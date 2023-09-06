@@ -212,37 +212,57 @@
     //     return ("" + x).replace(/[0-4]/g, '0').replace(/[5-9]/g, '1');
     // }
 
-
     // ------------------------------------------27.Are You Playing Banjo?----------------------------------------------
-    function areYouPlayingBanjo(name) {
-        if (name.startsWith('R') || name.startsWith('r')) {
-            return (name + " plays banjo")
+    // function areYouPlayingBanjo(name) {
+    //     if (name.startsWith('R') || name.startsWith('r')) {
+    //         return (name + " plays banjo")
+    //     } else {
+    //         return (name + " does not play banjo")
+    //     }
+    // }
+
+    // ------------------------------------------28.MakeUpperCase-------------------------------------------------------
+    // function makeUpperCase(str) {
+    //     return str.toUpperCase()
+    // }
+
+    // ------------------------------------------29.Will you make it?---------------------------------------------------
+    // const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
+    //     return mpg * fuelLeft >= distanceToPump
+    // };
+
+    // ------------------------------------------30.Century From Year---------------------------------------------------
+    // function century(year) {
+    //     return Math.ceil(year / 100)
+    // }
+
+    // ------------------------------------------31.Abbreviate a Two Word Name------------------------------------------
+    function abbrevName(name) {
+        return name.split(" ").map(w => w[0].toUpperCase()).join(".")
+    }
+
+    // ------------------------------------------32.Beginner Series #1 School Paperwork---------------------------------
+    function paperwork(n, m) {
+        if (n > 0 && m > 0) {
+            return n * m
         } else {
-            return (name + " does not play banjo")
+            return 0
         }
     }
 
-    // ------------------------------------------28.MakeUpperCase-------------------------------------------------------
-    function makeUpperCase(str) {
-        return str.toUpperCase()
-    }
-
-    // ------------------------------------------29.Will you make it?---------------------------------------------------
-    const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
-        return mpg * fuelLeft >= distanceToPump
+    // ------------------------------------------33.Reversed sequence----------------------------------------------------------------
+    const reverseSeq = n => {
+        let arr = []
+        for (let i = n; i > 0; i--) {
+            arr.push(i)
+        }
+        return arr
     };
 
-    // ------------------------------------------30.Century From Year---------------------------------------------------
-    function century(year) {
-        return Math.ceil(year / 100)
+    // ------------------------------------------34.Is he gonna survive?----------------------------------------------------------------
+    function hero(bullets, dragons) {
+        return bullets >= dragons * 2
     }
-
-
-    // ------------------------------------------31.----------------------------------------------------------------
-    // ------------------------------------------32.----------------------------------------------------------------
-    // ------------------------------------------33.----------------------------------------------------------------
-    // ------------------------------------------34.----------------------------------------------------------------
-
 
     // ------------------------------------------35.----------------------------------------------------------------
     // ------------------------------------------36.----------------------------------------------------------------
