@@ -237,37 +237,83 @@
     // }
 
     // ------------------------------------------31.Abbreviate a Two Word Name------------------------------------------
-    function abbrevName(name) {
-        return name.split(" ").map(w => w[0].toUpperCase()).join(".")
-    }
+    // function abbrevName(name) {
+    //     return name.split(" ").map(w => w[0].toUpperCase()).join(".")
+    // }
 
     // ------------------------------------------32.Beginner Series #1 School Paperwork---------------------------------
-    function paperwork(n, m) {
-        if (n > 0 && m > 0) {
-            return n * m
-        } else {
-            return 0
+    // function paperwork(n, m) {
+    //     if (n > 0 && m > 0) {
+    //         return n * m
+    //     } else {
+    //         return 0
+    //     }
+    // }
+
+    // ------------------------------------------33.Reversed sequence---------------------------------------------------
+    // const reverseSeq = n => {
+    //     let arr = []
+    //     for (let i = n; i > 0; i--) {
+    //         arr.push(i)
+    //     }
+    //     return arr
+    // };
+
+    // ------------------------------------------34.Is he gonna survive?------------------------------------------------
+    // function hero(bullets, dragons) {
+    //     return bullets >= dragons * 2
+    // }
+
+    // ------------------------------------------35.Beginner Series #2 Clock----------------------------------------------------------------
+    function past(h, m, s) {
+        //#Happy Coding! ^_^
+        if (h <= 23 && h >= 0 && m <= 59 && m >= 0 && s <= 59 && s >= 0) {
+            return (h * 3600000 + m * 60000 + s * 1000)
         }
     }
 
-    // ------------------------------------------33.Reversed sequence----------------------------------------------------------------
-    const reverseSeq = n => {
-        let arr = []
-        for (let i = n; i > 0; i--) {
-            arr.push(i)
-        }
-        return arr
-    };
-
-    // ------------------------------------------34.Is he gonna survive?----------------------------------------------------------------
-    function hero(bullets, dragons) {
-        return bullets >= dragons * 2
-    }
-
-    // ------------------------------------------35.----------------------------------------------------------------
     // ------------------------------------------36.----------------------------------------------------------------
-    // ------------------------------------------37.----------------------------------------------------------------
-    // ------------------------------------------38.----------------------------------------------------------------
+    // function sum(arr) {
+    //     let result = 0
+    //     for (let i = 0; i < arr.length; i++) {
+    //         result = result + arr[i]
+    //     }
+    //     return result
+    // };
+
+    function sum(numbers) {
+        return numbers.reduce((a, c) => a + c, 0)
+    }
+
+    // ------------------------------------------37.Calculate BMI----------------------------------------------------------------
+    function bmi(w, h) {
+        const bmi = w / Math.pow(h, 2)
+        if (bmi <= 18.5) {
+            return "Underweight"
+        }
+        if (bmi <= 25) {
+            return "Normal"
+        }
+        if (bmi <= 30) {
+            return "Overweight"
+        }
+        if (bmi > 30) {
+            return "Obese"
+        }
+    }
+
+    // ------------------------------------------38.Beginner - Reduce but Grow----------------------------------------------------------------
+    function grow(x){
+        // let result = x[0]
+        // for (let i=1; i<x.length; i++) {
+        //     result = result * x[i]
+        // }
+        // return result
+        //2nd variant through reduce operator
+        return x.reduce((a, c) => a * c, 1 )
+    }
+
+
 
 
     // ------------------------------------------39.----------------------------------------------------------------
