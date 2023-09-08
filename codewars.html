@@ -264,15 +264,15 @@
     //     return bullets >= dragons * 2
     // }
 
-    // ------------------------------------------35.Beginner Series #2 Clock----------------------------------------------------------------
-    function past(h, m, s) {
-        //#Happy Coding! ^_^
-        if (h <= 23 && h >= 0 && m <= 59 && m >= 0 && s <= 59 && s >= 0) {
-            return (h * 3600000 + m * 60000 + s * 1000)
-        }
-    }
+    // ------------------------------------------35.Beginner Series #2 Clock--------------------------------------------
+    // function past(h, m, s) {
+    //     //#Happy Coding! ^_^
+    //     if (h <= 23 && h >= 0 && m <= 59 && m >= 0 && s <= 59 && s >= 0) {
+    //         return (h * 3600000 + m * 60000 + s * 1000)
+    //     }
+    // }
 
-    // ------------------------------------------36.----------------------------------------------------------------
+    // ------------------------------------------36.--------------------------------------------------------------------
     // function sum(arr) {
     //     let result = 0
     //     for (let i = 0; i < arr.length; i++) {
@@ -281,45 +281,70 @@
     //     return result
     // };
 
-    function sum(numbers) {
-        return numbers.reduce((a, c) => a + c, 0)
+    // function sum(numbers) {
+    //     return numbers.reduce((a, c) => a + c, 0)
+    // }
+
+    // ------------------------------------------37.Calculate BMI-------------------------------------------------------
+    // function bmi(w, h) {
+    //     const bmi = w / Math.pow(h, 2)
+    //     if (bmi <= 18.5) {
+    //         return "Underweight"
+    //     }
+    //     if (bmi <= 25) {
+    //         return "Normal"
+    //     }
+    //     if (bmi <= 30) {
+    //         return "Overweight"
+    //     }
+    //     if (bmi > 30) {
+    //         return "Obese"
+    //     }
+    // }
+
+    // ------------------------------------------38.Beginner - Reduce but Grow------------------------------------------
+    // function grow(x){
+    // let result = x[0]
+    // for (let i=1; i<x.length; i++) {
+    //     result = result * x[i]
+    // }
+    // return result
+
+
+    //2nd variant through reduce operator
+    // return x.reduce((a, c) => a * c, 1 )
     }
 
-    // ------------------------------------------37.Calculate BMI----------------------------------------------------------------
-    function bmi(w, h) {
-        const bmi = w / Math.pow(h, 2)
-        if (bmi <= 18.5) {
-            return "Underweight"
-        }
-        if (bmi <= 25) {
-            return "Normal"
-        }
-        if (bmi <= 30) {
-            return "Overweight"
-        }
-        if (bmi > 30) {
-            return "Obese"
-        }
+    // ------------------------------------------39.Reversed Words------------------------------------------------------
+    function reverseWords(str) {
+        return str.split(' ').reverse().toString().replaceAll(',', ' ')
     }
 
-    // ------------------------------------------38.Beginner - Reduce but Grow----------------------------------------------------------------
-    function grow(x){
-        // let result = x[0]
-        // for (let i=1; i<x.length; i++) {
-        //     result = result * x[i]
-        // }
-        // return result
-        //2nd variant through reduce operator
-        return x.reduce((a, c) => a * c, 1 )
+    // ------------------------------------------40.DNA to RNA Conversion-----------------------------------------------
+    function DNAtoRNA(dna) {
+        return dna.includes('T') ? dna.replaceAll('T', 'U') : dna
+    }
+
+    // ------------------------------------------41.Sentence Smash------------------------------------------------------
+    function smash (words) {
+        return words.toString().replaceAll(',',' ')
+    }
+
+    // ------------------------------------------42.Jenny's secret message----------------------------------------------
+    function greet(name){
+        return name ==="Johnny"? "Hello, my love!" : "Hello, " + name + "!"
+    }
+
+    // ------------------------------------------43.Count by X----------------------------------------------------------
+    function countBy(x, n) {
+        let z = [];
+        for (let i=1; i<n+1; i++ )
+            z.push(i*x)
+        return z;
     }
 
 
 
-
-    // ------------------------------------------39.----------------------------------------------------------------
-    // ------------------------------------------40.----------------------------------------------------------------
-    // ------------------------------------------41.----------------------------------------------------------------
-    // ------------------------------------------42.----------------------------------------------------------------
 
 </script>
 
