@@ -486,35 +486,73 @@
     // }
 
     // ------------------------------------------55.Grasshopper - Personalized Message----------------------------------
-    function greet (name, owner) {
-        // Add code here
-        return name === owner ? 'Hello boss' : 'Hello guest'
-    }
+    // function greet (name, owner) {
+    //     // Add code here
+    //     return name === owner ? 'Hello boss' : 'Hello guest'
+    // }
 
     // ------------------------------------------56.Sum Mixed Array-----------------------------------------------------
-    function sumMix(x) {
-        return x.map(e => +e).reduce((a, b) => a+b)
-    }
+    // function sumMix(x) {
+    //     return x.map(e => +e).reduce((a, b) => a+b)
+    // }
 
     // ------------------------------------------57.Area or Perimeter---------------------------------------------------
-    const areaOrPerimeter = function(l , w) {
-        return l === w ? l*w : 2*l + 2*w
-    }
+    // const areaOrPerimeter = function(l , w) {
+    //     return l === w ? l*w : 2*l + 2*w
+    // }
 
     // ------------------------------------------58.Remove exclamation marks--------------------------------------------
-    function removeExclamationMarks(s) {
-        return s.replaceAll('!', '');
-    }
+    // function removeExclamationMarks(s) {
+    //     return s.replaceAll('!', '');
+    // }
 
     // ------------------------------------------59.The Feast of Many Beasts--------------------------------------------
-    function feast(beast, dish) {
-       return beast.charAt(0) == dish.charAt(0) && beast.charAt(beast.length-1) == dish.charAt(dish.length-1)
+    // function feast(beast, dish) {
+    //     return beast[0] == dish[0] && beast[beast.length-1] == dish[dish.length-1]
+    // }
+
+    // ------------------------------------------60.Transportation on vacation------------------------------------------
+    function rentalCarCost(d) {
+        // Your solution here
+        if (d < 3) {
+            return d * 40
+        }
+        if (d >= 3 && d < 7) {
+            return d * 40 - 20
+        }
+        if (d >= 7) {
+            return d * 40 - 50
+        }
     }
 
-    // ------------------------------------------60.----------------------------------------------------------
-    // ------------------------------------------61.----------------------------------------------------------
-    // ------------------------------------------62.----------------------------------------------------------
-    // ------------------------------------------63.----------------------------------------------------------
+    // ------------------------------------------61.Do I get a bonus?---------------------------------------------------
+    function bonusTime(salary, bonus) {
+        return bonus ? '£' + salary * 10 : '£' + salary
+    }
+
+    // ------------------------------------------62.Thinkful - Logic Drills: Traffic light------------------------------
+    function updateLight(current) {
+        if (current === "yellow")
+            return 'red'
+        if (current === "red")
+            return 'green'
+        if (current === "green")
+            return 'yellow'
+    }
+
+    // ------------------------------------------63.Quarter of the year-------------------------------------------------
+    const quarterOf = (month) => {
+        if (month >= 1 && month <= 12)
+            if (month <= 3)
+                return 1
+            if (month <= 6)
+                return 2
+            if (month <= 9)
+                return 3
+            if (month <= 12)
+                return 4
+    }
+
     // ------------------------------------------64.----------------------------------------------------------
     // ------------------------------------------65.----------------------------------------------------------
     // ------------------------------------------66.----------------------------------------------------------
