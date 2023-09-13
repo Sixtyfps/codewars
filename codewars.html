@@ -512,52 +512,93 @@
     // }
 
     // ------------------------------------------60.Transportation on vacation------------------------------------------
-    function rentalCarCost(d) {
-        // Your solution here
-        if (d < 3) {
-            return d * 40
-        }
-        if (d >= 3 && d < 7) {
-            return d * 40 - 20
-        }
-        if (d >= 7) {
-            return d * 40 - 50
-        }
-    }
+    // function rentalCarCost(d) {
+    //     // Your solution here
+    //     if (d < 3) {
+    //         return d * 40
+    //     }
+    //     if (d >= 3 && d < 7) {
+    //         return d * 40 - 20
+    //     }
+    //     if (d >= 7) {
+    //         return d * 40 - 50
+    //     }
+    // }
 
     // ------------------------------------------61.Do I get a bonus?---------------------------------------------------
-    function bonusTime(salary, bonus) {
-        return bonus ? '£' + salary * 10 : '£' + salary
-    }
+    // function bonusTime(salary, bonus) {
+    //     return bonus ? '£' + salary * 10 : '£' + salary
+    // }
 
     // ------------------------------------------62.Thinkful - Logic Drills: Traffic light------------------------------
-    function updateLight(current) {
-        if (current === "yellow")
-            return 'red'
-        if (current === "red")
-            return 'green'
-        if (current === "green")
-            return 'yellow'
-    }
+    // function updateLight(current) {
+    //     if (current === "yellow")
+    //         return 'red'
+    //     if (current === "red")
+    //         return 'green'
+    //     if (current === "green")
+    //         return 'yellow'
+    // }
 
     // ------------------------------------------63.Quarter of the year-------------------------------------------------
-    const quarterOf = (month) => {
-        if (month >= 1 && month <= 12)
-            if (month <= 3)
-                return 1
-            if (month <= 6)
-                return 2
-            if (month <= 9)
-                return 3
-            if (month <= 12)
-                return 4
+    // const quarterOf = (month) => {
+    //     if (month >= 1 && month <= 12)
+    //         if (month <= 3)
+    //             return 1
+    //         if (month <= 6)
+    //             return 2
+    //         if (month <= 9)
+    //             return 3
+    //         if (month <= 12)
+    //             return 4
+    // }
+
+    // ------------------------------------------64.L1: Set Alarm-------------------------------------------------------
+    function setAlarm(employed, vacation){
+        if (employed && vacation)
+            return false
+        if (employed && !vacation)
+            return true
+        if (!employed && vacation)
+            return false
+        if (!employed && !vacation)
+            return false
     }
 
-    // ------------------------------------------64.----------------------------------------------------------
-    // ------------------------------------------65.----------------------------------------------------------
-    // ------------------------------------------66.----------------------------------------------------------
-    // ------------------------------------------67.----------------------------------------------------------
-    // ------------------------------------------68.----------------------------------------------------------
+    // ------------------------------------------65.Double Char---------------------------------------------------------
+    function doubleChar(str) {
+        let arr = []
+        for(let i=0; i<str.length; i++) {
+            arr[i] = str[i] + str[i]
+        }
+        return arr.toString().replaceAll(',','')
+    }
+
+    // ------------------------------------------66.Removing Elements---------------------------------------------------
+    function removeEveryOther(arr){
+        let arrNew = []
+        for(let i=0; i<arr.length; i=i+2) {
+            arrNew.push(arr[i])
+        }
+        return arrNew
+    }
+
+    console.log(removeEveryOther([1,2,3,4,5,6]))
+
+    // ------------------------------------------67.Third Angle of a Triangle-------------------------------------------
+    function otherAngle(a, b) {
+        return 180-a-b;
+    }
+
+    // ------------------------------------------68.Will there be enough space?-----------------------------------------
+    function enough(cap, on, wait) {
+        if (wait<=cap-on) {
+            return 0
+        } else {
+            return wait-(cap-on)
+        }
+    }
+
     // ------------------------------------------69.----------------------------------------------------------
     // ------------------------------------------70.----------------------------------------------------------
     // ------------------------------------------71.----------------------------------------------------------
