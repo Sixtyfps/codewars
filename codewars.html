@@ -554,55 +554,122 @@
     // }
 
     // ------------------------------------------64.L1: Set Alarm-------------------------------------------------------
-    function setAlarm(employed, vacation){
-        if (employed && vacation)
-            return false
-        if (employed && !vacation)
-            return true
-        if (!employed && vacation)
-            return false
-        if (!employed && !vacation)
-            return false
-    }
+    // function setAlarm(employed, vacation){
+    //     if (employed && vacation)
+    //         return false
+    //     if (employed && !vacation)
+    //         return true
+    //     if (!employed && vacation)
+    //         return false
+    //     if (!employed && !vacation)
+    //         return false
+    // }
 
     // ------------------------------------------65.Double Char---------------------------------------------------------
-    function doubleChar(str) {
-        let arr = []
-        for(let i=0; i<str.length; i++) {
-            arr[i] = str[i] + str[i]
-        }
-        return arr.toString().replaceAll(',','')
-    }
+    // function doubleChar(str) {
+    //     let arr = []
+    //     for(let i=0; i<str.length; i++) {
+    //         arr[i] = str[i] + str[i]
+    //     }
+    //     return arr.toString().replaceAll(',','')
+    // }
 
     // ------------------------------------------66.Removing Elements---------------------------------------------------
-    function removeEveryOther(arr){
-        let arrNew = []
-        for(let i=0; i<arr.length; i=i+2) {
-            arrNew.push(arr[i])
-        }
-        return arrNew
-    }
-
-    console.log(removeEveryOther([1,2,3,4,5,6]))
+    // function removeEveryOther(arr){
+    //     let arrNew = []
+    //     for(let i=0; i<arr.length; i=i+2) {
+    //         arrNew.push(arr[i])
+    //     }
+    //     return arrNew
+    // }
+    //
+    // console.log(removeEveryOther([1,2,3,4,5,6]))
 
     // ------------------------------------------67.Third Angle of a Triangle-------------------------------------------
-    function otherAngle(a, b) {
-        return 180-a-b;
-    }
+    // function otherAngle(a, b) {
+    //     return 180-a-b;
+    // }
 
     // ------------------------------------------68.Will there be enough space?-----------------------------------------
-    function enough(cap, on, wait) {
-        if (wait<=cap-on) {
-            return 0
-        } else {
-            return wait-(cap-on)
-        }
+    // function enough(cap, on, wait) {
+    //     if (wait<=cap-on) {
+    //         return 0
+    //     } else {
+    //         return wait-(cap-on)
+    //     }
+    // }
+
+    // ------------------------------------------69.Beginner Series #4 Cockroach----------------------------------------
+    function cockroachSpeed(s) {
+        return s.Math.floor(s * (1000 / 36))
     }
 
-    // ------------------------------------------69.----------------------------------------------------------
-    // ------------------------------------------70.----------------------------------------------------------
-    // ------------------------------------------71.----------------------------------------------------------
-    // ------------------------------------------72.----------------------------------------------------------
+    // ------------------------------------------70.Find numbers which are divisible by given number--------------------
+    function divisibleBy(arr, d) {
+        let newArr = []
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] % d === 0)
+                newArr.push(arr[i])
+        }
+        return newArr
+    }
+
+    function divisibleBy(numbers, divisor) {
+        return numbers.filter(el => el % divisor === 0)
+    }
+
+    // ------------------------------------------71.Keep up the hoop----------------------------------------------------
+    function hoopCount(n) {
+        return n >= 10 ? 'Great, now move on to tricks' : 'Keep at it until you get it'
+    }
+
+    // ------------------------------------------72.Get Planet Name By ID-----------------------------------------------
+    function getPlanetName(id) {
+        var name;
+        switch (id) {
+            case 1:
+                name = 'Mercury'
+                break
+            case 2:
+                name = 'Venus'
+                break
+            case 3:
+                name = 'Earth'
+                break
+            case 4:
+                name = 'Mars'
+                break
+            case 5:
+                name = 'Jupiter'
+                break
+            case 6:
+                name = 'Saturn'
+                break
+            case 7:
+                name = 'Uranus'
+                break
+            case 8:
+                name = 'Neptune'
+                break
+        }
+
+        return name;
+    }
+
+    // ------------------------------------------73.----------------------------------------------------------
+    // ------------------------------------------74.----------------------------------------------------------
+    // ------------------------------------------75.----------------------------------------------------------
+    // ------------------------------------------76.----------------------------------------------------------
+    // ------------------------------------------77.----------------------------------------------------------
+    // ------------------------------------------78.----------------------------------------------------------
+    // ------------------------------------------79.----------------------------------------------------------
+    // ------------------------------------------80.----------------------------------------------------------
+    // ------------------------------------------81.----------------------------------------------------------
+    // ------------------------------------------82.----------------------------------------------------------
+    // ------------------------------------------83.----------------------------------------------------------
+    // ------------------------------------------84.----------------------------------------------------------
+    // ------------------------------------------85.----------------------------------------------------------
+    // ------------------------------------------86.----------------------------------------------------------
 
 
 </script>
