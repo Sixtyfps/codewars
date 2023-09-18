@@ -733,46 +733,77 @@
     // console.log(oddCount(9876543210))
 
     // ------------------------------------------81.Twice as old--------------------------------------------------------
-    function twiceAsOld(dad, son) {
-        return Math.abs(dad - 2*son)
-    }
+    // function twiceAsOld(dad, son) {
+    //     return Math.abs(dad - 2*son)
+    // }
 
     // ------------------------------------------82.Describe Age--------------------------------------------------------
-    function describeAge(a){
-        return `You're a(n) ${a<13?'kid':a<18?'teenager':a<65?'adult':'elderly'}`
-    }
+    // function describeAge(a){
+    //     return `You're a(n) ${a<13?'kid':a<18?'teenager':a<65?'adult':'elderly'}`
+    // }
 
 
     // ------------------------------------------83.Stringy Strings-----------------------------------------------------
-    function stringy(size) {
-        let str='10'
-        return size % 2===0? str.repeat(size/2) : str.repeat(Math.ceil(size/2)).slice(0,-1)
-    }
-
-    console.log(stringy(5))
+    // function stringy(size) {
+    //     let str='10'
+    //     return size % 2===0? str.repeat(size/2) : str.repeat(Math.ceil(size/2)).slice(0,-1)
+    // }
+    //
+    // console.log(stringy(5))
 
     // ------------------------------------------84.Add Length----------------------------------------------------------
-    function addLength(str) {
-        let result = []
-        let arr = str.split(' ')
-        for(let i=0;i<arr.length;i++) {
-            arr[i]= arr[i]+' '+arr[i].length
-            result.push(arr[i])
-        }
-        return result
-    }
+    // function addLength(str) {
+    //     let result = []
+    //     let arr = str.split(' ')
+    //     for(let i=0;i<arr.length;i++) {
+    //         arr[i]= arr[i]+' '+arr[i].length
+    //         result.push(arr[i])
+    //     }
+    //     return result
+    // }
 
     //Second solution
-    function addLength1(str){
-        return str.split(" ").map(s => `${s} ${s.length}`)
+    // function addLength1(str){
+    //     return str.split(" ").map(s => `${s} ${s.length}`)
+    // }
+    //
+    // console.log(addLength('Me tree wee'))
+
+    // ------------------------------------------85.Pillars-------------------------------------------------------------
+    function pillars(num, dist, width) {
+        if (num===1) {
+            return 0
+        }
+        if(num === 2) {
+            return dist*100
+        } else {
+            return ((num-2)*(width)) + (dist*100*(num-1))
+        }
     }
 
-    console.log(addLength('Me tree wee'))
+    function pillars(num, dist, width) {
+        return num===1? 0 : num===2? 100*dist : ((num-2)*(width)) + (dist*100*(num-1))
+    }
 
-    // ------------------------------------------85.----------------------------------------------------------
-    // ------------------------------------------86.----------------------------------------------------------
-    // ------------------------------------------87.----------------------------------------------------------
-    // ------------------------------------------88.----------------------------------------------------------
+    // ------------------------------------------86.Welcome to the City-------------------------------------------------
+    function sayHello( name, city, state ) {
+        return "Hello, " + name.toString().replaceAll(',', ' ') + '! Welcome to ' + city +', ' + state + '!'
+    }
+
+    // ------------------------------------------87.Is it even?---------------------------------------------------------
+    function testEven(n) {
+        return n % 2 === 0
+    }
+
+    // ------------------------------------------88.Name on billboard---------------------------------------------------
+    function billboard(name, price = 30){
+        let sum=0
+        for(const a of name) {
+            sum+=price
+        }
+        return sum
+    }
+
     // ------------------------------------------89.----------------------------------------------------------
     // ------------------------------------------90.----------------------------------------------------------
     // ------------------------------------------91.----------------------------------------------------------
