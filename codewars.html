@@ -880,45 +880,83 @@
     // }
 
     // ------------------------------------------98.altERnaTIng cAsE <=> ALTerNAtiNG CaSe-------------------------------
-    String.prototype.toAlternatingCase = function () {
-        // Define your method here :)
-        let str = ''
-        for (let i = 0; i < this.length; i++) {
-            if (this[i] === this[i].toUpperCase()) {
-                str += this[i].toLowerCase()
-            } else {
-                str += this[i].toUpperCase()
-            }
-        }
-        return str
-    }
-
-    String.prototype.toAlternatingCase = function () {
-        return this.split("").map(a => a === a.toUpperCase() ? a.toLowerCase() : a.toUpperCase()).join('')
-    }
+    // String.prototype.toAlternatingCase = function () {
+    //     // Define your method here :)
+    //     let str = ''
+    //     for (let i = 0; i < this.length; i++) {
+    //         if (this[i] === this[i].toUpperCase()) {
+    //             str += this[i].toLowerCase()
+    //         } else {
+    //             str += this[i].toUpperCase()
+    //         }
+    //     }
+    //     return str
+    // }
+    //
+    // String.prototype.toAlternatingCase = function () {
+    //     return this.split("").map(a => a === a.toUpperCase() ? a.toLowerCase() : a.toUpperCase()).join('')
+    // }
 
     // ------------------------------------------99.Palindrome----------------------------------------------------------
-    function isPalindrome(x) {
-        return x.split('').reverse().join('').toLowerCase() == x.toLowerCase()
-    }
+    // function isPalindrome(x) {
+    //     return x.split('').reverse().join('').toLowerCase() == x.toLowerCase()
+    // }
 
     // ------------------------------------------101.Sum The Strings----------------------------------------------------
-    function sumStr(a, b) {
-        return sum = ((+a) + (+b)).toString()
-    }
+    // function sumStr(a, b) {
+    //     return sum = ((+a) + (+b)).toString()
+    // }
 
     // ------------------------------------------102.Powers of 2--------------------------------------------------------
-    function powersOfTwo(n) {
-        let result = []
-        for (let i = 0; i <= n; i++) {
-            result.push(Math.pow(2, i))
+    // function powersOfTwo(n) {
+    //     let result = []
+    //     for (let i = 0; i <= n; i++) {
+    //         result.push(Math.pow(2, i))
+    //     }
+    //     return result
+    // }
+
+    // ------------------------------------------103.Student's Final Grade----------------------------------------------------------
+    function finalGrade (exam, proj) {
+        if(exam>90 || proj>10) {
+            return 100
         }
-        return result
+        if(exam>75 && proj>=5) {
+            return 90
+        }
+        if(exam>50 && proj>=2) {
+            return 75
+        } else {
+            return 0
+        }
     }
 
-    // ------------------------------------------103.----------------------------------------------------------
-    // ------------------------------------------104.----------------------------------------------------------
-    // ------------------------------------------105.----------------------------------------------------------
+    // ------------------------------------------104.I love you, a little , a lot, passionately ... not at all----------------------------------------------------------
+    function howMuchILoveYou(nbPetals){
+        if(nbPetals%6 == 1){
+            return ("I love you");
+        }
+        if(nbPetals%6 == 2){
+            return ("a little");
+        }
+        if(nbPetals%6 ==3){
+            return ("a lot");
+        }
+        if(nbPetals%6 ==4){
+            return ("passionately");
+        }
+        if(nbPetals%6 == 5){
+            return ("madly");
+        } else {
+            return ("not at all");
+        }
+    }
+
+    // ------------------------------------------105.Difference of Volumes of Cuboids----------------------------------------------------------
+    function findDifference(a, b) {
+        return Math.abs(a[0]*a[1]*a[2] - b[0]*b[1]*b[2])
+    }
+
     // ------------------------------------------106.----------------------------------------------------------
     // ------------------------------------------107.----------------------------------------------------------
     // ------------------------------------------108.----------------------------------------------------------
