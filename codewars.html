@@ -916,53 +916,91 @@
     //     return result
     // }
 
-    // ------------------------------------------103.Student's Final Grade----------------------------------------------------------
-    function finalGrade (exam, proj) {
-        if(exam>90 || proj>10) {
-            return 100
-        }
-        if(exam>75 && proj>=5) {
-            return 90
-        }
-        if(exam>50 && proj>=2) {
-            return 75
-        } else {
-            return 0
-        }
+    // ------------------------------------------103.Student's Final Grade----------------------------------------------
+    // function finalGrade (exam, proj) {
+    //     if(exam>90 || proj>10) {
+    //         return 100
+    //     }
+    //     if(exam>75 && proj>=5) {
+    //         return 90
+    //     }
+    //     if(exam>50 && proj>=2) {
+    //         return 75
+    //     } else {
+    //         return 0
+    //     }
+    // }
+
+    // ------------------------------------------104.I love you, a little , a lot, passionately ... not at all----------
+    // function howMuchILoveYou(nbPetals){
+    //     if(nbPetals%6 == 1){
+    //         return ("I love you");
+    //     }
+    //     if(nbPetals%6 == 2){
+    //         return ("a little");
+    //     }
+    //     if(nbPetals%6 ==3){
+    //         return ("a lot");
+    //     }
+    //     if(nbPetals%6 ==4){
+    //         return ("passionately");
+    //     }
+    //     if(nbPetals%6 == 5){
+    //         return ("madly");
+    //     } else {
+    //         return ("not at all");
+    //     }
+    // }
+
+    // ------------------------------------------105.Difference of Volumes of Cuboids-----------------------------------
+    // function findDifference(a, b) {
+    //     return Math.abs(a[0]*a[1]*a[2] - b[0]*b[1]*b[2])
+    // }
+
+    // ------------------------------------------106.ABC----------------------------------------------------------------
+    function goals (a, b, c) {
+        // code goes here
+        return a+b+c
     }
 
-    // ------------------------------------------104.I love you, a little , a lot, passionately ... not at all----------------------------------------------------------
-    function howMuchILoveYou(nbPetals){
-        if(nbPetals%6 == 1){
-            return ("I love you");
-        }
-        if(nbPetals%6 == 2){
-            return ("a little");
-        }
-        if(nbPetals%6 ==3){
-            return ("a lot");
-        }
-        if(nbPetals%6 ==4){
-            return ("passionately");
-        }
-        if(nbPetals%6 == 5){
-            return ("madly");
-        } else {
-            return ("not at all");
-        }
+    // ------------------------------------------107.Grasshopper - Debug sayHello---------------------------------------
+    function sayHello(name) {
+        return 'Hello, ' + name
     }
 
-    // ------------------------------------------105.Difference of Volumes of Cuboids----------------------------------------------------------
-    function findDifference(a, b) {
-        return Math.abs(a[0]*a[1]*a[2] - b[0]*b[1]*b[2])
+    // ------------------------------------------108.What is between?---------------------------------------------------
+    function between(a, b) {
+        // your code here
+        let arr = []
+        for (a; a <= b; a++) {
+            arr.push(a)
+        }
+        return arr
     }
 
-    // ------------------------------------------106.----------------------------------------------------------
-    // ------------------------------------------107.----------------------------------------------------------
-    // ------------------------------------------108.----------------------------------------------------------
-    // ------------------------------------------109.----------------------------------------------------------
-    // ------------------------------------------110.----------------------------------------------------------
-    // ------------------------------------------111.----------------------------------------------------------
+    // ------------------------------------------109.Sort and Star------------------------------------------------------
+    function twoSort(s) {
+        return result = s.sort()[0].split('').join('***')
+    }
+
+    console.log(twoSort(["bitcoin", "take", "over", "the", "world", "maybe", "who", "knows", "perhaps"]))
+
+    // ------------------------------------------110.Unfinished Loop - Bug Fixing #1------------------------------------
+    function createArray(number){
+        let newArray = [];
+
+        for(let counter = 1; counter <= number; counter++){
+            newArray.push(counter);
+        }
+
+        return newArray;
+    }
+
+    // ------------------------------------------111.Basic variable assignment------------------------------------------
+    var a = "code";
+    var b = "wa.rs";
+    var name = a + b;
+
     // ------------------------------------------112.----------------------------------------------------------
     // ------------------------------------------113.----------------------------------------------------------
     // ------------------------------------------114.----------------------------------------------------------
