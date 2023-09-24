@@ -958,54 +958,76 @@
     // }
 
     // ------------------------------------------106.ABC----------------------------------------------------------------
-    function goals (a, b, c) {
-        // code goes here
-        return a+b+c
-    }
+    // function goals (a, b, c) {
+    //     // code goes here
+    //     return a+b+c
+    // }
 
     // ------------------------------------------107.Grasshopper - Debug sayHello---------------------------------------
-    function sayHello(name) {
-        return 'Hello, ' + name
-    }
+    // function sayHello(name) {
+    //     return 'Hello, ' + name
+    // }
 
     // ------------------------------------------108.What is between?---------------------------------------------------
-    function between(a, b) {
-        // your code here
-        let arr = []
-        for (a; a <= b; a++) {
-            arr.push(a)
-        }
-        return arr
-    }
+    // function between(a, b) {
+    //     // your code here
+    //     let arr = []
+    //     for (a; a <= b; a++) {
+    //         arr.push(a)
+    //     }
+    //     return arr
+    // }
 
     // ------------------------------------------109.Sort and Star------------------------------------------------------
-    function twoSort(s) {
-        return result = s.sort()[0].split('').join('***')
-    }
-
-    console.log(twoSort(["bitcoin", "take", "over", "the", "world", "maybe", "who", "knows", "perhaps"]))
+    // function twoSort(s) {
+    //     return result = s.sort()[0].split('').join('***')
+    // }
+    //
+    // console.log(twoSort(["bitcoin", "take", "over", "the", "world", "maybe", "who", "knows", "perhaps"]))
 
     // ------------------------------------------110.Unfinished Loop - Bug Fixing #1------------------------------------
-    function createArray(number){
-        let newArray = [];
-
-        for(let counter = 1; counter <= number; counter++){
-            newArray.push(counter);
-        }
-
-        return newArray;
-    }
+    // function createArray(number){
+    //     let newArray = [];
+    //
+    //     for(let counter = 1; counter <= number; counter++){
+    //         newArray.push(counter);
+    //     }
+    //
+    //     return newArray;
+    // }
 
     // ------------------------------------------111.Basic variable assignment------------------------------------------
-    var a = "code";
-    var b = "wa.rs";
-    var name = a + b;
+    // var a = "code";
+    // var b = "wa.rs";
+    // var name = a + b;
 
-    // ------------------------------------------112.----------------------------------------------------------
-    // ------------------------------------------113.----------------------------------------------------------
-    // ------------------------------------------114.----------------------------------------------------------
-    // ------------------------------------------115.----------------------------------------------------------
-    // ------------------------------------------116.----------------------------------------------------------
+    // ------------------------------------------112.Expressions Matter-------------------------------------------------
+    function expressionMatter(a, b, c) {
+        return Math.max(a + b + c, a * (b + c), a * b * c, a + b * c, (a + b) * c)
+    }
+
+    // ------------------------------------------113.Filter out the geese-----------------------------------------------
+    function gooseFilter(birds) {
+        var geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
+        return birds.filter(b=> geese.indexOf(b)<0)
+    };
+
+    // ------------------------------------------114.To square(root) or not to square(root)-----------------------------
+    function squareOrSquareRoot(array) {
+        return array.map(n => Math.sqrt(n)%1 ===0 ? Math.sqrt(n) : n**2)
+    }
+
+    // ------------------------------------------115.Grasshopper - Terminal game move function--------------------------
+    function move (position, roll) {
+        // return the new position
+        return position + roll*2
+    }
+
+    // ------------------------------------------116.Grasshopper - If/else syntax debug---------------------------------
+    function checkAlive (health) {
+        return health > 0;
+    }
+
     // ------------------------------------------117.----------------------------------------------------------
     // ------------------------------------------118.----------------------------------------------------------
     // ------------------------------------------119.----------------------------------------------------------
