@@ -1149,32 +1149,58 @@
 
 
     // ------------------------------------------135.The Wide-Mouthed frog!---------------------------------------------
-    function mouthSize(animal) {
-        return animal.toLowerCase() === 'alligator'? 'small' : 'wide'
-    }
+    // function mouthSize(animal) {
+    //     return animal.toLowerCase() === 'alligator'? 'small' : 'wide'
+    // }
 
     // ------------------------------------------136.Grasshopper - Basic Function Fixer---------------------------------
-    function addFive(num) {
-        return total = num + 5
-    }
+    // function addFive(num) {
+    //     return total = num + 5
+    // }
 
     // ------------------------------------------137.Merge two sorted arrays into one-----------------------------------
-    function mergeArrays(arr1, arr2) {
-        let arr = [...arr1, ...arr2]
-        return arr.sort(function(a, b) {
-            return a - b;
-        }).filter((el, index)=>arr.indexOf(el)===index)
-    }
+    // function mergeArrays(arr1, arr2) {
+    //     let arr = [...arr1, ...arr2]
+    //     return arr.sort(function(a, b) {
+    //         return a - b;
+    //     }).filter((el, index)=>arr.indexOf(el)===index)
+    // }
 
     // ------------------------------------------138.Reversing Words in a String----------------------------------------
-    function reverse(str){
-        return str.split(' ').reverse().join('')
+    // function reverse(str){
+    //     return str.split(' ').reverse().join('')
+    // }
+
+    // ------------------------------------------139.A wolf in sheep's clothing-----------------------------------------
+    function warnTheSheep(arr) {
+        let ind = arr.indexOf('wolf')
+        let sheepInd = arr.length - (ind + 1)
+        if (arr[ind] === arr[arr.length-1]) {
+            return "Pls go away and stop eating my sheep"
+        } else {
+            return "Oi! Sheep number " + sheepInd.toString() +"! You are about to be eaten by a wolf!"
+        }
     }
 
-    // ------------------------------------------139.----------------------------------------------------------
-    // ------------------------------------------140.----------------------------------------------------------
-    // ------------------------------------------141.----------------------------------------------------------
-    // ------------------------------------------142.----------------------------------------------------------
+    // ------------------------------------------140.Find the position!-------------------------------------------------
+    function position(letter){
+        let arr = 'abcdefghijklmnopqrstuvwxyz'
+        return "Position of alphabet: " + (arr.indexOf(letter)+1)
+    }
+    // ------------------------------------------141.Generate range of integers-----------------------------------------
+    function generateRange(min, max, step){
+        let arr = []
+        for(let i = min; i<=max; i+=step) {
+            arr.push(i)
+        }
+        return arr
+    }
+
+    // ------------------------------------------142.Plural-------------------------------------------------------------
+    function plural(n) {
+        return n !== 1;
+    }
+
     // ------------------------------------------143.----------------------------------------------------------
     // ------------------------------------------144.----------------------------------------------------------
     // ------------------------------------------145.----------------------------------------------------------
