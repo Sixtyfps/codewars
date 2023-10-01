@@ -1172,48 +1172,116 @@
     // }
 
     // ------------------------------------------139.A wolf in sheep's clothing-----------------------------------------
-    function warnTheSheep(arr) {
-        let ind = arr.indexOf('wolf')
-        let sheepInd = arr.length - (ind + 1)
-        if (arr[ind] === arr[arr.length-1]) {
-            return "Pls go away and stop eating my sheep"
-        } else {
-            return "Oi! Sheep number " + sheepInd.toString() +"! You are about to be eaten by a wolf!"
-        }
-    }
+    // function warnTheSheep(arr) {
+    //     let ind = arr.indexOf('wolf')
+    //     let sheepInd = arr.length - (ind + 1)
+    //     if (arr[ind] === arr[arr.length-1]) {
+    //         return "Pls go away and stop eating my sheep"
+    //     } else {
+    //         return "Oi! Sheep number " + sheepInd.toString() +"! You are about to be eaten by a wolf!"
+    //     }
+    // }
 
     // ------------------------------------------140.Find the position!-------------------------------------------------
-    function position(letter){
-        let arr = 'abcdefghijklmnopqrstuvwxyz'
-        return "Position of alphabet: " + (arr.indexOf(letter)+1)
-    }
+    // function position(letter){
+    //     let arr = 'abcdefghijklmnopqrstuvwxyz'
+    //     return "Position of alphabet: " + (arr.indexOf(letter)+1)
+    // }
+
     // ------------------------------------------141.Generate range of integers-----------------------------------------
-    function generateRange(min, max, step){
-        let arr = []
-        for(let i = min; i<=max; i+=step) {
-            arr.push(i)
-        }
-        return arr
-    }
+    // function generateRange(min, max, step){
+    //     let arr = []
+    //     for(let i = min; i<=max; i+=step) {
+    //         arr.push(i)
+    //     }
+    //     return arr
+    // }
 
     // ------------------------------------------142.Plural-------------------------------------------------------------
-    function plural(n) {
-        return n !== 1;
+    // function plural(n) {
+    //     return n !== 1;
+    // }
+
+    // ------------------------143.Replace all vowel to exclamation mark in the sentence--------------------------------
+    function replace(s) {
+        return s.replace(/[aeiou]/gi, '!')
     }
 
-    // ------------------------------------------143.----------------------------------------------------------
-    // ------------------------------------------144.----------------------------------------------------------
-    // ------------------------------------------145.----------------------------------------------------------
+    // ------------------------------------------144.Bin to Decimal-----------------------------------------------------
+    function binToDec(bin) {
+        let arr = bin.toString().split("").reverse()
+        let result = 0
+        for (let i = 0; i < arr.length; i++) {
+            result = result + arr[i] * (2 ** i)
+        }
+        return result
+    }
 
+    binToDec(1001001)
 
+    // -----------------------------145.101 Dalmatians - squash the bugs, not the dogs!---------------------------------
+    function howManyDalmatians(number) {
+        const dogs = ["Hardly any", "More than a handful!", "Woah that's a lot of dogs!", "101 DALMATIANS!!!"]
 
+        return respond = number <= 10 ? dogs[0] : number <= 50 ? dogs[1] : number === 101 ? dogs[3] : dogs[2]
 
+    }
 
-    // ------------------------------------------146.----------------------------------------------------------
+    // ------------------------------------------146.Basic data types--Number-------------------------------------------
+    let v1 = 50,
+        v2 = 100,
+        v3 = 150,
+        v4 = 200,
+        v5 = 2,
+        v6 = 250;
+
+    function equal1() {
+        let a = v1,
+            b = v1;
+        return a + b;
+    }
+
+    //Please refer to the example above to complete the following functions
+    function equal2() {
+        let a = v4, //set number value to a
+            b = v2; //set number value to b
+        return a - b;
+    }
+
+    function equal3() {
+        let a = v1, //set number value to a
+            b = v5; //set number value to b
+        return a * b;
+    }
+
+    function equal4() {
+        let a = v4, //set number value to a
+            b = v5; //set number value to b
+        return a / b;
+    }
+
+    function equal5() {
+        let a = v6, //set number value to a
+            b = v3; //set number value to b
+        return a % b;
+    }
+
     // ------------------------------------------147.----------------------------------------------------------
     // ------------------------------------------148.----------------------------------------------------------
     // ------------------------------------------149.----------------------------------------------------------
     // ------------------------------------------150.----------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
     // ------------------------------------------151.----------------------------------------------------------
     // ------------------------------------------152.----------------------------------------------------------
     // ------------------------------------------153.----------------------------------------------------------
