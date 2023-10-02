@@ -1203,84 +1203,93 @@
     // }
 
     // ------------------------143.Replace all vowel to exclamation mark in the sentence--------------------------------
-    function replace(s) {
-        return s.replace(/[aeiou]/gi, '!')
-    }
+    // function replace(s) {
+    //     return s.replace(/[aeiou]/gi, '!')
+    // }
 
     // ------------------------------------------144.Bin to Decimal-----------------------------------------------------
-    function binToDec(bin) {
-        let arr = bin.toString().split("").reverse()
-        let result = 0
-        for (let i = 0; i < arr.length; i++) {
-            result = result + arr[i] * (2 ** i)
-        }
-        return result
-    }
-
-    binToDec(1001001)
+    // function binToDec(bin) {
+    //     let arr = bin.toString().split("").reverse()
+    //     let result = 0
+    //     for (let i = 0; i < arr.length; i++) {
+    //         result = result + arr[i] * (2 ** i)
+    //     }
+    //     return result
+    // }
+    //
+    // binToDec(1001001)
 
     // -----------------------------145.101 Dalmatians - squash the bugs, not the dogs!---------------------------------
-    function howManyDalmatians(number) {
-        const dogs = ["Hardly any", "More than a handful!", "Woah that's a lot of dogs!", "101 DALMATIANS!!!"]
-
-        return respond = number <= 10 ? dogs[0] : number <= 50 ? dogs[1] : number === 101 ? dogs[3] : dogs[2]
-
-    }
+    // function howManyDalmatians(number) {
+    //     const dogs = ["Hardly any", "More than a handful!", "Woah that's a lot of dogs!", "101 DALMATIANS!!!"]
+    //
+    //     return respond = number <= 10 ? dogs[0] : number <= 50 ? dogs[1] : number === 101 ? dogs[3] : dogs[2]
+    //
+    // }
 
     // ------------------------------------------146.Basic data types--Number-------------------------------------------
-    let v1 = 50,
-        v2 = 100,
-        v3 = 150,
-        v4 = 200,
-        v5 = 2,
-        v6 = 250;
+    // let v1 = 50,
+    //     v2 = 100,
+    //     v3 = 150,
+    //     v4 = 200,
+    //     v5 = 2,
+    //     v6 = 250;
+    //
+    // function equal1() {
+    //     let a = v1,
+    //         b = v1;
+    //     return a + b;
+    // }
+    //
+    // //Please refer to the example above to complete the following functions
+    // function equal2() {
+    //     let a = v4, //set number value to a
+    //         b = v2; //set number value to b
+    //     return a - b;
+    // }
+    //
+    // function equal3() {
+    //     let a = v1, //set number value to a
+    //         b = v5; //set number value to b
+    //     return a * b;
+    // }
+    //
+    // function equal4() {
+    //     let a = v4, //set number value to a
+    //         b = v5; //set number value to b
+    //     return a / b;
+    // }
+    //
+    // function equal5() {
+    //     let a = v6, //set number value to a
+    //         b = v3; //set number value to b
+    //     return a % b;
+    // }
 
-    function equal1() {
-        let a = v1,
-            b = v1;
-        return a + b;
+    // ------------------------------------------147.Hex to Decimal-----------------------------------------------------
+    function hexToDec(hex) {
+        return parseInt(hex, 16)
     }
 
-    //Please refer to the example above to complete the following functions
-    function equal2() {
-        let a = v4, //set number value to a
-            b = v2; //set number value to b
-        return a - b;
+    // ------------------------------------------148.Grasshopper - Debug------------------------------------------------
+    function weatherInfo(temp) {
+        let c = (temp - 32) * (5 / 9)
+        return c < 0 ? c + " is freezing temperature" : c + " is above freezing temperature"
     }
 
-    function equal3() {
-        let a = v1, //set number value to a
-            b = v5; //set number value to b
-        return a * b;
+    // ------------------------------------------149.Is this my tail?---------------------------------------------------
+    function correctTail(body, tail) {
+        let sub = body.substr(body.length - (tail.length))
+        if (sub === tail)
+            return true
+        else
+            return false
     }
 
-    function equal4() {
-        let a = v4, //set number value to a
-            b = v5; //set number value to b
-        return a / b;
+    // ------------------------------------------150.Hello, Name or World!----------------------------------------------
+    function hello(name) {
+        return `Hello, ${name ? name[0].toUpperCase() + name.slice(1).toLowerCase() : 'World'}!`
     }
-
-    function equal5() {
-        let a = v6, //set number value to a
-            b = v3; //set number value to b
-        return a % b;
-    }
-
-    // ------------------------------------------147.----------------------------------------------------------
-    // ------------------------------------------148.----------------------------------------------------------
-    // ------------------------------------------149.----------------------------------------------------------
-    // ------------------------------------------150.----------------------------------------------------------
-
-
-
-
-
-
-
-
-
-
-
 
     // ------------------------------------------151.----------------------------------------------------------
     // ------------------------------------------152.----------------------------------------------------------
