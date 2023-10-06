@@ -1347,52 +1347,81 @@
     // }
 
     // ------------------------------------------158.Seats in Theater---------------------------------------------------
-    function seatsInTheater(nCols, nRows, col, row) {
-        //coding and coding..
-        return (nRows - row)*(nCols - col + 1)
-
-    }
+    // function seatsInTheater(nCols, nRows, col, row) {
+    //     //coding and coding..
+    //     return (nRows - row)*(nCols - col + 1)
+    //
+    // }
 
     // ------------------------------------------159.Gravity Flip-------------------------------------------------------
-    const flip=(d, a)=>{
-        if(d === "R") {
-            return a.sort((a,b)=>{return a-b})
-        }
-        if(d === "L") {
-            return a.sort((a,b)=>{return a-b}).reverse()
-        }
-    }
+    // const flip=(d, a)=>{
+    //     if(d === "R") {
+    //         return a.sort((a,b)=>{return a-b})
+    //     }
+    //     if(d === "L") {
+    //         return a.sort((a,b)=>{return a-b}).reverse()
+    //     }
+    // }
 
     // -----------------------------------160.Fix your code before the garden dies!-------------------------------------
-    function rainAmount(mm){
-        if (mm < 40) {
-            return "You need to give your plant " + `${40 - mm}` + "mm of water"
-        } else {
-            return "Your plant has had more than enough water for today!"
-        }
-    }
+    // function rainAmount(mm){
+    //     if (mm < 40) {
+    //         return "You need to give your plant " + `${40 - mm}` + "mm of water"
+    //     } else {
+    //         return "Your plant has had more than enough water for today!"
+    //     }
+    // }
 
     // ------------------------------------------161.Multiple of index--------------------------------------------------
-    function multipleOfIndex(arr) {
-        let res=[]
-        for (let i=0; i<arr.length; i++) {
-            if (arr[i] % i == 0 || arr[i]==0) {
-                res.push(arr[i])
-            }
-        }
-        return res
-    }
+    // function multipleOfIndex(arr) {
+    //     let res=[]
+    //     for (let i=0; i<arr.length; i++) {
+    //         if (arr[i] % i == 0 || arr[i]==0) {
+    //             res.push(arr[i])
+    //         }
+    //     }
+    //     return res
+    // }
 
     // -----------------------------------162.Grasshopper - Function syntax debugging-----------------------------------
-    function main (verb, noun) {
-        return verb + noun
+    // function main (verb, noun) {
+    //     return verb + noun
+    // }
+
+    // ------------------------------------------163.Holiday VIII - Duty Free-------------------------------------------
+    function dutyFree(normPrice, discount, hol){
+        return Math.floor(hol/(normPrice/100*discount))
+    }
+
+    // ------------------------------------------164.Convert to Binary--------------------------------------------------
+    function toBinary(n){
+        return parseInt(n.toString(2))
+    }
+
+    // ------------------------------------------165.Basic data types--Object-------------------------------------------
+    function animal(obj){
+        return `This ${obj.color} ${obj.name} has ${obj.legs} legs.`
+    }
+
+    // ------------------------------------------166.SpeedCode #2 - Array Madness---------------------------------------
+    function arrayMadness(a, b) {
+        let sa = 0
+        for (let i=0; i<a.length; i++) {
+            sa += a[i]**2
+        }
+
+        let sb = 0
+        for (let i=0; i<b.length; i++) {
+            sb += b[i]**3
+        }
+        return sa > sb
     }
 
 
-    // ------------------------------------------163.----------------------------------------------------------
-    // ------------------------------------------164.----------------------------------------------------------
-    // ------------------------------------------165.----------------------------------------------------------
-    // ------------------------------------------166.----------------------------------------------------------
+
+
+
+
     // ------------------------------------------167.----------------------------------------------------------
     // ------------------------------------------168.----------------------------------------------------------
     // ------------------------------------------169.----------------------------------------------------------
