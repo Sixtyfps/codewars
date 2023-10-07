@@ -1389,43 +1389,64 @@
     // }
 
     // ------------------------------------------163.Holiday VIII - Duty Free-------------------------------------------
-    function dutyFree(normPrice, discount, hol){
-        return Math.floor(hol/(normPrice/100*discount))
-    }
+    // function dutyFree(normPrice, discount, hol){
+    //     return Math.floor(hol/(normPrice/100*discount))
+    // }
 
     // ------------------------------------------164.Convert to Binary--------------------------------------------------
-    function toBinary(n){
-        return parseInt(n.toString(2))
-    }
+    // function toBinary(n){
+    //     return parseInt(n.toString(2))
+    // }
 
     // ------------------------------------------165.Basic data types--Object-------------------------------------------
-    function animal(obj){
-        return `This ${obj.color} ${obj.name} has ${obj.legs} legs.`
-    }
+    // function animal(obj){
+    //     return `This ${obj.color} ${obj.name} has ${obj.legs} legs.`
+    // }
 
     // ------------------------------------------166.SpeedCode #2 - Array Madness---------------------------------------
-    function arrayMadness(a, b) {
-        let sa = 0
-        for (let i=0; i<a.length; i++) {
-            sa += a[i]**2
-        }
+    // function arrayMadness(a, b) {
+    //     let sa = 0
+    //     for (let i=0; i<a.length; i++) {
+    //         sa += a[i]**2
+    //     }
+    //
+    //     let sb = 0
+    //     for (let i=0; i<b.length; i++) {
+    //         sb += b[i]**3
+    //     }
+    //     return sa > sb
+    // }
 
-        let sb = 0
-        for (let i=0; i<b.length; i++) {
-            sb += b[i]**3
-        }
-        return sa > sb
+    // ------------------------------------------167.String cleaning----------------------------------------------------
+    function stringClean(s) {
+        return s.replace(/[0-9]/g, '')
     }
 
+    // ------------------------------------------168.Take the Derivative------------------------------------------------
+    function derive(c, exp) {
+        return `${c * exp}x^${exp - 1}`
+    }
 
+    // ------------------------------------------169.Dollars and Cents--------------------------------------------------
+    function formatMoney(num) {
+        let p = num.toString().indexOf(".")
 
+        if (Number.isInteger(num) ) {
+            return '$' + num + '.00'
+        }
+        if (num.toString().substring(p + 1).length == 1) {
+            return '$' + num + '0'
+        }
+        if (num.toString().substring(p + 1).length == 2) {
+            return '$' + num
+        }
+    }
 
+    // ---------------------------------------170.Grasshopper - Array Mean----------------------------------------------
+    var findAverage = function (arr) {
+        return arr.reduce((a,b) => a+b)/arr.length
+    }
 
-
-    // ------------------------------------------167.----------------------------------------------------------
-    // ------------------------------------------168.----------------------------------------------------------
-    // ------------------------------------------169.----------------------------------------------------------
-    // ------------------------------------------170.----------------------------------------------------------
     // ------------------------------------------171.----------------------------------------------------------
     // ------------------------------------------172.----------------------------------------------------------
     // ------------------------------------------173.----------------------------------------------------------
