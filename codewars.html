@@ -1418,39 +1418,62 @@
     // }
 
     // ------------------------------------------167.String cleaning----------------------------------------------------
-    function stringClean(s) {
-        return s.replace(/[0-9]/g, '')
-    }
+    // function stringClean(s) {
+    //     return s.replace(/[0-9]/g, '')
+    // }
 
     // ------------------------------------------168.Take the Derivative------------------------------------------------
-    function derive(c, exp) {
-        return `${c * exp}x^${exp - 1}`
-    }
+    // function derive(c, exp) {
+    //     return `${c * exp}x^${exp - 1}`
+    // }
 
     // ------------------------------------------169.Dollars and Cents--------------------------------------------------
-    function formatMoney(num) {
-        let p = num.toString().indexOf(".")
-
-        if (Number.isInteger(num) ) {
-            return '$' + num + '.00'
-        }
-        if (num.toString().substring(p + 1).length == 1) {
-            return '$' + num + '0'
-        }
-        if (num.toString().substring(p + 1).length == 2) {
-            return '$' + num
-        }
-    }
+    // function formatMoney(num) {
+    //     let p = num.toString().indexOf(".")
+    //
+    //     if (Number.isInteger(num) ) {
+    //         return '$' + num + '.00'
+    //     }
+    //     if (num.toString().substring(p + 1).length == 1) {
+    //         return '$' + num + '0'
+    //     }
+    //     if (num.toString().substring(p + 1).length == 2) {
+    //         return '$' + num
+    //     }
+    // }
 
     // ---------------------------------------170.Grasshopper - Array Mean----------------------------------------------
-    var findAverage = function (arr) {
-        return arr.reduce((a,b) => a+b)/arr.length
+    // var findAverage = function (arr) {
+    //     return arr.reduce((a,b) => a+b)/arr.length
+    // }
+
+    // ------------------------------171.Enumerable Magic - Does My List Include This?----------------------------------
+    function include(arr, item) {
+        return arr.includes(item)
     }
 
-    // ------------------------------------------171.----------------------------------------------------------
-    // ------------------------------------------172.----------------------------------------------------------
-    // ------------------------------------------173.----------------------------------------------------------
-    // ------------------------------------------174.----------------------------------------------------------
+    // ----------------------------------------172.How old will I be in 2099?-------------------------------------------
+    function calculateAge(a, b) {
+        return a === b ? "You were born this very year!"
+            : a < b ? `You are ${b - a === 1 ? `${b - a} year old.` : `${b - a} years old.`}`
+                : `You will be born in ${a - b === 1 ? `${a - b} year.` : `${a - b} years.`}`
+    }
+
+    // --------------------------------------173.How many lightsabers do you own?---------------------------------------
+    function howManyLightsabersDoYouOwn(name) {
+        switch (name) {
+            case "Zach":
+                return 18
+            default:
+                return 0
+        }
+    }
+
+    // ------------------------------------------174.Find the Remainder-------------------------------------------------
+    function remainder(n, m){
+        return n>m? n%m : m%n
+    }
+
     // ------------------------------------------175.----------------------------------------------------------
     // ------------------------------------------176.----------------------------------------------------------
     // ------------------------------------------177.----------------------------------------------------------
