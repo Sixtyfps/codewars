@@ -1517,54 +1517,90 @@
 
 
     // ------------------------------------------179.No Loops 2 - You only need one-------------------------------------
-    function check(a, x) {
-        return a.includes(x)
-    }
+    // function check(a, x) {
+    //     return a.includes(x)
+    // }
 
     // ------------------------------------------180.Do you speak "English"? -------------------------------------------
-    function spEng(sentence) {
-        return sentence.toLowerCase().includes("english")
-    }
+    // function spEng(sentence) {
+    //     return sentence.toLowerCase().includes("english")
+    // }
 
     // ------------------------------------------181.Sum of differences in array----------------------------------------
-    function sumOfDifferences(arr) {
-        return arr.length>1 ? Math.max(...arr)-Math.min(...arr) : 0
-    }
+    // function sumOfDifferences(arr) {
+    //     return arr.length>1 ? Math.max(...arr)-Math.min(...arr) : 0
+    // }
 
     // ------------------------------------------182.Basic data types--String-------------------------------------------
-    var a1="A",a2="a",b1="B",b2="b",c1="C",c2="c",d1="D",d2="d",e1="E",e2="e",n1="N",n2="n"
-    function Dad(){
-        //select some variable to combine "Dad"
-        return d1+a2+d2;
-    }
-    function Bee(){
-        //select some variable to combine "Bee"
-        return b1+e2+e2;
-    }
-    function banana(){
-        //select some variable to combine "banana"
-        return b2+a2+n2+a2+n2+a2;
+    // var a1="A",a2="a",b1="B",b2="b",c1="C",c2="c",d1="D",d2="d",e1="E",e2="e",n1="N",n2="n"
+    // function Dad(){
+    //     //select some variable to combine "Dad"
+    //     return d1+a2+d2;
+    // }
+    // function Bee(){
+    //     //select some variable to combine "Bee"
+    //     return b1+e2+e2;
+    // }
+    // function banana(){
+    //     //select some variable to combine "banana"
+    //     return b2+a2+n2+a2+n2+a2;
+    // }
+    //
+    // //answer some questions if you finished works above
+    // function answer1(){
+    //     //the answer should be "yes" or "no"
+    //     return "no";
+    // }
+    // function answer2(){
+    //     //the answer should be "yes" or "no"
+    //     return "no";
+    // }
+    // function answer3(){
+    //     //the answer should be "yes" or "no"
+    //     return "yes";
+    // }
+
+    // ------------------------------------------183.Return the day-----------------------------------------------------
+    function whatday(num) {
+        switch (num) {
+            case 1:
+                return "Sunday"
+            case 2:
+                return "Monday"
+            case 3:
+                return "Tuesday"
+            case 4:
+                return "Wednesday"
+            case 5:
+                return "Thursday"
+            case 6:
+                return "Friday"
+            case 7:
+                return "Saturday"
+            default:
+                return "Wrong, please enter a number between 1 and 7"
+        }
     }
 
-    //answer some questions if you finished works above
-    function answer1(){
-        //the answer should be "yes" or "no"
-        return "no";
-    }
-    function answer2(){
-        //the answer should be "yes" or "no"
-        return "no";
-    }
-    function answer3(){
-        //the answer should be "yes" or "no"
-        return "yes";
+    // ------------------------------------184.Find out whether the shape is a cube-------------------------------------
+    var cubeChecker = function (volume, side) {
+        return Math.cbrt(volume) > 0 && Math.cbrt(volume) === side
+    };
+
+    // ------------------------------------------185.Sum of Multiples---------------------------------------------------
+    function sumMul(n, m) {
+        if (n >=m ) return "INVALID"
+        let res=0
+        for (let i=n; i<m; i+=n) {
+            res+=i
+        }
+        return res
     }
 
-    // ------------------------------------------183.----------------------------------------------------------
-    // ------------------------------------------184.----------------------------------------------------------
-    // ------------------------------------------185.----------------------------------------------------------
-    // ------------------------------------------186.----------------------------------------------------------
-
+    // -------------------------------186.Printing Array elements with Comma delimiters----------------------------------------------------------
+    function printArray(arr){
+        return arr.toString()
+    }
 
     // ------------------------------------------187.----------------------------------------------------------
     // ------------------------------------------188.----------------------------------------------------------
