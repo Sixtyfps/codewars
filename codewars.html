@@ -1561,50 +1561,63 @@
     // }
 
     // ------------------------------------------183.Return the day-----------------------------------------------------
-    function whatday(num) {
-        switch (num) {
-            case 1:
-                return "Sunday"
-            case 2:
-                return "Monday"
-            case 3:
-                return "Tuesday"
-            case 4:
-                return "Wednesday"
-            case 5:
-                return "Thursday"
-            case 6:
-                return "Friday"
-            case 7:
-                return "Saturday"
-            default:
-                return "Wrong, please enter a number between 1 and 7"
-        }
-    }
+    // function whatday(num) {
+    //     switch (num) {
+    //         case 1:
+    //             return "Sunday"
+    //         case 2:
+    //             return "Monday"
+    //         case 3:
+    //             return "Tuesday"
+    //         case 4:
+    //             return "Wednesday"
+    //         case 5:
+    //             return "Thursday"
+    //         case 6:
+    //             return "Friday"
+    //         case 7:
+    //             return "Saturday"
+    //         default:
+    //             return "Wrong, please enter a number between 1 and 7"
+    //     }
+    // }
 
     // ------------------------------------184.Find out whether the shape is a cube-------------------------------------
-    var cubeChecker = function (volume, side) {
-        return Math.cbrt(volume) > 0 && Math.cbrt(volume) === side
-    };
+    // var cubeChecker = function (volume, side) {
+    //     return Math.cbrt(volume) > 0 && Math.cbrt(volume) === side
+    // };
 
     // ------------------------------------------185.Sum of Multiples---------------------------------------------------
-    function sumMul(n, m) {
-        if (n >=m ) return "INVALID"
-        let res=0
-        for (let i=n; i<m; i+=n) {
-            res+=i
-        }
-        return res
+    // function sumMul(n, m) {
+    //     if (n >=m ) return "INVALID"
+    //     let res=0
+    //     for (let i=n; i<m; i+=n) {
+    //         res+=i
+    //     }
+    //     return res
+    // }
+
+    // -------------------------------186.Printing Array elements with Comma delimiters---------------------------------
+    // function printArray(arr){
+    //     return arr.toString()
+    // }
+
+    // --------------------------------187.Remove First and Last Character Part Two-------------------------------------
+    function array(str) {
+        return str.split(',').slice(1, -1).join(' ') || null
+
     }
 
-    // -------------------------------186.Printing Array elements with Comma delimiters----------------------------------------------------------
-    function printArray(arr){
-        return arr.toString()
+    // ------------------------------------------188.Price of Mangoes---------------------------------------------------
+    function mango(quantity, price){
+        return quantity*price - price*(Math.floor(quantity/3))
     }
 
-    // ------------------------------------------187.----------------------------------------------------------
-    // ------------------------------------------188.----------------------------------------------------------
-    // ------------------------------------------189.----------------------------------------------------------
+    // ------------------------------------------189.Closest elevator---------------------------------------------------
+    function elevator(left, right, call){
+        return Math.abs(call-left)<Math.abs(call-right)? 'left':'right'
+    }
+
     // ------------------------------------------190.----------------------------------------------------------
 
 
