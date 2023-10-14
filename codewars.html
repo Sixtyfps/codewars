@@ -1618,49 +1618,75 @@
     // }
 
     // --------------------------------190.How many stairs will Suzuki climb in 20 years?-------------------------------
-    function stairsIn20(s){
-        let sum=0
-        for (let i=0; i<s.length; i++) {
-            sum = sum + s[i].reduce((a,b) => a+b)
-        }
-        return sum*20
-    }
+    // function stairsIn20(s){
+    //     let sum=0
+    //     for (let i=0; i<s.length; i++) {
+    //         sum = sum + s[i].reduce((a,b) => a+b)
+    //     }
+    //     return sum*20
+    // }
 
     // ------------------------------------------191.Area of a Square---------------------------------------------------
-    function squareArea(A){
-        let r = 2*A/Math.PI
-        return r*r
-    }
+    // function squareArea(A){
+    //     let r = 2*A/Math.PI
+    //     return r*r
+    // }
 
     // --------------------------------------192. Conditional statement--switch----------------------------------------------------------
-    function howManydays(month){
-        let days;
-        switch (month){
-            case 2:
-                days = 28
-                break
-            case 4:
-                days = 30
-                break
-            case 6:
-                days = 30
-                break
-            case 9:
-                days = 30
-                break
-            case 11:
-                days = 30
-                break
-            default:
-                days = 31
-        }
-        return days;
+    // function howManydays(month){
+    //     let days;
+    //     switch (month){
+    //         case 2:
+    //             days = 28
+    //             break
+    //         case 4:
+    //             days = 30
+    //             break
+    //         case 6:
+    //             days = 30
+    //             break
+    //         case 9:
+    //             days = 30
+    //             break
+    //         case 11:
+    //             days = 30
+    //             break
+    //         default:
+    //             days = 31
+    //     }
+    //     return days;
+    // }
+
+    // ----------------------------193.Remove all exclamation marks from the end of sentence----------------------------------------------------------
+    function remove (str) {
+        return str.replace(/!+$/g, "")
     }
 
-    // ------------------------------------------193.----------------------------------------------------------
-    // ------------------------------------------194.----------------------------------------------------------
-    // ------------------------------------------195.----------------------------------------------------------
-    // ------------------------------------------196.----------------------------------------------------------
+    // ------------------------------------------------194.USD => CNY----------------------------------------------------------
+    function usdcny(usd) {
+        return `${(usd*6.75).toFixed(2)} Chinese Yuan`
+    }
+
+    // --------------------------------------195.Formatting decimal places #0----------------------------------------------------------
+    function twoDecimalPlaces(n) {
+        return +n.toFixed(2)
+    }
+
+    // ----------------------------------------196.Define a card suit----------------------------------------------------------
+    function defineSuit(card) {
+        if(card.includes('♣')) {
+            return 'clubs'
+        }
+        if(card.includes('♦')) {
+            return 'diamonds'
+        }
+        if(card.includes('♥')) {
+            return 'hearts'
+        }
+        if(card.includes('♠')) {
+            return 'spades'
+        }
+    }
 
     // ------------------------------------------197.----------------------------------------------------------
     // ------------------------------------------198.----------------------------------------------------------
