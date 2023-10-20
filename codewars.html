@@ -1832,33 +1832,62 @@
     // ])
 
     // -----------------------------212.Boolean and conditional statements if..else-------------------------------------
-    function trueOrFalse(val){
-        return val? 'true' : 'false'
-    }
+    // function trueOrFalse(val){
+    //     return val? 'true' : 'false'
+    // }
 
     // ------------------------------------------213.Kata Example Twist-------------------------------------------------
-    var websites = []
-
-    for (let i=0; i<1000; i++) {
-        websites.push("codewars" )
-    }
+    // var websites = []
+    //
+    // for (let i=0; i<1000; i++) {
+    //     websites.push("codewars" )
+    // }
 
     // ------------------------------------------214.Swap Values--------------------------------------------------------
-    function swapValues(args) {
-        var temp = args[0];
-        args[0] = args[1];
-        args[1] = temp;
-    }
+    // function swapValues(args) {
+    //     var temp = args[0];
+    //     args[0] = args[1];
+    //     args[1] = temp;
+    // }
 
     // --------------------------------------215.Are arrow functions odd?-----------------------------------------------
-    function odds(values){
-        return values.filter( v => v % 2 !==0);
+    // function odds(values){
+    //     return values.filter( v => v % 2 !==0);
+    // }
+
+    // --------------------------------------216.Is there a vowel in there?---------------------------------------------
+    function isVow(arr){
+        return arr.map(el => el === 97?
+            el = 'a' : el === 101?
+                el='e' : el===105?
+                    el='i' : el===111?
+                        el='o': el===117?
+                            el='u' : el)
+    }
+    //---------2nd version----------
+    const isVow1 = a => a.map(el=>'aeiou'.includes(String.fromCharCode(el)) ? String.fromCharCode(el) : el)
+
+    // -----------------------------------217.Who is going to pay for the wall?-----------------------------------------
+    function whoIsPaying(name){
+        if(name.length <=2) {
+            return [name]
+        } else {
+            return [name, name.slice(0,2)]
+        }
     }
 
-    // ------------------------------------------216.----------------------------------------------------------
-    // ------------------------------------------217.----------------------------------------------------------
-    // ------------------------------------------218.----------------------------------------------------------
-    // ------------------------------------------219.----------------------------------------------------------
+    // ----------------------------------------218.Sleigh Authentication------------------------------------------------
+    function Sleigh() {}
+
+    Sleigh.prototype.authenticate = function(name, password) {
+        return (name === "Santa Claus" && password === "Ho Ho Ho!")
+    };
+
+    // ----------------------------------------219.Get number from string-----------------------------------------------
+    function getNumberFromString(s) {
+        return +s.replace(/\D/g,'')
+    }
+
     // ------------------------------------------220.----------------------------------------------------------
     // ------------------------------------------221.----------------------------------------------------------
     // ------------------------------------------222.----------------------------------------------------------
