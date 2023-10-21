@@ -1856,40 +1856,48 @@
     // }
 
     // --------------------------------------216.Is there a vowel in there?---------------------------------------------
-    function isVow(arr){
-        return arr.map(el => el === 97?
-            el = 'a' : el === 101?
-                el='e' : el===105?
-                    el='i' : el===111?
-                        el='o': el===117?
-                            el='u' : el)
-    }
+    // function isVow(arr){
+    //     return arr.map(el => el === 97?
+    //         el = 'a' : el === 101?
+    //             el='e' : el===105?
+    //                 el='i' : el===111?
+    //                     el='o': el===117?
+    //                         el='u' : el)
+    // }
     //---------2nd version----------
-    const isVow1 = a => a.map(el=>'aeiou'.includes(String.fromCharCode(el)) ? String.fromCharCode(el) : el)
+    // const isVow1 = a => a.map(el=>'aeiou'.includes(String.fromCharCode(el)) ? String.fromCharCode(el) : el)
 
     // -----------------------------------217.Who is going to pay for the wall?-----------------------------------------
-    function whoIsPaying(name){
-        if(name.length <=2) {
-            return [name]
-        } else {
-            return [name, name.slice(0,2)]
-        }
-    }
+    // function whoIsPaying(name){
+    //     if(name.length <=2) {
+    //         return [name]
+    //     } else {
+    //         return [name, name.slice(0,2)]
+    //     }
+    // }
 
     // ----------------------------------------218.Sleigh Authentication------------------------------------------------
-    function Sleigh() {}
-
-    Sleigh.prototype.authenticate = function(name, password) {
-        return (name === "Santa Claus" && password === "Ho Ho Ho!")
-    };
+    // function Sleigh() {}
+    //
+    // Sleigh.prototype.authenticate = function(name, password) {
+    //     return (name === "Santa Claus" && password === "Ho Ho Ho!")
+    // };
 
     // ----------------------------------------219.Get number from string-----------------------------------------------
-    function getNumberFromString(s) {
-        return +s.replace(/\D/g,'')
+    // function getNumberFromString(s) {
+    //     return +s.replace(/\D/g,'')
+    // }
+
+    // --------------------------------220.Miles per gallon to kilometers per liter----------------------------------------------------------
+    function converter (mpg) {
+        return +(mpg*1.609344/4.54609188).toFixed(2)
     }
 
-    // ------------------------------------------220.----------------------------------------------------------
-    // ------------------------------------------221.----------------------------------------------------------
+    // -------------------------------------221.A Strange Trip to the Market----------------------------------------------------------
+    function isLockNessMonster(s) {
+        return s.includes("tree fiddy") || s.includes("3.50")
+    }
+
     // ------------------------------------------222.----------------------------------------------------------
     // ------------------------------------------223.----------------------------------------------------------
     // ------------------------------------------224.----------------------------------------------------------
