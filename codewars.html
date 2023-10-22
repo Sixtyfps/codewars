@@ -1888,18 +1888,39 @@
     //     return +s.replace(/\D/g,'')
     // }
 
-    // --------------------------------220.Miles per gallon to kilometers per liter----------------------------------------------------------
-    function converter (mpg) {
-        return +(mpg*1.609344/4.54609188).toFixed(2)
+    // --------------------------------220.Miles per gallon to kilometers per liter-------------------------------------
+    // function converter (mpg) {
+    //     return +(mpg*1.609344/4.54609188).toFixed(2)
+    // }
+
+    // -------------------------------------221.A Strange Trip to the Market--------------------------------------------
+    // function isLockNessMonster(s) {
+    //     return s.includes("tree fiddy") || s.includes("3.50")
+    // }
+
+    // -------------------------------------222.Holiday VI - Shark Pontoon----------------------------------------------
+    function shark(pontoonDistance, sharkDistance, youSpeed, sharkSpeed, dolphin){
+        return sharkDistance/(dolphin? sharkSpeed/2 : sharkSpeed) > pontoonDistance/youSpeed? "Alive!" : "Shark Bait!"
     }
 
-    // -------------------------------------221.A Strange Trip to the Market----------------------------------------------------------
-    function isLockNessMonster(s) {
-        return s.includes("tree fiddy") || s.includes("3.50")
+    // -----------------------------------------223.Tip Calculator------------------------------------------------------
+    function calculateTip(amount, rating) {
+        switch (rating.toLowerCase()) {
+            case 'terrible':
+                return 0;
+            case 'poor':
+                return Math.ceil((amount/100)*5);
+            case 'good':
+                return Math.ceil(amount/10);
+            case 'great':
+                return Math.ceil((amount/100)*15);
+            case 'excellent':
+                return Math.ceil(amount/5);
+            default:
+                return "Rating not recognised";
+        }
     }
 
-    // ------------------------------------------222.----------------------------------------------------------
-    // ------------------------------------------223.----------------------------------------------------------
     // ------------------------------------------224.----------------------------------------------------------
     // ------------------------------------------225.----------------------------------------------------------
     // ------------------------------------------226.----------------------------------------------------------
