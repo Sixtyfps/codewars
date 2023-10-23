@@ -1899,34 +1899,70 @@
     // }
 
     // -------------------------------------222.Holiday VI - Shark Pontoon----------------------------------------------
-    function shark(pontoonDistance, sharkDistance, youSpeed, sharkSpeed, dolphin){
-        return sharkDistance/(dolphin? sharkSpeed/2 : sharkSpeed) > pontoonDistance/youSpeed? "Alive!" : "Shark Bait!"
-    }
+    // function shark(pontoonDistance, sharkDistance, youSpeed, sharkSpeed, dolphin){
+    //     return sharkDistance/(dolphin? sharkSpeed/2 : sharkSpeed) > pontoonDistance/youSpeed? "Alive!" : "Shark Bait!"
+    // }
 
     // -----------------------------------------223.Tip Calculator------------------------------------------------------
-    function calculateTip(amount, rating) {
-        switch (rating.toLowerCase()) {
-            case 'terrible':
-                return 0;
-            case 'poor':
-                return Math.ceil((amount/100)*5);
-            case 'good':
-                return Math.ceil(amount/10);
-            case 'great':
-                return Math.ceil((amount/100)*15);
-            case 'excellent':
-                return Math.ceil(amount/5);
-            default:
-                return "Rating not recognised";
+    // function calculateTip(amount, rating) {
+    //     switch (rating.toLowerCase()) {
+    //         case 'terrible':
+    //             return 0;
+    //         case 'poor':
+    //             return Math.ceil((amount/100)*5);
+    //         case 'good':
+    //             return Math.ceil(amount/10);
+    //         case 'great':
+    //             return Math.ceil((amount/100)*15);
+    //         case 'excellent':
+    //             return Math.ceil(amount/5);
+    //         default:
+    //             return "Rating not recognised";
+    //     }
+    // }
+
+    // -------------------------------------224.validate code with simple regex-----------------------------------------
+    function validateCode (code) {
+        return /^[1-3]/.test(code)
+    }
+
+    // --------------------------------------225.get ascii value of character-------------------------------------------
+    function getASCII(c){
+        return c.charCodeAt(0)
+    }
+
+    // ----------------------------------------------226.Power----------------------------------------------------------
+    function numberToPower(number, power){
+        let res = 1
+        for (let i=0; i<power; i++) {
+            res = res*number
+        }
+        return res
+    }
+
+    // ------------------------------------------227.OOP: Object Oriented Piracy----------------------------------------
+    function Ship(draft,crew) {
+        this.draft = draft;
+        this.crew = crew;
+        this.isWorthIt =(draft, crew)=> {
+            return (this.draft - this.crew * 1.5) > 20
         }
     }
 
-    // ------------------------------------------224.----------------------------------------------------------
-    // ------------------------------------------225.----------------------------------------------------------
-    // ------------------------------------------226.----------------------------------------------------------
-    // ------------------------------------------227.----------------------------------------------------------
-    // ------------------------------------------228.----------------------------------------------------------
-    // ------------------------------------------229.----------------------------------------------------------
+    // ------------------------------------------228.The 'if' function--------------------------------------------------
+    function _if(bool, func1, func2) {
+        if(bool) {
+            func1()
+        } else {
+            func2()
+        }
+    }
+
+    // ------------------------------------------229.Duck Duck Goose----------------------------------------------------
+    function duckDuckGoose(players, goose) {
+        return players[(goose-1)%players.length].name
+    }
+
     // ------------------------------------------230.----------------------------------------------------------
     // ------------------------------------------231.----------------------------------------------------------
     // ------------------------------------------232.----------------------------------------------------------
