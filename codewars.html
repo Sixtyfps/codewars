@@ -1997,35 +1997,70 @@
     // }
 
     // -------------------------------------------236.Template Strings--------------------------------------------------
-    var TempleStrings = function (obj, feature) {
-        return `${obj} are ${feature}`
-    }
+    // var TempleStrings = function (obj, feature) {
+    //     return `${obj} are ${feature}`
+    // }
 
     // -------------------237.For UFC Fans (Total Beginners): Conor McGregor vs George Saint Pierre---------------------
-    var quote = function (fighter) {
-        return fighter.toLowerCase() === 'george saint pierre' ? "I am not impressed by your performance."
-            : "I'd like to take this chance to apologize.. To absolutely NOBODY!"
-    }
+    // var quote = function (fighter) {
+    //     return fighter.toLowerCase() === 'george saint pierre' ? "I am not impressed by your performance."
+    //         : "I'd like to take this chance to apologize.. To absolutely NOBODY!"
+    // }
 
     // -----------------------------------238.Enumerable Magic #1 - True for All?---------------------------------------
-    function all( arr, fun ){
-        for (let i=0; i<arr.length; i++) {
-            if (fun(arr[i]) == false) {
-                return false
-            }
-        }
-        return true
-    }
+    // function all( arr, fun ){
+    //     for (let i=0; i<arr.length; i++) {
+    //         if (fun(arr[i]) == false) {
+    //             return false
+    //         }
+    //     }
+    //     return true
+    // }
 
     // ------------------------------------------239.Is it a number?----------------------------------------------------
-    function isDigit(s) {
-        s==parseFloat(s)
+    // function isDigit(s) {
+    //     s==parseFloat(s)
+    // }
+
+    // ------------------------------------------240.Return to Sanity---------------------------------------------------
+    function mystery() {
+        return {sanity: 'Hello'};
     }
 
-    // ------------------------------------------240.----------------------------------------------------------
-    // ------------------------------------------241.----------------------------------------------------------
-    // ------------------------------------------242.----------------------------------------------------------
-    // ------------------------------------------243.----------------------------------------------------------
+    // ------------------------------------241.Leonardo Dicaprio and Oscars---------------------------------------------
+    function leo(oscar){
+        if(oscar===88) {
+            return "Leo finally won the oscar! Leo is happy"
+        }
+        if(oscar===86) {
+            return "Not even for Wolf of wallstreet?!"
+        }
+        if(oscar<86 || oscar===87) {
+            return "When will you give Leo an Oscar?"
+        }
+        else {
+            return "Leo got one already!"
+        }
+    }
+
+    // --------------------------------242.Fix the Bugs (Syntax) - My First Kata----------------------------------------
+    myFirstKata = (a, b) => {
+        if (typeof(a) != "number" || typeof(b) != "number") {
+            return false
+        } else {
+            return (a % b + b % a)
+        }
+    }
+
+    // ------------------------------------------243.ASCII Total--------------------------------------------------------
+    function uniTotal (str) {
+        let sum=0
+        for(let i=0; i<str.length; i++) {
+            sum += str[i].charCodeAt(0)
+        }
+        return sum
+    }
+
     // ------------------------------------------244.----------------------------------------------------------
     // ------------------------------------------245.----------------------------------------------------------
     // ------------------------------------------246.----------------------------------------------------------
