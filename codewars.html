@@ -2023,48 +2023,71 @@
     // }
 
     // ------------------------------------------240.Return to Sanity---------------------------------------------------
-    function mystery() {
-        return {sanity: 'Hello'};
-    }
+    // function mystery() {
+    //     return {sanity: 'Hello'};
+    // }
 
     // ------------------------------------241.Leonardo Dicaprio and Oscars---------------------------------------------
-    function leo(oscar){
-        if(oscar===88) {
-            return "Leo finally won the oscar! Leo is happy"
-        }
-        if(oscar===86) {
-            return "Not even for Wolf of wallstreet?!"
-        }
-        if(oscar<86 || oscar===87) {
-            return "When will you give Leo an Oscar?"
-        }
-        else {
-            return "Leo got one already!"
-        }
-    }
+    // function leo(oscar){
+    //     if(oscar===88) {
+    //         return "Leo finally won the oscar! Leo is happy"
+    //     }
+    //     if(oscar===86) {
+    //         return "Not even for Wolf of wallstreet?!"
+    //     }
+    //     if(oscar<86 || oscar===87) {
+    //         return "When will you give Leo an Oscar?"
+    //     }
+    //     else {
+    //         return "Leo got one already!"
+    //     }
+    // }
 
     // --------------------------------242.Fix the Bugs (Syntax) - My First Kata----------------------------------------
-    myFirstKata = (a, b) => {
-        if (typeof(a) != "number" || typeof(b) != "number") {
-            return false
-        } else {
-            return (a % b + b % a)
-        }
-    }
+    // myFirstKata = (a, b) => {
+    //     if (typeof(a) != "number" || typeof(b) != "number") {
+    //         return false
+    //     } else {
+    //         return (a % b + b % a)
+    //     }
+    // }
 
     // ------------------------------------------243.ASCII Total--------------------------------------------------------
-    function uniTotal (str) {
-        let sum=0
-        for(let i=0; i<str.length; i++) {
-            sum += str[i].charCodeAt(0)
+    // function uniTotal (str) {
+    //     let sum=0
+    //     for(let i=0; i<str.length; i++) {
+    //         sum += str[i].charCodeAt(0)
+    //     }
+    //     return sum
+    // }
+
+    // ----------------------------------------244.Classy Classes-------------------------------------------------------
+    class Person {
+        constructor(name, age) {
+            this.info = `${name}s age is ${age}`
         }
-        return sum
     }
 
-    // ------------------------------------------244.----------------------------------------------------------
-    // ------------------------------------------245.----------------------------------------------------------
-    // ------------------------------------------246.----------------------------------------------------------
-    // ------------------------------------------247.----------------------------------------------------------
+    // ---------------------------------------245.Multiply the number---------------------------------------------------
+    function multiply(n) {
+        n > 0 ? len = String(n).length : len = String(n).length - 1
+        return n * (5 ** len)
+    }
+
+    // ----------------------------------246.Chuck Norris VII - True or False?------------------------------------------
+    function ifChuckSaysSo() {
+        return !true
+    }
+
+    // ------------------------------------------247.Draw stairs--------------------------------------------------------
+    function drawStairs(n) {
+        let res = ''
+        for (let i = 0; i < n; i++) {
+            res = res + ' '.repeat(i)+'I\n'
+        }
+        return res.slice(0,-1)
+    }
+
     // ------------------------------------------248.----------------------------------------------------------
     // ------------------------------------------249.----------------------------------------------------------
     // ------------------------------------------250.----------------------------------------------------------
