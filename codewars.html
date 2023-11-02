@@ -2144,48 +2144,72 @@
     // }
 
     // ------------------------------------------255.Unexpected parsing-------------------------------------------------
-//     function getStatus(isBusy) {
-// //   if (isBusy) {
-// //      return {status: "busy"}
-// //   } else {
-// //     return {status: "available"}
-// //   }
-//         return isBusy? {status: "busy"} : {status: "available"}
-//     }
+    //     function getStatus(isBusy) {
+    // //   if (isBusy) {
+    // //      return {status: "busy"}
+    // //   } else {
+    // //     return {status: "available"}
+    // //   }
+    //         return isBusy? {status: "busy"} : {status: "available"}
+    //     }
 
     // -------------------------------------256.Basic subclasses - Adam and Eve-----------------------------------------
-    class God{
-        /**
-         * @returns Human[]
-         */
-        static create(){
-            const Adam = new Man()
-            const Eve = new Woman()
-            return [Adam, Eve]
+    // class God {
+    //     /**
+    //      * @returns Human[]
+    //      */
+    //     static create() {
+    //         const Adam = new Man()
+    //         const Eve = new Woman()
+    //         return [Adam, Eve]
+    //     }
+    // }
+    //
+    // class Human {
+    //     constructor() {
+    //     }
+    // }
+    //
+    // class Man extends Human {
+    //     constructor() {
+    //         super()
+    //     }
+    // }
+    //
+    // class Woman extends Human {
+    //     constructor() {
+    //         super()
+    //     }
+    // }
+
+    // ------------------------------------257.Compare within margin----------------------------------------------------
+    // closeCompare = (a, b, margin) => Math.abs(a-b) <= margin? 0 : Math.sign(a-b)
+
+    // ---------------------------258.Training JS #9: loop statement --while and do..while------------------------------
+    function padIt(str, n) {
+        while (n>0) {
+            if(n%2) {
+                str='*'+str
+            }else{
+                str=str+'*'
+            }
+            n--
         }
+        return str
     }
 
-    class Human {
-        constructor() {}
-    }
+    // ---------------------------------------259.Are they opposite?----------------------------------------------------------
+    function isOpposite(s1,s2){
+        if(s1 === s2 || s1.toLowerCase() !== s2.toLowerCase()) return false;
 
-    class Man extends Human {
-        constructor() {
-            super()
+        for(var i = 0; i < s1.length; i++) {
+            if(s1.charAt(i) === s2.charAt(i)) return false;
         }
+
+        return true;
+
     }
 
-    class Woman extends Human {
-        constructor() {
-            super()
-        }
-    }
-
-    // --------------------------257.Training JS #9: loop statement --while and do..while-------------------------------
-
-
-    // ------------------------------------------258.----------------------------------------------------------
-    // ------------------------------------------259.----------------------------------------------------------
     // ------------------------------------------260.----------------------------------------------------------
     // ------------------------------------------261.----------------------------------------------------------
     // ------------------------------------------262.----------------------------------------------------------
