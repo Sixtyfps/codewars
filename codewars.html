@@ -2186,34 +2186,57 @@
     // closeCompare = (a, b, margin) => Math.abs(a-b) <= margin? 0 : Math.sign(a-b)
 
     // ---------------------------258.Training JS #9: loop statement --while and do..while------------------------------
-    function padIt(str, n) {
-        while (n>0) {
-            if(n%2) {
-                str='*'+str
-            }else{
-                str=str+'*'
-            }
-            n--
-        }
-        return str
+    // function padIt(str, n) {
+    //     while (n>0) {
+    //         if(n%2) {
+    //             str='*'+str
+    //         }else{
+    //             str=str+'*'
+    //         }
+    //         n--
+    //     }
+    //     return str
+    // }
+
+    // ---------------------------------------259.Are they opposite?----------------------------------------------------
+    // function isOpposite(s1,s2){
+    //     if(s1 === s2 || s1.toLowerCase() !== s2.toLowerCase()) {
+    //         return false
+    //     }
+    //
+    //     for(var i = 0; i < s1.length; i++) {
+    //         if(s1.charAt(i) === s2.charAt(i)) {
+    //             return false
+    //         }
+    //     }
+    //     return true
+    // }
+
+    // ------------------------------------------260.Parse float----------------------------------------------------------
+    function parseF(s) {
+        return Number.parseFloat(s) == s ? +s : null
     }
 
-    // ---------------------------------------259.Are they opposite?----------------------------------------------------------
-    function isOpposite(s1,s2){
-        if(s1 === s2 || s1.toLowerCase() !== s2.toLowerCase()) return false;
-
-        for(var i = 0; i < s1.length; i++) {
-            if(s1.charAt(i) === s2.charAt(i)) return false;
-        }
-
-        return true;
-
+    // ------------------------------------261.NBA full 48 minutes average----------------------------------------------------------
+    function pointsPer48(ppg, mpg) {
+        return ppg == 0 && mpg == 0 ? 0 : Math.round(((ppg / mpg) * 48) * 10) / 10
     }
 
-    // ------------------------------------------260.----------------------------------------------------------
-    // ------------------------------------------261.----------------------------------------------------------
-    // ------------------------------------------262.----------------------------------------------------------
-    // ------------------------------------------263.----------------------------------------------------------
+    // -----------262.Training JS #18: Methods of String object--concat() split() and its good friend join()----------------------
+    function splitAndMerge(str, separator) {
+        let arr = str.split(' ')
+        let res = []
+        for (let i = 0; i < arr.length; i++) {
+            res.push(arr[i].split('').join(separator))
+        }
+        return res.join(' ')
+    }
+
+    // ----------------------------263.Geometry Basics: Distance between points in 2D----------------------------------------------------------
+    function distanceBetweenPoints(a, b) {
+        return Math.sqrt(((a.x - b.x) ** 2) + ((a.y - b.y) ** 2))
+    }
+
     // ------------------------------------------264.----------------------------------------------------------
     // ------------------------------------------265.----------------------------------------------------------
     // ------------------------------------------266.----------------------------------------------------------
