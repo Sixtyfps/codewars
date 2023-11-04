@@ -2212,34 +2212,66 @@
     //     return true
     // }
 
-    // ------------------------------------------260.Parse float----------------------------------------------------------
-    function parseF(s) {
-        return Number.parseFloat(s) == s ? +s : null
-    }
+    // ------------------------------------------260.Parse float--------------------------------------------------------
+    // function parseF(s) {
+    //     return Number.parseFloat(s) == s ? +s : null
+    // }
 
-    // ------------------------------------261.NBA full 48 minutes average----------------------------------------------------------
-    function pointsPer48(ppg, mpg) {
-        return ppg == 0 && mpg == 0 ? 0 : Math.round(((ppg / mpg) * 48) * 10) / 10
-    }
+    // ------------------------------------261.NBA full 48 minutes average----------------------------------------------
+    // function pointsPer48(ppg, mpg) {
+    //     return ppg == 0 && mpg == 0 ? 0 : Math.round(((ppg / mpg) * 48) * 10) / 10
+    // }
 
-    // -----------262.Training JS #18: Methods of String object--concat() split() and its good friend join()----------------------
-    function splitAndMerge(str, separator) {
-        let arr = str.split(' ')
-        let res = []
-        for (let i = 0; i < arr.length; i++) {
-            res.push(arr[i].split('').join(separator))
+    // -----------262.Training JS #18: Methods of String object--concat() split() and its good friend join()------------
+    // function splitAndMerge(str, separator) {
+    //     let arr = str.split(' ')
+    //     let res = []
+    //     for (let i = 0; i < arr.length; i++) {
+    //         res.push(arr[i].split('').join(separator))
+    //     }
+    //     return res.join(' ')
+    // }
+
+    // ----------------------------263.Geometry Basics: Distance between points in 2D-----------------------------------
+    // function distanceBetweenPoints(a, b) {
+    //     return Math.sqrt(((a.x - b.x) ** 2) + ((a.y - b.y) ** 2))
+    // }
+
+    // ----------------------------264.Training JS #11: loop statement --break,continue---------------------------------
+    function grabDoll(dolls){
+        var bag=[];
+        for (let i=0; i<dolls.length; i++) {
+            if(dolls[i]==="Barbie doll" || dolls[i]==="Hello Kitty")
+                bag.push(dolls[i]);
+            else
+                continue
+            if(bag.length === 3)  break
+
         }
-        return res.join(' ')
+        return bag;
     }
 
-    // ----------------------------263.Geometry Basics: Distance between points in 2D----------------------------------------------------------
-    function distanceBetweenPoints(a, b) {
-        return Math.sqrt(((a.x - b.x) ** 2) + ((a.y - b.y) ** 2))
+    // ---------------------------------265.Grasshopper - Order of operations-------------------------------------------
+    function orderOperations () {
+        return (2 + 2) * (2 + 2) * 2
     }
 
-    // ------------------------------------------264.----------------------------------------------------------
-    // ------------------------------------------265.----------------------------------------------------------
-    // ------------------------------------------266.----------------------------------------------------------
+    // ------------------------------------------266.Evil or Odious-----------------------------------------------------
+    function evil(n) {
+        let bin = n.toString(2)
+        console.log(bin)
+        let ones = String(bin).match(/1/g).length
+        if (ones % 2) {
+            return "It's Odious!"
+        } else {
+            return "It's Evil!"
+        }
+    }
+
+    function evil(n) {
+        return n.toString(2).match(/1/g).length % 2? "It's Odious!" : "It's Evil!"
+    }
+
     // ------------------------------------------267.----------------------------------------------------------
     // ------------------------------------------268.----------------------------------------------------------
     // ------------------------------------------269.----------------------------------------------------------
