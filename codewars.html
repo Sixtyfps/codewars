@@ -2238,43 +2238,60 @@
     // }
 
     // ----------------------------264.Training JS #11: loop statement --break,continue---------------------------------
-    function grabDoll(dolls){
-        var bag=[];
-        for (let i=0; i<dolls.length; i++) {
-            if(dolls[i]==="Barbie doll" || dolls[i]==="Hello Kitty")
-                bag.push(dolls[i]);
-            else
-                continue
-            if(bag.length === 3)  break
-
-        }
-        return bag;
-    }
+    // function grabDoll(dolls){
+    //     var bag=[];
+    //     for (let i=0; i<dolls.length; i++) {
+    //         if(dolls[i]==="Barbie doll" || dolls[i]==="Hello Kitty")
+    //             bag.push(dolls[i]);
+    //         else
+    //             continue
+    //         if(bag.length === 3)  break
+    //
+    //     }
+    //     return bag;
+    // }
 
     // ---------------------------------265.Grasshopper - Order of operations-------------------------------------------
-    function orderOperations () {
-        return (2 + 2) * (2 + 2) * 2
-    }
+    // function orderOperations () {
+    //     return (2 + 2) * (2 + 2) * 2
+    // }
 
     // ------------------------------------------266.Evil or Odious-----------------------------------------------------
-    function evil(n) {
-        let bin = n.toString(2)
-        console.log(bin)
-        let ones = String(bin).match(/1/g).length
-        if (ones % 2) {
-            return "It's Odious!"
-        } else {
-            return "It's Evil!"
-        }
+    // function evil(n) {
+    //     let bin = n.toString(2)
+    //     console.log(bin)
+    //     let ones = String(bin).match(/1/g).length
+    //     if (ones % 2) {
+    //         return "It's Odious!"
+    //     } else {
+    //         return "It's Evil!"
+    //     }
+    // }
+    //
+    // function evil(n) {
+    //     return n.toString(2).match(/1/g).length % 2? "It's Odious!" : "It's Evil!"
+    // }
+
+    // -------------------------------------267.Grasshopper - Terminal Game #1------------------------------------------
+    function Hero(name) {
+        this.name = name || "Hero"
+        this.position = '00'
+        this.health = 100
+        this.damage = 5
+        this.experience = 0
     }
 
-    function evil(n) {
-        return n.toString(2).match(/1/g).length % 2? "It's Odious!" : "It's Evil!"
+    // ------------------------------------------268.Color Ghost--------------------------------------------------------
+    var Ghost = function () {
+        this.color = ['white', 'yellow', 'purple', 'red'][Math.floor(Math.random() * 4)]
+    };
+
+    // ------------------------------------------269.Freudian translator------------------------------------------------
+    function toFreud(str) {
+        return str.length ? str.split(' ').map(el => el = 'sex').join(' ') : ''
     }
 
-    // ------------------------------------------267.----------------------------------------------------------
-    // ------------------------------------------268.----------------------------------------------------------
-    // ------------------------------------------269.----------------------------------------------------------
+
     // ------------------------------------------270.----------------------------------------------------------
     // ------------------------------------------271.----------------------------------------------------------
     // ------------------------------------------272.----------------------------------------------------------
