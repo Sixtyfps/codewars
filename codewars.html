@@ -2325,16 +2325,22 @@
     // }
 
     // ------------------------------------------274.Crash Override-----------------------------------------------------
-    function aliasGen(first, last){
-        if(/^[A-Z]$/i.test(first[0]) && /^[A-Z]$/i.test(last[0])) {
-            return firstName[first[0].toUpperCase()].toString() + " " + surname[last[0].toUpperCase().toString()]
-        } else {
-            return "Your name must start with a letter from A - Z."
-        }
+    // function aliasGen(first, last){
+    //     if(/^[A-Z]$/i.test(first[0]) && /^[A-Z]$/i.test(last[0])) {
+    //         return firstName[first[0].toUpperCase()].toString() + " " + surname[last[0].toUpperCase().toString()]
+    //     } else {
+    //         return "Your name must start with a letter from A - Z."
+    //     }
+    // }
+
+    // ------------------------------------275.Grasshopper - Create the rooms-------------------------------------------
+    const rooms = Object.assign({}, Array.from({length:3},_ => Object.assign({}, [{n:'room'}, {d:'square'}, {c:true}])))
+
+    // ------------------------------------------276.Did she say hallo?-------------------------------------------------
+    function validateHello(greetings) {
+        return /\b(hello|ciao|salut|hallo|hola|ahoj|czesc)\b/i.test(greetings)
     }
 
-    // ------------------------------------------275.----------------------------------------------------------
-    // ------------------------------------------276.----------------------------------------------------------
     // ------------------------------------------277.----------------------------------------------------------
     // ------------------------------------------278.----------------------------------------------------------
     // ------------------------------------------279.----------------------------------------------------------
