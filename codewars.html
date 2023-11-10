@@ -2334,22 +2334,49 @@
     // }
 
     // ------------------------------------275.Grasshopper - Create the rooms-------------------------------------------
-    const rooms = Object.assign({}, Array.from({length:3},_ => Object.assign({}, [{n:'room'}, {d:'square'}, {c:true}])))
+    // const rooms = Object.assign({}, Array.from({length:3},_ => Object.assign({}, [{n:'room'}, {d:'square'}, {c:true}])))
 
     // -----------------------------------------276.Did she say hallo?-------------------------------------------------
-    function validateHello(greetings) {
-        return /\b(hello|ciao|salut|hallo|hola|ahoj|czesc)\b/i.test(greetings)
-    }
+    // function validateHello(greetings) {
+    //     return /\b(hello|ciao|salut|hallo|hola|ahoj|czesc)\b/i.test(greetings)
+    // }
 
     // -----------------------------------------277.Highest and Lowest--------------------------------------------------
-    function highAndLow(nums){
-        return `${Math.max(...nums.split(' '))} ${Math.min(...nums.split(' '))}`
+    // function highAndLow(nums){
+    //     return `${Math.max(...nums.split(' '))} ${Math.min(...nums.split(' '))}`
+    // }
+
+    // ------------------------------------------278.Vowel Count--------------------------------------------------------
+    function getCount(str) {
+        let count=0
+        for(let i=0; i<str.length; i++) {
+            if(str[i]=='a' || str[i]=='e' || str[i]=='i' || str[i]=='o' || str[i]=='u'){
+                count++
+            }
+        }
+        return count
     }
 
-    // ------------------------------------------278.----------------------------------------------------------
-    // ------------------------------------------279.----------------------------------------------------------
-    // ------------------------------------------280.----------------------------------------------------------
-    // ------------------------------------------281.----------------------------------------------------------
+    // ----------------------------------------279.Disemvowel Trolls----------------------------------------------------
+    function disemvowel(str) {
+        return str.replaceAll(/[aieou]/gi, '')
+    }
+
+    // ----------------------------------------280.Square Every Digit---------------------------------------------------
+    function squareDigits(num) {
+        let arr = num.toString()
+        let res = ''
+        for (let i=0; i<arr.length; i++) {
+            res += (Number(arr[i])**2).toString()
+        }
+        return +res
+    }
+
+    // ------------------------------------------281.Descending Order---------------------------------------------------
+    function descendingOrder(n) {
+        return +n.toString().split('').sort().reverse().join('')
+    }
+
     // ------------------------------------------282.----------------------------------------------------------
     // ------------------------------------------283.----------------------------------------------------------
     // ------------------------------------------284.----------------------------------------------------------
