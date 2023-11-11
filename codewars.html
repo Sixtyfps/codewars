@@ -2347,39 +2347,53 @@
     // }
 
     // ------------------------------------------278.Vowel Count--------------------------------------------------------
-    function getCount(str) {
-        let count=0
-        for(let i=0; i<str.length; i++) {
-            if(str[i]=='a' || str[i]=='e' || str[i]=='i' || str[i]=='o' || str[i]=='u'){
-                count++
-            }
-        }
-        return count
-    }
+    // function getCount(str) {
+    //     let count=0
+    //     for(let i=0; i<str.length; i++) {
+    //         if(str[i]=='a' || str[i]=='e' || str[i]=='i' || str[i]=='o' || str[i]=='u'){
+    //             count++
+    //         }
+    //     }
+    //     return count
+    // }
 
     // ----------------------------------------279.Disemvowel Trolls----------------------------------------------------
-    function disemvowel(str) {
-        return str.replaceAll(/[aieou]/gi, '')
-    }
+    // function disemvowel(str) {
+    //     return str.replaceAll(/[aieou]/gi, '')
+    // }
 
     // ----------------------------------------280.Square Every Digit---------------------------------------------------
-    function squareDigits(num) {
-        let arr = num.toString()
-        let res = ''
-        for (let i=0; i<arr.length; i++) {
-            res += (Number(arr[i])**2).toString()
-        }
-        return +res
-    }
+    // function squareDigits(num) {
+    //     let arr = num.toString()
+    //     let res = ''
+    //     for (let i=0; i<arr.length; i++) {
+    //         res += (Number(arr[i])**2).toString()
+    //     }
+    //     return +res
+    // }
 
     // ------------------------------------------281.Descending Order---------------------------------------------------
-    function descendingOrder(n) {
-        return +n.toString().split('').sort().reverse().join('')
+    // function descendingOrder(n) {
+    //     return +n.toString().split('').sort().reverse().join('')
+    // }
+
+    // --------------------------------------282.Get the Middle Character-----------------------------------------------
+    getMiddle = (s) => {
+        return s.length % 2?  s[Math.floor(s.length/2)] : s[(s.length/2)-1] + s[(s.length/2)]
     }
 
-    // ------------------------------------------282.----------------------------------------------------------
-    // ------------------------------------------283.----------------------------------------------------------
-    // ------------------------------------------284.----------------------------------------------------------
+    // -----------------------------------------283.List Filtering------------------------------------------------------
+    function filter_list(l) {
+        return l.filter(el => typeof el === "number")
+    }
+
+    // -------------------------------------------284.Mumbling----------------------------------------------------------
+    function accum(s) {
+        let arr = s.split('')
+        return arr.map((el, index) => el.toUpperCase() + element.repeat(index)).join('-')
+    }
+
+    console.log(accum("Zpgl"))
     // ------------------------------------------285.----------------------------------------------------------
     // ------------------------------------------286.----------------------------------------------------------
     // ------------------------------------------287.----------------------------------------------------------
