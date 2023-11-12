@@ -2378,23 +2378,26 @@
     // }
 
     // --------------------------------------282.Get the Middle Character-----------------------------------------------
-    getMiddle = (s) => {
-        return s.length % 2?  s[Math.floor(s.length/2)] : s[(s.length/2)-1] + s[(s.length/2)]
-    }
+    // getMiddle = (s) => {
+    //     return s.length % 2?  s[Math.floor(s.length/2)] : s[(s.length/2)-1] + s[(s.length/2)]
+    // }
 
     // -----------------------------------------283.List Filtering------------------------------------------------------
-    function filter_list(l) {
-        return l.filter(el => typeof el === "number")
-    }
+    // function filter_list(l) {
+    //     return l.filter(el => typeof el === "number")
+    // }
 
     // -------------------------------------------284.Mumbling----------------------------------------------------------
-    function accum(s) {
-        let arr = s.split('')
-        return arr.map((el, index) => el.toUpperCase() + element.repeat(index)).join('-')
+    // function accum(s) {
+    //     let arr = s.split('')
+    //     return arr.map((el, index) => el.toUpperCase() + element.repeat(index)).join('-')
+    // }
+
+    // -----------------------------------------285.You're a square!----------------------------------------------------
+    var isSquare = function(n){
+       return Number.isInteger(Math.sqrt(n))
     }
 
-    console.log(accum("Zpgl"))
-    // ------------------------------------------285.----------------------------------------------------------
     // ------------------------------------------286.----------------------------------------------------------
     // ------------------------------------------287.----------------------------------------------------------
     // ------------------------------------------288.----------------------------------------------------------
