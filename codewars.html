@@ -2449,39 +2449,63 @@
     // console.log(maskify('143434445'))
 
     // -----------------------------------292.Sum of two lowest positive integers---------------------------------------
-    function sumTwoSmallestNumbers(numbers) {
-        let arr = numbers.sort((a,b) => a - b)
-        return arr[0]+arr[1]
-    }
-
-    console.log(sumTwoSmallestNumbers([5, 8, 12, 19, 22]))
+    // function sumTwoSmallestNumbers(numbers) {
+    //     let arr = numbers.sort((a,b) => a - b)
+    //     return arr[0]+arr[1]
+    // }
+    //
+    // console.log(sumTwoSmallestNumbers([5, 8, 12, 19, 22]))
 
     // -------------------------------------293.Beginner Series #3 Sum of Numbers---------------------------------------
-    function getSum(a, b)
-    {
-        let max = Math.max(a, b)
-        let min = Math.min(a, b)
-        res = 0
-        if (a===b) {
-            return a
-        } else {
-            for (let i = min; i <= max; i++) {
-                res = res+i
+    // function getSum(a, b)
+    // {
+    //     let max = Math.max(a, b)
+    //     let min = Math.min(a, b)
+    //     res = 0
+    //     if (a===b) {
+    //         return a
+    //     } else {
+    //         for (let i = min; i <= max; i++) {
+    //             res = res+i
+    //         }
+    //         return res
+    //     }
+    // }
+
+    // ------------------------------------------294.Two to One---------------------------------------------------------
+    // function longest(s1, s2) {
+    //     return (s1+s2).split('').sort().filter((item, pos, self)=> self.indexOf(item) === pos).join('')
+    // }
+    //
+    // console.log(longest("cat", "dog"))
+
+    // ------------------------------------------295.Friend or Foe?-----------------------------------------------------
+    function friend(friends){
+        return friends.filter (f => f.length===4)
+    }
+
+    // ---------------------------------------296.Categorize New Member-------------------------------------------------
+    function openOrSenior(data){
+        const arr = []
+        for (let i=0; i<data.length; i++) {
+            console.log(data[i][0])
+            if (data[i][0]>=55 && data[i][1]>7) {
+                arr.push('Senior')
+            } else {
+                arr.push('Open')
             }
-            return res
         }
+        return arr
     }
 
-    // ------------------------------------------294.Two to One----------------------------------------------------------
-    function longest(s1, s2) {
-        return (s1+s2).split('').sort().filter((item, pos, self)=> self.indexOf(item) === pos).join('')
+    console.log(openOrSenior([[59, 12],[55,-1],[12, -2],[12, 12]]))
+
+    // ------------------------------------297.Find the next perfect square!--------------------------------------------
+    function findNextSquare(sq) {
+        const root = Math.sqrt(sq)
+        return Number.isInteger(root) ? (root + 1)**2 : -1
     }
 
-    console.log(longest("cat", "dog"))
-
-    // ------------------------------------------295.----------------------------------------------------------
-    // ------------------------------------------296.----------------------------------------------------------
-    // ------------------------------------------297.----------------------------------------------------------
     // ------------------------------------------298.----------------------------------------------------------
     // ------------------------------------------299.----------------------------------------------------------
     // ------------------------------------------300.----------------------------------------------------------
