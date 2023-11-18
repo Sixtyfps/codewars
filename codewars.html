@@ -2480,36 +2480,57 @@
     // console.log(longest("cat", "dog"))
 
     // ------------------------------------------295.Friend or Foe?-----------------------------------------------------
-    function friend(friends){
-        return friends.filter (f => f.length===4)
-    }
+    // function friend(friends){
+    //     return friends.filter (f => f.length===4)
+    // }
 
     // ---------------------------------------296.Categorize New Member-------------------------------------------------
-    function openOrSenior(data){
-        const arr = []
-        for (let i=0; i<data.length; i++) {
-            console.log(data[i][0])
-            if (data[i][0]>=55 && data[i][1]>7) {
-                arr.push('Senior')
-            } else {
-                arr.push('Open')
-            }
-        }
-        return arr
-    }
-
-    console.log(openOrSenior([[59, 12],[55,-1],[12, -2],[12, 12]]))
+    // function openOrSenior(data){
+    //     const arr = []
+    //     for (let i=0; i<data.length; i++) {
+    //         console.log(data[i][0])
+    //         if (data[i][0]>=55 && data[i][1]>7) {
+    //             arr.push('Senior')
+    //         } else {
+    //             arr.push('Open')
+    //         }
+    //     }
+    //     return arr
+    // }
+    //
+    // console.log(openOrSenior([[59, 12],[55,-1],[12, -2],[12, 12]]))
 
     // ------------------------------------297.Find the next perfect square!--------------------------------------------
-    function findNextSquare(sq) {
-        const root = Math.sqrt(sq)
-        return Number.isInteger(root) ? (root + 1)**2 : -1
+    // function findNextSquare(sq) {
+    //     const root = Math.sqrt(sq)
+    //     return Number.isInteger(root) ? (root + 1)**2 : -1
+    // }
+
+    // ------------------------------------------298.Printer Errors-----------------------------------------------------
+    function printerError(s) {
+        return s.match(/[n-z]/gi) ? `${s.match(/[n-z]/gi).length}/${s.length}` : `0/${s.length}`
     }
 
-    // ------------------------------------------298.----------------------------------------------------------
-    // ------------------------------------------299.----------------------------------------------------------
-    // ------------------------------------------300.----------------------------------------------------------
-    // ------------------------------------------301.----------------------------------------------------------
+    // ---------------------------------------299.Regex validate PIN code-----------------------------------------------
+    function validatePIN(pin) {
+        return (/^\d{4}$|^\d{6}$/).test(pin)
+    }
+
+    // ------------------------------------------300.Binary Addition----------------------------------------------------------
+    function addBinary(a, b) {
+        return (a + b).toString(2)
+    }
+
+    // ----------------------------------------301.Growth of a Population----------------------------------------------------------
+    function nbYear(p0, percent, aug, p) {
+        let years = 0
+        while ( p0 < p) {
+            p0 += Math.floor(p0 * percent / 100 + aug)
+            years++
+        }
+        return years
+    }
+
     // ------------------------------------------302.----------------------------------------------------------
     // ------------------------------------------303.----------------------------------------------------------
     // ------------------------------------------304.----------------------------------------------------------
