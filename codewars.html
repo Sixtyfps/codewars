@@ -2655,25 +2655,57 @@
     // }
 
     // ----------------------------------------318.Money, Money, Money--------------------------------------------------
-    function calculateYears(principal, interest, tax, desired) {
-        let years = 0
-        while (principal < desired) {
-            principal += (principal*interest) - (principal*interest*tax)
-            years++
-        }
-        return years
-    }
+    // function calculateYears(principal, interest, tax, desired) {
+    //     let years = 0
+    //     while (principal < desired) {
+    //         principal += (principal*interest) - (principal*interest*tax)
+    //         years++
+    //     }
+    //     return years
+    // }
 
     // -------------------------------------319.Sort array by string length---------------------------------------------
-    function sortByLength (arr) {
-        return arr.sort((a, b) => a.length - b.length)
+    // function sortByLength (arr) {
+    //     return arr.sort((a, b) => a.length - b.length)
+    // }
+
+    // --------------------------------------320.Breaking chocolate problem---------------------------------------------
+    // function breakChocolate(n,m) {
+    //     return n>0 && m>0? m*n-1 : 0
+    // }
+
+    // ------------------------------------------321.Count the Digit----------------------------------------------------
+    // function nbDig(n, d) {
+    //     let result = ''
+    //     for(let i=0; i<=n; i++) {
+    //         result += i ** 2
+    //     }
+    //     return result.split(d).length - 1
+    // }
+    // ---------------------------------322.Make a function that does arithmetic!---------------------------------------
+    function arithmetic(a, b, operator){
+        switch (operator) {
+            case "add":
+                return a + b
+            case "subtract":
+                return a - b
+            case "multiply":
+                return a * b
+            case "divide":
+                return a/b
+        }
     }
 
-    // ------------------------------------------320.----------------------------------------------------------
-    // ------------------------------------------321.----------------------------------------------------------
-    // ------------------------------------------322.----------------------------------------------------------
-    // ------------------------------------------323.----------------------------------------------------------
-    // ------------------------------------------324.----------------------------------------------------------
+    // -----------------------------------------323.Find the middle element---------------------------------------------
+    function gimme (triplet) {
+        return triplet.indexOf([...triplet].sort((a,b)=> a-b)[1])
+    }
+
+    // -------------------------------------324.Round up to the next multiple of 5--------------------------------------
+    function roundToNext5(n){
+        return Math.ceil(n/5)*5
+    }
+
     // ------------------------------------------325.----------------------------------------------------------
     // ------------------------------------------326.----------------------------------------------------------
     // ------------------------------------------327.----------------------------------------------------------
