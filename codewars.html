@@ -2683,31 +2683,43 @@
     //     return result.split(d).length - 1
     // }
     // ---------------------------------322.Make a function that does arithmetic!---------------------------------------
-    function arithmetic(a, b, operator){
-        switch (operator) {
-            case "add":
-                return a + b
-            case "subtract":
-                return a - b
-            case "multiply":
-                return a * b
-            case "divide":
-                return a/b
-        }
-    }
+    // function arithmetic(a, b, operator){
+    //     switch (operator) {
+    //         case "add":
+    //             return a + b
+    //         case "subtract":
+    //             return a - b
+    //         case "multiply":
+    //             return a * b
+    //         case "divide":
+    //             return a/b
+    //     }
+    // }
 
     // -----------------------------------------323.Find the middle element---------------------------------------------
-    function gimme (triplet) {
-        return triplet.indexOf([...triplet].sort((a,b)=> a-b)[1])
-    }
+    // function gimme (triplet) {
+    //     return triplet.indexOf([...triplet].sort((a,b)=> a-b)[1])
+    // }
 
     // -------------------------------------324.Round up to the next multiple of 5--------------------------------------
-    function roundToNext5(n){
-        return Math.ceil(n/5)*5
+    // function roundToNext5(n){
+    //     return Math.ceil(n/5)*5
+    // }
+
+    // ------------------------------------------325.Sum of a sequence--------------------------------------------------
+    const sequenceSum = (begin, end, step) => {
+        res=0
+        for (let i = begin; i<=end; i=i+step) {
+            res+=i
+        }
+        return res
+    };
+
+    // ------------------------------------------326.Remove anchor from URL---------------------------------------------
+    function removeUrlAnchor(url){
+        return url.replace(/#.*/,'')
     }
 
-    // ------------------------------------------325.----------------------------------------------------------
-    // ------------------------------------------326.----------------------------------------------------------
     // ------------------------------------------327.----------------------------------------------------------
     // ------------------------------------------328.----------------------------------------------------------
     // ------------------------------------------329.----------------------------------------------------------
