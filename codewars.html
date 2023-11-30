@@ -2721,33 +2721,42 @@
     // }
 
     // ------------------------------------------327.Anagram Detection--------------------------------------------------
-    const isAnagram = (w1, w2) => {
-        return w1.toUpperCase().split('').sort().join('') === w2.toUpperCase().split('').sort().join('')
-    }
+    // const isAnagram = (w1, w2) => {
+    //     return w1.toUpperCase().split('').sort().join('') === w2.toUpperCase().split('').sort().join('')
+    // }
 
     // ------------------------------------------328.Find the capitals--------------------------------------------------
-    const capitals = (word) => {
-        let res = []
-        for (let i=0; i<word.length; i++) {
-            if (word[i].toUpperCase() === word[i]) {
-                res.push(i)
-            }
-        }
-        return res
-    }
+    // const capitals = (word) => {
+    //     let res = []
+    //     for (let i=0; i<word.length; i++) {
+    //         if (word[i].toUpperCase() === word[i]) {
+    //             res.push(i)
+    //         }
+    //     }
+    //     return res
+    // }
 
     // ----------------------------------------329.Small enough? - Beginner---------------------------------------------
-    function smallEnough(arr, limit){
-        for(let i=0; i<arr.length; i++) {
-            if(arr[i]>limit) {
-                return false
-            }
-        }
-        return true
+    // function smallEnough(arr, limit){
+    //     for(let i=0; i<arr.length; i++) {
+    //         if(arr[i]>limit) {
+    //             return false
+    //         }
+    //     }
+    //     return true
+    // }
+
+    // ------------------------------------------330.Two Oldest Ages----------------------------------------------------
+    const twoOldestAges = (ages) => {
+        const arr = ages.sort((a,b) => a-b)
+        return [arr[arr.length-2], arr[arr.length-1]]
     }
 
-    // ------------------------------------------330.----------------------------------------------------------
-    // ------------------------------------------331.----------------------------------------------------------
+    // -------------------------------------331.Simple Fun #176: Reverse Letter-----------------------------------------
+    function reverseLetter(str) {
+        return str.split('').reverse().join('').replace(/[^a-zA-Z]/g, "")
+    }
+
     // ------------------------------------------332.----------------------------------------------------------
     // ------------------------------------------333.----------------------------------------------------------
     // ------------------------------------------334.----------------------------------------------------------
