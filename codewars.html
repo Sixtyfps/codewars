@@ -2768,36 +2768,54 @@
     // }
 
     // ------------------------------------------333.Maximum Multiple---------------------------------------------------
-    function maxMultiple(divisor, bound){
-        return divisor * Math.floor(bound/divisor)
-    }
+    // function maxMultiple(divisor, bound){
+    //     return divisor * Math.floor(bound/divisor)
+    // }
 
     // ------------------------------------------334.Check the exam-----------------------------------------------------
-    function checkExam(arr1, arr2) {
-        let res = 0
-        for(let i=0; i<arr1.length; i++) {
-            if (arr1[i] === arr2[i]) {
-                res=res+4
-            }
-            if (arr2[i] === '') {
-                res= res + 0
-            }
-            if (arr1[i] !== arr2[i] && arr2[i]!=='') {
-                res= res - 1
-            }
-        }
-        return res>0? res : 0
-    }
+    // function checkExam(arr1, arr2) {
+    //     let res = 0
+    //     for(let i=0; i<arr1.length; i++) {
+    //         if (arr1[i] === arr2[i]) {
+    //             res=res+4
+    //         }
+    //         if (arr2[i] === '') {
+    //             res= res + 0
+    //         }
+    //         if (arr1[i] !== arr2[i] && arr2[i]!=='') {
+    //             res= res - 1
+    //         }
+    //     }
+    //     return res>0? res : 0
+    // }
 
     // --------------------------------------335.Two fighters, one winner.----------------------------------------------
-    function declareWinner(fighter1, fighter2, firstAttacker) {
-        let damage1 = Math.ceil(fighter1.health/ fighter2.damagePerAttack),
-            damage2 = Math.ceil(fighter2.health/ fighter1.damagePerAttack)
-        return damage1>damage2? fighter1.name : damage1<damage2? fighter2.name : firstAttacker
+    // function declareWinner(fighter1, fighter2, firstAttacker) {
+    //     let damage1 = Math.ceil(fighter1.health/ fighter2.damagePerAttack),
+    //         damage2 = Math.ceil(fighter2.health/ fighter1.damagePerAttack)
+    //     return damage1>damage2? fighter1.name : damage1<damage2? fighter2.name : firstAttacker
+    // }
+
+    // ------------------------------------------336.Fix string case----------------------------------------------------
+    function solve(s){
+        let up = 0
+        let low = 0
+        for (let i=0; i<s.length; i++) {
+            if (s[i] === s[i].toUpperCase()) {
+                up++
+            }
+            if (s[i] === s[i].toLowerCase()) {
+                low++
+            }
+        }
+        return low<up? s.toUpperCase() : s.toLowerCase()
     }
 
-    // ------------------------------------------336.----------------------------------------------------------
-    // ------------------------------------------337.----------------------------------------------------------
+    // ------------------------------------------337.Form The Minimum---------------------------------------------------
+    function minValue(values){
+        return +values.filter((el, pos, self) => self.indexOf(el)===pos).sort((a,b) => a-b).join('')
+    }
+
     // ------------------------------------------338.----------------------------------------------------------
     // ------------------------------------------339.----------------------------------------------------------
     // ------------------------------------------340.----------------------------------------------------------
