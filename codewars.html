@@ -2797,44 +2797,67 @@
     // }
 
     // ------------------------------------------336.Fix string case----------------------------------------------------
-    function solve(s){
-        let up = 0
-        let low = 0
-        for (let i=0; i<s.length; i++) {
-            if (s[i] === s[i].toUpperCase()) {
-                up++
-            }
-            if (s[i] === s[i].toLowerCase()) {
-                low++
-            }
-        }
-        return low<up? s.toUpperCase() : s.toLowerCase()
-    }
+    // function solve(s){
+    //     let up = 0
+    //     let low = 0
+    //     for (let i=0; i<s.length; i++) {
+    //         if (s[i] === s[i].toUpperCase()) {
+    //             up++
+    //         }
+    //         if (s[i] === s[i].toLowerCase()) {
+    //             low++
+    //         }
+    //     }
+    //     return low<up? s.toUpperCase() : s.toLowerCase()
+    // }
 
     // ------------------------------------------337.Form The Minimum---------------------------------------------------
-    function minValue(values){
-        return +values.filter((el, pos, self) => self.indexOf(el)===pos).sort((a,b) => a-b).join('')
-    }
+    // function minValue(values){
+    //     return +values.filter((el, pos, self) => self.indexOf(el)===pos).sort((a,b) => a-b).join('')
+    // }
 
     // ---------------------------------------338.Alternate capitalization----------------------------------------------
-    function capitalize(s){
-        let arr1=[]
-        let arr2=[]
-        for (let i=0; i<s.length; i++) {
-            if (i%2) {
-                arr1.push(s[i].toUpperCase())
-                arr2.push(s[i].toLowerCase())
-            } else {
-                arr2.push(s[i].toUpperCase())
-                arr1.push(s[i].toLowerCase())
-            }
-        }
-        return [arr2.join(''), arr1.join('')]
+    // function capitalize(s){
+    //     let arr1=[]
+    //     let arr2=[]
+    //     for (let i=0; i<s.length; i++) {
+    //         if (i%2) {
+    //             arr1.push(s[i].toUpperCase())
+    //             arr2.push(s[i].toLowerCase())
+    //         } else {
+    //             arr2.push(s[i].toUpperCase())
+    //             arr1.push(s[i].toLowerCase())
+    //         }
+    //     }
+    //     return [arr2.join(''), arr1.join('')]
+    // }
+
+    // ---------------------------------------339.Flatten and sort an array---------------------------------------------
+    function flattenAndSort(arr) {
+        return arr.flat().sort((a, b) => a - b)
     }
 
-    // ------------------------------------------339.----------------------------------------------------------
-    // ------------------------------------------340.----------------------------------------------------------
-    // ------------------------------------------341.----------------------------------------------------------
+    // ------------------------------------------340.Sum of Minimums!---------------------------------------------------
+    function sumOfMinimums(arr) {
+        let sum = 0
+        for (let i = 0; i < arr.length; i++) {
+            sum += Math.min(...arr[i])
+        }
+        return sum
+    }
+
+    // ---------------------------------------------341.Factorial-------------------------------------------------------
+    function factorial(n) {
+        if (n>12 || n<0) {
+            throw error
+        }
+        if (n<1) {
+            return 1
+        } else {
+            return n * factorial(--n)
+        }
+    }
+
     // ------------------------------------------342.----------------------------------------------------------
     // ------------------------------------------343.----------------------------------------------------------
     // ------------------------------------------344.----------------------------------------------------------
