@@ -2833,33 +2833,46 @@
     // }
 
     // ---------------------------------------339.Flatten and sort an array---------------------------------------------
-    function flattenAndSort(arr) {
-        return arr.flat().sort((a, b) => a - b)
-    }
+    // function flattenAndSort(arr) {
+    //     return arr.flat().sort((a, b) => a - b)
+    // }
 
     // ------------------------------------------340.Sum of Minimums!---------------------------------------------------
-    function sumOfMinimums(arr) {
-        let sum = 0
-        for (let i = 0; i < arr.length; i++) {
-            sum += Math.min(...arr[i])
-        }
-        return sum
-    }
+    // function sumOfMinimums(arr) {
+    //     let sum = 0
+    //     for (let i = 0; i < arr.length; i++) {
+    //         sum += Math.min(...arr[i])
+    //     }
+    //     return sum
+    // }
 
     // ---------------------------------------------341.Factorial-------------------------------------------------------
-    function factorial(n) {
-        if (n>12 || n<0) {
-            throw error
-        }
-        if (n<1) {
-            return 1
-        } else {
-            return n * factorial(--n)
-        }
+    // function factorial(n) {
+    //     if (n>12 || n<0) {
+    //         throw error
+    //     }
+    //     if (n<1) {
+    //         return 1
+    //     } else {
+    //         return n * factorial(--n)
+    //     }
+    // }
+
+    // ----------------------------------342.Largest 5 digit number in a series-----------------------------------------
+    function solution(digits){
+        return digits.split('').reduce((prev,_,index) => Math.max(prev, digits.slice(index, index+5)), 0)
     }
 
-    // ------------------------------------------342.----------------------------------------------------------
-    // ------------------------------------------343.----------------------------------------------------------
+    // --------------------------------------343.Are the numbers in order?----------------------------------------------
+    function inAscOrder(arr) {
+        for(let i=0; i<arr.length; i++) {
+            if (arr[i]>arr[i+1]) {
+                return false
+            }
+        }
+        return true
+    }
+
     // ------------------------------------------344.----------------------------------------------------------
     // ------------------------------------------345.----------------------------------------------------------
     // ------------------------------------------346.----------------------------------------------------------
