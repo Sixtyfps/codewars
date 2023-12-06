@@ -2859,22 +2859,38 @@
     // }
 
     // ----------------------------------342.Largest 5 digit number in a series-----------------------------------------
-    function solution(digits){
-        return digits.split('').reduce((prev,_,index) => Math.max(prev, digits.slice(index, index+5)), 0)
-    }
+    // function solution(digits){
+    //     return digits.split('').reduce((prev,_,index) => Math.max(prev, digits.slice(index, index+5)), 0)
+    // }
 
     // --------------------------------------343.Are the numbers in order?----------------------------------------------
-    function inAscOrder(arr) {
-        for(let i=0; i<arr.length; i++) {
-            if (arr[i]>arr[i+1]) {
-                return false
-            }
-        }
-        return true
+    // function inAscOrder(arr) {
+    //     for(let i=0; i<arr.length; i++) {
+    //         if (arr[i]>arr[i+1]) {
+    //             return false
+    //         }
+    //     }
+    //     return true
+    // }
+
+    // ------------------------------------------344.The Coupon Code----------------------------------------------------
+    function checkCoupon(enteredCode, correctCode, currentDate, expirationDate){
+        return enteredCode===correctCode && new Date(currentDate)<=new Date(expirationDate)
     }
 
-    // ------------------------------------------344.----------------------------------------------------------
-    // ------------------------------------------345.----------------------------------------------------------
+    // ------------------------------------------345.Row Weights--------------------------------------------------------
+    function rowWeights(arr){
+        let w1=0
+        let w2=0
+        for (let i=0; i<arr.length; i=i+2) {
+            w1=w1+arr[i]
+        }
+        for (let n=1; n<arr.length; n=n+2) {
+            w2=w2+arr[n]
+        }
+        return[w1, w2]
+    }
+
     // ------------------------------------------346.----------------------------------------------------------
     // ------------------------------------------347.----------------------------------------------------------
     // ------------------------------------------348.----------------------------------------------------------
