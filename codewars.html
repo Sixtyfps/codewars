@@ -2874,26 +2874,43 @@
     // }
 
     // ------------------------------------------344.The Coupon Code----------------------------------------------------
-    function checkCoupon(enteredCode, correctCode, currentDate, expirationDate){
-        return enteredCode===correctCode && new Date(currentDate)<=new Date(expirationDate)
-    }
+    // function checkCoupon(enteredCode, correctCode, currentDate, expirationDate){
+    //     return enteredCode===correctCode && new Date(currentDate)<=new Date(expirationDate)
+    // }
 
     // ------------------------------------------345.Row Weights--------------------------------------------------------
-    function rowWeights(arr){
-        let w1=0
-        let w2=0
-        for (let i=0; i<arr.length; i=i+2) {
-            w1=w1+arr[i]
-        }
-        for (let n=1; n<arr.length; n=n+2) {
-            w2=w2+arr[n]
-        }
-        return[w1, w2]
+    // function rowWeights(arr){
+    //     let w1=0
+    //     let w2=0
+    //     for (let i=0; i<arr.length; i=i+2) {
+    //         w1=w1+arr[i]
+    //     }
+    //     for (let n=1; n<arr.length; n=n+2) {
+    //         w2=w2+arr[n]
+    //     }
+    //     return[w1, w2]
+    // }
+
+    // --------------------------------------346.Remove duplicate words-------------------------------------------------
+    removeDuplicateWords = (str) => {
+        let str1 = str.split(' ')
+        return str1.filter((item, i) => str1.indexOf(item) === i).join(' ')
     }
 
-    // ------------------------------------------346.----------------------------------------------------------
-    // ------------------------------------------347.----------------------------------------------------------
-    // ------------------------------------------348.----------------------------------------------------------
+    // ---------------------------------------347.JavaScript Array Filter-----------------------------------------------
+    function getEvenNumbers(arr) {
+        return arr.filter(el => el % 2 === 0)
+    }
+
+    // ------------------------------------------348.Factorial----------------------------------------------------------
+    function factorial(n) {
+        let res = 1
+        for (let i=1; i<=n; i++) {
+            res=res*i
+        }
+        return res
+    }
+
     // ------------------------------------------349.----------------------------------------------------------
     // ------------------------------------------350.----------------------------------------------------------
     // ------------------------------------------351.----------------------------------------------------------
