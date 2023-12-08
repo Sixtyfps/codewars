@@ -2892,27 +2892,48 @@
     // }
 
     // --------------------------------------346.Remove duplicate words-------------------------------------------------
-    removeDuplicateWords = (str) => {
-        let str1 = str.split(' ')
-        return str1.filter((item, i) => str1.indexOf(item) === i).join(' ')
-    }
+    // removeDuplicateWords = (str) => {
+    //     let str1 = str.split(' ')
+    //     return str1.filter((item, i) => str1.indexOf(item) === i).join(' ')
+    // }
 
     // ---------------------------------------347.JavaScript Array Filter-----------------------------------------------
-    function getEvenNumbers(arr) {
-        return arr.filter(el => el % 2 === 0)
-    }
+    // function getEvenNumbers(arr) {
+    //     return arr.filter(el => el % 2 === 0)
+    // }
 
     // ------------------------------------------348.Factorial----------------------------------------------------------
-    function factorial(n) {
-        let res = 1
-        for (let i=1; i<=n; i++) {
-            res=res*i
+    // function factorial(n) {
+    //     let res = 1
+    //     for (let i=1; i<=n; i++) {
+    //         res=res*i
+    //     }
+    //     return res
+    // }
+
+    // --------------------349.Count the number of JavaScript developers coming from Europe-----------------------------
+    function countDevelopers(list) {
+        let res = 0
+        for (let i=0; i<list.length; i++) {
+            if (list[i].continent === 'Europe' && list[i].language === 'JavaScript') {
+                res++
+            }
         }
         return res
     }
 
-    // ------------------------------------------349.----------------------------------------------------------
-    // ------------------------------------------350.----------------------------------------------------------
+    // ---------------------------------------350.Maximum Length Difference---------------------------------------------
+    function mxdiflg(a1, a2) {
+        if (a1.length === 0 || a2.length === 0) {
+            return -1
+        }
+        let a1min = Math.min(...a1.map(el=>el.length))
+        let a1max = Math.max(...a1.map(el=>el.length))
+        let a2min = Math.min(...a2.map(el=>el.length))
+        let a2max = Math.max(...a2.map(el=>el.length))
+        return  Math.max(Math.abs(a1min-a2max), Math.abs(a2min-a1max))
+    }
+
     // ------------------------------------------351.----------------------------------------------------------
     // ------------------------------------------352.----------------------------------------------------------
     // ------------------------------------------353.----------------------------------------------------------
