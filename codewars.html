@@ -2912,31 +2912,43 @@
     // }
 
     // --------------------349.Count the number of JavaScript developers coming from Europe-----------------------------
-    function countDevelopers(list) {
-        let res = 0
-        for (let i=0; i<list.length; i++) {
-            if (list[i].continent === 'Europe' && list[i].language === 'JavaScript') {
-                res++
-            }
-        }
-        return res
-    }
+    // function countDevelopers(list) {
+    //     let res = 0
+    //     for (let i=0; i<list.length; i++) {
+    //         if (list[i].continent === 'Europe' && list[i].language === 'JavaScript') {
+    //             res++
+    //         }
+    //     }
+    //     return res
+    // }
 
     // ---------------------------------------350.Maximum Length Difference---------------------------------------------
-    function mxdiflg(a1, a2) {
-        if (a1.length === 0 || a2.length === 0) {
-            return -1
-        }
-        let a1min = Math.min(...a1.map(el=>el.length))
-        let a1max = Math.max(...a1.map(el=>el.length))
-        let a2min = Math.min(...a2.map(el=>el.length))
-        let a2max = Math.max(...a2.map(el=>el.length))
-        return  Math.max(Math.abs(a1min-a2max), Math.abs(a2min-a1max))
+    // function mxdiflg(a1, a2) {
+    //     if (a1.length === 0 || a2.length === 0) {
+    //         return -1
+    //     }
+    //     let a1min = Math.min(...a1.map(el=>el.length))
+    //     let a1max = Math.max(...a1.map(el=>el.length))
+    //     let a2min = Math.min(...a2.map(el=>el.length))
+    //     let a2max = Math.max(...a2.map(el=>el.length))
+    //     return  Math.max(Math.abs(a1min-a2max), Math.abs(a2min-a1max))
+    // }
+
+    // ------------------------------------------351.Sum of angles------------------------------------------------------
+    function angle(n) {
+        return 180 * (n-2)
     }
 
-    // ------------------------------------------351.----------------------------------------------------------
-    // ------------------------------------------352.----------------------------------------------------------
-    // ------------------------------------------353.----------------------------------------------------------
+    // ----------------------------------------352.Love vs friendship---------------------------------------------------
+    function wordsToMarks(str){
+        return str.split('').map(el => el.charCodeAt(0) - 96).reduce((a,b) => a+b)
+    }
+
+    // ------------------------------------------353.Leap Years---------------------------------------------------------
+    function isLeapYear(year) {
+        return year%400 === 0 || (year%100 !== 0 && year%4 === 0)
+    }
+
     // ------------------------------------------354.----------------------------------------------------------
     // ------------------------------------------355.----------------------------------------------------------
     // ------------------------------------------356.----------------------------------------------------------
