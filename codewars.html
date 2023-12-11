@@ -2950,24 +2950,60 @@
     // }
 
     // ------------------------------------354.Largest pair sum in array------------------------------------------------
-    function largestPairSum (numbers) {
-        let arr = numbers.sort((a,b)=>a-b)
-        return arr[arr.length-1]+arr[arr.length-2]
-    }
+    // function largestPairSum (numbers) {
+    //     let arr = numbers.sort((a,b)=>a-b)
+    //     return arr[arr.length-1]+arr[arr.length-2]
+    // }
 
     // ---------------------------------------355.Sorted? yes? no? how?-------------------------------------------------
-    function isSortedAndHow(arr) {
-        if (arr.toString() === [...arr].sort((a,b)=>a-b).toString()) {
-            return "yes, ascending"
-        }
-        if (arr.toString() === [...arr].sort((a,b)=>a-b).reverse().toString()) {
-            return "yes, descending"
-        } else {
-            return "no"
-        }
-    }
+    // function isSortedAndHow(arr) {
+    //     if (arr.toString() === [...arr].sort((a,b)=>a-b).toString()) {
+    //         return "yes, ascending"
+    //     }
+    //     if (arr.toString() === [...arr].sort((a,b)=>a-b).reverse().toString()) {
+    //         return "yes, descending"
+    //     } else {
+    //         return "no"
+    //     }
+    // }
 
     // ------------------------------------------356.----------------------------------------------------------
+    function alphabetWar(str) {
+        let right = 0
+        let left = 0
+        for (let i=0; i<str.length; i++) {
+            switch (str[i]) {
+                case 'w':
+                    left+=4
+                    break
+                case 'p':
+                    left+=3
+                    break
+                case 'b':
+                    left+=2
+                    break
+                case 's':
+                    left+=1
+                    break
+
+                case 'm':
+                    right+=4
+                    break
+                case 'q':
+                    right+=3
+                    break
+                case 'd':
+                    right+=2
+                    break
+                case 'z':
+                    right+=1
+                    break
+            }
+        }
+        return left>right? 'Left side wins!' : left<right? "Right side wins!" : "Let's fight again!"
+    }
+
+    console.log(alphabetWar("z"))
     // ------------------------------------------357.----------------------------------------------------------
     // ------------------------------------------358.----------------------------------------------------------
     // ------------------------------------------359.----------------------------------------------------------
