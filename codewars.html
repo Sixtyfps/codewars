@@ -3018,38 +3018,53 @@
     // console.log(predictAge(65,60,75,55,60,63,64,45))
 
     // ------------------------------------359.Even numbers in an array-------------------------------------------------
-    function evenNumbers(arr, number) {
-        return arr.filter(el => el % 2 === 0).slice(-number)
-    }
+    // function evenNumbers(arr, number) {
+    //     return arr.filter(el => el % 2 === 0).slice(-number)
+    // }
 
     // ----------------------------------------360.Bumps in the Road----------------------------------------------------
-    function bump(x) {
-        return x.replaceAll('_', '').length > 15 ? "Car Dead" : "Woohoo!"
-    }
-
-    console.log(bump("__nn_nnnn__n_n___n____nn__nnn"))
+    // function bump(x) {
+    //     return x.replaceAll('_', '').length > 15 ? "Car Dead" : "Woohoo!"
+    // }
+    //
+    // console.log(bump("__nn_nnnn__n_n___n____nn__nnn"))
 
     // ------------------------------------------361.Fizz Buzz----------------------------------------------------------
-    function fizzbuzz(n) {
-        let arr = []
-        for (let i = 1; i <= n; i++) {
-            if (i % 3 === 0 && i % 5 === 0) {
-                arr.push("FizzBuzz")
-            } else if (i % 5 === 0) {
-                arr.push("Buzz")
-            } else if (i % 3 === 0) {
-                arr.push("Fizz")
-            } else {
-                arr.push(i)
-            }
+    // function fizzbuzz(n) {
+    //     let arr = []
+    //     for (let i = 1; i <= n; i++) {
+    //         if (i % 3 === 0 && i % 5 === 0) {
+    //             arr.push("FizzBuzz")
+    //         } else if (i % 5 === 0) {
+    //             arr.push("Buzz")
+    //         } else if (i % 3 === 0) {
+    //             arr.push("Fizz")
+    //         } else {
+    //             arr.push(i)
+    //         }
+    //     }
+    //     return arr
+    // }
+    //
+    // console.log(fizzbuzz(5))
+
+    // ----------------------------------------362.Maximum Product------------------------------------------------------
+    function adjacentElementsProduct(arr) {
+        let res =[]
+        for (let i=0; i<arr.length-1; i++) {
+
+            res.push(arr[i]*arr[i+1])
         }
-        return arr
+        return Math.max(...res)
     }
 
-    console.log(fizzbuzz(5))
+    console.log(adjacentElementsProduct([1,2,3]))
 
-    // ------------------------------------------362.----------------------------------------------------------
-    // ------------------------------------------363.----------------------------------------------------------
+    // ------------------------------------363.Number of Decimal Digits-------------------------------------------------
+    function digits(n) {
+        return n.toString().length
+    }
+
     // ------------------------------------------364.----------------------------------------------------------
     // ------------------------------------------365.----------------------------------------------------------
     // ------------------------------------------366.----------------------------------------------------------
