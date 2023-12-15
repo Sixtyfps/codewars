@@ -3049,24 +3049,38 @@
     // console.log(fizzbuzz(5))
 
     // ----------------------------------------362.Maximum Product------------------------------------------------------
-    function adjacentElementsProduct(arr) {
-        let res =[]
-        for (let i=0; i<arr.length-1; i++) {
-
-            res.push(arr[i]*arr[i+1])
-        }
-        return Math.max(...res)
-    }
-
-    console.log(adjacentElementsProduct([1,2,3]))
+    // function adjacentElementsProduct(arr) {
+    //     let res =[]
+    //     for (let i=0; i<arr.length-1; i++) {
+    //
+    //         res.push(arr[i]*arr[i+1])
+    //     }
+    //     return Math.max(...res)
+    // }
+    //
+    // console.log(adjacentElementsProduct([1,2,3]))
 
     // ------------------------------------363.Number of Decimal Digits-------------------------------------------------
-    function digits(n) {
-        return n.toString().length
+    // function digits(n) {
+    //     return n.toString().length
+    // }
+
+    // ------------------------------------------364.Greet Me-----------------------------------------------------------
+    const greet = (name) => {
+        return `Hello ${name.charAt(0).toUpperCase()+name.toLowerCase().slice(1)}!`
     }
 
-    // ------------------------------------------364.----------------------------------------------------------
-    // ------------------------------------------365.----------------------------------------------------------
+    // -------------------------------------365.Deodorant Evaporator----------------------------------------------------
+    function evaporator(content, evap_per_day, threshold){
+        let res = 0
+        content = 100
+        while(content >= threshold) {
+            content -= content * evap_per_day/100
+            res++
+        }
+        return res
+    }
+
     // ------------------------------------------366.----------------------------------------------------------
     // ------------------------------------------367.----------------------------------------------------------
     // ------------------------------------------368.----------------------------------------------------------
