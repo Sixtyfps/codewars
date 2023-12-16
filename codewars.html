@@ -3066,35 +3066,44 @@
     // }
 
     // ------------------------------------------364.Greet Me-----------------------------------------------------------
-    const greet = (name) => {
-        return `Hello ${name.charAt(0).toUpperCase()+name.toLowerCase().slice(1)}!`
-    }
+    // const greet = (name) => {
+    //     return `Hello ${name.charAt(0).toUpperCase()+name.toLowerCase().slice(1)}!`
+    // }
 
     // -------------------------------------365.Deodorant Evaporator----------------------------------------------------
-    function evaporator(content, evap_per_day, threshold){
-        let res = 0
-        content = 100
-        while(content >= threshold) {
-            content -= content * evap_per_day/100
-            res++
-        }
-        return res
+    // function evaporator(content, evap_per_day, threshold){
+    //     let res = 0
+    //     content = 100
+    //     while(content >= threshold) {
+    //         content -= content * evap_per_day/100
+    //         res++
+    //     }
+    //     return res
+    // }
+
+    // --------------------------------------------366.Find the vowels--------------------------------------------------
+    // function vowelIndices(word){
+    //     let res=[]
+    //     for (let i=0; i<word.length; i++) {
+    //         if (word[i].match(/[aeiouyAEIOUY]/gi)) {
+    //             res.push(i+1)
+    //         }
+    //     }
+    //     return res
+    // }
+    //
+    // console.log(vowelIndices("apple"))
+
+    // -----------------------------------------367.Triangular Treasure-------------------------------------------------
+    function triangular(n) {
+        return n>0? n*(n+1)/2 : 0
     }
 
-    // ------------------------------------------366.----------------------------------------------------------
-    function vowelIndices(word){
-        let res=[]
-        for (let i=0; i<word.length; i++) {
-            if (word[i].match(/[aeiouyAEIOUY]/gi)) {
-                res.push(i+1)
-            }
-        }
-        return res
+    // --------------------------------------------368.Most digits-----------------------------------------------------
+    function findLongest(arr){
+        return arr.find(el => el.toString().length === Math.max(...arr.map(el=>el.toString().length)))
     }
 
-    console.log(vowelIndices("apple"))
-    // ------------------------------------------367.----------------------------------------------------------
-    // ------------------------------------------368.----------------------------------------------------------
     // ------------------------------------------369.----------------------------------------------------------
     // ------------------------------------------370.----------------------------------------------------------
 
