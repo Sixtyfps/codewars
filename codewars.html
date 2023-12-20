@@ -3136,26 +3136,38 @@
     // console.log(reverseNumber(-123))
 
     // ------------------------------------------373.Switcheroo---------------------------------------------------------
-    function switcheroo(x){
-        return x.replace(/[ab]/g, match=>match === 'a' ? 'b': 'a')
-    }
+    // function switcheroo(x){
+    //     return x.replace(/[ab]/g, match=>match === 'a' ? 'b': 'a')
+    // }
 
     // ------------------------------------374.Sum of Triangular Numbers------------------------------------------------
-    function sumTriangularNumbers(n) {
-        return n>0? ((n*(n+1)*(n+2))/6) : 0
-    }
+    // function sumTriangularNumbers(n) {
+    //     return n>0? ((n*(n+1)*(n+2))/6) : 0
+    // }
 
     // -----------------------------------------375.Build a square------------------------------------------------------
-    function generateShape(int){
-        let str=''
-        let row = '+'.repeat(int) + '\n'
-        for (let i=0; i<int; i++) {
-            str= str + row
-        }
-        return str.slice(0,-1)
+    // function generateShape(int){
+    //     let str=''
+    //     let row = '+'.repeat(int) + '\n'
+    //     for (let i=0; i<int; i++) {
+    //         str= str + row
+    //     }
+    //     return str.slice(0,-1)
+    // }
+
+    // ------------------------------------376.Moves in squared strings (I)---------------------------------------------
+    function vertMirror(str) {
+        return str.split('\n').map(el => el.split('').reverse().join('')).join('\n')
+    }
+    function horMirror(str) {
+        return str.split('\n').reverse().join('\n')
+    }
+    function oper(fct, s) {
+        return fct(s)
     }
 
-    // ------------------------------------------376.----------------------------------------------------------
+    console.log(vertMirror("QHdgSh\\noaMDnH\\nXxNNlC\\nHxxvRi\\nAvVTqb\\nuRySvw"))
+    console.log(horMirror("abcd\nefgh\nijkl\nmnop"))
     // ------------------------------------------377.----------------------------------------------------------
     // ------------------------------------------378.----------------------------------------------------------
     // ------------------------------------------379.----------------------------------------------------------
