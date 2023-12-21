@@ -3156,21 +3156,42 @@
     // }
 
     // ------------------------------------376.Moves in squared strings (I)---------------------------------------------
-    function vertMirror(str) {
-        return str.split('\n').map(el => el.split('').reverse().join('')).join('\n')
-    }
-    function horMirror(str) {
-        return str.split('\n').reverse().join('\n')
-    }
-    function oper(fct, s) {
-        return fct(s)
+    // function vertMirror(str) {
+    //     return str.split('\n').map(el => el.split('').reverse().join('')).join('\n')
+    // }
+    // function horMirror(str) {
+    //     return str.split('\n').reverse().join('\n')
+    // }
+    // function oper(fct, s) {
+    //     return fct(s)
+    // }
+    //
+    // console.log(vertMirror("QHdgSh\\noaMDnH\\nXxNNlC\\nHxxvRi\\nAvVTqb\\nuRySvw"))
+    // console.log(horMirror("abcd\nefgh\nijkl\nmnop"))
+
+    // ----------------------------377.Convert an array of strings to array of numbers----------------------------------
+    function toNumberArray(arr){
+        return arr.map(el => +el)
     }
 
-    console.log(vertMirror("QHdgSh\\noaMDnH\\nXxNNlC\\nHxxvRi\\nAvVTqb\\nuRySvw"))
-    console.log(horMirror("abcd\nefgh\nijkl\nmnop"))
-    // ------------------------------------------377.----------------------------------------------------------
-    // ------------------------------------------378.----------------------------------------------------------
-    // ------------------------------------------379.----------------------------------------------------------
+    // -----------------------------------------378.Sort the Gift Code--------------------------------------------------
+    function sortGiftCode(code){
+        return code.split('').sort().join('')
+    }
+
+    // ------------------------------------------379.Parts of a list----------------------------------------------------
+    function partlist(arr) {
+        let res = []
+        for (let i=0; i<arr.length-1; i++) {
+            res.push([arr.slice(0,i+1).toString().replaceAll(',', ' '),
+                arr.slice(i+1).toString().replaceAll(',', ' ')
+            ])
+        }
+        return res
+    }
+
+    console.log(partlist(["A", "B", "C", "D"]))
+
     // ------------------------------------------380.----------------------------------------------------------
 
 
