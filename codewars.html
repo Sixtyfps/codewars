@@ -3193,29 +3193,34 @@
     // console.log(partlist(["A", "B", "C", "D"]))
 
     // ----------------------------------------380.Divide and Conquer---------------------------------------------------
-    function divCon(x) {
-        let res = 0
-        for (let i = 0; i < x.length; i++) {
-            if (typeof (x[i]) === "number") {
-                res = res + x[i]
-            } else {
-                res = res - x[i].toString()
-            }
-        }
-        return res
+    // function divCon(x) {
+    //     let res = 0
+    //     for (let i = 0; i < x.length; i++) {
+    //         if (typeof (x[i]) === "number") {
+    //             res = res + x[i]
+    //         } else {
+    //             res = res - x[i].toString()
+    //         }
+    //     }
+    //     return res
+    // }
+
+    // -------------------------------------------381.Is Ruby coming?---------------------------------------------------
+    // function isRubyComing(list) {
+    //     for (n in list) {
+    //         if (list[n].language === 'Ruby') {
+    //             return true
+    //         }
+    //     }
+    //     return false
+    // }
+
+    // ------------------------------------------382.Alphabet symmetry--------------------------------------------------
+    function solve(arr){
+        var alphabeth = "abcdefghijklmnopqrstuvwxyz";
+        return arr.map(x => x.toLowerCase().split('').filter((y,i) => i==alphabeth.indexOf(y)).length);
     }
 
-    // -----------------------------------------381.Is Ruby coming?-----------------------------------------------------
-    function isRubyComing(list) {
-        for (n in list) {
-            if (list[n].language === 'Ruby') {
-                return true
-            }
-        }
-        return false
-    }
-
-    // ------------------------------------------382.----------------------------------------------------------
     // ------------------------------------------383.----------------------------------------------------------
     // ------------------------------------------384.----------------------------------------------------------
     // ------------------------------------------385.----------------------------------------------------------
