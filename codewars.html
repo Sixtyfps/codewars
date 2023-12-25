@@ -3222,49 +3222,80 @@
     // }
 
     // ------------------------------------------383.Sum even numbers---------------------------------------------------
-    function sumEvenNumbers(input) {
-        return input.reduce((a,c) => c%2 ? a : a+c, 0)
-    }
+    // function sumEvenNumbers(input) {
+    //     return input.reduce((a,c) => c%2 ? a : a+c, 0)
+    // }
 
     // --------------------------------------384.Sum of numbers from 0 to N---------------------------------------------
-    var SequenceSum = (function() {
-        function SequenceSum() {}
-
-        SequenceSum.showSequence = function(count) {
-            let sumStr = '0'
-            let sumVal = 0
-            if (count>0) {
-                for (let i=1; i<=count; i++) {
-                    sumStr = `${sumStr}+${i}`
-                    sumVal = sumVal + i
-                }
-            }
-            else if (count===0){
-                return '0=0'
-            }
-            else if (count<0) {
-                return `${count}<0`
-            }
-            return sumStr + ' = '+ sumVal
-        };
-
-        return SequenceSum;
-
-    })();
+    // var SequenceSum = (function() {
+    //     function SequenceSum() {}
+    //
+    //     SequenceSum.showSequence = function(count) {
+    //         let sumStr = '0'
+    //         let sumVal = 0
+    //         if (count>0) {
+    //             for (let i=1; i<=count; i++) {
+    //                 sumStr = `${sumStr}+${i}`
+    //                 sumVal = sumVal + i
+    //             }
+    //         }
+    //         else if (count===0){
+    //             return '0=0'
+    //         }
+    //         else if (count<0) {
+    //             return `${count}<0`
+    //         }
+    //         return sumStr + ' = '+ sumVal
+    //     };
+    //
+    //     return SequenceSum;
+    //
+    // })();
 
     // -----------------------------------------------385.Boiled Eggs---------------------------------------------------
-    function cookingTime(eggs) {
-        return Math.ceil(eggs/8)*5
-    }
+    // function cookingTime(eggs) {
+    //     return Math.ceil(eggs/8)*5
+    // }
 
     // --------------------------------------------386.Simple beads count-----------------------------------------------
-    function countRedBeads(n) {
-        return n<2? 0 : (n-1)*2
+    // function countRedBeads(n) {
+    //     return n<2? 0 : (n-1)*2
+    // }
+
+    // ------------------------------387.Higher-Order Functions Series - Greet developers-------------------------------
+    function greetDevelopers(list) {
+        return list.map(el => {
+            return {...el, greeting: `Hi ${el.firstName}, what do you like the most about ${el.language}?`}
+        })
     }
 
-    // ------------------------------------------387.----------------------------------------------------------
-    // ------------------------------------------388.----------------------------------------------------------
-    // ------------------------------------------389.----------------------------------------------------------
+    // ------------------------------------------------388.All unique---------------------------------------------------
+    function hasUniqueChars(arr){
+        let str = arr.split('').sort().join('')
+        for (let i=0; i<str.length; i++) {
+            if(str[i]===str[i+1]) {
+                return false
+            }
+        }
+        return true
+    }
+
+    // ----------------------------------------389.Simple remove duplicates---------------------------------------------
+    function solve(numbers) {
+        const uniqueNumbers = [];
+
+        const lastOccurrences = {};
+
+        for (let i = numbers.length - 1; i >= 0; i--) {
+            const number = numbers[i];
+            if (!lastOccurrences[number]) {
+                uniqueNumbers.unshift(number);
+                lastOccurrences[number] = true;
+            }
+        }
+        return uniqueNumbers
+    }
+
     // ------------------------------------------390.----------------------------------------------------------
 
 
