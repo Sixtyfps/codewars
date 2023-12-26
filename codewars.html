@@ -3263,39 +3263,58 @@
     // }
 
     // ------------------------------387.Higher-Order Functions Series - Greet developers-------------------------------
-    function greetDevelopers(list) {
-        return list.map(el => {
-            return {...el, greeting: `Hi ${el.firstName}, what do you like the most about ${el.language}?`}
-        })
-    }
+    // function greetDevelopers(list) {
+    //     return list.map(el => {
+    //         return {...el, greeting: `Hi ${el.firstName}, what do you like the most about ${el.language}?`}
+    //     })
+    // }
 
     // ------------------------------------------------388.All unique---------------------------------------------------
-    function hasUniqueChars(arr){
-        let str = arr.split('').sort().join('')
-        for (let i=0; i<str.length; i++) {
-            if(str[i]===str[i+1]) {
-                return false
-            }
-        }
-        return true
-    }
+    // function hasUniqueChars(arr){
+    //     let str = arr.split('').sort().join('')
+    //     for (let i=0; i<str.length; i++) {
+    //         if(str[i]===str[i+1]) {
+    //             return false
+    //         }
+    //     }
+    //     return true
+    // }
 
     // ----------------------------------------389.Simple remove duplicates---------------------------------------------
-    function solve(numbers) {
-        const uniqueNumbers = [];
+    // function solve(numbers) {
+    //     const uniqueNumbers = [];
+    //
+    //     const lastOccurrences = {};
+    //
+    //     for (let i = numbers.length - 1; i >= 0; i--) {
+    //         const number = numbers[i];
+    //         if (!lastOccurrences[number]) {
+    //             uniqueNumbers.unshift(number);
+    //             lastOccurrences[number] = true;
+    //         }
+    //     }
+    //     return uniqueNumbers
+    // }
 
-        const lastOccurrences = {};
-
-        for (let i = numbers.length - 1; i >= 0; i--) {
-            const number = numbers[i];
-            if (!lastOccurrences[number]) {
-                uniqueNumbers.unshift(number);
-                lastOccurrences[number] = true;
-            }
-        }
-        return uniqueNumbers
+    // ------------------------------------------390.Filter the number--------------------------------------------------
+    const filterString = (value) => {
+        return Number(value.replace(/[a-zA-Z]/g,''))
     }
 
+    // ------------------------------------------390.max diff - easy----------------------------------------------------------
+    function maxDiff(list) {
+        const max = Math.max(...list)
+        const min = Math.min(...list)
+        if (list.length < 2) {
+            return 0
+        } else {
+            return max-min
+        }
+    }
+
+    // ------------------------------------------390.----------------------------------------------------------
+    // ------------------------------------------390.----------------------------------------------------------
+    // ------------------------------------------390.----------------------------------------------------------
     // ------------------------------------------390.----------------------------------------------------------
 
 
