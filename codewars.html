@@ -3297,23 +3297,35 @@
     // }
 
     // ------------------------------------------390.Filter the number--------------------------------------------------
-    const filterString = (value) => {
-        return Number(value.replace(/[a-zA-Z]/g,''))
-    }
+    // const filterString = (value) => {
+    //     return Number(value.replace(/[a-zA-Z]/g,''))
+    // }
 
     // ------------------------------------------390.max diff - easy----------------------------------------------------------
-    function maxDiff(list) {
-        const max = Math.max(...list)
-        const min = Math.min(...list)
-        if (list.length < 2) {
-            return 0
-        } else {
-            return max-min
+    // function maxDiff(list) {
+    //     const max = Math.max(...list)
+    //     const min = Math.min(...list)
+    //     if (list.length < 2) {
+    //         return 0
+    //     } else {
+    //         return max-min
+    //     }
+    // }
+
+    // --------------------------------------------390.esreveR----------------------------------------------------------
+    reverse = function (arr) {
+        let res = []
+        for (let i = arr.length - 1; i >= 0; i--) {
+            res.push(arr[i])
         }
+        return res
     }
 
     // ------------------------------------------390.----------------------------------------------------------
-    // ------------------------------------------390.----------------------------------------------------------
+    function repeats(arr){
+        return arr.filter((item, pos, self) => self.indexOf(item)===pos).reduce((a,b) =>a+b)
+    }
+
     // ------------------------------------------390.----------------------------------------------------------
     // ------------------------------------------390.----------------------------------------------------------
 
