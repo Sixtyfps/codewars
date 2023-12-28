@@ -3313,20 +3313,35 @@
     // }
 
     // --------------------------------------------390.esreveR----------------------------------------------------------
-    reverse = function (arr) {
-        let res = []
-        for (let i = arr.length - 1; i >= 0; i--) {
-            res.push(arr[i])
-        }
-        return res
-    }
+    // reverse = function (arr) {
+    //     let res = []
+    //     for (let i = arr.length - 1; i >= 0; i--) {
+    //         res.push(arr[i])
+    //     }
+    //     return res
+    // }
 
-    // ------------------------------------------390.----------------------------------------------------------
+    // ---------------------------------------390.Sum of array singles--------------------------------------------------
     function repeats(arr){
-        return arr.filter((item, pos, self) => self.indexOf(item)===pos).reduce((a,b) =>a+b)
+        return arr.filter((val, i, self) => self.indexOf(val)===self.lastIndexOf(val)).reduce((a,b) =>a+b)
     }
 
-    // ------------------------------------------390.----------------------------------------------------------
+    // --------------------------------------390.Palindrome chain length------------------------------------------------
+    const palindromeChainLength = (n) => {
+        for (let i=0; i< 100000; i++) {
+            if (n === Number(n.toString().split('').reverse().join(''))) {
+                return i
+            } else {
+                n = n + Number(n.toString().split('').reverse().join(''))
+                if (n === Number(n.toString().split('').reverse().join(''))) {
+                    return i+1
+                }
+            }
+        }
+    }
+
+    console.log(palindromeChainLength(45))
+
     // ------------------------------------------390.----------------------------------------------------------
 
 
