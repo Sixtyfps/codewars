@@ -3358,20 +3358,36 @@
     // console.log(gps(15, [0.0, 0.19, 0.5, 0.75, 1.0, 1.25, 1.5, 1.75, 2.0, 2.25]))
 
     // ------------------------------------------396.Over The Road------------------------------------------------------
-    function overTheRoad(address, n){
-        return n*2 - address + 1
-    }
+    // function overTheRoad(address, n){
+    //     return n*2 - address + 1
+    // }
 
     // -------------------------------------------397.Halving Sum-------------------------------------------------------
-    function halvingSum(n) {
-        let res=n
-        for (let i=2; i<n; i = i*2) {
-            res = res + Math.floor(n/i)
+    // function halvingSum(n) {
+    //     let res=n
+    //     for (let i=2; i<n; i = i*2) {
+    //         res = res + Math.floor(n/i)
+    //     }
+    //     return res
+    // }
+
+    // -----------------------------------398.Ordered Count of Characters-----------------------------------------------
+    const orderedCount = (text) => {
+        let temp = []
+        let res= []
+        for (let i=0; i<text.length; i++) {
+            let regex = new RegExp(text[i], 'g')
+            temp.push([text[i], text.match(regex).length].toString())
+        }
+        const a = temp.filter((el, i, res) => res.indexOf(el) === i)
+        for (let i=0; i<a.length; i++) {
+            res.push([a[i][0], +a[i][2]])
         }
         return res
     }
 
-    // ------------------------------------------398.----------------------------------------------------------
+    console.log(orderedCount('abracadabra'))
+
     // ------------------------------------------399.----------------------------------------------------------
     // ------------------------------------------400.----------------------------------------------------------
 
