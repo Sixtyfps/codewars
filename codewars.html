@@ -3389,35 +3389,62 @@
     // console.log(orderedCount('abracadabra'))
 
     // ---------------------------------------399.Odd-Even String Sort--------------------------------------------------
-    function sortMyString(str) {
-        let even = []
-        let odd = []
-        str.split('').map((el, i) => i % 2 ? odd.push(el) : even.push(el))
-        return `${even.join('')} ${odd.join('')}`
-    }
+    // function sortMyString(str) {
+    //     let even = []
+    //     let odd = []
+    //     str.split('').map((el, i) => i % 2 ? odd.push(el) : even.push(el))
+    //     return `${even.join('')} ${odd.join('')}`
+    // }
 
     // -------------------------------------400.Sum of Odd Cubed Numbers------------------------------------------------
-    function cubeOdd(arr) {
-        let sum = 0
-        for (let i = 0; i < arr.length; i++) {
-            if (typeof arr[i] !== 'number') {
-                return undefined
-            } else {
-                if (arr[i] % 2) {
-                    sum = sum + arr[i] ** 3
-                }
-            }
-        }
-        return sum
-    }
+    // function cubeOdd(arr) {
+    //     let sum = 0
+    //     for (let i = 0; i < arr.length; i++) {
+    //         if (typeof arr[i] !== 'number') {
+    //             return undefined
+    //         } else {
+    //             if (arr[i] % 2) {
+    //                 sum = sum + arr[i] ** 3
+    //             }
+    //         }
+    //     }
+    //     return sum
+    // }
 
     // ------------------------------------401.Lost number in number sequence-------------------------------------------
-    function findDeletedNumber(arr, mixArr) {
-        return arr.reduce((a,b) => a + b, 0) - mixArr.reduce((a,b) => a + b, 0)
+    // function findDeletedNumber(arr, mixArr) {
+    //     return arr.reduce((a,b) => a + b, 0) - mixArr.reduce((a,b) => a + b, 0)
+    // }
+
+    // ------------------------------------402.Find the nth Digit of a Number-------------------------------------------
+    const findDigit = (num, nth) => {
+        if (nth < 1) {
+            return -1
+        }
+        if (nth<Math.abs(num).toString().length+1) {
+            const a= Math.abs(num).toString().split('').reverse()[nth-1]
+            return +a
+        } else {
+            return 0
+        }
     }
 
-    // ------------------------------------------402.----------------------------------------------------------
-    // ------------------------------------------403.----------------------------------------------------------
+    // -----------------------------------403.Find the first Python developer-------------------------------------------
+    function getFirstPython(list) {
+        const dev = list.find(el => el.language === 'Python')
+        if ( dev === undefined) {
+            return 'There will be no Python developers'
+        } else {
+            return `${dev.firstName}, ${dev.country}`
+        }
+    }
+
+    console.log(getFirstPython([
+        { firstName: 'Mark', lastName: 'G.', country: 'Scotland', continent: 'Europe', age: 22, language: 'JavaScript' },
+        { firstName: 'Victoria', lastName: 'T.', country: 'Puerto Rico', continent: 'Americas', age: 30, language: 'Python' },
+        { firstName: 'Emma', lastName: 'B.', country: 'Norway', continent: 'Europe', age: 19, language: 'Clojure' }
+    ]))
+
     // ------------------------------------------404.----------------------------------------------------------
     // ------------------------------------------405.----------------------------------------------------------
     // ------------------------------------------406.----------------------------------------------------------
