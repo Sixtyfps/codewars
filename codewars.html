@@ -3458,24 +3458,38 @@
     // }
 
     // ------------------------------------------406.Invite More Women?-------------------------------------------------
-    function inviteMoreWomen(arr) {
-        const sum = arr.reduce((a,b) => a+b, 0)
-        if (sum > 0) {
-            return true
-        } else if (sum<=0) {
-            return false
-        }
-    }
-
-    console.log(inviteMoreWomen([1, -1]))
+    // function inviteMoreWomen(arr) {
+    //     const sum = arr.reduce((a,b) => a+b, 0)
+    //     if (sum > 0) {
+    //         return true
+    //     } else if (sum<=0) {
+    //         return false
+    //     }
+    // }
+    //
+    // console.log(inviteMoreWomen([1, -1]))
 
     // -----------------------------------------------407.Spacify-------------------------------------------------------
-    function spacify(str) {
-        return str.replaceAll('', ' ').trim()
+    // function spacify(str) {
+    //     return str.replaceAll('', ' ').trim()
+    // }
+
+    // ---------------------------------------------408.Tidy Number-----------------------------------------------------
+    function tidyNumber(n){
+        const str = n.toString()
+        for (let i=0; i<str.length; i++) {
+            if (str[i]>str[i+1]) {
+                return false
+            }
+        }
+        return true
     }
 
-    // ------------------------------------------408.----------------------------------------------------------
-    // ------------------------------------------409.----------------------------------------------------------
+    // ----------------------------------------409.Alphabetical Addition------------------------------------------------
+    function addLetters(...letters) {
+        return String.fromCharCode(letters.reduce((sum,v)=>sum+v.charCodeAt()-96,25) % 26 + 97)
+    }
+
     // ------------------------------------------410.----------------------------------------------------------
 
 
