@@ -3506,23 +3506,42 @@
     //
     // console.log(maxTriSum([100,2,9,13,10,5,2,9,5]))
 
-    // ------------------------------------------412.Strong Number----------------------------------------------------------
-    function strong(n) {
-        const arr = n.toString().split('')
-        let sum = 0
-        for (let i=0; i<arr.length; i++) {
-            let fac = 1
-            for (let j=1; j<=arr[i]; j++){
-                fac = fac*j
-            }
-            sum = sum+fac
+    // ------------------------------------------412.Strong Number------------------------------------------------------
+    // function strong(n) {
+    //     const arr = n.toString().split('')
+    //     let sum = 0
+    //     for (let i=0; i<arr.length; i++) {
+    //         let fac = 1
+    //         for (let j=1; j<=arr[i]; j++){
+    //             fac = fac*j
+    //         }
+    //         sum = sum+fac
+    //     }
+    //     return sum === n? "STRONG!!!!" : "Not Strong !!"
+    // }
+    //
+    // console.log(strong(2))
+
+    // -----------------------------------------413.Balanced Number-----------------------------------------------------
+    const balancedNum = (n) => {
+        let nLength = n.toString().length
+        if (nLength<3) {
+            return "Balanced"
         }
-        return sum === n? "STRONG!!!!" : "Not Strong !!"
+        let arr = n.toString().split('').map(el => +el)
+        let digits = Math.floor(nLength/2)
+
+        if (nLength % 2) {
+            return arr.slice(0, digits).reduce((a,b) => a+b) === arr.slice(-digits).reduce((a,b) => a+b)?
+                "Balanced" : "Not Balanced"
+        } else {
+            return arr.slice(0, digits-1).reduce((a,b) => a+b) === arr.slice(-digits+1).reduce((a,b) => a+b)?
+                "Balanced" : "Not Balanced"
+        }
     }
 
-    console.log(strong(2))
+    console.log(balancedNum(7))
 
-    // ------------------------------------------413.----------------------------------------------------------
     // ------------------------------------------414.----------------------------------------------------------
     // ------------------------------------------415.----------------------------------------------------------
     // ------------------------------------------416.----------------------------------------------------------
