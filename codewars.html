@@ -3523,27 +3523,43 @@
     // console.log(strong(2))
 
     // -----------------------------------------413.Balanced Number-----------------------------------------------------
-    const balancedNum = (n) => {
-        let nLength = n.toString().length
-        if (nLength<3) {
-            return "Balanced"
-        }
-        let arr = n.toString().split('').map(el => +el)
-        let digits = Math.floor(nLength/2)
+    // const balancedNum = (n) => {
+    //     let nLength = n.toString().length
+    //     if (nLength<3) {
+    //         return "Balanced"
+    //     }
+    //     let arr = n.toString().split('').map(el => +el)
+    //     let digits = Math.floor(nLength/2)
+    //
+    //     if (nLength % 2) {
+    //         return arr.slice(0, digits).reduce((a,b) => a+b) === arr.slice(-digits).reduce((a,b) => a+b)?
+    //             "Balanced" : "Not Balanced"
+    //     } else {
+    //         return arr.slice(0, digits-1).reduce((a,b) => a+b) === arr.slice(-digits+1).reduce((a,b) => a+b)?
+    //             "Balanced" : "Not Balanced"
+    //     }
+    // }
+    //
+    // console.log(balancedNum(7))
 
-        if (nLength % 2) {
-            return arr.slice(0, digits).reduce((a,b) => a+b) === arr.slice(-digits).reduce((a,b) => a+b)?
-                "Balanced" : "Not Balanced"
+    // -----------------------------------------414.Averages of numbers-------------------------------------------------
+    function averages(arr) {
+        let res = []
+        if (arr) {
+            for (let i = 0; i < arr.length - 1; i++) {
+                res.push((arr[i] + arr[i + 1]) / 2)
+            }
+            return res
         } else {
-            return arr.slice(0, digits-1).reduce((a,b) => a+b) === arr.slice(-digits+1).reduce((a,b) => a+b)?
-                "Balanced" : "Not Balanced"
+            return []
         }
     }
 
-    console.log(balancedNum(7))
+    // ------------------------------------------415.Help the Fruit Guy-------------------------------------------------
+    function removeRotten(arr) {
+        return arr ? arr.map(el => el.replace('rotten', '').toLowerCase()) : []
+    }
 
-    // ------------------------------------------414.----------------------------------------------------------
-    // ------------------------------------------415.----------------------------------------------------------
     // ------------------------------------------416.----------------------------------------------------------
     // ------------------------------------------417.----------------------------------------------------------
     // ------------------------------------------418.----------------------------------------------------------
