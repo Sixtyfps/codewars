@@ -3543,25 +3543,45 @@
     // console.log(balancedNum(7))
 
     // -----------------------------------------414.Averages of numbers-------------------------------------------------
-    function averages(arr) {
-        let res = []
-        if (arr) {
-            for (let i = 0; i < arr.length - 1; i++) {
-                res.push((arr[i] + arr[i + 1]) / 2)
-            }
-            return res
-        } else {
-            return []
+    // function averages(arr) {
+    //     let res = []
+    //     if (arr) {
+    //         for (let i = 0; i < arr.length - 1; i++) {
+    //             res.push((arr[i] + arr[i + 1]) / 2)
+    //         }
+    //         return res
+    //     } else {
+    //         return []
+    //     }
+    // }
+
+    // ------------------------------------------415.Help the Fruit Guy-------------------------------------------------
+    // function removeRotten(arr) {
+    //     return arr ? arr.map(el => el.replace('rotten', '').toLowerCase()) : []
+    // }
+
+    // ---------------------------------------416.Smallest value of an array--------------------------------------------
+    function min(arr, toReturn) {
+        if (toReturn === 'value') {
+            return Math.min(...arr)
+        } else if (toReturn === 'index') {
+            return arr.indexOf(Math.min(...arr))
         }
     }
 
-    // ------------------------------------------415.Help the Fruit Guy-------------------------------------------------
-    function removeRotten(arr) {
-        return arr ? arr.map(el => el.replace('rotten', '').toLowerCase()) : []
+    // ---------------------------------------417.Simple Fun #74: Growing Plant-----------------------------------------
+    function growingPlant(upSpeed, downSpeed, desiredHeight) {
+        let h = 0
+        for (let i=1; i < Infinity; i++) {
+            h = h + upSpeed
+            if (h>=desiredHeight){
+                return i
+            } else {
+                h = h - downSpeed
+            }
+        }
     }
 
-    // ------------------------------------------416.----------------------------------------------------------
-    // ------------------------------------------417.----------------------------------------------------------
     // ------------------------------------------418.----------------------------------------------------------
     // ------------------------------------------419.----------------------------------------------------------
     // ------------------------------------------420.----------------------------------------------------------
