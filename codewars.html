@@ -3583,29 +3583,47 @@
     // }
 
     // ------------------------------------------418.Alternate case-----------------------------------------------------
-    function alternateCase(s) {
-        return s.split("")
-            .map(c => (c === c.toUpperCase() ? c.toLowerCase() : c.toUpperCase()))
-            .join("");
-    }
+    // function alternateCase(s) {
+    //     return s.split("")
+    //         .map(c => (c === c.toUpperCase() ? c.toLowerCase() : c.toUpperCase()))
+    //         .join("");
+    // }
 
     // -------------------------------------419.Sort Out The Men From Boys----------------------------------------------
-    function menFromBoys(ar){
-        let arr = ar.filter((el,i)=>ar.indexOf(el)===i)
-        let even = []
-        let odd = []
-        for (let i=0; i<arr.length; i++) {
-            if (arr[i]%2) {
-                odd.push(arr[i])
-            } else {
-                even.push(arr[i])
-            }
-        }
-        return [...even.sort((a,b) => a-b), ...odd.sort((a,b) => a-b).reverse()]
+    // function menFromBoys(ar){
+    //     let arr = ar.filter((el,i)=>ar.indexOf(el)===i)
+    //     let even = []
+    //     let odd = []
+    //     for (let i=0; i<arr.length; i++) {
+    //         if (arr[i]%2) {
+    //             odd.push(arr[i])
+    //         } else {
+    //             even.push(arr[i])
+    //         }
+    //     }
+    //     return [...even.sort((a,b) => a-b), ...odd.sort((a,b) => a-b).reverse()]
+    // }
+
+    // -------------------------420.Currying functions: multiply all elements in an array-------------------------------
+    function multiplyAll(arr) {
+        return mult = (n) => arr.map(el => el * n)
     }
 
-    // ------------------------------------------420.----------------------------------------------------------
-    // ------------------------------------------421.----------------------------------------------------------
+    // -------------------------------------421.Simple string characters------------------------------------------------
+    function solve(s) {
+        let up = 0
+        let low = 0
+        let num = 0
+        let spec = 0
+        for(let i=0; i<s.length; i++) {
+            if (s[i]>='A' && s[i]<='Z') up++
+            else if (s[i]>='a' && s[i]<='z') low++
+            else if (s[i]>='0' && s[i]<'9') num++
+            else spec++
+        }
+        return [up, low, num, spec]
+    }
+
     // ------------------------------------------422.----------------------------------------------------------
     // ------------------------------------------423.----------------------------------------------------------
     // ------------------------------------------424.----------------------------------------------------------
