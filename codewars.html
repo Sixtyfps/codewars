@@ -3605,27 +3605,40 @@
     // }
 
     // -------------------------420.Currying functions: multiply all elements in an array-------------------------------
-    function multiplyAll(arr) {
-        return mult = (n) => arr.map(el => el * n)
-    }
+    // function multiplyAll(arr) {
+    //     return mult = (n) => arr.map(el => el * n)
+    // }
 
     // -------------------------------------421.Simple string characters------------------------------------------------
-    function solve(s) {
-        let up = 0
-        let low = 0
-        let num = 0
-        let spec = 0
-        for(let i=0; i<s.length; i++) {
-            if (s[i]>='A' && s[i]<='Z') up++
-            else if (s[i]>='a' && s[i]<='z') low++
-            else if (s[i]>='0' && s[i]<'9') num++
-            else spec++
-        }
-        return [up, low, num, spec]
+    // function solve(s) {
+    //     let up = 0
+    //     let low = 0
+    //     let num = 0
+    //     let spec = 0
+    //     for(let i=0; i<s.length; i++) {
+    //         if (s[i]>='A' && s[i]<='Z') up++
+    //         else if (s[i]>='a' && s[i]<='z') low++
+    //         else if (s[i]>='0' && s[i]<'9') num++
+    //         else spec++
+    //     }
+    //     return [up, low, num, spec]
+    // }
+
+    // -----------------------------------------422.Sort by Last Char---------------------------------------------------
+    function last(x) {
+        return x.split(' ').sort((a, b) => a.charCodeAt(a.length - 1) - b.charCodeAt(b.length - 1))
     }
 
-    // ------------------------------------------422.----------------------------------------------------------
-    // ------------------------------------------423.----------------------------------------------------------
+    // ------------------------------------------423.Squares sequence---------------------------------------------------
+    function squares(x, n) {
+        let res = []
+        for (let i=0; i<n; i++) {
+            res.push(x)
+            x=x*x
+        }
+        return res
+    }
+
     // ------------------------------------------424.----------------------------------------------------------
     // ------------------------------------------425.----------------------------------------------------------
     // ------------------------------------------426.----------------------------------------------------------
