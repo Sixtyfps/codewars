@@ -3655,10 +3655,10 @@
     // --------------------------------------426.Folding your way to the moon-------------------------------------------
     function foldTo(distance) {
         let fold = 0
-        if (distance < 0) {
+        if (distance <0) {
             return null
         }
-        for (let thick = 0.0001; thick < distance; thick = thick * 2) {
+        for (let thick = 0.0001; thick<distance; thick = thick*2) {
             fold++
         }
         return fold
