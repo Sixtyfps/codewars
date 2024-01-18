@@ -3675,25 +3675,44 @@
     // }
 
     // --------------------------------------------429.Digits explosion-------------------------------------------------
-    function explode(s) {
-        return s.split('').map(el => el.repeat(el)).join('')
-    }
-
-    console.log(explode("312"))
+    // function explode(s) {
+    //     return s.split('').map(el => el.repeat(el)).join('')
+    // }
+    //
+    // console.log(explode("312"))
 
     // ------------------------------------------430.Array element parity-----------------------------------------------
-    function solve(arr){
-        return [...new Set(arr)].reduce((a,b)=>a+b,0)
-    }
+    // function solve(arr){
+    //     return [...new Set(arr)].reduce((a,b)=>a+b,0)
+    // }
 
     // ---------------------------------------431.Debug Sum of Digits of a Number---------------------------------------
-    function getSumOfDigits(integer) {
-        return integer.toString().split('').map(el => +el).reduce((a,b)=>a+b,0)
+    // function getSumOfDigits(integer) {
+    //     return integer.toString().split('').map(el => +el).reduce((a,b)=>a+b,0)
+    // }
+    //
+    // console.log(getSumOfDigits(1324))
+
+    // -----------------------------------------432.Char Code Calculation-----------------------------------------------
+    function calc(x){
+        let total1 = x.split('').map(el => el.charCodeAt()).join('')
+        let total2 = total1.replaceAll(7, 1)
+        let total1sum = total1.toString().split('').map(el => +el).reduce((a,b)=>a+b,0)
+        let total2sum = total2.toString().split('').map(el => +el).reduce((a,b)=>a+b,0)
+        return total1sum-total2sum
     }
 
-    console.log(getSumOfDigits(1324))
-    // ------------------------------------------432.----------------------------------------------------------
-    // ------------------------------------------433.----------------------------------------------------------
+    // ----------------------------------------433.Simple consecutive pairs---------------------------------------------
+    function pairs(arr){
+        let count = 0
+        for(let i=0; i<arr.length; i=i+2) {
+            if(arr[i]===arr[i+1]+1 || arr[i]===arr[i+1]-1) {
+                count++
+            }
+        }
+        return count
+    }
+
     // ------------------------------------------434.----------------------------------------------------------
     // ------------------------------------------435.----------------------------------------------------------
     // ------------------------------------------436.----------------------------------------------------------
