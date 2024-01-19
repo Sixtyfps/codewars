@@ -3694,27 +3694,45 @@
     // console.log(getSumOfDigits(1324))
 
     // -----------------------------------------432.Char Code Calculation-----------------------------------------------
-    function calc(x){
-        let total1 = x.split('').map(el => el.charCodeAt()).join('')
-        let total2 = total1.replaceAll(7, 1)
-        let total1sum = total1.toString().split('').map(el => +el).reduce((a,b)=>a+b,0)
-        let total2sum = total2.toString().split('').map(el => +el).reduce((a,b)=>a+b,0)
-        return total1sum-total2sum
-    }
+    // function calc(x){
+    //     let total1 = x.split('').map(el => el.charCodeAt()).join('')
+    //     let total2 = total1.replaceAll(7, 1)
+    //     let total1sum = total1.toString().split('').map(el => +el).reduce((a,b)=>a+b,0)
+    //     let total2sum = total2.toString().split('').map(el => +el).reduce((a,b)=>a+b,0)
+    //     return total1sum-total2sum
+    // }
 
     // ----------------------------------------433.Simple consecutive pairs---------------------------------------------
-    function pairs(arr){
-        let count = 0
-        for(let i=0; i<arr.length; i=i+2) {
-            if(arr[i]===arr[i+1]+1 || arr[i]===arr[i+1]-1) {
-                count++
-            }
+    // function pairs(arr){
+    //     let count = 0
+    //     for(let i=0; i<arr.length; i=i+2) {
+    //         if(arr[i]===arr[i+1]+1 || arr[i]===arr[i+1]-1) {
+    //             count++
+    //         }
+    //     }
+    //     return count
+    // }
+
+    // -----------------------------------------434.Greatest common divisor---------------------------------------------
+    function mygcd(x,y){
+        x = Math.abs(x)
+        y = Math.abs(y)
+        while(y) {
+            let t = y
+            y = x % y
+            x = t
         }
-        return count
+        return x
     }
 
-    // ------------------------------------------434.----------------------------------------------------------
-    // ------------------------------------------435.----------------------------------------------------------
+    // --------------------------------------435.Product Of Maximums Of Array ------------------------------------------
+    function maxProduct(arr, k){
+        let nums = arr.sort((a,b) => a-b)
+        return nums.slice(-k).reduce((a,b) => a*b, 1)
+    }
+
+    console.log(maxProduct([8,6,4,6], 3))
+
     // ------------------------------------------436.----------------------------------------------------------
     // ------------------------------------------437.----------------------------------------------------------
     // ------------------------------------------438.----------------------------------------------------------
