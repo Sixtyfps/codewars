@@ -3734,21 +3734,57 @@
     // console.log(maxProduct([8,6,4,6], 3))
 
     // ------------------------------------------436.Get Full Name------------------------------------------------------
-    class Dinglemouse{
+    // class Dinglemouse{
+    //
+    //     constructor( firstName, lastName ){
+    //         this._firstName=firstName;
+    //         this._lastName=lastName;
+    //     }
+    //
+    //     getFullName(){
+    //         return `${this._firstName} ${this._lastName}`.trim();
+    //     }
+    //
+    // }
 
-        constructor( firstName, lastName ){
-            this._firstName=firstName;
-            this._lastName=lastName;
+    // ---------------------------------------437.Indexed capitalization------------------------------------------------
+    function capitalize(s, arr) {
+        let res = []
+        for (let i = 0; i < s.length; i++) {
+            if (arr.includes(i)) {
+                res.push(s[i].toUpperCase())
+            } else {
+                res.push(s[i])
+            }
         }
-
-        getFullName(){
-            return `${this._firstName} ${this._lastName}`.trim();
-        }
-
+        return res.join('')
     }
 
-    // ------------------------------------------437.----------------------------------------------------------
-    // ------------------------------------------438.----------------------------------------------------------
+    console.log(capitalize("abcdef", [1, 2, 5]))
+
+    // ------------------------------------438.The Office II - Boredom Score--------------------------------------------
+    function boredom(staff) {
+        let v = Object.values(staff)
+        let arr = v.map(el => el === 'accounts' ? el = 1
+            : el === 'finance' ? el = 2
+                : el === 'canteen' ? el = 10
+                    : el === 'regulation' ? el = 3
+                        : el === 'trading' ? el = 6
+                            : el === 'change' ? el = 6
+                                : el === 'IS' ? el = 8
+                                    : el === 'retail' ? el = 5
+                                        : el === 'cleaning' ? el = 4
+                                            : el = 25)
+        let res = arr.reduce((a, b) => a + b, 0)
+        if (res <= 80) {
+            return 'kill me now'
+        } else if (res >= 100) {
+            return 'party time!!'
+        } else {
+            return 'i can handle this'
+        }
+    }
+
     // ------------------------------------------439.----------------------------------------------------------
     // ------------------------------------------440.----------------------------------------------------------
     // ------------------------------------------441.----------------------------------------------------------
