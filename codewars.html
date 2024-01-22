@@ -3748,44 +3748,60 @@
     // }
 
     // ---------------------------------------437.Indexed capitalization------------------------------------------------
-    function capitalize(s, arr) {
-        let res = []
-        for (let i = 0; i < s.length; i++) {
-            if (arr.includes(i)) {
-                res.push(s[i].toUpperCase())
-            } else {
-                res.push(s[i])
-            }
-        }
-        return res.join('')
-    }
-
-    console.log(capitalize("abcdef", [1, 2, 5]))
+    // function capitalize(s, arr) {
+    //     let res = []
+    //     for (let i = 0; i < s.length; i++) {
+    //         if (arr.includes(i)) {
+    //             res.push(s[i].toUpperCase())
+    //         } else {
+    //             res.push(s[i])
+    //         }
+    //     }
+    //     return res.join('')
+    // }
+    //
+    // console.log(capitalize("abcdef", [1, 2, 5]))
 
     // ------------------------------------438.The Office II - Boredom Score--------------------------------------------
-    function boredom(staff) {
-        let v = Object.values(staff)
-        let arr = v.map(el => el === 'accounts' ? el = 1
-            : el === 'finance' ? el = 2
-                : el === 'canteen' ? el = 10
-                    : el === 'regulation' ? el = 3
-                        : el === 'trading' ? el = 6
-                            : el === 'change' ? el = 6
-                                : el === 'IS' ? el = 8
-                                    : el === 'retail' ? el = 5
-                                        : el === 'cleaning' ? el = 4
-                                            : el = 25)
-        let res = arr.reduce((a, b) => a + b, 0)
-        if (res <= 80) {
-            return 'kill me now'
-        } else if (res >= 100) {
-            return 'party time!!'
-        } else {
-            return 'i can handle this'
+    // function boredom(staff) {
+    //     let v = Object.values(staff)
+    //     let arr = v.map(el => el === 'accounts' ? el = 1
+    //         : el === 'finance' ? el = 2
+    //             : el === 'canteen' ? el = 10
+    //                 : el === 'regulation' ? el = 3
+    //                     : el === 'trading' ? el = 6
+    //                         : el === 'change' ? el = 6
+    //                             : el === 'IS' ? el = 8
+    //                                 : el === 'retail' ? el = 5
+    //                                     : el === 'cleaning' ? el = 4
+    //                                         : el = 25)
+    //     let res = arr.reduce((a, b) => a + b, 0)
+    //     if (res <= 80) {
+    //         return 'kill me now'
+    //     } else if (res >= 100) {
+    //         return 'party time!!'
+    //     } else {
+    //         return 'i can handle this'
+    //     }
+    // }
+
+    // ----------------------------------------439.All Inclusive?-------------------------------------------------------
+    function containAllRots(str, arr) {
+        let res = []
+        if (str === '') return true
+        for (let i = 0; i < str.length; i++) {
+            res.push(str.slice(i) + str.slice(0, i))
         }
+        for (const el of res) {
+            if (!arr.includes(el)) {
+                return false
+            }
+        }
+        return true
     }
 
-    // ------------------------------------------439.----------------------------------------------------------
+    console.log(containAllRots("abc", ["bsjq", "qbsj", "sjqb", "twZNsslC", "jqbs"]))
+
     // ------------------------------------------440.----------------------------------------------------------
     // ------------------------------------------441.----------------------------------------------------------
     // ------------------------------------------442.----------------------------------------------------------
