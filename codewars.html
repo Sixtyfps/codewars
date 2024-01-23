@@ -3786,23 +3786,48 @@
     // }
 
     // ----------------------------------------439.All Inclusive?-------------------------------------------------------
-    function containAllRots(str, arr) {
-        let res = []
-        if (str === '') return true
-        for (let i = 0; i < str.length; i++) {
-            res.push(str.slice(i) + str.slice(0, i))
+    // function containAllRots(str, arr) {
+    //     let res = []
+    //     if (str === '') return true
+    //     for (let i = 0; i < str.length; i++) {
+    //         res.push(str.slice(i) + str.slice(0, i))
+    //     }
+    //     for (const el of res) {
+    //         if (!arr.includes(el)) {
+    //             return false
+    //         }
+    //     }
+    //     return true
+    // }
+    //
+    // console.log(containAllRots("abc", ["bsjq", "qbsj", "sjqb", "twZNsslC", "jqbs"]))
+
+    // ----------------------------------------440.Building blocks------------------------------------------------------
+    class Block{
+        constructor(data){
+            this.width = data[0]
+            this.length = data[1]
+            this.height = data[2]
         }
-        for (const el of res) {
-            if (!arr.includes(el)) {
-                return false
-            }
+
+        getWidth () {
+            return this.width
         }
-        return true
+        getLength() {
+            return this.length
+        }
+        getHeight() {
+            return this.height
+        }
+
+        getVolume() {
+            return (this.width * this.length * this.height)
+        }
+        getSurfaceArea() {
+            return (2*(this.width * this.length + this.length * this.height + this.width *this.height))
+        }
     }
 
-    console.log(containAllRots("abc", ["bsjq", "qbsj", "sjqb", "twZNsslC", "jqbs"]))
-
-    // ------------------------------------------440.----------------------------------------------------------
     // ------------------------------------------441.----------------------------------------------------------
     // ------------------------------------------442.----------------------------------------------------------
     // ------------------------------------------443.----------------------------------------------------------
