@@ -3803,32 +3803,42 @@
     // console.log(containAllRots("abc", ["bsjq", "qbsj", "sjqb", "twZNsslC", "jqbs"]))
 
     // ----------------------------------------440.Building blocks------------------------------------------------------
-    class Block{
-        constructor(data){
-            this.width = data[0]
-            this.length = data[1]
-            this.height = data[2]
-        }
+    // class Block{
+    //     constructor(data){
+    //         this.width = data[0]
+    //         this.length = data[1]
+    //         this.height = data[2]
+    //     }
+    //
+    //     getWidth () {
+    //         return this.width
+    //     }
+    //     getLength() {
+    //         return this.length
+    //     }
+    //     getHeight() {
+    //         return this.height
+    //     }
+    //
+    //     getVolume() {
+    //         return (this.width * this.length * this.height)
+    //     }
+    //     getSurfaceArea() {
+    //         return (2*(this.width * this.length + this.length * this.height + this.width *this.height))
+    //     }
+    // }
 
-        getWidth () {
-            return this.width
+    // -------------------------------------441.Array Leaders (Array Series #3)-----------------------------------------
+    function arrayLeaders(nums){
+        let res = []
+        for (let i=0; i<nums.length; i++) {
+            if (nums[i]>nums.slice(i+1).reduce((a,b) => a+b,0)) {
+                res.push(nums[i])
+            }
         }
-        getLength() {
-            return this.length
-        }
-        getHeight() {
-            return this.height
-        }
-
-        getVolume() {
-            return (this.width * this.length * this.height)
-        }
-        getSurfaceArea() {
-            return (2*(this.width * this.length + this.length * this.height + this.width *this.height))
-        }
+        return res
     }
 
-    // ------------------------------------------441.----------------------------------------------------------
     // ------------------------------------------442.----------------------------------------------------------
     // ------------------------------------------443.----------------------------------------------------------
     // ------------------------------------------444.----------------------------------------------------------
