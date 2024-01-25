@@ -3829,18 +3829,48 @@
     // }
 
     // -------------------------------------441.Array Leaders (Array Series #3)-----------------------------------------
-    function arrayLeaders(nums){
-        let res = []
-        for (let i=0; i<nums.length; i++) {
-            if (nums[i]>nums.slice(i+1).reduce((a,b) => a+b,0)) {
-                res.push(nums[i])
-            }
+    // function arrayLeaders(nums){
+    //     let res = []
+    //     for (let i=0; i<nums.length; i++) {
+    //         if (nums[i]>nums.slice(i+1).reduce((a,b) => a+b,0)) {
+    //             res.push(nums[i])
+    //         }
+    //     }
+    //     return res
+    // }
+
+    // ------------------------------------------442.Basic Calculator---------------------------------------------------
+    function calculate(n1, op, n2) {
+        switch (op) {
+            case '+':
+                return n1 + n2
+            case '-':
+                return n1 - n2
+            case '*':
+                return n1 * n2
+            case '/':
+                if (n2 === 0) {
+                    return null
+                } else {
+                    return n1 / n2
+                }
+            default:
+                return null
         }
-        return res
     }
 
-    // ------------------------------------------442.----------------------------------------------------------
-    // ------------------------------------------443.----------------------------------------------------------
+    // ----------------------------------------------443.16+18=214------------------------------------------------------
+    function add(num1, num2) {
+        num1 = ('' + num1).split('').reverse()
+        num2 = ('' + num2).split('').reverse()
+        let max = Math.max(num1.length, num2.length)
+        let str = [];
+        for (let i = 0; i < max; i++)
+            str.push((parseInt(num1[i]) || 0) + (parseInt(num2[i]) || 0))
+        num1 = str.reverse().join('');
+        return parseInt(num1);
+    }
+
     // ------------------------------------------444.----------------------------------------------------------
     // ------------------------------------------445.----------------------------------------------------------
     // ------------------------------------------446.----------------------------------------------------------
