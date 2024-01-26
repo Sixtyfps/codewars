@@ -3840,38 +3840,49 @@
     // }
 
     // ------------------------------------------442.Basic Calculator---------------------------------------------------
-    function calculate(n1, op, n2) {
-        switch (op) {
-            case '+':
-                return n1 + n2
-            case '-':
-                return n1 - n2
-            case '*':
-                return n1 * n2
-            case '/':
-                if (n2 === 0) {
-                    return null
-                } else {
-                    return n1 / n2
-                }
-            default:
-                return null
-        }
-    }
+    // function calculate(n1, op, n2) {
+    //     switch (op) {
+    //         case '+':
+    //             return n1 + n2
+    //         case '-':
+    //             return n1 - n2
+    //         case '*':
+    //             return n1 * n2
+    //         case '/':
+    //             if (n2 === 0) {
+    //                 return null
+    //             } else {
+    //                 return n1 / n2
+    //             }
+    //         default:
+    //             return null
+    //     }
+    // }
 
     // ----------------------------------------------443.16+18=214------------------------------------------------------
-    function add(num1, num2) {
-        num1 = ('' + num1).split('').reverse()
-        num2 = ('' + num2).split('').reverse()
-        let max = Math.max(num1.length, num2.length)
-        let str = [];
-        for (let i = 0; i < max; i++)
-            str.push((parseInt(num1[i]) || 0) + (parseInt(num2[i]) || 0))
-        num1 = str.reverse().join('');
-        return parseInt(num1);
+    // function add(num1, num2) {
+    //     num1 = ('' + num1).split('').reverse()
+    //     num2 = ('' + num2).split('').reverse()
+    //     let max = Math.max(num1.length, num2.length)
+    //     let str = [];
+    //     for (let i = 0; i < max; i++)
+    //         str.push((parseInt(num1[i]) || 0) + (parseInt(num2[i]) || 0))
+    //     num1 = str.reverse().join('');
+    //     return parseInt(num1);
+    // }
+
+    // ------------------------------------------444.Disarium Number----------------------------------------------------
+    function disariumNumber(n){
+        let num = n.toString().split('').map(el=>+el)
+        let sum = 0
+        for (let i=0; i<num.length; i++) {
+            sum = sum + Math.pow(num[i], i+1)
+        }
+        return +sum===n? "Disarium !!" : "Not !!"
     }
 
-    // ------------------------------------------444.----------------------------------------------------------
+    disariumNumber(89)
+
     // ------------------------------------------445.----------------------------------------------------------
     // ------------------------------------------446.----------------------------------------------------------
     // ------------------------------------------447.----------------------------------------------------------
