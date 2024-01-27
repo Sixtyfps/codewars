@@ -3872,18 +3872,26 @@
     // }
 
     // ------------------------------------------444.Disarium Number----------------------------------------------------
-    function disariumNumber(n){
-        let num = n.toString().split('').map(el=>+el)
-        let sum = 0
-        for (let i=0; i<num.length; i++) {
-            sum = sum + Math.pow(num[i], i+1)
+    // function disariumNumber(n){
+    //     let num = n.toString().split('').map(el=>+el)
+    //     let sum = 0
+    //     for (let i=0; i<num.length; i++) {
+    //         sum = sum + Math.pow(num[i], i+1)
+    //     }
+    //     return +sum===n? "Disarium !!" : "Not !!"
+    // }
+    //
+    // disariumNumber(89)
+
+    // --------------445.Coding Meetup #5 - Higher-Order Functions Series - Prepare the count of languages--------------
+    function countLanguages(list) {
+        let langs = []
+        for (let i=0; i<list.length; i++) {
+            langs.push(list[i].language)
         }
-        return +sum===n? "Disarium !!" : "Not !!"
+        return langs.reduce((count, item) => (count[item] = count[item] + 1 || 1, count), {})
     }
 
-    disariumNumber(89)
-
-    // ------------------------------------------445.----------------------------------------------------------
     // ------------------------------------------446.----------------------------------------------------------
     // ------------------------------------------447.----------------------------------------------------------
     // ------------------------------------------448.----------------------------------------------------------
