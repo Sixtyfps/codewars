@@ -3893,15 +3893,19 @@
     // }
 
     // -------------------------------------------446.Digital cypher----------------------------------------------------
-    function encode(str, n) {
-        let arr = str.split('').map(el => el.charCodeAt(0)-96)
-        let arrn = n.toString().split('').map(el => +el)
-        return arr.map((el,i) => i+1<=arrn.length? el + arrn[i] : el + arrn[i%arrn.length])
+    // function encode(str, n) {
+    //     let arr = str.split('').map(el => el.charCodeAt(0)-96)
+    //     let arrn = n.toString().split('').map(el => +el)
+    //     return arr.map((el,i) => i+1<=arrn.length? el + arrn[i] : el + arrn[i%arrn.length])
+    // }
+    //
+    // console.log(encode("masterpiece",1939))
+
+    // -----------------------------------------447.The old switcheroo----------------------------------------------------------
+    function vowel2index(str) {
+        return str.split('').map((el,i) => el.match(/[aeiouAEIOU]/g) ? i+1 : el ).join('')
     }
 
-    console.log(encode("masterpiece",1939))
-
-    // ------------------------------------------447.----------------------------------------------------------
     // ------------------------------------------448.----------------------------------------------------------
     // ------------------------------------------449.----------------------------------------------------------
     // ------------------------------------------450.----------------------------------------------------------
