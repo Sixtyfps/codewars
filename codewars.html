@@ -3884,15 +3884,23 @@
     // disariumNumber(89)
 
     // --------------445.Coding Meetup #5 - Higher-Order Functions Series - Prepare the count of languages--------------
-    function countLanguages(list) {
-        let langs = []
-        for (let i=0; i<list.length; i++) {
-            langs.push(list[i].language)
-        }
-        return langs.reduce((count, item) => (count[item] = count[item] + 1 || 1, count), {})
+    // function countLanguages(list) {
+    //     let langs = []
+    //     for (let i=0; i<list.length; i++) {
+    //         langs.push(list[i].language)
+    //     }
+    //     return langs.reduce((count, item) => (count[item] = count[item] + 1 || 1, count), {})
+    // }
+
+    // -------------------------------------------446.Digital cypher----------------------------------------------------
+    function encode(str, n) {
+        let arr = str.split('').map(el => el.charCodeAt(0)-96)
+        let arrn = n.toString().split('').map(el => +el)
+        return arr.map((el,i) => i+1<=arrn.length? el + arrn[i] : el + arrn[i%arrn.length])
     }
 
-    // ------------------------------------------446.----------------------------------------------------------
+    console.log(encode("masterpiece",1939))
+
     // ------------------------------------------447.----------------------------------------------------------
     // ------------------------------------------448.----------------------------------------------------------
     // ------------------------------------------449.----------------------------------------------------------
