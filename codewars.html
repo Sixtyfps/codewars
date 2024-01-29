@@ -3907,18 +3907,23 @@
     // }
 
     // ---------------------------------------------448.SevenAte9-------------------------------------------------------
-    function sevenAte9(st) {
-        let str = st.split('')
-        for(let i=0; i<str.length;i++) {
-            if(str[i]==='7' && str[i+1]==='9' && str[i+2]==='7') {
-                str[i+1]=''
-            }
-        }
-        return str.join('')
+    // function sevenAte9(st) {
+    //     let str = st.split('')
+    //     for(let i=0; i<str.length;i++) {
+    //         if(str[i]==='7' && str[i+1]==='9' && str[i+2]==='7') {
+    //             str[i+1]=''
+    //         }
+    //     }
+    //     return str.join('')
+    // }
+    //
+    // console.log(sevenAte9('79712312'))
+    // --------------------------------------449.Sum of integers in string----------------------------------------------
+    function sumOfIntegersInString(s){
+        return s.replace(/[^0-9]+/g,' ').split(' ').map(el => +el).reduce((a,b)=> a+b,0)
     }
 
-    console.log(sevenAte9('79712312'))
-    // ------------------------------------------449.----------------------------------------------------------
+    console.log(sumOfIntegersInString('The30quick20brown10f0x1203jumps914ov3r1349the102l4zy'))
     // ------------------------------------------450.----------------------------------------------------------
 
 
