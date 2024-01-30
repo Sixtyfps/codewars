@@ -3925,17 +3925,21 @@
     //
     // console.log(sumOfIntegersInString('The30quick20brown10f0x1203jumps914ov3r1349the102l4zy'))
     // ----------------------------------------450.Difference Of Squares------------------------------------------------
-    function differenceOfSquares(n){
-        let arr = []
-        for(let i=1; i<=n; i++) {
-            arr.push(i)
-        }
-        let sum = arr.reduce((a,b) => a+b)**2
-        let sumSq = arr.map(el => el**2).reduce((a,b) => a+b)
-        return sum-sumSq
-    }
+    // function differenceOfSquares(n){
+    //     let arr = []
+    //     for(let i=1; i<=n; i++) {
+    //         arr.push(i)
+    //     }
+    //     let sum = arr.reduce((a,b) => a+b)**2
+    //     let sumSq = arr.map(el => el**2).reduce((a,b) => a+b)
+    //     return sum-sumSq
+    // }
 
-    // ------------------------------------------451.----------------------------------------------------------
+    // ---------------------------451.Substituting Variables Into Strings: Padded Numbers-------------------------------
+    function solution(value){
+        let zeros = 5-value.toString().length
+        return `Value is ${'0'.repeat(zeros)}${value}`
+    }
     // ------------------------------------------452.----------------------------------------------------------
     // ------------------------------------------453.----------------------------------------------------------
     // ------------------------------------------454.----------------------------------------------------------
