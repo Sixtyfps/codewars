@@ -3941,11 +3941,17 @@
     //     return `Value is ${'0'.repeat(zeros)}${value}`
     // }
     // -----------------------------------------452.Longest vowel chain-------------------------------------------------
-    function solve(s){
-        return Math.max(...s.split(/[bcdfghjklmnpqrstvwxyz]/gi).map(el=>el.length))
+    // function solve(s){
+    //     return Math.max(...s.split(/[bcdfghjklmnpqrstvwxyz]/gi).map(el=>el.length))
+    // }
+
+    // --------------------------------453.Return the closest number multiple of 10-------------------------------------
+    const closestMultiple10 = num => {
+        let lastDigit = num%10
+        return lastDigit<5? num-lastDigit : num+(10-lastDigit)
     }
 
-    // ------------------------------------------453.----------------------------------------------------------
+    console.log(closestMultiple10(36))
     // ------------------------------------------454.----------------------------------------------------------
     // ------------------------------------------455.----------------------------------------------------------
     // ------------------------------------------456.----------------------------------------------------------
