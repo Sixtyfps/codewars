@@ -3946,13 +3946,19 @@
     // }
 
     // --------------------------------453.Return the closest number multiple of 10-------------------------------------
-    const closestMultiple10 = num => {
-        let lastDigit = num%10
-        return lastDigit<5? num-lastDigit : num+(10-lastDigit)
+    // const closestMultiple10 = num => {
+    //     let lastDigit = num%10
+    //     return lastDigit<5? num-lastDigit : num+(10-lastDigit)
+    // }
+    //
+    // console.log(closestMultiple10(34))
+    // ----------------------------------------------454.Word values----------------------------------------------------
+    function wordValue(a) {
+        let arr =  a.map(word => word.replaceAll(' ','').split('').map(l => l.charCodeAt(0) - 96).reduce((a,b)=>a+b,0))
+        return arr.map((el,i) => el*(i+1))
     }
 
-    console.log(closestMultiple10(36))
-    // ------------------------------------------454.----------------------------------------------------------
+    console.log( wordValue(["abc abc","abc abc","abc","abc"]))
     // ------------------------------------------455.----------------------------------------------------------
     // ------------------------------------------456.----------------------------------------------------------
     // ------------------------------------------457.----------------------------------------------------------
