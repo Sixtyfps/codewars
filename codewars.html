@@ -3918,12 +3918,14 @@
     // }
     //
     // console.log(sevenAte9('79712312'))
+
     // --------------------------------------449.Sum of integers in string----------------------------------------------
     // function sumOfIntegersInString(s){
     //     return s.replace(/[^0-9]+/g,' ').split(' ').map(el => +el).reduce((a,b)=> a+b,0)
     // }
     //
     // console.log(sumOfIntegersInString('The30quick20brown10f0x1203jumps914ov3r1349the102l4zy'))
+
     // ----------------------------------------450.Difference Of Squares------------------------------------------------
     // function differenceOfSquares(n){
     //     let arr = []
@@ -3940,6 +3942,7 @@
     //     let zeros = 5-value.toString().length
     //     return `Value is ${'0'.repeat(zeros)}${value}`
     // }
+
     // -----------------------------------------452.Longest vowel chain-------------------------------------------------
     // function solve(s){
     //     return Math.max(...s.split(/[bcdfghjklmnpqrstvwxyz]/gi).map(el=>el.length))
@@ -3952,14 +3955,33 @@
     // }
     //
     // console.log(closestMultiple10(34))
+
     // ----------------------------------------------454.Word values----------------------------------------------------
-    function wordValue(a) {
-        let arr =  a.map(word => word.replaceAll(' ','').split('').map(l => l.charCodeAt(0) - 96).reduce((a,b)=>a+b,0))
-        return arr.map((el,i) => el*(i+1))
+    // function wordValue(a) {
+    //     let arr =  a.map(word => word.replaceAll(' ','').split('').map(l => l.charCodeAt(0) - 96).reduce((a,b)=>a+b,0))
+    //     return arr.map((el,i) => el*(i+1))
+    // }
+    //
+    // console.log( wordValue(["abc abc","abc abc","abc","abc"]))
+
+    // ------------455.Coding Meetup #6 - Higher-Order Functions Series - Can they code in the same language?-----------
+    function isSameLanguage(list) {
+        let arr=[]
+        list.map(el => arr.push(el.language))
+        for(let i=0; i<arr.length-1; i++) {
+            if (arr[i] !== arr[i+1]) {
+                return false
+            }
+        }
+        return true
     }
 
-    console.log( wordValue(["abc abc","abc abc","abc","abc"]))
-    // ------------------------------------------455.----------------------------------------------------------
+    console.log(isSameLanguage([
+        { firstName: 'Daniel', lastName: 'J.', country: 'Aruba', continent: 'Americas', age: 42, language: 'JavaScript' },
+        { firstName: 'Kseniya', lastName: 'T.', country: 'Belarus', continent: 'Europe', age: 22, language: 'JavaScript' },
+        { firstName: 'Hanna', lastName: 'L.', country: 'Hungary', continent: 'Europe', age: 65, language: 'JavaScript' },
+    ]))
+
     // ------------------------------------------456.----------------------------------------------------------
     // ------------------------------------------457.----------------------------------------------------------
     // ------------------------------------------458.----------------------------------------------------------
