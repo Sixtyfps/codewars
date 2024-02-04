@@ -4004,17 +4004,30 @@
     // console.log(pattern(3))
 
     // ------------------------------------------458.Last Survivor------------------------------------------------------
-    function lastSurvivor(str, arr) {
-        str=str.split('')
-        for (let i=0; i<arr.length;i++) {
-            str.splice(arr[i],1)
+    // function lastSurvivor(str, arr) {
+    //     str=str.split('')
+    //     for (let i=0; i<arr.length;i++) {
+    //         str.splice(arr[i],1)
+    //     }
+    //     return str.toString()
+    // }
+    //
+    // console.log(lastSurvivor('abc', [1, 1]))
+
+    // -----------------------------------------459.Jumping Number------------------------------------------------------
+    function jumpingNumber(n){
+        n=n.toString()
+        for (let i=0; i<n.length-1; i++) {
+            if (Math.abs(n[i]-n[i+1]) !== 1) {
+                console.log(Math.abs(n[i]-n[i+1]))
+                return "Not!!"
+            }
         }
-        return str.toString()
+        return "Jumping!!"
     }
 
-    console.log(lastSurvivor('abc', [1, 1]))
+    console.log(jumpingNumber(78))
 
-    // ------------------------------------------459.----------------------------------------------------------
     // ------------------------------------------460.----------------------------------------------------------
     // ------------------------------------------461.----------------------------------------------------------
     // ------------------------------------------462.----------------------------------------------------------
