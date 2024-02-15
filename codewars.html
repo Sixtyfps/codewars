@@ -4155,19 +4155,27 @@
     // }
 
     // ----------------------------------------475.Find The Parity Outlier----------------------------------------------
-    function findOutlier(arr){
-        if(arr.filter(el => el%2 === 1).length>1) {
-            console.log('if returning even')
-            return arr.find(el => el%2 === 0)
-        } else {
-            console.log('if return odd')
-            return arr.find(el => el%2 !== 0)
-        }
+    // function findOutlier(arr){
+    //     if(arr.filter(el => el%2 === 1).length>1) {
+    //         console.log('if returning even')
+    //         return arr.find(el => el%2 === 0)
+    //     } else {
+    //         console.log('if return odd')
+    //         return arr.find(el => el%2 !== 0)
+    //     }
+    // }
+    //
+    // console.log(findOutlier([4,6,2,-3,4,34,5324686888888888444446]))
+
+    // -------------------------------------476.function duplicateCount(text)-------------------------------------------
+    function duplicateCount(text){
+        return text.toLowerCase().split('')
+            .filter((item, pos, self)=> self.indexOf(item) !== pos)
+            .filter((item, pos, self)=> self.indexOf(item) === pos).length
     }
 
-    console.log(findOutlier([4,6,2,-3,4,34,5324686888888888444446]))
+    console.log(duplicateCount("Indivisibilities"))
 
-    // ------------------------------------------476.----------------------------------------------------------
     // ------------------------------------------477.----------------------------------------------------------
     // ------------------------------------------478.----------------------------------------------------------
     // ------------------------------------------479.----------------------------------------------------------
