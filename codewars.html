@@ -4167,16 +4167,37 @@
     //
     // console.log(findOutlier([4,6,2,-3,4,34,5324686888888888444446]))
 
-    // -------------------------------------476.function duplicateCount(text)-------------------------------------------
-    function duplicateCount(text){
-        return text.toLowerCase().split('')
-            .filter((item, pos, self)=> self.indexOf(item) !== pos)
-            .filter((item, pos, self)=> self.indexOf(item) === pos).length
+    // ------------------------------------476.function duplicateCount(text)--------------------------------------------
+    // function duplicateCount(text){
+    //     return text.toLowerCase().split('')
+    //         .filter((item, pos, self)=> self.indexOf(item) !== pos)
+    //         .filter((item, pos, self)=> self.indexOf(item) === pos).length
+    // }
+    //
+    // console.log(duplicateCount("Indivisibilities"))
+
+    // ------------------------------------------477.Duplicate Encoder--------------------------------------------------
+    function duplicateEncode(word){
+        return word
+            .toLowerCase()
+            .split('')
+            .map((el, i, arr)=> arr.lastIndexOf(el) === arr.indexOf(el)? '(' : ')')
+            .join('')
     }
 
-    console.log(duplicateCount("Indivisibilities"))
+    function duplicateEncode2(word){
+        let arr =  word.toLowerCase().split('')
+        let res = []
+        for (let i=0; i<arr.length; i++) {
+            if(arr.filter(el => el === arr[i]).length > 1) {
+                res.push(')')
+            } else {
+                res.push('(')
+            }
+        }
+        return res.join('')
+    }
 
-    // ------------------------------------------477.----------------------------------------------------------
     // ------------------------------------------478.----------------------------------------------------------
     // ------------------------------------------479.----------------------------------------------------------
     // ------------------------------------------480.----------------------------------------------------------
