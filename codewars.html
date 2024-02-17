@@ -4177,28 +4177,38 @@
     // console.log(duplicateCount("Indivisibilities"))
 
     // ------------------------------------------477.Duplicate Encoder--------------------------------------------------
-    function duplicateEncode(word){
-        return word
-            .toLowerCase()
-            .split('')
-            .map((el, i, arr)=> arr.lastIndexOf(el) === arr.indexOf(el)? '(' : ')')
-            .join('')
+    // function duplicateEncode(word){
+    //     return word
+    //         .toLowerCase()
+    //         .split('')
+    //         .map((el, i, arr)=> arr.lastIndexOf(el) === arr.indexOf(el)? '(' : ')')
+    //         .join('')
+    // }
+    //
+    // function duplicateEncode2(word){
+    //     let arr =  word.toLowerCase().split('')
+    //     let res = []
+    //     for (let i=0; i<arr.length; i++) {
+    //         if(arr.filter(el => el === arr[i]).length > 1) {
+    //             res.push(')')
+    //         } else {
+    //             res.push('(')
+    //         }
+    //     }
+    //     return res.join('')
+    // }
+
+    // ----------------------------------------478.Take a Ten Minutes Walk----------------------------------------------
+    function isValidWalk(walk) {
+        let n = walk.filter(el => el === 'n').length
+        let s = walk.filter(el => el === 's').length
+        let w = walk.filter(el => el === 'w').length
+        let e = walk.filter(el => el === 'e').length
+        return (n===s && w===e && walk.length===10)
     }
 
-    function duplicateEncode2(word){
-        let arr =  word.toLowerCase().split('')
-        let res = []
-        for (let i=0; i<arr.length; i++) {
-            if(arr.filter(el => el === arr[i]).length > 1) {
-                res.push(')')
-            } else {
-                res.push('(')
-            }
-        }
-        return res.join('')
-    }
+    console.log(isValidWalk(['s','w','e']))
 
-    // ------------------------------------------478.----------------------------------------------------------
     // ------------------------------------------479.----------------------------------------------------------
     // ------------------------------------------480.----------------------------------------------------------
     // ------------------------------------------481.----------------------------------------------------------
