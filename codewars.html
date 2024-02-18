@@ -4210,13 +4210,24 @@
     // console.log(isValidWalk(['s','w','e']))
 
     // -------------------------------------479.Replace With Alphabet Position------------------------------------------
-    function alphabetPosition(text) {
-        return text.replace(/[^a-z]/gi, '').toLowerCase().split('').map(el => el.charCodeAt(0)-96).join(' ');
+    // function alphabetPosition(text) {
+    //     return text.replace(/[^a-z]/gi, '').toLowerCase().split('').map(el => el.charCodeAt(0)-96).join(' ');
+    // }
+    //
+    // console.log(alphabetPosition("abcd"))
+
+    // ------------------------------------------480.Persistent Bugger.-------------------------------------------------
+    function persistence(num) {
+        let res = 0
+        while (num.toString().length > 1) {
+            num = num.toString().split('').reduce((a,b) => a*b)
+            res++
+        }
+        return res
     }
 
-    console.log(alphabetPosition("abcd"))
+    console.log(persistence(234))
 
-    // ------------------------------------------480.----------------------------------------------------------
     // ------------------------------------------481.----------------------------------------------------------
     // ------------------------------------------482.----------------------------------------------------------
     // ------------------------------------------483.----------------------------------------------------------
