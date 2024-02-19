@@ -4217,18 +4217,22 @@
     // console.log(alphabetPosition("abcd"))
 
     // ------------------------------------------480.Persistent Bugger.-------------------------------------------------
-    function persistence(num) {
-        let res = 0
-        while (num.toString().length > 1) {
-            num = num.toString().split('').reduce((a,b) => a*b)
-            res++
-        }
-        return res
+    // function persistence(num) {
+    //     let res = 0
+    //     while (num.toString().length > 1) {
+    //         num = num.toString().split('').reduce((a,b) => a*b)
+    //         res++
+    //     }
+    //     return res
+    // }
+    //
+    // console.log(persistence(234))
+
+    // -------------------------------------481.Convert string to camel case--------------------------------------------
+    function toCamelCase(str) {
+        return str.replace(/[-_](.)/g, (_, group1) => group1.toUpperCase())
     }
 
-    console.log(persistence(234))
-
-    // ------------------------------------------481.----------------------------------------------------------
     // ------------------------------------------482.----------------------------------------------------------
     // ------------------------------------------483.----------------------------------------------------------
     // ------------------------------------------484.----------------------------------------------------------
