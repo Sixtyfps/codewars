@@ -4248,17 +4248,28 @@
     // console.log(order("is2 Thi1s T4est 3a"))
 
     // -----------------------------------------484.Tribonacci Sequence-------------------------------------------------
-    function tribonacci(arr,n){
-        let resArr = [arr[0], arr[1], arr[2]]
-        for (let i=1; i<=n-3; i++) {
-            resArr.push(resArr[resArr.length - 1] + resArr[resArr.length - 2] + resArr[resArr.length - 3])
-        }
-        return n>3?  resArr : resArr.slice(0, n)
+    // function tribonacci(arr,n){
+    //     let resArr = [arr[0], arr[1], arr[2]]
+    //     for (let i=1; i<=n-3; i++) {
+    //         resArr.push(resArr[resArr.length - 1] + resArr[resArr.length - 2] + resArr[resArr.length - 3])
+    //     }
+    //     return resArr.slice(0, n)
+    // }
+    //
+    // console.log(tribonacci([1,1,1], 10))
+
+    // -------------------------------------------485.Unique In Order---------------------------------------------------
+    const uniqueInOrder = (input) => {
+        return (typeof input === 'string') ?
+            input.split('').filter((el,i,arr) => arr[i] !== arr[i+1] )
+            : input.filter((el,i,arr) => arr[i] !== arr[i+1] )
     }
 
-    console.log(tribonacci([1,1,1], 10))
+    const uniqueInOrder2 = (iterable) => {
+        return [...iterable].filter((el,i,arr) => arr[i] !== arr[i+1])
+    }
+    console.log(uniqueInOrder([a,a,b,b,c,a,a]))
 
-    // ------------------------------------------485.----------------------------------------------------------
     // ------------------------------------------486.----------------------------------------------------------
     // ------------------------------------------487.----------------------------------------------------------
     // ------------------------------------------488.----------------------------------------------------------
