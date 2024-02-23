@@ -4259,18 +4259,30 @@
     // console.log(tribonacci([1,1,1], 10))
 
     // -------------------------------------------485.Unique In Order---------------------------------------------------
-    const uniqueInOrder = (input) => {
-        return (typeof input === 'string') ?
-            input.split('').filter((el,i,arr) => arr[i] !== arr[i+1] )
-            : input.filter((el,i,arr) => arr[i] !== arr[i+1] )
+    // const uniqueInOrder = (input) => {
+    //     return (typeof input === 'string') ?
+    //         input.split('').filter((el,i,arr) => arr[i] !== arr[i+1] )
+    //         : input.filter((el,i,arr) => arr[i] !== arr[i+1] )
+    // }
+    //
+    // const uniqueInOrder2 = (iterable) => {
+    //     return [...iterable].filter((el,i,arr) => arr[i] !== arr[i+1])
+    // }
+    //
+    // console.log(uniqueInOrder([a,a,b,b,c,a,a]))
+
+    // ------------------------------------------486.Playing with digits------------------------------------------------
+    function digPow(n, p){
+        const arr = n.toString()
+        let res=0
+        for (let i=0; i<arr.length; i++) {
+            res = res+(arr[i]**(p+i))
+        }
+        return res%n===0? res/n : -1
     }
 
-    const uniqueInOrder2 = (iterable) => {
-        return [...iterable].filter((el,i,arr) => arr[i] !== arr[i+1])
-    }
-    console.log(uniqueInOrder([a,a,b,b,c,a,a]))
+    console.log(digPow(46288, 3))
 
-    // ------------------------------------------486.----------------------------------------------------------
     // ------------------------------------------487.----------------------------------------------------------
     // ------------------------------------------488.----------------------------------------------------------
     // ------------------------------------------489.----------------------------------------------------------
