@@ -4289,26 +4289,37 @@
     //     return words.map(el => el.split(' ').map(el=>MORSE_CODE[el]).join('')).join(' ')
     // }
 
-    // ------------------------------------------488.Detect Pangram----------------------------------------------------------
-    function isPangram(string){
-        const a = 'abcdefghijklmnopqrstuvwxyz'
-        let str=string.toLowerCase().replace(/[^a-zA-Z]/g, "").split("")
-            .filter((letter, index, arr) => arr.indexOf(letter) === index)
-            .join("")
-        let res = []
-        for(let i=0; i<str.length; i++) {
-            console.log(str[i].toLowerCase())
-            if (a.includes(str[i])) {
-                res.push(str[i])
+    // ------------------------------------------488.Detect Pangram-----------------------------------------------------
+    // function isPangram(string){
+    //     const a = 'abcdefghijklmnopqrstuvwxyz'
+    //     let str=string.toLowerCase().replace(/[^a-zA-Z]/g, "").split("")
+    //         .filter((letter, index, arr) => arr.indexOf(letter) === index)
+    //         .join("")
+    //     let res = []
+    //     for(let i=0; i<str.length; i++) {
+    //         if (a.includes(str[i])) {
+    //             res.push(str[i])
+    //         }
+    //     }
+    //     return res.length >= a.length
+    // }
+    //
+    // console.log(isPangram("pangram."))
+
+    // ---------------------------------------489.Equal Sides Of An Array-----------------------------------------------
+    const findEvenIndex = (arr) => {
+        for(let i=0; i<arr.length; i++) {
+            sumLeft = arr.slice(0, i).reduce((a,b)=>a+b,0)
+            sumRight = arr.slice(i+1, arr.length+1).reduce((a,b)=>a+b,0)
+            if (sumLeft === sumRight) {
+                return i
             }
         }
-        console.log(res)
-        return res.length >= a.length
+        return -1
     }
 
-    console.log(isPangram("pangram."))
+    console.log(findEvenIndex([1,2,3,4,3,2,1]))
 
-    // ------------------------------------------489.----------------------------------------------------------
     // ------------------------------------------490.----------------------------------------------------------
     // ------------------------------------------491.----------------------------------------------------------
     // ------------------------------------------492.----------------------------------------------------------
