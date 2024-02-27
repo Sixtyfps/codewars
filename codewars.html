@@ -4307,20 +4307,33 @@
     // console.log(isPangram("pangram."))
 
     // ---------------------------------------489.Equal Sides Of An Array-----------------------------------------------
-    const findEvenIndex = (arr) => {
-        for(let i=0; i<arr.length; i++) {
-            sumLeft = arr.slice(0, i).reduce((a,b)=>a+b,0)
-            sumRight = arr.slice(i+1, arr.length+1).reduce((a,b)=>a+b,0)
-            if (sumLeft === sumRight) {
-                return i
-            }
+    // const findEvenIndex = (arr) => {
+    //     for(let i=0; i<arr.length; i++) {
+    //         sumLeft = arr.slice(0, i).reduce((a,b)=>a+b,0)
+    //         sumRight = arr.slice(i+1, arr.length+1).reduce((a,b)=>a+b,0)
+    //         if (sumLeft === sumRight) {
+    //             return i
+    //         }
+    //     }
+    //     return -1
+    // }
+    //
+    // console.log(findEvenIndex([1,2,3,4,3,2,1]))
+
+    // -------------------------------------------490.Split Strings-----------------------------------------------------
+    function solution(str){
+        let res = []
+        if(str.length % 2) {
+            str = str + '_'
         }
-        return -1
+        for (let i=0; i<str.length; i+=2) {
+            res.push(str.substring(i,i+2))
+        }
+        return res
     }
 
-    console.log(findEvenIndex([1,2,3,4,3,2,1]))
+    console.log(solution("abcdefd"))
 
-    // ------------------------------------------490.----------------------------------------------------------
     // ------------------------------------------491.----------------------------------------------------------
     // ------------------------------------------492.----------------------------------------------------------
     // ------------------------------------------493.----------------------------------------------------------
