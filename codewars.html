@@ -4340,14 +4340,28 @@
     // }
 
     // --------------------------------------------492.Sort the odd-----------------------------------------------------
-    function sortArray(arr) {
-        const odd = arr.filter(el => el%2).sort((a,b)=>a-b)
-        return arr.map((el,i) => el%2===0? el : odd.shift())
+    // function sortArray(arr) {
+    //     const odd = arr.filter(el => el%2).sort((a,b)=>a-b)
+    //     return arr.map((el,i) => el%2===0? el : odd.shift())
+    // }
+    //
+    // console.log(sortArray([5, 3, 2, 8, 1, 4]))
+
+    // ---------------------------------------493.Find the missing letter-----------------------------------------------
+    const findMissingLetter = (array) => {
+        const arr = array.map(el => el.charCodeAt(0))
+        console.log(arr)
+        let res
+        for(let i=0; i<arr.length-1; i++) {
+            if(arr[i+1] - arr[i] > 1 ) {
+                res = arr[i+1]-1
+            }
+        }
+        return String.fromCharCode(res)
     }
 
-    console.log(sortArray([5, 3, 2, 8, 1, 4]))
+    console.log(findMissingLetter(['A','B','C','D','F']))
 
-    // ------------------------------------------493.----------------------------------------------------------
     // ------------------------------------------494.----------------------------------------------------------
     // ------------------------------------------495.----------------------------------------------------------
     // ------------------------------------------496.----------------------------------------------------------
