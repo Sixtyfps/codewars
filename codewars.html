@@ -4348,21 +4348,32 @@
     // console.log(sortArray([5, 3, 2, 8, 1, 4]))
 
     // ---------------------------------------493.Find the missing letter-----------------------------------------------
-    const findMissingLetter = (array) => {
-        const arr = array.map(el => el.charCodeAt(0))
-        console.log(arr)
-        let res
-        for(let i=0; i<arr.length-1; i++) {
-            if(arr[i+1] - arr[i] > 1 ) {
-                res = arr[i+1]-1
-            }
+    // const findMissingLetter = (array) => {
+    //     const arr = array.map(el => el.charCodeAt(0))
+    //     console.log(arr)
+    //     let res
+    //     for(let i=0; i<arr.length-1; i++) {
+    //         if(arr[i+1] - arr[i] > 1 ) {
+    //             res = arr[i+1]-1
+    //         }
+    //     }
+    //     return String.fromCharCode(res)
+    // }
+    //
+    // console.log(findMissingLetter(['A','B','C','D','F']))
+
+    // ---------------------------------------------494.Build Tower-----------------------------------------------------
+    const towerBuilder = (n) => {
+        let res = []
+        for (let i=1; i<=n; i++) {
+            let floor = `${' '.repeat(n-i)}${'*'.repeat(2*i-1)}${' '.repeat(n-i)}`
+            res.push(floor)
         }
-        return String.fromCharCode(res)
+        return res
     }
 
-    console.log(findMissingLetter(['A','B','C','D','F']))
+    console.log(towerBuilder(1))
 
-    // ------------------------------------------494.----------------------------------------------------------
     // ------------------------------------------495.----------------------------------------------------------
     // ------------------------------------------496.----------------------------------------------------------
     // ------------------------------------------497.----------------------------------------------------------
