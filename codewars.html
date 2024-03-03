@@ -4385,16 +4385,20 @@
     // console.log(ensureQuestion('Yes'))
 
     // ----------------------------------------496.Highest Scoring Word-------------------------------------------------
-    const high = (x) => {
-        const arr = x.split(' ')
-        const nums = arr.map(el => el.split('').map(l => l.charCodeAt(0)-96).reduce((a,b) => a+b,0))
-        const index = nums.indexOf(Math.max(...nums))
-        return arr[index]
+    // const high = (x) => {
+    //     const arr = x.split(' ')
+    //     const nums = arr.map(el => el.split('').map(l => l.charCodeAt(0)-96).reduce((a,b) => a+b,0))
+    //     const index = nums.indexOf(Math.max(...nums))
+    //     return arr[index]
+    // }
+    //
+    // console.log(high('abc abc abcd abcde'))
+
+    // ----------------------------------------497.Is your period late?----------------------------------------------------------
+    const periodIsLate = (last, today, cycleLength) => {
+        return (today.getTime()-last.getTime())/ (1000 * 3600 * 24) > cycleLength
     }
 
-    console.log(high('abc abc abcd abcde'))
-
-    // ------------------------------------------497.----------------------------------------------------------
     // ------------------------------------------498.----------------------------------------------------------
     // ------------------------------------------499.----------------------------------------------------------
     // ------------------------------------------500.----------------------------------------------------------
