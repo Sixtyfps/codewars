@@ -4375,16 +4375,25 @@
     // console.log(towerBuilder(1))
 
     // ------------------------------------------495.Ensure question----------------------------------------------------
-    function ensureQuestion(s) {
-        if(s.length<1) {
-            return '?'
-        }
-        return s[s.length-1].charCodeAt(0) === 63? s : `${s}?`
+    // function ensureQuestion(s) {
+    //     if(s.length<1) {
+    //         return '?'
+    //     }
+    //     return s[s.length-1].charCodeAt(0) === 63? s : `${s}?`
+    // }
+    //
+    // console.log(ensureQuestion('Yes'))
+
+    // ----------------------------------------496.Highest Scoring Word-------------------------------------------------
+    const high = (x) => {
+        const arr = x.split(' ')
+        const nums = arr.map(el => el.split('').map(l => l.charCodeAt(0)-96).reduce((a,b) => a+b,0))
+        const index = nums.indexOf(Math.max(...nums))
+        return arr[index]
     }
 
-    console.log(ensureQuestion('Yes'))
+    console.log(high('abc abc abcd abcde'))
 
-    // ------------------------------------------496.----------------------------------------------------------
     // ------------------------------------------497.----------------------------------------------------------
     // ------------------------------------------498.----------------------------------------------------------
     // ------------------------------------------499.----------------------------------------------------------
