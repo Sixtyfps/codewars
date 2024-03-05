@@ -4413,7 +4413,7 @@
     //
     // console.log(moveZeros([false,1,0,1,2,0,1,3,"a"]))
 
-    // ------------------------------------------499.Simple Pig Latin----------------------------------------------------------
+    // ------------------------------------------499.Simple Pig Latin---------------------------------------------------
     // const pigIt = (str) => {
     //     const newArr = str.replace(/\b(\w)(\w*)\b/g, "$2$1")
     //     return newArr.split(' ').map(el => /^[^\w\s]$/.test(el)? el : el + 'ay').join(' ')
@@ -4421,21 +4421,39 @@
     //
     // console.log(pigIt('Pig latin O is cool'))
 
-    // ------------------------------------------500.Human Readable Time----------------------------------------------------------
-    const humanReadable = (sec_num) => {
-        let hours   = Math.floor(sec_num / 3600)
-        let minutes = Math.floor((sec_num - (hours * 3600)) / 60)
-        let seconds = sec_num - (hours * 3600) - (minutes * 60)
+    // ------------------------------------------500.Human Readable Time------------------------------------------------
+    // const humanReadable = (sec_num) => {
+    //     let hours   = Math.floor(sec_num / 3600)
+    //     let minutes = Math.floor((sec_num - (hours * 3600)) / 60)
+    //     let seconds = sec_num - (hours * 3600) - (minutes * 60)
+    //
+    //     if (hours   < 10) {hours   = "0"+hours}
+    //     if (minutes < 10) {minutes = "0"+minutes}
+    //     if (seconds < 10) {seconds = "0"+seconds}
+    //     return `${hours}:${minutes}:${seconds}`
+    // }
+    //
+    // console.log(humanReadable(359999))
 
-        if (hours   < 10) {hours   = "0"+hours}
-        if (minutes < 10) {minutes = "0"+minutes}
-        if (seconds < 10) {seconds = "0"+seconds}
-        return `${hours}:${minutes}:${seconds}`
+    // ------------------------------------------------501.Grader-------------------------------------------------------
+    const grader = (score) => {
+        if(score>1 || score<0.6) {
+            return 'F'
+        }
+        else if (score>=0.9) {
+            return 'A'
+        }
+        else if (score>=0.8) {
+            return 'B'
+        }
+        else if (score>=0.7) {
+            return 'C'
+        }
+        else if (score>=0.6) {
+            return 'D'
+        }
     }
 
-    console.log(humanReadable(359999))
-
-    // ------------------------------------------501.----------------------------------------------------------
     // ------------------------------------------502.----------------------------------------------------------
     // ------------------------------------------503.----------------------------------------------------------
     // ------------------------------------------504.----------------------------------------------------------
