@@ -4436,25 +4436,49 @@
     // console.log(humanReadable(359999))
 
     // ------------------------------------------------501.Grader-------------------------------------------------------
-    const grader = (score) => {
-        if(score>1 || score<0.6) {
-            return 'F'
+    // const grader = (score) => {
+    //     if(score>1 || score<0.6) {
+    //         return 'F'
+    //     }
+    //     else if (score>=0.9) {
+    //         return 'A'
+    //     }
+    //     else if (score>=0.8) {
+    //         return 'B'
+    //     }
+    //     else if (score>=0.7) {
+    //         return 'C'
+    //     }
+    //     else if (score>=0.6) {
+    //         return 'D'
+    //     }
+    // }
+
+    // ------------------------------------------502.RGB To Hex Conversion----------------------------------------------
+    const rgb = (r, g, b) => {
+        const res = [r,g,b]
+        let res1 = []
+        for(let i=0; i<res.length; i++) {
+            if(res[i]<=0) {
+                res1.push('00')
+            }
+            else if(res[i]>=255) {
+                res1.push('FF')
+            }
+            else {
+                if(res[i].toString(16).length<2) {
+                    res1.push(`0${res[i].toString(16).toUpperCase()}`)
+                } else {
+                    res1.push(res[i].toString(16).toUpperCase())
+                }
+            }
         }
-        else if (score>=0.9) {
-            return 'A'
-        }
-        else if (score>=0.8) {
-            return 'B'
-        }
-        else if (score>=0.7) {
-            return 'C'
-        }
-        else if (score>=0.6) {
-            return 'D'
-        }
+        return res1.join('')
     }
 
-    // ------------------------------------------502.----------------------------------------------------------
+    console.log(rgb(300, 173, 14))
+
+
     // ------------------------------------------503.----------------------------------------------------------
     // ------------------------------------------504.----------------------------------------------------------
     // ------------------------------------------505.----------------------------------------------------------
