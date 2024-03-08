@@ -4502,18 +4502,34 @@
 
     // ----------------------------------------505.Count the smiley faces!----------------------------------------------
     //1
-    const countSmileys = (arr) => {
-        const regex = /^[:;][-~]?[)D]$/
-        let count = 0
-        arr.map(el => regex.test(el) ? count++ : count)
-        return count
-    }
+    // const countSmileys = (arr) => {
+    //     const regex = /^[:;][-~]?[)D]$/
+    //     let count = 0
+    //     arr.map(el => regex.test(el) ? count++ : count)
+    //     return count
+    // }
+
     //2
-    const _countSmileys = (arr) => {
-        return arr.filter(el => /^[:;][-~]?[)D]$/.test(el)).length
+    // const _countSmileys = (arr) => {
+    //     return arr.filter(el => /^[:;][-~]?[)D]$/.test(el)).length
+    // }
+
+    // ---------------------------------------506.Simple Fun #261: Whose Move----------------------------------------------------------
+    //1
+    function whoseMove(lastPlayer, win) {
+        if (win && lastPlayer === 'white' || !win && lastPlayer === 'black') {
+            return 'white'
+        } else if (win && lastPlayer === 'black' || !win && lastPlayer === 'white') {
+            return 'black'
+        }
     }
 
-    // ------------------------------------------506.----------------------------------------------------------
+    //2
+    function _whoseMove(lastPlayer, win) {
+        return (win && lastPlayer === 'white' || !win && lastPlayer === 'black')? 'white'
+            : win && lastPlayer === 'black' || !win && lastPlayer === 'white'? 'black' : 'white'
+    }
+
     // ------------------------------------------507.----------------------------------------------------------
     // ------------------------------------------508.----------------------------------------------------------
     // ------------------------------------------509.----------------------------------------------------------
