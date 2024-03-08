@@ -4487,20 +4487,32 @@
     // console.log(barTriang([4, 6], [12, 4], [10, 10]))
 
     // -----------------------------------------504.Directions Reduction------------------------------------------------
-    const dirReduc = (arr) => {
-        let sides = {
-            'NORTH': 'SOUTH',
-            'SOUTH': 'NORTH',
-            'EAST': 'WEST',
-            'WEST': 'EAST'
-        }
-        return arr.reduce((acc, val) => {
-            sides[acc[acc.length-1]] === val? acc.pop() : acc.push(val)
-            return acc
-        },[])
+    // const dirReduc = (arr) => {
+    //     let sides = {
+    //         'NORTH': 'SOUTH',
+    //         'SOUTH': 'NORTH',
+    //         'EAST': 'WEST',
+    //         'WEST': 'EAST'
+    //     }
+    //     return arr.reduce((acc, val) => {
+    //         sides[acc[acc.length-1]] === val? acc.pop() : acc.push(val)
+    //         return acc
+    //     },[])
+    // }
+
+    // ----------------------------------------505.Count the smiley faces!----------------------------------------------
+    //1
+    const countSmileys = (arr) => {
+        const regex = /^[:;][-~]?[)D]$/
+        let count = 0
+        arr.map(el => regex.test(el) ? count++ : count)
+        return count
+    }
+    //2
+    const _countSmileys = (arr) => {
+        return arr.filter(el => /^[:;][-~]?[)D]$/.test(el)).length
     }
 
-    // ------------------------------------------505.----------------------------------------------------------
     // ------------------------------------------506.----------------------------------------------------------
     // ------------------------------------------507.----------------------------------------------------------
     // ------------------------------------------508.----------------------------------------------------------
