@@ -4514,23 +4514,31 @@
     //     return arr.filter(el => /^[:;][-~]?[)D]$/.test(el)).length
     // }
 
-    // ---------------------------------------506.Simple Fun #261: Whose Move----------------------------------------------------------
+    // ---------------------------------------506.Simple Fun #261: Whose Move-------------------------------------------
     //1
-    function whoseMove(lastPlayer, win) {
-        if (win && lastPlayer === 'white' || !win && lastPlayer === 'black') {
-            return 'white'
-        } else if (win && lastPlayer === 'black' || !win && lastPlayer === 'white') {
-            return 'black'
+    // function whoseMove(lastPlayer, win) {
+    //     if (win && lastPlayer === 'white' || !win && lastPlayer === 'black') {
+    //         return 'white'
+    //     } else if (win && lastPlayer === 'black' || !win && lastPlayer === 'white') {
+    //         return 'black'
+    //     }
+    // }
+    //
+    // //2
+    // function _whoseMove(lastPlayer, win) {
+    //     return (win && lastPlayer === 'white' || !win && lastPlayer === 'black')? 'white'
+    //         : win && lastPlayer === 'black' || !win && lastPlayer === 'white'? 'black' : 'white'
+    // }
+
+    // ----------------507.Training JS #17: Methods of String object--indexOf(), lastIndexOf() and search()-------------
+    function firstToLast(str,c){
+        if (str.indexOf(c) === -1) {
+            return -1
+        } else {
+            return str.lastIndexOf(c)-str.indexOf(c)
         }
     }
 
-    //2
-    function _whoseMove(lastPlayer, win) {
-        return (win && lastPlayer === 'white' || !win && lastPlayer === 'black')? 'white'
-            : win && lastPlayer === 'black' || !win && lastPlayer === 'white'? 'black' : 'white'
-    }
-
-    // ------------------------------------------507.----------------------------------------------------------
     // ------------------------------------------508.----------------------------------------------------------
     // ------------------------------------------509.----------------------------------------------------------
     // ------------------------------------------510.----------------------------------------------------------
