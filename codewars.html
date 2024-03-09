@@ -4531,15 +4531,24 @@
     // }
 
     // ----------------507.Training JS #17: Methods of String object--indexOf(), lastIndexOf() and search()-------------
-    function firstToLast(str,c){
-        if (str.indexOf(c) === -1) {
-            return -1
+    // function firstToLast(str,c){
+    //     if (str.indexOf(c) === -1) {
+    //         return -1
+    //     } else {
+    //         return str.lastIndexOf(c)-str.indexOf(c)
+    //     }
+    // }
+
+    // -----------------------------------------508.Find the Slope------------------------------------------------------
+    const slope = (p) => {
+        if((p[2]-p[0]===0)) {
+            return 'undefined'
         } else {
-            return str.lastIndexOf(c)-str.indexOf(c)
+            return (p[3]-p[1])/(p[2]-p[0]) + ''
         }
     }
 
-    // ------------------------------------------508.----------------------------------------------------------
+    console.log(slope([19,3,20,3]))
     // ------------------------------------------509.----------------------------------------------------------
     // ------------------------------------------510.----------------------------------------------------------
 
