@@ -4559,15 +4559,24 @@
     // console.log(productArray([2,10,3,2]))
 
     // ------------------------------------------510.String Merge!------------------------------------------------------
-    const stringMerge = (st1, st2, letter) => {
-        const first = st1.indexOf(letter)
-        const second = st2.indexOf(letter)
-        return `${st1.substring(0,first+1)}${st2.substring(second+1,st2.length)}`
+    // const stringMerge = (st1, st2, letter) => {
+    //     const first = st1.indexOf(letter)
+    //     const second = st2.indexOf(letter)
+    //     return `${st1.substring(0,first+1)}${st2.substring(second+1,st2.length)}`
+    // }
+    //
+    // console.log(stringMerge("person","here", "e"))
+
+    // -----------------------------------------511.Changing letters----------------------------------------------------
+    const swap = (str) => {
+        return str
+            .split('')
+            .map(el => (el === 'a' || el === 'e' || el === 'i' || el === 'o' || el === 'u')? el.toUpperCase() : el)
+            .join('')
     }
 
-    console.log(stringMerge("person","here", "e"))
+    console.log(swap('Hello world'))
 
-    // ------------------------------------------511.----------------------------------------------------------
     // ------------------------------------------512.----------------------------------------------------------
     // ------------------------------------------513.----------------------------------------------------------
     // ------------------------------------------514.----------------------------------------------------------
