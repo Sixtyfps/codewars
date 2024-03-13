@@ -4592,14 +4592,33 @@
     //     return typeof variable === type
     // }
 
-    // -------------------------------------515.Return Two Highest Values in List----------------------------------------------------------
-    const twoHighest = (arr) => {
-        return arr.sort((a,b) => a-b).filter((el,i) => arr.indexOf(el) === i).slice(-2).reverse()
+    // -------------------------------------515.Return Two Highest Values in List---------------------------------------
+    // const twoHighest = (arr) => {
+    //     return arr.sort((a,b) => a-b).filter((el,i) => arr.indexOf(el) === i).slice(-2).reverse()
+    // }
+    //
+    // console.log(twoHighest([15, 20, 20, 17]))
+
+    // ------------------------------------------516.Coloured Triangles-------------------------------------------------
+    const triangle = (row) => {
+        let res = ''
+        if (row.length === 1) {
+            res = row
+        }
+        for (let i=0; i<row.length-1; i++) {
+            if(row[i]===row[i+1]) {
+                res += row[i]
+            } else {
+                result+='RGB'.replace(row[i], '').replace(row[i+1], '')
+            }
+        }
+        if(res.length > 1) {
+            return triangle(res)
+        } else {
+            return res
+        }
     }
 
-    console.log(twoHighest([15, 20, 20, 17]))
-
-    // ------------------------------------------516.----------------------------------------------------------
     // ------------------------------------------517.----------------------------------------------------------
     // ------------------------------------------518.----------------------------------------------------------
     // ------------------------------------------519.----------------------------------------------------------
