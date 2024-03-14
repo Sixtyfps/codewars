@@ -4600,26 +4600,33 @@
     // console.log(twoHighest([15, 20, 20, 17]))
 
     // ------------------------------------------516.Coloured Triangles-------------------------------------------------
-    const triangle = (row) => {
-        let res = ''
-        if (row.length === 1) {
-            res = row
-        }
-        for (let i=0; i<row.length-1; i++) {
-            if(row[i]===row[i+1]) {
-                res += row[i]
-            } else {
-                result+='RGB'.replace(row[i], '').replace(row[i+1], '')
-            }
-        }
-        if(res.length > 1) {
-            return triangle(res)
-        } else {
-            return res
-        }
+    // const triangle = (row) => {
+    //     let res = ''
+    //     if (row.length === 1) {
+    //         res = row
+    //     }
+    //     for (let i=0; i<row.length-1; i++) {
+    //         if(row[i]===row[i+1]) {
+    //             res += row[i]
+    //         } else {
+    //             result+='RGB'.replace(row[i], '').replace(row[i+1], '')
+    //         }
+    //     }
+    //     if(res.length > 1) {
+    //         return triangle(res)
+    //     } else {
+    //         return res
+    //     }
+    // }
+
+    // ----------------------------------------517.Numbers in strings---------------------------------------------------
+    const solve = (s) => {
+        const arr = s.replace(/[a-z]/g, ' ').split(' ')
+        return Math.max(...arr)
     }
 
-    // ------------------------------------------517.----------------------------------------------------------
+    console.log(solve('gh12cdy695m1'))
+
     // ------------------------------------------518.----------------------------------------------------------
     // ------------------------------------------519.----------------------------------------------------------
     // ------------------------------------------520.----------------------------------------------------------
