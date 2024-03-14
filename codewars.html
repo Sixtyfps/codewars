@@ -4620,14 +4620,30 @@
     // }
 
     // ----------------------------------------517.Numbers in strings---------------------------------------------------
-    const solve = (s) => {
-        const arr = s.replace(/[a-z]/g, ' ').split(' ')
-        return Math.max(...arr)
+    // const solve = (s) => {
+    //     const arr = s.replace(/[a-z]/g, ' ').split(' ')
+    //     return Math.max(...arr)
+    // }
+    //
+    // console.log(solve('gh12cdy695m1'))
+
+    // ----------------------518.Delete occurrences of an element if it occurs more than n times------------------------
+    const deleteNth = (arr, n) => {
+        let countMap = {}
+        let result = []
+        for (let i of arr) {
+            if (!countMap[i]) {
+                countMap[i] = 1
+            } else if (countMap[i] < n) {
+                countMap[i]++
+            } else {
+                continue
+            }
+            result.push(i)
+        }
+        return result
     }
 
-    console.log(solve('gh12cdy695m1'))
-
-    // ------------------------------------------518.----------------------------------------------------------
     // ------------------------------------------519.----------------------------------------------------------
     // ------------------------------------------520.----------------------------------------------------------
 
