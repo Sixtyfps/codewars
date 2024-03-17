@@ -4715,26 +4715,32 @@
     // console.log(toLeetSpeak("LEET CODE"))
 
     // ------------------------------------------521.Going to the cinema------------------------------------------------
-    const movie = (card, ticket, perc) => {
-        var costA = n = 0,
-            costB = card
-        while (Math.ceil(costB) >= costA) {
-            costA += ticket
-            costB += ticket * Math.pow(perc,++n)
-        }
-        return n
+    // const movie = (card, ticket, perc) => {
+    //     var costA = n = 0,
+    //         costB = card
+    //     while (Math.ceil(costB) >= costA) {
+    //         costA += ticket
+    //         costB += ticket * Math.pow(perc,++n)
+    //     }
+    //     return n
+    // }
+    //
+    // const _movie = (card, ticket, perc) => {
+    //     let count = 0
+    //     while (ticket * count <= Math.ceil(card)) {
+    //         count++
+    //         card += ticket * perc ** count
+    //     }
+    //     return count
+    // }
+
+    // ----------------------------------------------522.Largest Elements-----------------------------------------------
+    function largest(n, arr) {
+        return n===0? [] : arr.sort((a,b) => a-b).slice(-(n))
     }
 
-    const _movie = (card, ticket, perc) => {
-        let count = 0
-        while (ticket * count <= Math.ceil(card)) {
-            count++
-            card += ticket * perc ** count
-        }
-        return count
-    }
+    console.log(largest(3,[5, 1, 53, 2, 3, 1, 24, 3, 5]))
 
-    // ------------------------------------------522.----------------------------------------------------------
     // ------------------------------------------523.----------------------------------------------------------
     // ------------------------------------------524.----------------------------------------------------------
     // ------------------------------------------525.----------------------------------------------------------
