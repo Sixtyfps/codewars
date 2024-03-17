@@ -4680,41 +4680,60 @@
     // console.log(rot13('a!kdlz'))
 
     // ---------------------------------------------520.ToLeetSpeak-----------------------------------------------------
-    const toLeetSpeak = (str) => {
-        const leet = {
-            A : '@',
-            B : '8',
-            C : '(',
-            D : 'D',
-            E : '3',
-            F : 'F',
-            G : '6',
-            H : '#',
-            I : '!',
-            J : 'J',
-            K : 'K',
-            L : '1',
-            M : 'M',
-            N : 'N',
-            O : '0',
-            P : 'P',
-            Q : 'Q',
-            R : 'R',
-            S : '$',
-            T : '7',
-            U : 'U',
-            V : 'V',
-            W : 'W',
-            X : 'X',
-            Y : 'Y',
-            Z : '2'
+    // const toLeetSpeak = (str) => {
+    //     const leet = {
+    //         A : '@',
+    //         B : '8',
+    //         C : '(',
+    //         D : 'D',
+    //         E : '3',
+    //         F : 'F',
+    //         G : '6',
+    //         H : '#',
+    //         I : '!',
+    //         J : 'J',
+    //         K : 'K',
+    //         L : '1',
+    //         M : 'M',
+    //         N : 'N',
+    //         O : '0',
+    //         P : 'P',
+    //         Q : 'Q',
+    //         R : 'R',
+    //         S : '$',
+    //         T : '7',
+    //         U : 'U',
+    //         V : 'V',
+    //         W : 'W',
+    //         X : 'X',
+    //         Y : 'Y',
+    //         Z : '2'
+    //     }
+    //     return str.split('').map(el => leet[el] ? leet[el] : el).join('');
+    // }
+
+    // console.log(toLeetSpeak("LEET CODE"))
+
+    // ------------------------------------------521.Going to the cinema------------------------------------------------
+    const movie = (card, ticket, perc) => {
+        var costA = n = 0,
+            costB = card
+        while (Math.ceil(costB) >= costA) {
+            costA += ticket
+            costB += ticket * Math.pow(perc,++n)
         }
-        return str.split('').map(el => leet[el] ? leet[el] : el).join('');
+        return n
     }
 
-    console.log(toLeetSpeak("LEET CODE"))
+    const _movie = (card, ticket, perc) => {
+        let count = 0
+        while (ticket * count <= Math.ceil(card)) {
+            count++
+            card += ticket * perc ** count
+        }
+        return count
+    }
 
-    // ------------------------------------------521.----------------------------------------------------------
     // ------------------------------------------522.----------------------------------------------------------
     // ------------------------------------------523.----------------------------------------------------------
     // ------------------------------------------524.----------------------------------------------------------
