@@ -4735,13 +4735,35 @@
     // }
 
     // ----------------------------------------------522.Largest Elements-----------------------------------------------
-    function largest(n, arr) {
-        return n===0? [] : arr.sort((a,b) => a-b).slice(-(n))
+    // function largest(n, arr) {
+    //     return n===0? [] : arr.sort((a,b) => a-b).slice(-(n))
+    // }
+    //
+    // console.log(largest(3,[5, 1, 53, 2, 3, 1, 24, 3, 5]))
+
+    // ---------------------------------523.Find Count of Most Frequent Item in an Array--------------------------------
+    function mostFrequentItemCount(arr) {
+        if (arr.length === 0) {
+            return 0
+        }
+
+        let countMap = {}
+        for (let num of arr) {
+            countMap[num] = (countMap[num] || 0) + 1
+        }
+
+        let maxCount = 0
+        for (let key in countMap) {
+            if (countMap[key] > maxCount) {
+                maxCount = countMap[key]
+            }
+        }
+
+        return maxCount
     }
 
-    console.log(largest(3,[5, 1, 53, 2, 3, 1, 24, 3, 5]))
+    console.log(mostFrequentItemCount([1,2,3,3,4,5,6,6]))
 
-    // ------------------------------------------523.----------------------------------------------------------
     // ------------------------------------------524.----------------------------------------------------------
     // ------------------------------------------525.----------------------------------------------------------
     // ------------------------------------------526.----------------------------------------------------------
