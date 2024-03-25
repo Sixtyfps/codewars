@@ -4815,17 +4815,45 @@
     // }
 
     // -----------------------------------------531.Unique string characters--------------------------------------------
-    const solve = (a,b) => {
-        let aNew = a.split('').filter(el => !b.includes(el)).join('')
-        console.log(aNew)
-        let bNew = b.split('').filter(el => !a.includes(el)).join('')
-        console.log(bNew)
-        return aNew + bNew
+    // const solve = (a,b) => {
+    //     let aNew = a.split('').filter(el => !b.includes(el)).join('')
+    //     console.log(aNew)
+    //     let bNew = b.split('').filter(el => !a.includes(el)).join('')
+    //     console.log(bNew)
+    //     return aNew + bNew
+    // }
+    //
+    // console.log(solve("xyab","xzca"))
+
+    // ------------------------------------------532.Digitize-----------------------------------------------------------
+    const digitize = (n) => {
+        return n.toString().split('').map(el => +el)
     }
 
-    console.log(solve("xyab","xzca"))
+//---------------------------------------TODOLIST STATE STRUCTURE EXAMPLE------------------------------------------------
+//     [
+//         'todoid1': [{id:1, title: 'abc'}]
+//         'todoId2' : [{id:1, title: 'abc'}]
+//     ]
+//
+// dispatch(addTodolist(todolist))
+//
+//    store =  {
+//         stateTodolist: [{id: 12, name: 'whatever'}],[{id: 12, name: 'whatever'}] // [...state, todolist]
+//
+//
+//
+//           stateTasks:   ['12': [{ //[...state, [todolist.id]: []]
+//             id: 'task12',
+//             name: 'task'
+//         }, {
+//             id: 'task13',
+//             name: 'task2'
+//         }]
+//     ]
+//     }
 
-    // ------------------------------------------532.----------------------------------------------------------
+
     // ------------------------------------------533.----------------------------------------------------------
     // ------------------------------------------534.----------------------------------------------------------
     // ------------------------------------------535.----------------------------------------------------------
