@@ -4872,23 +4872,39 @@
     // }
 
     // -------------------------------------536.Head, Tail, Init and Last-----------------------------------------------
-    const head = (arr) => {
-        return arr[0]
+    // const head = (arr) => {
+    //     return arr[0]
+    // }
+    //
+    // const tail = (arr) => {
+    //     return arr.slice(1)
+    // }
+    //
+    // const init = (arr) => {
+    //     return arr.slice(0, arr.length - 1)
+    // }
+    //
+    // const last = (arr) => {
+    //     return arr[arr.length-1]
+    // }
+
+    // ---------------------------------------537.Clean up after your dog-----------------------------------------------
+    const crap = (x, bags, cap) => {
+        const arr = x.join('').split('')
+        let hsit = arr.filter(el => el === '@').length
+        if(arr.includes('D')) {
+            return 'Dog!!'
+        }
+        if(bags<1 || bags*cap<hsit) {
+            return 'Cr@p'
+        }
+        else {
+            return 'Clean'
+        }
     }
 
-    const tail = (arr) => {
-        return arr.slice(1)
-    }
+    console.log(crap([['_','_','_','_'], ['_','_','_','@'], ['_','_','@', '_']], 2, 2))
 
-    const init = (arr) => {
-        return arr.slice(0, arr.length - 1)
-    }
-
-    const last = (arr) => {
-        return arr[arr.length-1]
-    }
-
-    // ------------------------------------------537.----------------------------------------------------------
     // ------------------------------------------538.----------------------------------------------------------
     // ------------------------------------------539.----------------------------------------------------------
     // ------------------------------------------540.----------------------------------------------------------
