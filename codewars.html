@@ -4905,12 +4905,25 @@
     //
     // console.log(crap([['_','_','_','_'], ['_','_','_','@'], ['_','_','@', '_']], 2, 2))
 
-    // ------------------------------------538.Remove consecutive duplicate words----------------------------------------------------------
-    function removeConsecutiveDuplicates(str) {
-        return str.replace(/\b(\w+)(?:\s+\1\b)+/g, '$1')
+    // ------------------------------------538.Remove consecutive duplicate words---------------------------------------
+    // function removeConsecutiveDuplicates(str) {
+    //     return str.replace(/\b(\w+)(?:\s+\1\b)+/g, '$1')
+    // }
+
+    // ----------------------------------------539.Maximum Gap (Array Series #4)----------------------------------------
+    function maxGap (numbers){
+        const nums = numbers.sort((a,b) => a-b)
+        let dif = 0
+        for(let i=0; i<nums.length; i++) {
+            if(Math.abs(nums[i]-nums[i+1])>dif) {
+                dif = Math.abs(nums[i]-nums[i+1])
+            }
+        }
+        return dif
     }
 
-    // ------------------------------------------539.----------------------------------------------------------
+    console.log(maxGap([13,10,2,9,5]))
+
     // ------------------------------------------540.----------------------------------------------------------
 
 
