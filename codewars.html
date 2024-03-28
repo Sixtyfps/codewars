@@ -4889,23 +4889,27 @@
     // }
 
     // ---------------------------------------537.Clean up after your dog-----------------------------------------------
-    const crap = (x, bags, cap) => {
-        const arr = x.join('').split('')
-        let hsit = arr.filter(el => el === '@').length
-        if(arr.includes('D')) {
-            return 'Dog!!'
-        }
-        if(bags<1 || bags*cap<hsit) {
-            return 'Cr@p'
-        }
-        else {
-            return 'Clean'
-        }
+    // const crap = (x, bags, cap) => {
+    //     const arr = x.join('').split('')
+    //     let hsit = arr.filter(el => el === '@').length
+    //     if(arr.includes('D')) {
+    //         return 'Dog!!'
+    //     }
+    //     if(bags<1 || bags*cap<hsit) {
+    //         return 'Cr@p'
+    //     }
+    //     else {
+    //         return 'Clean'
+    //     }
+    // }
+    //
+    // console.log(crap([['_','_','_','_'], ['_','_','_','@'], ['_','_','@', '_']], 2, 2))
+
+    // ------------------------------------538.Remove consecutive duplicate words----------------------------------------------------------
+    function removeConsecutiveDuplicates(str) {
+        return str.replace(/\b(\w+)(?:\s+\1\b)+/g, '$1')
     }
 
-    console.log(crap([['_','_','_','_'], ['_','_','_','@'], ['_','_','@', '_']], 2, 2))
-
-    // ------------------------------------------538.----------------------------------------------------------
     // ------------------------------------------539.----------------------------------------------------------
     // ------------------------------------------540.----------------------------------------------------------
 
