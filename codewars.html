@@ -4830,28 +4830,28 @@
     //     return n.toString().split('').map(el => +el)
     // }
 
-//---------------------------------------TODOLIST STATE STRUCTURE EXAMPLE------------------------------------------------
-//     [
-//         'todoid1': [{id:1, title: 'abc'}]
-//         'todoId2' : [{id:1, title: 'abc'}]
-//     ]
-//
-// dispatch(addTodolist(todolist))
-//
-//    store =  {
-//         stateTodolist: [{id: 12, name: 'whatever'}],[{id: 12, name: 'whatever'}] // [...state, todolist]
-//
-//
-//
-//           stateTasks:   ['12': [{ //[...state, [todolist.id]: []]
-//             id: 'task12',
-//             name: 'task'
-//         }, {
-//             id: 'task13',
-//             name: 'task2'
-//         }]
-//     ]
-//     }
+    //---------------------------------------TODOLIST STATE STRUCTURE EXAMPLE------------------------------------------------
+    //     [
+    //         'todoid1': [{id:1, title: 'abc'}]
+    //         'todoId2' : [{id:1, title: 'abc'}]
+    //     ]
+    //
+    // dispatch(addTodolist(todolist))
+    //
+    //    store =  {
+    //         stateTodolist: [{id: 12, name: 'whatever'}],[{id: 12, name: 'whatever'}] // [...state, todolist]
+    //
+    //
+    //
+    //           stateTasks:   ['12': [{ //[...state, [todolist.id]: []]
+    //             id: 'task12',
+    //             name: 'task'
+    //         }, {
+    //             id: 'task13',
+    //             name: 'task2'
+    //         }]
+    //     ]
+    //     }
 
 
     // ------------------------------------------533.Valid Spacing------------------------------------------------------
@@ -4968,13 +4968,20 @@
     // }
 
     // -------------------------------------------545.Insert dashes-----------------------------------------------------
-    function insertDash(num) {
-        return num.toString().replace(/[13579](?=[13579])/g, '$&-')
+    // function insertDash(num) {
+    //     return num.toString().replace(/[13579](?=[13579])/g, '$&-')
+    // }
+    //
+    // console.log(insertDash(454793))
+
+    // ----------------------------------------546.Responsible Drinking-------------------------------------------------
+    function hydrate(s) {
+        const water = s.replace(/\D/g, "").split('').map(el => +el).reduce((a, b) => a + b, 0)
+        return water === 1 ? `${water} glass of water` : `${water} glasses of water`
     }
 
-    console.log(insertDash(454793))
+    console.log(hydrate("2 glasses of wine and 1 shot"))
 
-    // ------------------------------------------546.----------------------------------------------------------
     // ------------------------------------------547.----------------------------------------------------------
     // ------------------------------------------548.----------------------------------------------------------
     // ------------------------------------------549.----------------------------------------------------------
