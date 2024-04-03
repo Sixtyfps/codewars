@@ -4975,14 +4975,37 @@
     // console.log(insertDash(454793))
 
     // ----------------------------------------546.Responsible Drinking-------------------------------------------------
-    function hydrate(s) {
-        const water = s.replace(/\D/g, "").split('').map(el => +el).reduce((a, b) => a + b, 0)
-        return water === 1 ? `${water} glass of water` : `${water} glasses of water`
+    // function hydrate(s) {
+    //     const water = s.replace(/\D/g, "").split('').map(el => +el).reduce((a, b) => a + b, 0)
+    //     return water === 1 ? `${water} glass of water` : `${water} glasses of water`
+    // }
+    //
+    // console.log(hydrate("2 glasses of wine and 1 shot"))
+
+    // -----------------------------------------547.Nickname Generator--------------------------------------------------
+    function nicknameGenerator(name){
+        if(name.length > 3) {
+            if (/^[aeiuo]$/i.test(name[2])) {
+                return name.slice(0,4)
+            } else {
+                return name.slice(0,3)
+            }
+        }
+        else {
+            return "Error: Name too short"
+        }
     }
 
-    console.log(hydrate("2 glasses of wine and 1 shot"))
+    //---ternary----
 
-    // ------------------------------------------547.----------------------------------------------------------
+    function _nicknameGenerator(name){
+        if(name.length > 3) {
+            return /^[aeiuo]$/i.test(name[2])? name.slice(0,4) : name.slice(0,3)
+        } else {
+            return "Error: Name too short"
+        }
+    }
+
     // ------------------------------------------548.----------------------------------------------------------
     // ------------------------------------------549.----------------------------------------------------------
     // ------------------------------------------550.----------------------------------------------------------
