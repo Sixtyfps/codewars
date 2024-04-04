@@ -5007,20 +5007,31 @@
     // }
 
     // ------------------------------------548.Minimum Steps (Array Series #6)------------------------------------------
-    function minimumSteps(nums, value) {
-        nums = nums.sort((a, b) => a - b)
-        let sum = 0
-        for (let i = 0; i < nums.length; i++) {
-            sum=sum+nums[i]
-            if(sum>=value){
-                return i
-            }
-        }
+    // function minimumSteps(nums, value) {
+    //     nums = nums.sort((a, b) => a - b)
+    //     let sum = 0
+    //     for (let i = 0; i < nums.length; i++) {
+    //         sum=sum+nums[i]
+    //         if(sum>=value){
+    //             return i
+    //         }
+    //     }
+    // }
+    //
+    // console.log(minimumSteps([4, 6, 3], 7))
+
+    // ------------------------------------------549.Inspiring Strings--------------------------------------------------
+    function longestWord(str) {
+        arr = str.split(' ')
+        const arrRev = str.split(' ').reverse()
+        const maxLen = Math.max(...arr.map(el => el.length))
+
+        return arr.filter(el => el.length === maxLen).length > 1?
+            arrRev.find(el => el.length === maxLen) : arr.find(el => el.length === maxLen)
     }
 
-    console.log(minimumSteps([4, 6, 3], 7))
+    console.log(longestWord('one thaaa two three'))
 
-    // ------------------------------------------549.----------------------------------------------------------
     // ------------------------------------------550.----------------------------------------------------------
     // ------------------------------------------551.----------------------------------------------------------
     // ------------------------------------------552.----------------------------------------------------------
