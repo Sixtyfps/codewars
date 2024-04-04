@@ -5021,13 +5021,22 @@
     // console.log(minimumSteps([4, 6, 3], 7))
 
     // ------------------------------------------549.Inspiring Strings--------------------------------------------------
-    function longestWord(str) {
+    function _longestWord(str) {
         arr = str.split(' ')
         const arrRev = str.split(' ').reverse()
         const maxLen = Math.max(...arr.map(el => el.length))
 
         return arr.filter(el => el.length === maxLen).length > 1?
             arrRev.find(el => el.length === maxLen) : arr.find(el => el.length === maxLen)
+    }
+
+    //-------2 ver with findLast
+
+    function longestWord(str) {
+        arr = str.split(' ')
+        const maxLen = Math.max(...arr.map(el => el.length))
+
+        return arr.findLast(el => el.length === maxLen)
     }
 
     console.log(longestWord('one thaaa two three'))
