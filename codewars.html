@@ -5021,27 +5021,35 @@
     // console.log(minimumSteps([4, 6, 3], 7))
 
     // ------------------------------------------549.Inspiring Strings--------------------------------------------------
-    function _longestWord(str) {
-        arr = str.split(' ')
-        const arrRev = str.split(' ').reverse()
-        const maxLen = Math.max(...arr.map(el => el.length))
+    // function _longestWord(str) {
+    //     arr = str.split(' ')
+    //     const arrRev = str.split(' ').reverse()
+    //     const maxLen = Math.max(...arr.map(el => el.length))
+    //
+    //     return arr.filter(el => el.length === maxLen).length > 1?
+    //         arrRev.find(el => el.length === maxLen) : arr.find(el => el.length === maxLen)
+    // }
+    //
+    // //-------2 ver with findLast
+    //
+    // function longestWord(str) {
+    //     arr = str.split(' ')
+    //     const maxLen = Math.max(...arr.map(el => el.length))
+    //
+    //     return arr.findLast(el => el.length === maxLen)
+    // }
+    //
+    // console.log(longestWord('one thaaa two three'))
 
-        return arr.filter(el => el.length === maxLen).length > 1?
-            arrRev.find(el => el.length === maxLen) : arr.find(el => el.length === maxLen)
+    // ------------------------------------550.shorter concat [reverse longer]------------------------------------------
+    function shorterReverseLonger(a,b){
+        if(b.length <= a.length) {
+            return `${b}${a.split('').reverse().join('')}${b}`
+        } else {
+            return `${a}${b.split('').reverse().join('')}${a}`
+        }
     }
 
-    //-------2 ver with findLast
-
-    function longestWord(str) {
-        arr = str.split(' ')
-        const maxLen = Math.max(...arr.map(el => el.length))
-
-        return arr.findLast(el => el.length === maxLen)
-    }
-
-    console.log(longestWord('one thaaa two three'))
-
-    // ------------------------------------------550.----------------------------------------------------------
     // ------------------------------------------551.----------------------------------------------------------
     // ------------------------------------------552.----------------------------------------------------------
     // ------------------------------------------553.----------------------------------------------------------
