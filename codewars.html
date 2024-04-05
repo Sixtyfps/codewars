@@ -5042,15 +5042,21 @@
     // console.log(longestWord('one thaaa two three'))
 
     // ------------------------------------550.shorter concat [reverse longer]------------------------------------------
-    function shorterReverseLonger(a,b){
-        if(b.length <= a.length) {
-            return `${b}${a.split('').reverse().join('')}${b}`
-        } else {
-            return `${a}${b.split('').reverse().join('')}${a}`
-        }
+    // function shorterReverseLonger(a,b){
+    //     if(b.length <= a.length) {
+    //         return `${b}${a.split('').reverse().join('')}${b}`
+    //     } else {
+    //         return `${a}${b.split('').reverse().join('')}${a}`
+    //     }
+    // }
+
+    // ----------------------------------------551.Two numbers are positive---------------------------------------------
+    function twoArePositive(a, b, c) {
+        const arr = [a,b,c]
+        const positive = arr.filter(el => el>0).length
+        return positive===2
     }
 
-    // ------------------------------------------551.----------------------------------------------------------
     // ------------------------------------------552.----------------------------------------------------------
     // ------------------------------------------553.----------------------------------------------------------
     // ------------------------------------------554.----------------------------------------------------------
