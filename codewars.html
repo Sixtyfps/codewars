@@ -5072,11 +5072,24 @@
     // }
 
     // --------------------------554.Count all the sheep on farm in the heights of New Zealand--------------------------
-    function lostSheep(friday,saturday,total){
-        return total - [...friday, ...saturday].reduce((a,b)=> a+b,0)
+    // function lostSheep(friday,saturday,total){
+    //     return total - [...friday, ...saturday].reduce((a,b)=> a+b,0)
+    // }
+
+    // ---------------------------------------555.Compare Strings by Sum of Chars---------------------------------------
+    function compare(s1, s2) {
+        const sum = (s) => {
+            if (s === null || s === '' || /[^a-zA-Z]/.test(s)) {
+                return ''
+            } else {
+                return s.toUpperCase().split('').map(el => el.charCodeAt(0)).reduce((a,b) => a+b)
+            }
+        }
+        return sum(s1)===sum(s2)
     }
 
-    // ------------------------------------------555.----------------------------------------------------------
+    console.log(compare('', 'ba'))
+
     // ------------------------------------------556.----------------------------------------------------------
     // ------------------------------------------557.----------------------------------------------------------
     // ------------------------------------------558.----------------------------------------------------------
