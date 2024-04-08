@@ -5076,21 +5076,29 @@
     //     return total - [...friday, ...saturday].reduce((a,b)=> a+b,0)
     // }
 
-    // ---------------------------------------555.Compare Strings by Sum of Chars---------------------------------------
-    function compare(s1, s2) {
-        const sum = (s) => {
-            if (s === null || s === '' || /[^a-zA-Z]/.test(s)) {
-                return ''
-            } else {
-                return s.toUpperCase().split('').map(el => el.charCodeAt(0)).reduce((a,b) => a+b)
-            }
+    // -------------------------------------555.Compare Strings by Sum of Chars-----------------------------------------
+    // function compare(s1, s2) {
+    //     const sum = (s) => {
+    //         if (s === null || s === '' || /[^a-zA-Z]/.test(s)) {
+    //             return ''
+    //         } else {
+    //             return s.toUpperCase().split('').map(el => el.charCodeAt(0)).reduce((a,b) => a+b)
+    //         }
+    //     }
+    //     return sum(s1)===sum(s2)
+    // }
+    //
+    // console.log(compare('', 'ba'))
+
+    // -----------------------------------------556.Elevator Distance---------------------------------------------------
+    function elevatorDistance(arr) {
+        let res =[]
+        for(let i=0; i<arr.length-1; i++) {
+            res.push(Math.abs(arr[i]-arr[i+1]))
         }
-        return sum(s1)===sum(s2)
+        return res.reduce((a,b) => a+b)
     }
 
-    console.log(compare('', 'ba'))
-
-    // ------------------------------------------556.----------------------------------------------------------
     // ------------------------------------------557.----------------------------------------------------------
     // ------------------------------------------558.----------------------------------------------------------
     // ------------------------------------------559.----------------------------------------------------------
