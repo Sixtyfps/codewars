@@ -5125,17 +5125,26 @@
     // console.log(createDict(['a', 'b', 'c'], [1, 2, 3]))
 
     // ------------------------------------------560.Check three and two------------------------------------------------
-    function checkThreeAndTwo(arr) {
-        const a = arr.filter(el => el==='a').length
-        const b = arr.filter(el => el==='b').length
-        const c = arr.filter(el => el==='c').length
-        return (a === 3 || b === 3 || c=== 3)
-            && (a === 2 || b === 2 || c === 2)
+    // function checkThreeAndTwo(arr) {
+    //     const a = arr.filter(el => el==='a').length
+    //     const b = arr.filter(el => el==='b').length
+    //     const c = arr.filter(el => el==='c').length
+    //     return (a === 3 || b === 3 || c=== 3)
+    //         && (a === 2 || b === 2 || c === 2)
+    // }
+    //
+    // console.log(checkThreeAndTwo(["a", "a", "a", "b", "b"]))
+
+    // -----------------------------------------561.Arithmetic progression----------------------------------------------
+    function arithmeticSequenceElements(a, d, n) {
+        let res = ''
+        for (let i = 0; i<n; i++) {
+            res = res+a+', '
+            a=a+d
+        }
+        return res.slice(0, -2)
     }
 
-    console.log(checkThreeAndTwo(["a", "a", "a", "b", "b"]))
-
-    // ------------------------------------------561.----------------------------------------------------------
     // ------------------------------------------562.----------------------------------------------------------
     // ------------------------------------------563.----------------------------------------------------------
     // ------------------------------------------564.----------------------------------------------------------
