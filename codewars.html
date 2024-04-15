@@ -5153,14 +5153,21 @@
     // console.log(spacey(['i', 'have','no','space']))
 
     // ---------------------------------------------563.Stanton measure-------------------------------------------------
-    const stantonMeasure = (arr) => {
-        const n = arr.filter(el => el===1).length
-        return arr.filter(el => el===n).length
+    // const stantonMeasure = (arr) => {
+    //     const n = arr.filter(el => el===1).length
+    //     return arr.filter(el => el===n).length
+    // }
+    //
+    // console.log(stantonMeasure([1,1,1,2,5,4]))
+
+    // ----------------------------------------564.Basic Math (Add or Subtract)-----------------------------------------
+    function calculate(str) {
+        const res = eval(str.replace(/(\d+)/g, ' $1 ').replaceAll('plus', '+').replaceAll('minus', '-'))
+        return res.toString()
     }
 
-    console.log(stantonMeasure([1,1,1,2,5,4]))
+    console.log(calculate('1plus3minus2'))
 
-    // ------------------------------------------564.----------------------------------------------------------
     // ------------------------------------------565.----------------------------------------------------------
     // ------------------------------------------566.----------------------------------------------------------
     // ------------------------------------------567.----------------------------------------------------------
