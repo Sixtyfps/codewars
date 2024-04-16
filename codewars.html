@@ -5161,14 +5161,20 @@
     // console.log(stantonMeasure([1,1,1,2,5,4]))
 
     // ----------------------------------------564.Basic Math (Add or Subtract)-----------------------------------------
-    function calculate(str) {
-        const res = eval(str.replace(/(\d+)/g, ' $1 ').replaceAll('plus', '+').replaceAll('minus', '-'))
-        return res.toString()
+    // function calculate(str) {
+    //     const res = eval(str.replace(/(\d+)/g, ' $1 ').replaceAll('plus', '+').replaceAll('minus', '-'))
+    //     return res.toString()
+    // }
+    //
+    // console.log(calculate('1plus3minus2'))
+
+    // ------------------------------------------565.Nth power rules them all!------------------------------------------
+    function modifiedSum(a, n) {
+        return a.map(el => el**n).reduce((a,b) => a+b,0) - a.reduce((a,b) => a+b,0)
     }
 
-    console.log(calculate('1plus3minus2'))
+    console.log(modifiedSum([1,2,3], 2))
 
-    // ------------------------------------------565.----------------------------------------------------------
     // ------------------------------------------566.----------------------------------------------------------
     // ------------------------------------------567.----------------------------------------------------------
     // ------------------------------------------568.----------------------------------------------------------
