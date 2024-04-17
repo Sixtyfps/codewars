@@ -5169,13 +5169,36 @@
     // console.log(calculate('1plus3minus2'))
 
     // ------------------------------------------565.Nth power rules them all!------------------------------------------
-    function modifiedSum(a, n) {
-        return a.map(el => el**n).reduce((a,b) => a+b,0) - a.reduce((a,b) => a+b,0)
+    // function modifiedSum(a, n) {
+    //     return a.map(el => el**n).reduce((a,b) => a+b,0) - a.reduce((a,b) => a+b,0)
+    // }
+    //
+    // console.log(modifiedSum([1,2,3], 2))
+
+    // --------------------------------------------566.Letterbox Paint-Squad--------------------------------------------
+    var paintLetterboxes = function(start, end) {
+        let arr = []
+        for (let i=start;i<=end;i++) {
+            arr.push(i)
+        }
+        arr = arr.join('').split('')
+        const num = (array,digit) => {
+            return array.filter(el => el === digit.toString()).length
+        }
+        return [num(arr, 0),
+            num(arr, 1),
+            num(arr, 2),
+            num(arr, 3),
+            num(arr, 4),
+            num(arr, 5),
+            num(arr, 6),
+            num(arr, 7),
+            num(arr, 8),
+            num(arr, 9)]
     }
 
-    console.log(modifiedSum([1,2,3], 2))
+    console.log(paintLetterboxes(125, 132))
 
-    // ------------------------------------------566.----------------------------------------------------------
     // ------------------------------------------567.----------------------------------------------------------
     // ------------------------------------------568.----------------------------------------------------------
     // ------------------------------------------569.----------------------------------------------------------
