@@ -5176,30 +5176,31 @@
     // console.log(modifiedSum([1,2,3], 2))
 
     // --------------------------------------------566.Letterbox Paint-Squad--------------------------------------------
-    var paintLetterboxes = function(start, end) {
-        let arr = []
-        for (let i=start;i<=end;i++) {
-            arr.push(i)
-        }
-        arr = arr.join('').split('')
-        const num = (array,digit) => {
-            return array.filter(el => el === digit.toString()).length
-        }
-        return [num(arr, 0),
-            num(arr, 1),
-            num(arr, 2),
-            num(arr, 3),
-            num(arr, 4),
-            num(arr, 5),
-            num(arr, 6),
-            num(arr, 7),
-            num(arr, 8),
-            num(arr, 9)]
+    // var paintLetterboxes = function(start, end) {
+    //     let arr = []
+    //     for (let i=start;i<=end;i++) {
+    //         arr.push(i)
+    //     }
+    //     arr = arr.join('').split('')
+    //     const num = (array,digit) => {
+    //         return array.filter(el => el === digit.toString()).length
+    //     }
+    //     let res = []
+    //     for(let i=0; i<10; i++) {
+    //         res.push(num(arr, i))
+    //     }
+    //     return res
+    // }
+    //
+    // console.log(paintLetterboxes(125, 132))
+
+    // ----------------------------------------567.Reverse the bits in an integer---------------------------------------
+    function reverseBits (n) {
+        return parseInt(n.toString(2).split('').reverse().join(''), 2)
     }
 
-    console.log(paintLetterboxes(125, 132))
+    console.log(reverseBits(417))
 
-    // ------------------------------------------567.----------------------------------------------------------
     // ------------------------------------------568.----------------------------------------------------------
     // ------------------------------------------569.----------------------------------------------------------
     // ------------------------------------------570.----------------------------------------------------------
