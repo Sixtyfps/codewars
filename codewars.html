@@ -5195,13 +5195,17 @@
     // console.log(paintLetterboxes(125, 132))
 
     // ----------------------------------------567.Reverse the bits in an integer---------------------------------------
-    function reverseBits (n) {
-        return parseInt(n.toString(2).split('').reverse().join(''), 2)
+    // function reverseBits (n) {
+    //     return parseInt(n.toString(2).split('').reverse().join(''), 2)
+    // }
+    //
+    // console.log(reverseBits(417))
+
+    // ------------------------------------------568.Formatting decimal places #1---------------------------------------
+    function twoDecimalPlaces(number) {
+        return +number.toString().match(/^-?\d+(?:\.\d{0,2})?/)[0]
     }
 
-    console.log(reverseBits(417))
-
-    // ------------------------------------------568.----------------------------------------------------------
     // ------------------------------------------569.----------------------------------------------------------
     // ------------------------------------------570.----------------------------------------------------------
 
