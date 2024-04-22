@@ -5235,13 +5235,17 @@
     // console.log(flatten([[1, 2, 3], ["a", "b", "c"], [1, 2, 3]]))
 
     // ------------------------------------------573.Number Of Occurrences----------------------------------------------
-    Object.defineProperty(Array.prototype, 'numberOfOccurrences',{
-        value : function numberOfOccurrences(element) {
-            return this.filter(el => el===element).length
-        }
-    })
+    // Object.defineProperty(Array.prototype, 'numberOfOccurrences',{
+    //     value : function numberOfOccurrences(element) {
+    //         return this.filter(el => el===element).length
+    //     }
+    // })
 
-    // ------------------------------------------574.----------------------------------------------------------
+    // -------------------------------------574.Simple Fun #2: Circle of Numbers----------------------------------------
+    function circleOfNumbers(n, firstNumber) {
+        return (firstNumber + n/2) % n
+    }
+
     // ------------------------------------------575.----------------------------------------------------------
     // ------------------------------------------576.----------------------------------------------------------
     // ------------------------------------------577.----------------------------------------------------------
