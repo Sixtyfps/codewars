@@ -5273,17 +5273,24 @@
     // console.log(divisibleByThree('124'))
 
     // ---------------------------------------579.How many are smaller than me?-----------------------------------------
-    function smaller(arr) {
-        let res = []
-        for (let i=0; i<arr.length; i++) {
-            res.push(arr.slice(i+1, arr.length).filter(el => el<arr[i]).length)
+    // function smaller(arr) {
+    //     let res = []
+    //     for (let i=0; i<arr.length; i++) {
+    //         res.push(arr.slice(i+1, arr.length).filter(el => el<arr[i]).length)
+    //     }
+    //     return res
+    // }
+    //
+    // console.log(smaller([5, 4, 3, 2, 1]))
+
+    // -----------------------------580.Computer problem series #1: Fill the Hard Disk Drive----------------------------
+    const save = (arr, hd) => {
+        for (var i=0;i<arr.length;i++){
+            if (arr.slice(0,1+i).reduce((a,b)=>a+b,0)>hd) return i
         }
-        return res
+        return i
     }
 
-    console.log(smaller([5, 4, 3, 2, 1]))
-
-    // ------------------------------------------580.----------------------------------------------------------
     // ------------------------------------------581.----------------------------------------------------------
     // ------------------------------------------582.----------------------------------------------------------
     // ------------------------------------------583.----------------------------------------------------------
