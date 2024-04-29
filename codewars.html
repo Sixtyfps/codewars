@@ -5307,15 +5307,24 @@
     // console.log(isLucky(234))
 
     // ---------------------------------------------583.Double Sort-----------------------------------------------------
-    function dbSort(a) {
-        const nums = a.filter(el => typeof el === 'number').sort((a,b) => a-b)
-        const strings = a.filter(el => typeof el === 'string').sort()
-        return [...nums, ...strings]
-    }
+    // function dbSort(a) {
+    //     const nums = a.filter(el => typeof el === 'number').sort((a,b) => a-b)
+    //     const strings = a.filter(el => typeof el === 'string').sort()
+    //     return [...nums, ...strings]
+    // }
+    //
+    // console.log(dbSort(["Banana", "Orange", "Apple", "Mango", 4, 23, 2]))
 
-    console.log(dbSort(["Banana", "Orange", "Apple", "Mango", 4, 23, 2]))
+    // ------------------------------------------584.Refactored Greeting------------------------------------------------
+    class Person {
+        constructor(name) {
+            this.name = name
+        }
 
-    // ------------------------------------------584.----------------------------------------------------------
+        greet(yourName) {
+            return `Hello ${yourName}, my name is ${this.name}`
+        }}
+
     // ------------------------------------------585.----------------------------------------------------------
     // ------------------------------------------586.----------------------------------------------------------
     // ------------------------------------------587.----------------------------------------------------------
