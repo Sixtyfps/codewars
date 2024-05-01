@@ -5345,19 +5345,39 @@
     // }
 
     // ---------------------------------------------588.Dot Calculator--------------------------------------------------
-    function dotCalculator (str) {
-        let len
-        if (str.includes('//')) {
-            len = Math.floor(eval(str.replace('/', '').replace(/\.{2,}/g, (match) => match.length)))
-        } else {
-            len = eval(str.replace(/\.{2,}/g, (match) => match.length))
-        }
-        return '.'.repeat(len)
+    // function dotCalculator (str) {
+    //     let len
+    //     if (str.includes('//')) {
+    //         len = Math.floor(eval(str.replace('/', '').replace(/\.{2,}/g, (match) => match.length)))
+    //     } else {
+    //         len = eval(str.replace(/\.{2,}/g, (match) => match.length))
+    //     }
+    //     return '.'.repeat(len)
+    // }
+    //
+    // console.log(dotCalculator("..... * .."))
+
+    // -----------------------------------589.Add property to every object in array-------------------------------------
+    // variant 1
+    const objNewProp = (arr) => {
+        return arr.map(obj => ({ ...obj, usersAnswer:null }))
     }
 
-    console.log(dotCalculator("..... * .."))
+    // variant 2
+    questions.forEach(function(q) {
+        q.usersAnswer = null
+    })
 
-    // ------------------------------------------589.----------------------------------------------------------
+    console.log(objNewProp([{
+        question: "What's the currency of the USA?",
+        choices: ["US dollar", "Ruble", "Horses", "Gold"],
+        corAnswer: 0,
+    }, {
+        question: "Where was the American Declaration of Independence signed?",
+        choices: ["Philadelphia", "At the bottom", "Frankie's pub", "China"],
+        corAnswer: 0,
+    }]))
+
     // ------------------------------------------590.----------------------------------------------------------
 
 
