@@ -5340,11 +5340,23 @@
     // }
 
     // --------------------------------------587.Building Strings From a Hash-------------------------------------------
-    function solution(pairs){
-        return JSON.stringify(pairs).replace(/[{}"]/g, '').replace(/:/g, ' = ').replace(/,/g, ',')
+    // function solution(pairs){
+    //     return JSON.stringify(pairs).replace(/[{}"]/g, '').replace(/:/g, ' = ').replace(/,/g, ',')
+    // }
+
+    // ---------------------------------------------588.Dot Calculator--------------------------------------------------
+    function dotCalculator (str) {
+        let len
+        if (str.includes('//')) {
+            len = Math.floor(eval(str.replace('/', '').replace(/\.{2,}/g, (match) => match.length)))
+        } else {
+            len = eval(str.replace(/\.{2,}/g, (match) => match.length))
+        }
+        return '.'.repeat(len)
     }
 
-    // ------------------------------------------588.----------------------------------------------------------
+    console.log(dotCalculator("..... * .."))
+
     // ------------------------------------------589.----------------------------------------------------------
     // ------------------------------------------590.----------------------------------------------------------
 
