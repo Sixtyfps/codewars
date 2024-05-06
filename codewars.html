@@ -5427,19 +5427,34 @@
     // console.log(evenLast([7,4,3,9,5,2]))
 
     // -----------------------------------------595.Interview Question (easy)-------------------------------------------
-    function getStrings(word){
-        return word
-            .replaceAll(' ','')
-            .toLowerCase()
-            .split('')
-            .map((letter,i,arr) => `${letter}:${'*'.repeat(arr.filter(el=> el===letter).length)}`)
-            .filter((item, pos, self)=> self.indexOf(item) === pos)
-            .join(',')
+    // function getStrings(word){
+    //     return word
+    //         .replaceAll(' ','')
+    //         .toLowerCase()
+    //         .split('')
+    //         .map((letter,i,arr) => `${letter}:${'*'.repeat(arr.filter(el=> el===letter).length)}`)
+    //         .filter((item, pos, self)=> self.indexOf(item) === pos)
+    //         .join(',')
+    // }
+    //
+    // console.log(getStrings("Chicago"))
+
+    // --------------------------------------------596.Initialize my name-----------------------------------------------
+    function initializeNames(name) {
+        let arr = name.split(' ')
+        let res = []
+        if (arr.length > 2) {
+            for (let i = 1; i < arr.length - 1; i++) {
+                res.push(`${arr[i].charAt(0)}.`)
+            }
+            return [arr[0],...res, arr[arr.length-1]].join(' ')
+        } else {
+            return name
+        }
     }
 
-    console.log(getStrings("Chicago"))
+    console.log(initializeNames('Lois Mary M Bary Lane'))
 
-    // ------------------------------------------596.----------------------------------------------------------
     // ------------------------------------------597.----------------------------------------------------------
     // ------------------------------------------598.----------------------------------------------------------
     // ------------------------------------------599.----------------------------------------------------------
