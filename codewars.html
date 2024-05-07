@@ -5456,18 +5456,23 @@
     // console.log(initializeNames('Lois Mary M Bary Lane'))
 
     // -----------------------------------------------597.L2: Triple X--------------------------------------------------
-    function tripleX(str) {
-        let ind = str.indexOf('x')
-        if (ind !== -1) {
-            return str[ind + 1] === 'x' && str[ind + 2] === 'x';
-        } else {
-            return false
-        }
+    // function tripleX(str) {
+    //     let ind = str.indexOf('x')
+    //     if (ind !== -1) {
+    //         return str[ind + 1] === 'x' && str[ind + 2] === 'x';
+    //     } else {
+    //         return false
+    //     }
+    // }
+    //
+    // console.log(tripleX('xxxwarmwarmsoft'))
+
+    // ----------------------------------------598.Regexp Basics - is it a vowel?---------------------------------------
+    String.prototype.vowel = function() {
+        let regex = /^[aeiou]$/i
+        return regex.test(this)
     }
 
-    console.log(tripleX('xxxwarmwarmsoft'))
-
-    // ------------------------------------------598.----------------------------------------------------------
     // ------------------------------------------599.----------------------------------------------------------
     // ------------------------------------------600.----------------------------------------------------------
     // ------------------------------------------601.----------------------------------------------------------
