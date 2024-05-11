@@ -5499,20 +5499,36 @@
     // }
 
     // ---------------------------------------------603.Nice Array------------------------------------------------------
-    function isNice(arr) {
-        if (arr.length > 1) {
-            for (let i = 0; i < arr.length; i++) {
-                if (!arr.includes(arr[i] + 1) && !arr.includes(arr[i] - 1)) {
-                    return false
-                }
+    // function isNice(arr) {
+    //     if (arr.length > 1) {
+    //         for (let i = 0; i < arr.length; i++) {
+    //             if (!arr.includes(arr[i] + 1) && !arr.includes(arr[i] - 1)) {
+    //                 return false
+    //             }
+    //         }
+    //         return true
+    //     } else {
+    //         return false
+    //     }
+    // }
+
+    // --------------------------------------------604.Drone Fly-By-----------------------------------------------------
+    function flyBy(lamps, drone){
+        const index = drone.length
+        console.log(index)
+        let res = []
+        for(let i=0; i<lamps.length; i++) {
+            if(i<index) {
+                res.push('o')
+            } else {
+                res.push('x')
             }
-            return true
-        } else {
-            return false
         }
+        return res.join('')
     }
 
-    // ------------------------------------------604.----------------------------------------------------------
+    console.log(flyBy('xxxxxxxxx', '==T'))
+
     // ------------------------------------------605.----------------------------------------------------------
     // ------------------------------------------606.----------------------------------------------------------
     // ------------------------------------------607.----------------------------------------------------------
