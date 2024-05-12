@@ -5513,23 +5513,34 @@
     // }
 
     // --------------------------------------------604.Drone Fly-By-----------------------------------------------------
-    function flyBy(lamps, drone){
-        const index = drone.length
-        console.log(index)
-        let res = []
-        for(let i=0; i<lamps.length; i++) {
-            if(i<index) {
-                res.push('o')
-            } else {
-                res.push('x')
+    // function flyBy(lamps, drone){
+    //     const index = drone.length
+    //     console.log(index)
+    //     let res = []
+    //     for(let i=0; i<lamps.length; i++) {
+    //         if(i<index) {
+    //             res.push('o')
+    //         } else {
+    //             res.push('x')
+    //         }
+    //     }
+    //     return res.join('')
+    // }
+    //
+    // console.log(flyBy('xxxxxxxxx', '==T'))
+
+    // ------------------------------------605.Is n divisible by (...)?----------------------------------------------------------
+    function isDivisible(){
+        for(let i=0; i<arguments.length; i++) {
+            if (arguments[0] % arguments[i]) {
+                return false
             }
         }
-        return res.join('')
+        return true
     }
 
-    console.log(flyBy('xxxxxxxxx', '==T'))
+    console.log(isDivisible(12,3,4))
 
-    // ------------------------------------------605.----------------------------------------------------------
     // ------------------------------------------606.----------------------------------------------------------
     // ------------------------------------------607.----------------------------------------------------------
     // ------------------------------------------608.----------------------------------------------------------
