@@ -5542,17 +5542,32 @@
     // console.log(isDivisible(12,3,4))
 
     // ------------------------------------606.The wheat/rice and chessboard problem------------------------------------
-    function squaresNeeded(grains){
-        if (grains <= 0) {
-            return 0
+    // function squaresNeeded(grains){
+    //     if (grains <= 0) {
+    //         return 0
+    //     }
+    //     if (grains === 1) {
+    //         return 1
+    //     }
+    //     const squares = Math.log2(grains * 2 + 1)
+    //     return Math.ceil(squares)-1
+    // }
+
+    // -----------------------------------------------607.Check the exam------------------------------------------------
+    function checkExam(arr1, arr2) {
+        let res = 0
+        for(let i=0; i<arr1.length; i++) {
+            if (arr1[i] === arr2[i]) {
+                res+= 4
+            } else if (arr2[i] === '') {
+                res+= 0
+            } else {
+                res-= 1
+            }
         }
-        if (grains === 1) {
-            return 1
-        }
-        const squares = Math.log2(grains * 2 + 1)
-        return Math.ceil(squares)-1
+        return res>0? res : 0
     }
-    // ------------------------------------------607.----------------------------------------------------------
+
     // ------------------------------------------608.----------------------------------------------------------
     // ------------------------------------------609.----------------------------------------------------------
     // ------------------------------------------610.----------------------------------------------------------
