@@ -5553,20 +5553,14 @@
     //     return Math.ceil(squares)-1
     // }
 
-    // -----------------------------------------------607.Check the exam------------------------------------------------
-    function checkExam(arr1, arr2) {
-        let res = 0
-        for(let i=0; i<arr1.length; i++) {
-            if (arr1[i] === arr2[i]) {
-                res+= 4
-            } else if (arr2[i] === '') {
-                res+= 0
-            } else {
-                res-= 1
-            }
-        }
-        return res>0? res : 0
+    // -------------------------------------------607.Especially Joyful Numbers-----------------------------------------
+    function numberJoy(n) {
+        const sum = n.toString().split('').map(el => +el).reduce((a,b) => a+b)
+        const sumReverse = +sum.toString().split('').reverse().join('')
+        return sum * sumReverse === n
     }
+
+    console.log(numberJoy(1997))
 
     // ------------------------------------------608.----------------------------------------------------------
     // ------------------------------------------609.----------------------------------------------------------
