@@ -5563,13 +5563,17 @@
     // console.log(numberJoy(1997))
 
     // --608.Exclamation marks series #13: Count the number of exclamation marks and question marks, return the product-
-    const product = (str) => {
-        const a = str.split('').filter(el => el==='!').length
-        const b = str.split('').filter(el => el==='?').length
-        return a*b
+    // const product = (str) => {
+    //     const a = str.split('').filter(el => el==='!').length
+    //     const b = str.split('').filter(el => el==='?').length
+    //     return a*b
+    // }
+
+    // --------------------------------------------609.Filter Long Words------------------------------------------------
+    function filterLongWords(sentence, n) {
+        return sentence.split(' ').filter(el => el.length > n)
     }
 
-    // ------------------------------------------609.----------------------------------------------------------
     // ------------------------------------------610.----------------------------------------------------------
     // ------------------------------------------611.----------------------------------------------------------
     // ------------------------------------------612.----------------------------------------------------------
