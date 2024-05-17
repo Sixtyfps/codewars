@@ -5575,11 +5575,21 @@
     // }
 
     // ---------------610.Find how many times did a team from a given country win the Champions League?-----------------
-    function countWins(winnerList, country) {
-        return winnerList.filter(el => el.country === country).length
+    // function countWins(winnerList, country) {
+    //     return winnerList.filter(el => el.country === country).length
+    // }
+
+    // ------------------------------611.Find all occurrences of an element in an array---------------------------------
+    const findAll = (arr, n) => {
+        let res = []
+        for (let i=0; i<arr.length; i++) {
+            if(arr[i] === n) {
+                res.push(i)
+            }
+        }
+        return res
     }
 
-    // ------------------------------------------611.----------------------------------------------------------
     // ------------------------------------------612.----------------------------------------------------------
     // ------------------------------------------613.----------------------------------------------------------
     // ------------------------------------------614.----------------------------------------------------------
