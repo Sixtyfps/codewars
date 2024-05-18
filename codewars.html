@@ -5591,20 +5591,24 @@
     // }
 
     // ------------------------------------------612.Who is the killer?-------------------------------------------------
-    function killer(suspectInfo, dead) {
-        for (const [key, value] of Object.entries(suspectInfo)) {
-            if(value.includes(...dead)) {
-                return key
-            }
-        }
+    // function killer(suspectInfo, dead) {
+    //     for (const [key, value] of Object.entries(suspectInfo)) {
+    //         if(value.includes(...dead)) {
+    //             return key
+    //         }
+    //     }
+    // }
+    //
+    // console.log(killer({
+    //     'James': ['Jacob', 'Bill', 'Lucas'],
+    //     'Johnny': ['David', 'ABC','Kyle', 'Lucas'],
+    //     'Peter': ['Lucy', 'Kyle']}, ['Lucas', 'Bill']), 'James')
+
+    // --------------------------------------------613.Spoonerize Me----------------------------------------------------
+    function spoonerize(words) {
+        return words.replace(/^(\w)(\w*)(\s)(\w)(\w*)$/, '$4$2$3$1$5');
     }
 
-    console.log(killer({
-        'James': ['Jacob', 'Bill', 'Lucas'],
-        'Johnny': ['David', 'ABC','Kyle', 'Lucas'],
-        'Peter': ['Lucy', 'Kyle']}, ['Lucas', 'Bill']), 'James')
-
-    // ------------------------------------------613.----------------------------------------------------------
     // ------------------------------------------614.----------------------------------------------------------
     // ------------------------------------------615.----------------------------------------------------------
     // ------------------------------------------616.----------------------------------------------------------
