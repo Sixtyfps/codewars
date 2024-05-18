@@ -5580,17 +5580,30 @@
     // }
 
     // ------------------------------611.Find all occurrences of an element in an array---------------------------------
-    const findAll = (arr, n) => {
-        let res = []
-        for (let i=0; i<arr.length; i++) {
-            if(arr[i] === n) {
-                res.push(i)
+    // const findAll = (arr, n) => {
+    //     let res = []
+    //     for (let i=0; i<arr.length; i++) {
+    //         if(arr[i] === n) {
+    //             res.push(i)
+    //         }
+    //     }
+    //     return res
+    // }
+
+    // ------------------------------------------612.Who is the killer?-------------------------------------------------
+    function killer(suspectInfo, dead) {
+        for (const [key, value] of Object.entries(suspectInfo)) {
+            if(value.includes(...dead)) {
+                return key
             }
         }
-        return res
     }
 
-    // ------------------------------------------612.----------------------------------------------------------
+    console.log(killer({
+        'James': ['Jacob', 'Bill', 'Lucas'],
+        'Johnny': ['David', 'ABC','Kyle', 'Lucas'],
+        'Peter': ['Lucy', 'Kyle']}, ['Lucas', 'Bill']), 'James')
+
     // ------------------------------------------613.----------------------------------------------------------
     // ------------------------------------------614.----------------------------------------------------------
     // ------------------------------------------615.----------------------------------------------------------
