@@ -5696,24 +5696,34 @@
     //     },
     // ]))
 
-    // ----------------------------------------620.Credit card issuer checking----------------------------------------------------------
-    function getIssuer(n) {
-        n = n.toString()
-        const len = n.length
-        if((n.startsWith('34') || n.startsWith('37')) && len===15) return 'AMEX'
-        if((n.startsWith('51') ||
-            n.startsWith('52') ||
-            n.startsWith('53') ||
-            n.startsWith('54') ||
-            n.startsWith('55')) && len===16) return 'Mastercard'
-        if( n.startsWith('6011') && len===16) return 'Discover'
-        if( n.startsWith('4') && (len===16 || len ===13)) return 'VISA'
-        else return 'Unknown'
+    // ---------------------------------------620.Credit card issuer checking-------------------------------------------
+    // function getIssuer(n) {
+    //     n = n.toString()
+    //     const len = n.length
+    //     if((n.startsWith('34') || n.startsWith('37')) && len===15) return 'AMEX'
+    //     if((n.startsWith('51') ||
+    //         n.startsWith('52') ||
+    //         n.startsWith('53') ||
+    //         n.startsWith('54') ||
+    //         n.startsWith('55')) && len===16) return 'Mastercard'
+    //     if( n.startsWith('6011') && len===16) return 'Discover'
+    //     if( n.startsWith('4') && (len===16 || len ===13)) return 'VISA'
+    //     else return 'Unknown'
+    // }
+    //
+    // console.log(getIssuer(11378282246310005))
+
+    // ----------------------------------------621.last digits of a number----------------------------------------------
+    function lastDigit(n, d) {
+        if(d>n) {
+            return n.toString().split('').map(el => +el)
+        } else if (d<=0) {
+            return []
+        } else {
+           return n.toString().slice(-d).split('').map(el => +el)
+        }
     }
 
-    console.log(getIssuer(11378282246310005))
-
-    // ------------------------------------------621.----------------------------------------------------------
     // ------------------------------------------622.----------------------------------------------------------
     // ------------------------------------------623.----------------------------------------------------------
     // ------------------------------------------624.----------------------------------------------------------
