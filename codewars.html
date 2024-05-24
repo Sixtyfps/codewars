@@ -5714,17 +5714,29 @@
     // console.log(getIssuer(11378282246310005))
 
     // ----------------------------------------621.last digits of a number----------------------------------------------
-    function lastDigit(n, d) {
-        if(d>n) {
-            return n.toString().split('').map(el => +el)
-        } else if (d<=0) {
-            return []
-        } else {
-           return n.toString().slice(-d).split('').map(el => +el)
+    // function lastDigit(n, d) {
+    //     if(d>n) {
+    //         return n.toString().split('').map(el => +el)
+    //     } else if (d<=0) {
+    //         return []
+    //     } else {
+    //        return n.toString().slice(-d).split('').map(el => +el)
+    //     }
+    // }
+
+    // ------------------------------------622.Help Bob count letters and digits----------------------------------------
+    function countLettersAndDigits(input) {
+        let count = 0
+        for (let i = 0; i < input.length; i++) {
+            if (input[i].match(/[a-zA-Z0-9]/)) {
+                count++;
+            }
         }
+        return count
     }
 
-    // ------------------------------------------622.----------------------------------------------------------
+    console.log(countLettersAndDigits('hel2!lo'))
+
     // ------------------------------------------623.----------------------------------------------------------
     // ------------------------------------------624.----------------------------------------------------------
     // ------------------------------------------625.----------------------------------------------------------
