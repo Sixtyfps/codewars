@@ -5766,29 +5766,61 @@
 
     // ---------------------------------------627.Previous multiple of three--------------------------------------------
     //----1 ver
-    const _prevMultOfThree = n => {
-        if (n % 3 === 0) {
-            return n
+    // const _prevMultOfThree = n => {
+    //     if (n % 3 === 0) {
+    //         return n
+    //     }
+    //     while (n > 0) {
+    //         n = Math.floor(n / 10)
+    //         if (n % 3 === 0 && n !== 0) {
+    //             return n
+    //         }
+    //     }
+    //     return null
+    // }
+    //
+    // console.log(_prevMultOfThree(234))
+    //
+    // //----2ver
+    // const prevMultOfThree = n => {
+    //     if (n === 0) return null
+    //     if (n % 3 === 0) return n
+    //     return prevMultOfThree(+n.toString().slice(0,-1))
+    // }
+
+    // ---------------------------------------------628.Who's Online?---------------------------------------------------
+    const whosOnline = friends => {
+        if (!friends.length) return {}
+
+        const online = friends
+            .filter(({ status, lastActivity }) => status === 'online' && lastActivity <= 10)
+            .map(({ username }) => username)
+        const away = friends
+            .filter(({ status, lastActivity }) => status === 'online' && lastActivity > 10)
+            .map(({ username }) => username)
+        const offline = friends.filter(({ status }) => status === 'offline').map(({ username }) => username)
+
+        return {
+            ...(online.length && { online }),
+            ...(offline.length && { offline }),
+            ...(away.length && { away }),
         }
-        while (n > 0) {
-            n = Math.floor(n / 10)
-            if (n % 3 === 0 && n !== 0) {
-                return n
-            }
-        }
-        return null
     }
 
-    console.log(_prevMultOfThree(234))
+    console.log(whosOnline([{
+        username: 'David',
+        status: 'online',
+        lastActivity: 10
+    }, {
+        username: 'Lucy',
+        status: 'offline',
+        lastActivity: 22
+    }, {
+        username: 'Bob',
+        status: 'online',
+        lastActivity: 104
+    }]))
 
-    //----2ver
-    const prevMultOfThree = n => {
-        if (n === 0) return null
-        if (n % 3 === 0) return n
-        return prevMultOfThree(+n.toString().slice(0,-1))
-    }
-
-    // ------------------------------------------628.----------------------------------------------------------
     // ------------------------------------------629.----------------------------------------------------------
     // ------------------------------------------630.----------------------------------------------------------
 
