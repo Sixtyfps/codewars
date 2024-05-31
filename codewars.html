@@ -5822,11 +5822,23 @@
     // }]))
 
     // --------------------------------------629.Regexp Basics - is it a letter?----------------------------------------
-    String.prototype.isLetter = function() {
-        return (/[a-zA-Z]/).test(this) && this.length === 1
+    // String.prototype.isLetter = function() {
+    //     return (/[a-zA-Z]/).test(this) && this.length === 1
+    // }
+
+    // ---------------------------------------630.Numbers with this digit inside----------------------------------------
+    function numbersWithDigitInside(x, d) {
+        let res = []
+        for(let i=1; i<=x; i++) {
+            if(i.toString().includes(d.toString())) {
+                res.push(i)
+            }
+        }
+        return [res.length, res.reduce((a,b) => a+b,0), res.length? prod = res.reduce((a,b) => a*b,1) : prod = 0]
     }
 
-    // ------------------------------------------630.----------------------------------------------------------
+    console.log(numbersWithDigitInside(5,6))
+
     // ------------------------------------------631.----------------------------------------------------------
     // ------------------------------------------632.----------------------------------------------------------
     // ------------------------------------------633.----------------------------------------------------------
