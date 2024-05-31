@@ -5827,19 +5827,33 @@
     // }
 
     // ---------------------------------------630.Numbers with this digit inside----------------------------------------
-    function numbersWithDigitInside(x, d) {
+    // function numbersWithDigitInside(x, d) {
+    //     let res = []
+    //     for(let i=1; i<=x; i++) {
+    //         if(i.toString().includes(d.toString())) {
+    //             res.push(i)
+    //         }
+    //     }
+    //     return [res.length, res.reduce((a,b) => a+b,0), res.length? prod = res.reduce((a,b) => a*b,1) : prod = 0]
+    // }
+    //
+    // console.log(numbersWithDigitInside(5,6))
+
+    // ----------------------------------------------631.Max-min arrays-------------------------------------------------
+    function solve(arr){
         let res = []
-        for(let i=1; i<=x; i++) {
-            if(i.toString().includes(d.toString())) {
-                res.push(i)
+        arr = arr.sort((a,b) => a-b).reverse()
+        for(let i=0; i<Math.ceil(arr.length/2); i++) {
+            res.push(arr[i])
+            if (i !== arr.length - 1 - i) {
+                res.push(arr[arr.length - 1 - i]);
             }
         }
-        return [res.length, res.reduce((a,b) => a+b,0), res.length? prod = res.reduce((a,b) => a*b,1) : prod = 0]
+        return res
     }
 
-    console.log(numbersWithDigitInside(5,6))
+    console.log(solve([15,11,10,7,12]))
 
-    // ------------------------------------------631.----------------------------------------------------------
     // ------------------------------------------632.----------------------------------------------------------
     // ------------------------------------------633.----------------------------------------------------------
     // ------------------------------------------634.----------------------------------------------------------
