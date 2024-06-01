@@ -5840,21 +5840,28 @@
     // console.log(numbersWithDigitInside(5,6))
 
     // ----------------------------------------------631.Max-min arrays-------------------------------------------------
-    function solve(arr){
-        let res = []
-        arr = arr.sort((a,b) => a-b).reverse()
-        for(let i=0; i<Math.ceil(arr.length/2); i++) {
-            res.push(arr[i])
-            if (i !== arr.length - 1 - i) {
-                res.push(arr[arr.length - 1 - i]);
-            }
-        }
-        return res
+    // function solve(arr){
+    //     let res = []
+    //     arr = arr.sort((a,b) => a-b).reverse()
+    //     for(let i=0; i<Math.ceil(arr.length/2); i++) {
+    //         res.push(arr[i])
+    //         if (i !== arr.length - 1 - i) {
+    //             res.push(arr[arr.length - 1 - i]);
+    //         }
+    //     }
+    //     return res
+    // }
+    //
+    // console.log(solve([15,11,10,7,12]))
+
+    // --------------------------------------------632.Frequency sequence-----------------------------------------------
+    function freqSeq(str, sep) {
+        str = str.split('')
+        return str.map(letter => str.filter(el=>el=== letter).length).join(sep)
     }
 
-    console.log(solve([15,11,10,7,12]))
+    console.log(freqSeq('hello world'))
 
-    // ------------------------------------------632.----------------------------------------------------------
     // ------------------------------------------633.----------------------------------------------------------
     // ------------------------------------------634.----------------------------------------------------------
     // ------------------------------------------635.----------------------------------------------------------
