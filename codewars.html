@@ -5855,14 +5855,33 @@
     // console.log(solve([15,11,10,7,12]))
 
     // --------------------------------------------632.Frequency sequence-----------------------------------------------
-    function freqSeq(str, sep) {
-        str = str.split('')
-        return str.map(letter => str.filter(el=>el=== letter).length).join(sep)
+    // function freqSeq(str, sep) {
+    //     str = str.split('')
+    //     return str.map(letter => str.filter(el=>el=== letter).length).join(sep)
+    // }
+    //
+    // console.log(freqSeq('hello world'))
+
+    // ----------------------------------------------633.Broken sequence------------------------------------------------
+    function findMissingNumber(sequence){
+        if(sequence === ""){
+            return 0
+        }
+        else if (!/^(\d+ )+\d+$/gi.test(sequence)){
+            return 1
+        }
+        else{
+            const arr = sequence.split(' ').map(x => +x)
+            const max = Math.max(...arr)
+            for(let i = 1; i < max; ++i)
+                if (arr.find(x => x === i) === undefined)
+                    return i
+            return 0
+        }
     }
 
-    console.log(freqSeq('hello world'))
+    console.log(findMissingNumber("a 1 2 3 5 86 15"))
 
-    // ------------------------------------------633.----------------------------------------------------------
     // ------------------------------------------634.----------------------------------------------------------
     // ------------------------------------------635.----------------------------------------------------------
     // ------------------------------------------636.----------------------------------------------------------
