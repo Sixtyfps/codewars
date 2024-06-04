@@ -5883,13 +5883,20 @@
     // console.log(findMissingNumber("a 1 2 3 5 86 15"))
 
     // -----------------------------------------634.Javascript filter - 1-----------------------------------------------
-    function searchNames( logins ){
-        return logins.filter(arr => arr[0].endsWith('_'))
+    // function searchNames( logins ){
+    //     return logins.filter(arr => arr[0].endsWith('_'))
+    // }
+    //
+    // console.log(searchNames([ [ "foo", "foo@foo.com" ], [ "bar_", "bar@bar.com" ] ]))
+
+    // ----------------------------------635.Is every value in the array an array?--------------------------------------
+    const arrCheck = arr => {
+        for(let i=0; i<arr.length; i++) {
+            if(!Array.isArray(arr[i])) return false
+        }
+        return true
     }
 
-    console.log(searchNames([ [ "foo", "foo@foo.com" ], [ "bar_", "bar@bar.com" ] ]))
-
-    // ------------------------------------------635.----------------------------------------------------------
     // ------------------------------------------636.----------------------------------------------------------
     // ------------------------------------------637.----------------------------------------------------------
     // ------------------------------------------638.----------------------------------------------------------
