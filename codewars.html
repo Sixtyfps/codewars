@@ -5890,14 +5890,22 @@
     // console.log(searchNames([ [ "foo", "foo@foo.com" ], [ "bar_", "bar@bar.com" ] ]))
 
     // ----------------------------------635.Is every value in the array an array?--------------------------------------
-    const arrCheck = arr => {
-        for(let i=0; i<arr.length; i++) {
-            if(!Array.isArray(arr[i])) return false
-        }
-        return true
+    // const arrCheck = arr => {
+    //     for(let i=0; i<arr.length; i++) {
+    //         if(!Array.isArray(arr[i])) return false
+    //     }
+    //     return true
+    // }
+
+    // ---------------------------------------------636.Split The Bill--------------------------------------------------
+    function splitTheBill(obj) {
+        let avg = Object.values(obj).reduce((a,b) => a+b,0) / Object.values(obj).length
+        Object.keys(obj).forEach((item) => obj[item] = parseFloat((obj[item] - avg).toFixed(2)))
+        return obj
     }
 
-    // ------------------------------------------636.----------------------------------------------------------
+    console.log( splitTheBill({A: 20, B: 15, C: 10}) )
+
     // ------------------------------------------637.----------------------------------------------------------
     // ------------------------------------------638.----------------------------------------------------------
     // ------------------------------------------639.----------------------------------------------------------
