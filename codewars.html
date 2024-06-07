@@ -5907,17 +5907,31 @@
     // console.log( splitTheBill({A: 20, B: 15, C: 10}) )
 
     // -------------------------------------637.Even or Odd - Which is Greater?-----------------------------------------
-    const evenOrOdd = (str) => {
-        const odd = str.split('').map(el => +el).filter(el => el%2===1).reduce((a,b) => a+b,0)
-        const even = str.split('').map(el => +el).filter(el => el%2===0).reduce((a,b) => a+b,0)
-        if(odd>even) return "Odd is greater than Even"
-        if(odd<even) return "Even is greater than Odd"
-        else return "Even and Odd are the same"
+    // const evenOrOdd = (str) => {
+    //     const odd = str.split('').map(el => +el).filter(el => el%2===1).reduce((a,b) => a+b,0)
+    //     const even = str.split('').map(el => +el).filter(el => el%2===0).reduce((a,b) => a+b,0)
+    //     if(odd>even) return "Odd is greater than Even"
+    //     if(odd<even) return "Even is greater than Odd"
+    //     else return "Even and Odd are the same"
+    // }
+    //
+    // console.log(evenOrOdd('5948'))
+
+    // -----------------------------------------638.Complete The Pattern #2---------------------------------------------
+    const pattern = (n) => {
+        if (n < 1) return ""
+        let result = ""
+        for (let i = 0; i < n; i++) {
+            for (let j = n; j > i; j--) {
+                result += j
+            }
+            if (i < n - 1) result += "\n"
+        }
+        return result
     }
 
-    console.log(evenOrOdd('5948'))
+    console.log(pattern(6))
 
-    // ------------------------------------------638.----------------------------------------------------------
     // ------------------------------------------639.----------------------------------------------------------
     // ------------------------------------------640.----------------------------------------------------------
     // ------------------------------------------641.----------------------------------------------------------
