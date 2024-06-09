@@ -5946,15 +5946,24 @@
     // console.log(collatz(20))
 
     // -------------------------------------------------640.Move 10-----------------------------------------------------
-    const moveTen = (s) => {
-        const alphabet = 'abcdefghijklmnopqrstuvwxyz'
-        return s.split('').map(el => alphabet[(alphabet.indexOf(el) + 10) % alphabet.length])
-            .join('')
+    // const moveTen = (s) => {
+    //     const alphabet = 'abcdefghijklmnopqrstuvwxyz'
+    //     return s.split('').map(el => alphabet[(alphabet.indexOf(el) + 10) % alphabet.length])
+    //         .join('')
+    // }
+    //
+    // console.log(moveTen('aabb'))
+
+    // ------------------------------------------641.Simple string reversal---------------------------------------------
+    const solve = (str) => {
+        // Extract non-space characters and reverse them
+        let reversedChars = str.replace(/\s/g, '').split('').reverse();
+        // Create the result string by replacing non-space characters with reversed ones
+        return str.split('').map(char => char === ' ' ? ' ' : reversedChars.shift()).join('');
     }
 
-    console.log(moveTen('aabb'))
+    console.log(solve('abc def lk'))
 
-    // ------------------------------------------641.----------------------------------------------------------
     // ------------------------------------------642.----------------------------------------------------------
     // ------------------------------------------643.----------------------------------------------------------
     // ------------------------------------------644.----------------------------------------------------------
