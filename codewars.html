@@ -5955,16 +5955,38 @@
     // console.log(moveTen('aabb'))
 
     // ------------------------------------------641.Simple string reversal---------------------------------------------
-    const solve = (str) => {
-        // Extract non-space characters and reverse them
-        let reversedChars = str.replace(/\s/g, '').split('').reverse();
-        // Create the result string by replacing non-space characters with reversed ones
-        return str.split('').map(char => char === ' ' ? ' ' : reversedChars.shift()).join('');
+    // const solve = (str) => {
+    //     // Extract non-space characters and reverse them
+    //     let reversedChars = str.replace(/\s/g, '').split('').reverse();
+    //     // Create the result string by replacing non-space characters with reversed ones
+    //     return str.split('').map(char => char === ' ' ? ' ' : reversedChars.shift()).join('');
+    // }
+    //
+    // console.log(solve('abc def lk'))
+
+    // -----------------------------------------642.Debug Basic Calculator----------------------------------------------
+    const calculate = (a, o, b) => {
+        if(o === "+") {
+            return a + b;
+        }
+        else if(o === "-") {
+            return a - b;
+        }
+        else if(o === "*") {
+            return a*b;
+        }
+        else if(o === "/") {
+            if (b===0) {
+                return null
+            } else {
+                return a/b
+            }
+        }
+        else {
+            return null
+        }
     }
 
-    console.log(solve('abc def lk'))
-
-    // ------------------------------------------642.----------------------------------------------------------
     // ------------------------------------------643.----------------------------------------------------------
     // ------------------------------------------644.----------------------------------------------------------
     // ------------------------------------------645.----------------------------------------------------------
