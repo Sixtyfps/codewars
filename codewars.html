@@ -6009,36 +6009,44 @@
 
     // ------------------------------643.Fun with ES6 Classes #2 - Animals and Inheritance------------------------------
     // I. Shark class
-    class Shark extends Animal {
-        constructor(name, age, status) {
-            super(name, age, 0, "shark", status);
+    // class Shark extends Animal {
+    //     constructor(name, age, status) {
+    //         super(name, age, 0, "shark", status);
+    //     }
+    // }
+    //
+    // // II. Cat class
+    // class Cat extends Animal {
+    //     constructor(name, age, status) {
+    //         super(name, age, 4, "cat", status);
+    //     }
+    //
+    //     introduce() {
+    //         return `${super.introduce()}  Meow meow!`; // Notice the TWO spaces before "Meow meow!"
+    //     }
+    // }
+    //
+    // // III. Dog class
+    // class Dog extends Animal {
+    //     constructor(name, age, status, master) {
+    //         super(name, age, 4, "dog", status);
+    //         this.master = master;
+    //     }
+    //
+    //     greetMaster() {
+    //         return `Hello ${this.master}`;
+    //     }
+    // }
+
+    // ---------------------------------------------644.String matchup--------------------------------------------------
+    const solve = (arr1,arr2) => {
+        let res = []
+        for(let i=0; i<arr2.length; i++) {
+            res.push(arr1.filter(el => el===arr2[i]).length)
         }
+        return res
     }
 
-    // II. Cat class
-    class Cat extends Animal {
-        constructor(name, age, status) {
-            super(name, age, 4, "cat", status);
-        }
-
-        introduce() {
-            return `${super.introduce()}  Meow meow!`; // Notice the TWO spaces before "Meow meow!"
-        }
-    }
-
-    // III. Dog class
-    class Dog extends Animal {
-        constructor(name, age, status, master) {
-            super(name, age, 4, "dog", status);
-            this.master = master;
-        }
-
-        greetMaster() {
-            return `Hello ${this.master}`;
-        }
-    }
-
-    // ------------------------------------------644.----------------------------------------------------------
     // ------------------------------------------645.----------------------------------------------------------
     // ------------------------------------------646.----------------------------------------------------------
     // ------------------------------------------647.----------------------------------------------------------
