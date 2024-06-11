@@ -5965,49 +5965,79 @@
     // console.log(solve('abc def lk'))
 
     // -----------------------------------------642.Debug Basic Calculator----------------------------------------------
-    const calculate = (a, o, b) => {
-        if(o === "+") {
-            return a + b;
-        }
-        else if(o === "-") {
-            return a - b;
-        }
-        else if(o === "*") {
-            return a*b;
-        }
-        else if(o === "/") {
-            if (b===0) {
-                return null
-            } else {
-                return a/b
-            }
-        }
-        else {
-            return null
+    // const calculate = (a, o, b) => {
+    //     if(o === "+") {
+    //         return a + b;
+    //     }
+    //     else if(o === "-") {
+    //         return a - b;
+    //     }
+    //     else if(o === "*") {
+    //         return a*b;
+    //     }
+    //     else if(o === "/") {
+    //         if (b===0) {
+    //             return null
+    //         } else {
+    //             return a/b
+    //         }
+    //     }
+    //     else {
+    //         return null
+    //     }
+    // }
+    //
+    // //-------2 ver
+    // const _calculate = (a, o, b) => {
+    //     switch (o) {
+    //         case '+':
+    //             return a + b
+    //         case '-':
+    //             return a - b
+    //         case '*':
+    //             return a * b
+    //         case '/':
+    //             if (a === 0) {
+    //                 return null
+    //             } else {
+    //                 return a / b
+    //             }
+    //         default:
+    //             return null
+    //     }
+    // }
+
+    // ------------------------------643.Fun with ES6 Classes #2 - Animals and Inheritance------------------------------
+    // I. Shark class
+    class Shark extends Animal {
+        constructor(name, age, status) {
+            super(name, age, 0, "shark", status);
         }
     }
 
-    //-------2 ver
-    const _calculate = (a, o, b) => {
-        switch (o) {
-            case '+':
-                return a + b
-            case '-':
-                return a - b
-            case '*':
-                return a * b
-            case '/':
-                if (a === 0) {
-                    return null
-                } else {
-                    return a / b
-                }
-            default:
-                return null
+    // II. Cat class
+    class Cat extends Animal {
+        constructor(name, age, status) {
+            super(name, age, 4, "cat", status);
+        }
+
+        introduce() {
+            return `${super.introduce()}  Meow meow!`; // Notice the TWO spaces before "Meow meow!"
         }
     }
 
-    // ------------------------------------------643.----------------------------------------------------------
+    // III. Dog class
+    class Dog extends Animal {
+        constructor(name, age, status, master) {
+            super(name, age, 4, "dog", status);
+            this.master = master;
+        }
+
+        greetMaster() {
+            return `Hello ${this.master}`;
+        }
+    }
+
     // ------------------------------------------644.----------------------------------------------------------
     // ------------------------------------------645.----------------------------------------------------------
     // ------------------------------------------646.----------------------------------------------------------
