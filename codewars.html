@@ -6073,18 +6073,22 @@
     // console.log(uniqueSum([1,2,3,4,3,2]))
 
     // -------------------------------------------647.Hells Kitchen-----------------------------------------------------
-    const gordon = (str) => {
-        return str.toUpperCase()
-            .replaceAll('A', '@')
-            .replace(/[EIOU]/gi, '*')
-            .split(' ')
-            .map(el => `${el}!!!!`)
-            .join(' ')
+    // const gordon = (str) => {
+    //     return str.toUpperCase()
+    //         .replaceAll('A', '@')
+    //         .replace(/[EIOU]/gi, '*')
+    //         .split(' ')
+    //         .map(el => `${el}!!!!`)
+    //         .join(' ')
+    // }
+    //
+    // console.log(gordon('What feck damn cake'))
+
+    // --------------------------------648.Enumerable Magic #5- True for Just One?--------------------------------------
+    const one = (arr, func) => {
+        return arr.filter(func).length === 1;
     }
 
-    console.log(gordon('What feck damn cake'))
-
-    // ------------------------------------------648.----------------------------------------------------------
     // ------------------------------------------649.----------------------------------------------------------
     // ------------------------------------------650.----------------------------------------------------------
 
