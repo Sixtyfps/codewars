@@ -6106,17 +6106,22 @@
     // }
 
     // ---------------------------------------------651.Absent vowel----------------------------------------------------
-    const absentVowel = (str) => {
-        if(!str.includes('a')) return 0
-        if(!str.includes('e')) return 1
-        if(!str.includes('i')) return 2
-        if(!str.includes('o')) return 3
-        if(!str.includes('u')) return 4
+    // const absentVowel = (str) => {
+    //     if(!str.includes('a')) return 0
+    //     if(!str.includes('e')) return 1
+    //     if(!str.includes('i')) return 2
+    //     if(!str.includes('o')) return 3
+    //     if(!str.includes('u')) return 4
+    // }
+    //
+    // console.log(absentVowel("Joahn Doe hs seven red pples under his bsket"))
+
+    // ------------------------------------------652.Find Duplicates----------------------------------------------------
+    const duplicates = (arr) => {
+        const newArr = arr.filter((item, pos, self) => self.indexOf(item) !== pos)
+        return [...new Set(newArr)]
     }
 
-    console.log(absentVowel("Joahn Doe hs seven red pples under his bsket"))
-
-    // ------------------------------------------652.----------------------------------------------------------
     // ------------------------------------------653.----------------------------------------------------------
     // ------------------------------------------654.----------------------------------------------------------
     // ------------------------------------------655.----------------------------------------------------------
