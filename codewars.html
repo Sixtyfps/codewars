@@ -6135,29 +6135,33 @@
     // }
 
     // ----------------------------------------655.Correct the time-string----------------------------------------------
-    function timeCorrect(timeString) {
-        if (timeString === null || timeString === '') {
-            return timeString;
-        }
-        const timeFormat = /^(\d{2}):(\d{2}):(\d{2})$/;
-        const match = timeString.match(timeFormat);
+    // function timeCorrect(timeString) {
+    //     if (timeString === null || timeString === '') {
+    //         return timeString;
+    //     }
+    //     const timeFormat = /^(\d{2}):(\d{2}):(\d{2})$/;
+    //     const match = timeString.match(timeFormat);
+    //
+    //     if (!match) {
+    //         return null;
+    //     }
+    //
+    //     let [_, hours, minutes, seconds] = match;
+    //
+    //     const date = new Date(0, 0, 0, hours, minutes, seconds);
+    //
+    //     return [
+    //         String(date.getHours()).padStart(2, '0'),
+    //         String(date.getMinutes()).padStart(2, '0'),
+    //         String(date.getSeconds()).padStart(2, '0')
+    //     ].join(':');
+    // }
 
-        if (!match) {
-            return null;
-        }
-
-        let [_, hours, minutes, seconds] = match;
-
-        const date = new Date(0, 0, 0, hours, minutes, seconds);
-
-        return [
-            String(date.getHours()).padStart(2, '0'),
-            String(date.getMinutes()).padStart(2, '0'),
-            String(date.getSeconds()).padStart(2, '0')
-        ].join(':');
+    // ----------------------------------------656.Numbers to Objects---------------------------------------------------
+    function numObj(arr){
+        return arr.map( el => ({[el.toString()]:String.fromCharCode(el)}) )
     }
 
-    // ------------------------------------------656.----------------------------------------------------------
     // ------------------------------------------657.----------------------------------------------------------
     // ------------------------------------------658.----------------------------------------------------------
     // ------------------------------------------659.----------------------------------------------------------
