@@ -6163,12 +6163,16 @@
     // }
 
     // ---------------------------------657.Sum a list but ignore any duplicates----------------------------------------
-    function sumNoDuplicates(arr) {
-        const counts = arr.reduce((acc, num) => (acc[num] = (acc[num] || 0) + 1, acc), {});
-        return arr.filter(num => counts[num] === 1).reduce((a,b) => a+b,0)
+    // function sumNoDuplicates(arr) {
+    //     const counts = arr.reduce((acc, num) => (acc[num] = (acc[num] || 0) + 1, acc), {});
+    //     return arr.filter(num => counts[num] === 1).reduce((a,b) => a+b,0)
+    // }
+
+    // ----------------------658.Working with arrays I (and why your code fails in some katas)--------------------------
+    function withoutLast(arr) {
+        return arr.slice(0,-1);
     }
 
-    // ------------------------------------------658.----------------------------------------------------------
     // ------------------------------------------659.----------------------------------------------------------
     // ------------------------------------------660.----------------------------------------------------------
 
