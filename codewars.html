@@ -6208,19 +6208,30 @@
     // console.log(broken('101010'))
 
     // ---------------------------------------------662.Password maker--------------------------------------------------
-    function makePassword(str) {
-        return str.split(' ').map(el => el[0]).join('')
-            .replaceAll('i', 1)
-            .replaceAll('I', 1)
-            .replaceAll('o', 0)
-            .replaceAll('O', 0)
-            .replaceAll('s', 5)
-            .replaceAll('S', 5)
+    // function makePassword(str) {
+    //     return str.split(' ').map(el => el[0]).join('')
+    //         .replaceAll('i', 1)
+    //         .replaceAll('I', 1)
+    //         .replaceAll('o', 0)
+    //         .replaceAll('O', 0)
+    //         .replaceAll('s', 5)
+    //         .replaceAll('S', 5)
+    // }
+    //
+    // console.log(makePassword("Give me liberty or give me death"))
+
+    // ----------------------------------------------663.Scrolling Text-------------------------------------------------
+    function scrollingText(text){
+        text = text.toUpperCase()
+        let res = []
+
+        for(let i=0; i<text.length; i++) {
+            res.push(text.slice(i) + text.slice(0, i))
+        }
+
+        return res
     }
 
-    console.log(makePassword("Give me liberty or give me death"))
-
-    // ------------------------------------------663.----------------------------------------------------------
     // ------------------------------------------664.----------------------------------------------------------
     // ------------------------------------------665.----------------------------------------------------------
     // ------------------------------------------666.----------------------------------------------------------
