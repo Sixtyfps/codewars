@@ -6221,18 +6221,22 @@
     // console.log(makePassword("Give me liberty or give me death"))
 
     // ----------------------------------------------663.Scrolling Text-------------------------------------------------
-    function scrollingText(text){
-        text = text.toUpperCase()
-        let res = []
+    // function scrollingText(text){
+    //     text = text.toUpperCase()
+    //     let res = []
+    //
+    //     for(let i=0; i<text.length; i++) {
+    //         res.push(text.slice(i) + text.slice(0, i))
+    //     }
+    //
+    //     return res
+    // }
 
-        for(let i=0; i<text.length; i++) {
-            res.push(text.slice(i) + text.slice(0, i))
-        }
-
-        return res
+    // ----------------664.Exclamation marks series #5: Remove all exclamation marks from the end of words--------------
+    function remove (str) {
+        return str.replace(/!+(\s|$)/g, '$1')
     }
 
-    // ------------------------------------------664.----------------------------------------------------------
     // ------------------------------------------665.----------------------------------------------------------
     // ------------------------------------------666.----------------------------------------------------------
     // ------------------------------------------667.----------------------------------------------------------
