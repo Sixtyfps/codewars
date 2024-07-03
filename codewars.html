@@ -6244,15 +6244,37 @@
     // }
 
     // -------------------------------------666.Calculate mean and concatenate string-----------------------------------
-    function mean(arr){
-        const a0 = arr.filter(str => /^\d+$/.test(str)).map(el => +el).reduce((a,b) => a+b,0)/10
-        const a1 = arr.filter(str => /^[a-zA-Z]+$/.test(str)).join('')
-        return [a0, a1]
+    // function mean(arr){
+    //     const a0 = arr.filter(str => /^\d+$/.test(str)).map(el => +el).reduce((a,b) => a+b,0)/10
+    //     const a1 = arr.filter(str => /^[a-zA-Z]+$/.test(str)).join('')
+    //     return [a0, a1]
+    // }
+    //
+    // console.log(mean(["u", "6", "d", "1", "i", "w", "6", "s", "t", "4", "a", "6", "g", "1", "2", "w", "8", "o", "2", "0"]))
+
+    // -----------------------------------------------667.Replace every nth---------------------------------------------
+    function replaceNth(text, n, oldValue, newValue) {
+        if (n <= 0) {
+            return text;
+        }
+
+        let count = 0;
+        let result = '';
+
+        for (let i = 0; i < text.length; i++) {
+            if (text[i] === oldValue) {
+                count++;
+                if (count % n === 0) {
+                    result += newValue;
+                    continue;
+                }
+            }
+            result += text[i];
+        }
+
+        return result;
     }
 
-    console.log(mean(["u", "6", "d", "1", "i", "w", "6", "s", "t", "4", "a", "6", "g", "1", "2", "w", "8", "o", "2", "0"]))
-
-    // ------------------------------------------667.----------------------------------------------------------
     // ------------------------------------------668.----------------------------------------------------------
     // ------------------------------------------669.----------------------------------------------------------
     // ------------------------------------------670.----------------------------------------------------------
