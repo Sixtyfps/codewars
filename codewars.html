@@ -6253,29 +6253,44 @@
     // console.log(mean(["u", "6", "d", "1", "i", "w", "6", "s", "t", "4", "a", "6", "g", "1", "2", "w", "8", "o", "2", "0"]))
 
     // -----------------------------------------------667.Replace every nth---------------------------------------------
-    function replaceNth(text, n, oldValue, newValue) {
-        if (n <= 0) {
-            return text;
-        }
+    // function replaceNth(text, n, oldValue, newValue) {
+    //     if (n <= 0) {
+    //         return text;
+    //     }
+    //
+    //     let count = 0;
+    //     let result = '';
+    //
+    //     for (let i = 0; i < text.length; i++) {
+    //         if (text[i] === oldValue) {
+    //             count++;
+    //             if (count % n === 0) {
+    //                 result += newValue;
+    //                 continue;
+    //             }
+    //         }
+    //         result += text[i];
+    //     }
+    //
+    //     return result;
+    // }
 
-        let count = 0;
-        let result = '';
-
-        for (let i = 0; i < text.length; i++) {
-            if (text[i] === oldValue) {
-                count++;
-                if (count % n === 0) {
-                    result += newValue;
-                    continue;
-                }
+    // --------------------------------------------668.Search for letters-----------------------------------------------
+    function change(str){
+        const a = "abcdefghijklmnopqrstuvwxyz"
+        let res = ''
+        for (let i=0; i<a.length; i++) {
+            if(str.toLowerCase().includes(a[i])) {
+                res = res + '1'
+            } else {
+                res = res + '0'
             }
-            result += text[i];
         }
-
-        return result;
+        return res
     }
 
-    // ------------------------------------------668.----------------------------------------------------------
+    console.log(change("a **&  bZ"))
+
     // ------------------------------------------669.----------------------------------------------------------
     // ------------------------------------------670.----------------------------------------------------------
 
