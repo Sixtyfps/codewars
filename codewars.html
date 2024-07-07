@@ -6307,19 +6307,23 @@
     // console.log(well([['bad', 'bad', 'gooD'], ['goOd', 'bad'], ['bad', 'bad', 'GoOd', 'bad', 'bad'] ]))
 
     // --------------------------------------------670."Very Even" Numbers----------------------------------------------
-    function isVeryEvenNumber(n) {
-        function sumDigits(num) {
-            return num.toString().split('').reduce((sum, digit) => sum + parseInt(digit, 10), 0);
-        }
-        while (n >= 10) {
-            n = sumDigits(n);
-        }
-        return n % 2 === 0;
+    // function isVeryEvenNumber(n) {
+    //     function sumDigits(num) {
+    //         return num.toString().split('').reduce((sum, digit) => sum + parseInt(digit, 10), 0);
+    //     }
+    //     while (n >= 10) {
+    //         n = sumDigits(n);
+    //     }
+    //     return n % 2 === 0;
+    // }
+    //
+    // console.log(isVeryEvenNumber(324))
+
+    // --------------------------------------------------671.Chain me---------------------------------------------------
+    function chain(num, fs) {
+        return fs.reduce((val, fn) => fn(val), num)
     }
 
-    console.log(isVeryEvenNumber(324))
-
-    // ------------------------------------------671.----------------------------------------------------------
     // ------------------------------------------672.----------------------------------------------------------
     // ------------------------------------------673.----------------------------------------------------------
     // ------------------------------------------674.----------------------------------------------------------
