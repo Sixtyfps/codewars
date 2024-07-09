@@ -6325,13 +6325,21 @@
     // }
 
     // -----------------------------------------672.Help Suzuki rake his garden!----------------------------------------
-    function rakeGarden(garden) {
-        return garden.split(' ').map(el => (el === "rock" || el === "gravel") ? el : 'gravel').join(' ')
+    // function rakeGarden(garden) {
+    //     return garden.split(' ').map(el => (el === "rock" || el === "gravel") ? el : 'gravel').join(' ')
+    // }
+    //
+    // console.log(rakeGarden('slug spider rock gravel gravel gravel gravel gravel gravel gravel'))
+
+    // -------673.Exclamation marks series #7: Remove words from the sentence if it contains one exclamation mark-------
+    function remove (str) {
+        return str.split(' ')
+            .filter(word => (word.match(/!/g) || []).length !== 1)
+            .join(' ');
     }
 
-    console.log(rakeGarden('slug spider rock gravel gravel gravel gravel gravel gravel gravel'))
+    console.log(remove("Hi Hi! Hi! Hi"))
 
-    // ------------------------------------------673.----------------------------------------------------------
     // ------------------------------------------674.----------------------------------------------------------
     // ------------------------------------------675.----------------------------------------------------------
     // ------------------------------------------676.----------------------------------------------------------
