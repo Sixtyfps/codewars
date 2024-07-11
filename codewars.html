@@ -6341,13 +6341,22 @@
     // console.log(remove("Hi Hi! Hi! Hi"))
 
     // ---------------------------------------------674.Substring fun---------------------------------------------------
-    function nthChar(arr){
-        return arr.map((el,i) => el[i]).join('')
+    // function nthChar(arr){
+    //     return arr.map((el,i) => el[i]).join('')
+    // }
+    //
+    // console.log(nthChar(['yoda', 'best', 'has']))
+
+    // ------------------------------------------675.Filter unused digits----------------------------------------------------------
+    function unusedDigits(...numbers) {
+        const combined = numbers.join('')
+        const allDigits = '0123456789'
+        const missingDigits = allDigits.split('').filter(digit => !combined.includes(digit))
+        return missingDigits.join('')
     }
 
-    console.log(nthChar(['yoda', 'best', 'has']))
+    console.log(21, 46, 98, 540)
 
-    // ------------------------------------------675.----------------------------------------------------------
     // ------------------------------------------676.----------------------------------------------------------
     // ------------------------------------------677.----------------------------------------------------------
     // ------------------------------------------678.----------------------------------------------------------
