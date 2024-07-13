@@ -6358,26 +6358,32 @@
     // console.log(21, 46, 98, 540)
 
     // -----------------------------------------676.Dominant array elements---------------------------------------------
-    function solve(arr) {
-        let res = []
-        for (let i = 0; i < arr.length; i++) {
-            let isGreater = true
-            for (let j = i + 1; j < arr.length; j++) {
-                if (arr[i] <= arr[j]) {
-                    isGreater = false
-                    break
-                }
-            }
-            if (isGreater) {
-                res.push(arr[i])
-            }
-        }
-        return res
+    // function solve(arr) {
+    //     let res = []
+    //     for (let i = 0; i < arr.length; i++) {
+    //         let isGreater = true
+    //         for (let j = i + 1; j < arr.length; j++) {
+    //             if (arr[i] <= arr[j]) {
+    //                 isGreater = false
+    //                 break
+    //             }
+    //         }
+    //         if (isGreater) {
+    //             res.push(arr[i])
+    //         }
+    //     }
+    //     return res
+    // }
+    //
+    // console.log(solve([1,21,4,7,5]))
+
+    // ------------------------------------------677.Sum of a Beach----------------------------------------------------------
+    function sumOfABeach(beach) {
+        const regex = /sand|water|fish|sun/gi;
+        const matches = beach.match(regex);
+        return matches ? matches.length : 0;
     }
 
-    console.log(solve([1,21,4,7,5]))
-
-    // ------------------------------------------677.----------------------------------------------------------
     // ------------------------------------------678.----------------------------------------------------------
     // ------------------------------------------679.----------------------------------------------------------
     // ------------------------------------------680.----------------------------------------------------------
