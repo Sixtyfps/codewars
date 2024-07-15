@@ -6385,17 +6385,23 @@
     // }
 
     // ---------------------------------------678.Debug the functions EASY----------------------------------------------
-    function multi(arr) {
-        return arr.reduce((a,b) => a*b,1);
-    }
-    function add(arr) {
-        return arr.reduce((a,b) => a+b,0);
-    }
-    function reverse(str) {
-        return str.split('').reverse().join('');
+    // function multi(arr) {
+    //     return arr.reduce((a,b) => a*b,1);
+    // }
+    // function add(arr) {
+    //     return arr.reduce((a,b) => a+b,0);
+    // }
+    // function reverse(str) {
+    //     return str.split('').reverse().join('');
+    // }
+
+    // ------------------------------------------679.Multiply Word in String--------------------------------------------
+    function modifyMultiply (str,loc,num) {
+        return (str.split(' ')[loc] + '-').repeat(num).slice(0,-1)
     }
 
-    // ------------------------------------------679.----------------------------------------------------------
+    console.log(modifyMultiply("This is a string",3 ,5))
+
     // ------------------------------------------680.----------------------------------------------------------
     // ------------------------------------------681.----------------------------------------------------------
     // ------------------------------------------682.----------------------------------------------------------
