@@ -6408,14 +6408,18 @@
     // }
 
     // -------------------------------------681.Return a string's even characters.--------------------------------------
-    function evenChars(str) {
-        if (str.length < 2 || str.length  > 100) return "invalid string"
-        return str.split('').filter((el,i) => i%2)
+    // function evenChars(str) {
+    //     if (str.length < 2 || str.length  > 100) return "invalid string"
+    //     return str.split('').filter((el,i) => i%2)
+    // }
+    //
+    // console.log(evenChars("abcdefghijklm"))
+
+    // ---------------------------------------------682.We Have Liftoff-------------------------------------------------
+    function liftoff(arr){
+        return arr.sort((a,b) => a-b).reverse().join(' ').toString() + ' liftoff!'
     }
 
-    console.log(evenChars("abcdefghijklm"))
-
-    // ------------------------------------------682.----------------------------------------------------------
     // ------------------------------------------683.----------------------------------------------------------
     // ------------------------------------------684.----------------------------------------------------------
     // ------------------------------------------685.----------------------------------------------------------
