@@ -6432,11 +6432,21 @@
     // console.log(mergeArrays([1, 2, 3], ['a', 'b', 'c', 'd', 'e', 'f']))
 
     // ------------------------------------------684.Alphabetically ordered---------------------------------------------
-    function alphabetic(s) {
-        return s === s.split('').sort().join('')
+    // function alphabetic(s) {
+    //     return s === s.split('').sort().join('')
+    // }
+
+    // ---------------------------------------685.Battle of the characters (Easy)---------------------------------------
+    function battle(x, y) {
+        const sumX = x.split('').map(el => el.toLowerCase().charCodeAt(0)-96).reduce((a,b) => a+b,0)
+        const sumY = y.split('').map(el => el.toLowerCase().charCodeAt(0)-96).reduce((a,b) => a+b,0)
+        if(sumX === sumY) return "Tie!"
+        else if (sumX > sumY) return x
+        else if (sumX < sumY) return y
     }
 
-    // ------------------------------------------685.----------------------------------------------------------
+    console.log(battle('AAA','BBB'))
+
     // ------------------------------------------686.----------------------------------------------------------
     // ------------------------------------------687.----------------------------------------------------------
     // ------------------------------------------688.----------------------------------------------------------
