@@ -6437,17 +6437,32 @@
     // }
 
     // ---------------------------------------685.Battle of the characters (Easy)---------------------------------------
-    function battle(x, y) {
-        const sumX = x.split('').map(el => el.toLowerCase().charCodeAt(0)-96).reduce((a,b) => a+b,0)
-        const sumY = y.split('').map(el => el.toLowerCase().charCodeAt(0)-96).reduce((a,b) => a+b,0)
-        if(sumX === sumY) return "Tie!"
-        else if (sumX > sumY) return x
-        else if (sumX < sumY) return y
+    // function battle(x, y) {
+    //     const sumX = x.split('').map(el => el.toLowerCase().charCodeAt(0)-96).reduce((a,b) => a+b,0)
+    //     const sumY = y.split('').map(el => el.toLowerCase().charCodeAt(0)-96).reduce((a,b) => a+b,0)
+    //     if(sumX === sumY) return "Tie!"
+    //     else if (sumX > sumY) return x
+    //     else if (sumX < sumY) return y
+    // }
+    //
+    // console.log(battle('AAA','BBB'))
+
+    // ------------------------------------------686.Valid Parentheses--------------------------------------------------
+    function validParentheses(str) {
+        let stack = [];
+        for (let char of str) {
+            if (char === '(') {
+                stack.push(char);
+            } else if (char === ')') {
+                if (stack.length === 0) {
+                    return false
+                }
+                stack.pop()
+            }
+        }
+        return stack.length === 0
     }
 
-    console.log(battle('AAA','BBB'))
-
-    // ------------------------------------------686.----------------------------------------------------------
     // ------------------------------------------687.----------------------------------------------------------
     // ------------------------------------------688.----------------------------------------------------------
     // ------------------------------------------689.----------------------------------------------------------
