@@ -6464,17 +6464,24 @@
     // }
 
     // ---------------------------------------------687.Odd Ones Out!---------------------------------------------------
-    function oddOnesOut(nums) {
-        const counts = {}
-        nums.forEach(num => {
-            counts[num] = (counts[num] || 0) + 1
-        })
-        return nums.filter(num => counts[num] % 2 === 0)
+    // function oddOnesOut(nums) {
+    //     const counts = {}
+    //     nums.forEach(num => {
+    //         counts[num] = (counts[num] || 0) + 1
+    //     })
+    //     return nums.filter(num => counts[num] % 2 === 0)
+    // }
+    //
+    // console.log(oddOnesOut([2,3,2,3,3]))
+
+    // ------------------------------------------688.Find the calculation type----------------------------------------------------------
+    function calcType(a, b, res) {
+        if(a+b === res) return 'addition'
+        if(a*b === res) return 'multiplication'
+        if(a-b === res) return 'subtraction'
+        if(a/b === res) return 'division'
     }
 
-    console.log(oddOnesOut([2,3,2,3,3]))
-
-    // ------------------------------------------688.----------------------------------------------------------
     // ------------------------------------------689.----------------------------------------------------------
     // ------------------------------------------690.----------------------------------------------------------
 
