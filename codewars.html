@@ -6483,28 +6483,34 @@
     // }
 
     // -----------------------------------------689.MinMaxMin: Bounded Nums---------------------------------------------
-    function minMinMax(arr) {
-        arr = arr.sort((a, b) => a - b)
-        let smallest = arr[0]
-        let largest = arr[arr.length - 1]
-        let minimumAbsent = smallest + 1
+    // function minMinMax(arr) {
+    //     arr = arr.sort((a, b) => a - b)
+    //     let smallest = arr[0]
+    //     let largest = arr[arr.length - 1]
+    //     let minimumAbsent = smallest + 1
+    //
+    //     for (let i = 0; i < arr.length - 1; i++) {
+    //         if (arr[i] + 1 < arr[i + 1]) {
+    //             minimumAbsent = arr[i] + 1
+    //             break
+    //         }
+    //     }
+    //     if (minimumAbsent > largest) {
+    //         minimumAbsent = largest + 1
+    //     }
+    //
+    //     return [smallest, minimumAbsent, largest];
+    // }
+    //
+    // console.log(minMinMax([-1, 4, 5, -23, 24]))
 
-        for (let i = 0; i < arr.length - 1; i++) {
-            if (arr[i] + 1 < arr[i + 1]) {
-                minimumAbsent = arr[i] + 1
-                break
-            }
-        }
-        if (minimumAbsent > largest) {
-            minimumAbsent = largest + 1
-        }
-
-        return [smallest, minimumAbsent, largest];
+    // ------------------------------------------690.Vampire Numbers----------------------------------------------------
+    function vampireTest(a, b) {
+        return `${a}${b}`.split('').sort().join('') === `${a*b}`.split('').sort().join('')
     }
 
-    console.log(minMinMax([-1, 4, 5, -23, 24]))
+    console.log(vampireTest(21,6))
 
-    // ------------------------------------------690.----------------------------------------------------------
     // ------------------------------------------691.----------------------------------------------------------
     // ------------------------------------------692.----------------------------------------------------------
     // ------------------------------------------693.----------------------------------------------------------
