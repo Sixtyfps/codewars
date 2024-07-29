@@ -6517,14 +6517,26 @@
     // }
 
     // -----------------------------------------692.Consecutive letters-------------------------------------------------
-    function solve(str) {
-        const alphabet = 'abcdefghijklmnopqrstuvwxyz'
-        return alphabet.includes(str.toLowerCase().split('').sort().join(''))
+    // function solve(str) {
+    //     const alphabet = 'abcdefghijklmnopqrstuvwxyz'
+    //     return alphabet.includes(str.toLowerCase().split('').sort().join(''))
+    // }
+    //
+    // console.log(solve('cdba'))
+
+    // ------------------------------693.Extra Perfect Numbers (Special Numbers Series #7)------------------------------
+    function extraPerfect(n){
+        let res = []
+        for (let i=1; i<=n; i++) {
+            if(i.toString(2)[0] === i.toString(2)[i.toString(2).length - 1]) {
+                res.push(i)
+            }
+        }
+        return res
     }
 
-    console.log(solve('cdba'))
+    console.log(extraPerfect(7))
 
-    // ------------------------------------------693.----------------------------------------------------------
     // ------------------------------------------694.----------------------------------------------------------
     // ------------------------------------------695.----------------------------------------------------------
     // ------------------------------------------696.----------------------------------------------------------
