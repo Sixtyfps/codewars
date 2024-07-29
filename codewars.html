@@ -6525,19 +6525,29 @@
     // console.log(solve('cdba'))
 
     // ------------------------------693.Extra Perfect Numbers (Special Numbers Series #7)------------------------------
-    function extraPerfect(n){
-        let res = []
-        for (let i=1; i<=n; i++) {
-            if(i.toString(2)[0] === i.toString(2)[i.toString(2).length - 1]) {
-                res.push(i)
-            }
+    // function extraPerfect(n){
+    //     let res = []
+    //     for (let i=1; i<=n; i++) {
+    //         if(i.toString(2)[0] === i.toString(2)[i.toString(2).length - 1]) {
+    //             res.push(i)
+    //         }
+    //     }
+    //     return res
+    // }
+    //
+    // console.log(extraPerfect(7))
+
+    // -----------------------------------------694.Sum of Two Integers-------------------------------------------------
+    function add(a, b) {
+        while (b !== 0) {
+            let sum = a ^ b
+            let carry = (a & b) << 1
+            a = sum
+            b = carry
         }
-        return res
+        return a
     }
 
-    console.log(extraPerfect(7))
-
-    // ------------------------------------------694.----------------------------------------------------------
     // ------------------------------------------695.----------------------------------------------------------
     // ------------------------------------------696.----------------------------------------------------------
     // ------------------------------------------697.----------------------------------------------------------
