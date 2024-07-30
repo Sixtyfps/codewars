@@ -6538,17 +6538,35 @@
     // console.log(extraPerfect(7))
 
     // -----------------------------------------694.Sum of Two Integers-------------------------------------------------
-    function add(a, b) {
-        while (b !== 0) {
-            let sum = a ^ b
-            let carry = (a & b) << 1
-            a = sum
-            b = carry
+    // function add(a, b) {
+    //     while (b !== 0) {
+    //         let sum = a ^ b
+    //         let carry = (a & b) << 1
+    //         a = sum
+    //         b = carry
+    //     }
+    //     return a
+    // }
+
+    // ------------------------------------695.Show multiples of 2 numbers within a range-------------------------------
+    function multiples(a,b,limit){
+        const lcmValue = (a * b) / gcd(a, b)
+        const multiples = []
+        for (let i = lcmValue; i < limit; i += lcmValue) {
+            multiples.push(i)
         }
-        return a
+
+        return multiples
+    }
+    function gcd(x, y) {
+        while (y !== 0) {
+            let temp = y
+            y = x % y
+            x = temp
+        }
+        return x
     }
 
-    // ------------------------------------------695.----------------------------------------------------------
     // ------------------------------------------696.----------------------------------------------------------
     // ------------------------------------------697.----------------------------------------------------------
     // ------------------------------------------698.----------------------------------------------------------
