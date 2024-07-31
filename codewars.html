@@ -6548,26 +6548,39 @@
     //     return a
     // }
 
-    // ------------------------------------695.Show multiples of 2 numbers within a range-------------------------------
-    function multiples(a,b,limit){
-        const lcmValue = (a * b) / gcd(a, b)
-        const multiples = []
-        for (let i = lcmValue; i < limit; i += lcmValue) {
-            multiples.push(i)
-        }
+    // ----------------------------------695.Show multiples of 2 numbers within a range---------------------------------
+    // function multiples(a,b,limit){
+    //     const lcmValue = (a * b) / gcd(a, b)
+    //     const multiples = []
+    //     for (let i = lcmValue; i < limit; i += lcmValue) {
+    //         multiples.push(i)
+    //     }
+    //
+    //     return multiples
+    // }
+    // function gcd(x, y) {
+    //     while (y !== 0) {
+    //         let temp = y
+    //         y = x % y
+    //         x = temp
+    //     }
+    //     return x
+    // }
 
-        return multiples
-    }
-    function gcd(x, y) {
-        while (y !== 0) {
-            let temp = y
-            y = x % y
-            x = temp
+    // --------------------------------------696.Every possible sum of two digits---------------------------------------
+    function digits(num){
+        num = num.toString().split('').map(el => +el)
+        let res = []
+        for(let i=0; i<num.length; i++) {
+            for(let j=i+1; j<num.length; j++) {
+                res.push(num[i] + num[j])
+            }
         }
-        return x
+        return res
     }
 
-    // ------------------------------------------696.----------------------------------------------------------
+    console.log(digits(1234))
+
     // ------------------------------------------697.----------------------------------------------------------
     // ------------------------------------------698.----------------------------------------------------------
     // ------------------------------------------699.----------------------------------------------------------
