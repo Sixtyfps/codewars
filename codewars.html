@@ -6619,15 +6619,36 @@
     // }
 
     // -------------------------------------------702.Partial Word Searching--------------------------------------------
-    function wordSearch(query, arr){
-        let res = []
-        for(let i=0; i<arr.length; i++) {
-            if(arr[i].toLowerCase().includes(query.toLowerCase())) res.push(arr[i])
+    // function wordSearch(query, arr){
+    //     let res = []
+    //     for(let i=0; i<arr.length; i++) {
+    //         if(arr[i].toLowerCase().includes(query.toLowerCase())) res.push(arr[i])
+    //     }
+    //     return res.length<1? ["Empty"] : res
+    // }
+
+    // ------------------------------------------703.Interactive Dictionary----------------------------------------------------------
+    class Dictionary {
+        constructor() {
+            // Initialize an empty object to store the dictionary entries
+            this.entries = {}
         }
-        return res.length<1? ["Empty"] : res
+
+        // Method to add a new entry to the dictionary
+        newEntry(key, value) {
+            this.entries[key] = value
+        }
+
+        // Method to look up a word in the dictionary
+        look(key) {
+            if (this.entries.hasOwnProperty(key)) {
+                return this.entries[key]
+            } else {
+                return `Can't find entry for ${key}`
+            }
+        }
     }
 
-    // ------------------------------------------703.----------------------------------------------------------
     // ------------------------------------------704.----------------------------------------------------------
     // ------------------------------------------705.----------------------------------------------------------
     // ------------------------------------------706.----------------------------------------------------------
