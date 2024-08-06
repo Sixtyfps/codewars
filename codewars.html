@@ -6650,17 +6650,31 @@
     // }
 
     // ---------------------------------------------704.Pandemia 🌡️-----------------------------------------------------
-    function infected(s) {
-        const arr = s.split('X')
-        if(!arr.join('').includes(1) && !arr.join('').includes(1)) return 0
-        const total = arr.join('').length
-        const infected = arr.map(el => el.includes(1)? el.replaceAll(0, 1) : el).join('').replaceAll(0,'').length
-        return infected/(total/100)
+    // function infected(s) {
+    //     const arr = s.split('X')
+    //     if(!arr.join('').includes(1) && !arr.join('').includes(1)) return 0
+    //     const total = arr.join('').length
+    //     const infected = arr.map(el => el.includes(1)? el.replaceAll(0, 1) : el).join('').replaceAll(0,'').length
+    //     return infected/(total/100)
+    // }
+    //
+    // console.log(infected("01000000X000X011X0X"))
+
+    // ------------------------------------------705.How Green Is My Valley?----------------------------------------------------------
+    function makeValley(arr) {
+        arr = arr.sort((a,b) => a-b).reverse()
+        const min = Math.min(...arr)
+        let left = []
+        let right = []
+        for(let i=0; i<arr.length; i++) {
+            if(i%2) right.push(arr[i])
+            if(i%2===0) left.push(arr[i])
+        }
+        return [...left,...right.reverse()]
     }
 
-    console.log(infected("01000000X000X011X0X"))
+    console.log(makeValley([67, 93, 100, -16, 65, 97, 92]))
 
-    // ------------------------------------------705.----------------------------------------------------------
     // ------------------------------------------706.----------------------------------------------------------
     // ------------------------------------------707.----------------------------------------------------------
     // ------------------------------------------708.----------------------------------------------------------
