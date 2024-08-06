@@ -6627,29 +6627,39 @@
     //     return res.length<1? ["Empty"] : res
     // }
 
-    // ------------------------------------------703.Interactive Dictionary----------------------------------------------------------
-    class Dictionary {
-        constructor() {
-            // Initialize an empty object to store the dictionary entries
-            this.entries = {}
-        }
+    // ------------------------------------------703.Interactive Dictionary---------------------------------------------
+    // class Dictionary {
+    //     constructor() {
+    //         // Initialize an empty object to store the dictionary entries
+    //         this.entries = {}
+    //     }
+    //
+    //     // Method to add a new entry to the dictionary
+    //     newEntry(key, value) {
+    //         this.entries[key] = value
+    //     }
+    //
+    //     // Method to look up a word in the dictionary
+    //     look(key) {
+    //         if (this.entries.hasOwnProperty(key)) {
+    //             return this.entries[key]
+    //         } else {
+    //             return `Can't find entry for ${key}`
+    //         }
+    //     }
+    // }
 
-        // Method to add a new entry to the dictionary
-        newEntry(key, value) {
-            this.entries[key] = value
-        }
-
-        // Method to look up a word in the dictionary
-        look(key) {
-            if (this.entries.hasOwnProperty(key)) {
-                return this.entries[key]
-            } else {
-                return `Can't find entry for ${key}`
-            }
-        }
+    // ---------------------------------------------704.Pandemia 🌡️-----------------------------------------------------
+    function infected(s) {
+        const arr = s.split('X')
+        if(!arr.join('').includes(1) && !arr.join('').includes(1)) return 0
+        const total = arr.join('').length
+        const infected = arr.map(el => el.includes(1)? el.replaceAll(0, 1) : el).join('').replaceAll(0,'').length
+        return infected/(total/100)
     }
 
-    // ------------------------------------------704.----------------------------------------------------------
+    console.log(infected("01000000X000X011X0X"))
+
     // ------------------------------------------705.----------------------------------------------------------
     // ------------------------------------------706.----------------------------------------------------------
     // ------------------------------------------707.----------------------------------------------------------
