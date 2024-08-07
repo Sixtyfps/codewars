@@ -6661,21 +6661,26 @@
     // console.log(infected("01000000X000X011X0X"))
 
     // ------------------------------------------705.How Green Is My Valley?----------------------------------------------------------
-    function makeValley(arr) {
-        arr = arr.sort((a,b) => a-b).reverse()
-        const min = Math.min(...arr)
-        let left = []
-        let right = []
-        for(let i=0; i<arr.length; i++) {
-            if(i%2) right.push(arr[i])
-            if(i%2===0) left.push(arr[i])
-        }
-        return [...left,...right.reverse()]
+    // function makeValley(arr) {
+    //     arr = arr.sort((a,b) => a-b).reverse()
+    //     const min = Math.min(...arr)
+    //     let left = []
+    //     let right = []
+    //     for(let i=0; i<arr.length; i++) {
+    //         if(i%2) right.push(arr[i])
+    //         if(i%2===0) left.push(arr[i])
+    //     }
+    //     return [...left,...right.reverse()]
+    // }
+    //
+    // console.log(makeValley([67, 93, 100, -16, 65, 97, 92]))
+
+    // ------------------------------------------706.Heron's formula----------------------------------------------------
+    function heron(a, b, c) {
+        const s = (a+b+c)/2
+        return Math.sqrt(s*(s-a)*(s-b)*(s-c))
     }
 
-    console.log(makeValley([67, 93, 100, -16, 65, 97, 92]))
-
-    // ------------------------------------------706.----------------------------------------------------------
     // ------------------------------------------707.----------------------------------------------------------
     // ------------------------------------------708.----------------------------------------------------------
     // ------------------------------------------709.----------------------------------------------------------
