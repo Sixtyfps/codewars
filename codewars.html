@@ -6687,11 +6687,25 @@
     // }
 
     // ------------------------------------------708.Find the Capitals--------------------------------------------------
-    function capital(capitals){
-        return capitals.map(el =>  `The capital of ${Object.entries(el)[0][1]} is ${Object.entries(el)[1][1]}`)
+    // function capital(capitals){
+    //     return capitals.map(el =>  `The capital of ${Object.entries(el)[0][1]} is ${Object.entries(el)[1][1]}`)
+    // }
+
+    // --------------------------------------------709.sPoNgEbOb MeMe---------------------------------------------------
+    function spongeMeme(input) {
+        let result = '';
+        for (let i = 0; i < input.length; i++) {
+            if (i % 2 === 0) {
+                result += input[i].toUpperCase();
+            } else {
+                result += input[i].toLowerCase();
+            }
+        }
+        return result;
     }
 
-    // ------------------------------------------709.----------------------------------------------------------
+    console.log(spongeMeme('stop Making spongebob Memes!'))
+
     // ------------------------------------------710.----------------------------------------------------------
     // ------------------------------------------711.----------------------------------------------------------
     // ------------------------------------------712.----------------------------------------------------------
