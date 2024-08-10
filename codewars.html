@@ -6692,21 +6692,37 @@
     // }
 
     // --------------------------------------------709.sPoNgEbOb MeMe---------------------------------------------------
-    function spongeMeme(input) {
-        let result = '';
-        for (let i = 0; i < input.length; i++) {
-            if (i % 2 === 0) {
-                result += input[i].toUpperCase();
-            } else {
-                result += input[i].toLowerCase();
+    // function spongeMeme(input) {
+    //     let result = '';
+    //     for (let i = 0; i < input.length; i++) {
+    //         if (i % 2 === 0) {
+    //             result += input[i].toUpperCase();
+    //         } else {
+    //             result += input[i].toLowerCase();
+    //         }
+    //     }
+    //     return result;
+    // }
+    //
+    // console.log(spongeMeme('stop Making spongebob Memes!'))
+
+    // ------------------------------------------710.Snail crawls up----------------------------------------------------------
+    function snail(columnHeight, dayDistance, nightDistance) {
+        let currentHeight = 0
+        let days = 0
+
+        while (currentHeight < columnHeight) {
+            days++
+            currentHeight += dayDistance
+
+            if (currentHeight >= columnHeight) {
+                break
             }
+            currentHeight -= nightDistance
         }
-        return result;
+        return days
     }
 
-    console.log(spongeMeme('stop Making spongebob Memes!'))
-
-    // ------------------------------------------710.----------------------------------------------------------
     // ------------------------------------------711.----------------------------------------------------------
     // ------------------------------------------712.----------------------------------------------------------
     // ------------------------------------------713.----------------------------------------------------------
