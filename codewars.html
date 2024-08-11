@@ -6706,24 +6706,34 @@
     //
     // console.log(spongeMeme('stop Making spongebob Memes!'))
 
-    // ------------------------------------------710.Snail crawls up----------------------------------------------------------
-    function snail(columnHeight, dayDistance, nightDistance) {
-        let currentHeight = 0
-        let days = 0
+    // ---------------------------------------------710.Snail crawls up-------------------------------------------------
+    // function snail(columnHeight, dayDistance, nightDistance) {
+    //     let currentHeight = 0
+    //     let days = 0
+    //
+    //     while (currentHeight < columnHeight) {
+    //         days++
+    //         currentHeight += dayDistance
+    //
+    //         if (currentHeight >= columnHeight) {
+    //             break
+    //         }
+    //         currentHeight -= nightDistance
+    //     }
+    //     return days
+    // }
 
-        while (currentHeight < columnHeight) {
-            days++
-            currentHeight += dayDistance
-
-            if (currentHeight >= columnHeight) {
-                break
-            }
-            currentHeight -= nightDistance
-        }
-        return days
+    // ------------------------------------------711.Selective fear of numbers------------------------------------------
+    const AmIAfraid = (day, num) => {
+        if(day === 'Monday' && num === 12) return true
+        else if(day === 'Tuesday' && num > 95) return true
+        else if(day === 'Wednesday' && num === 34) return true
+        else if(day === 'Thursday' && num === 0) return true
+        else if(day === 'Friday' && num%2 === 0) return true
+        else if(day === 'Saturday' && num === 56) return true
+        else return day === 'Sunday' && Math.abs(num) === 666;
     }
 
-    // ------------------------------------------711.----------------------------------------------------------
     // ------------------------------------------712.----------------------------------------------------------
     // ------------------------------------------713.----------------------------------------------------------
     // ------------------------------------------715.----------------------------------------------------------
