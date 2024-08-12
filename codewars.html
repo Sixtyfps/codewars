@@ -6724,17 +6724,32 @@
     // }
 
     // ------------------------------------------711.Selective fear of numbers------------------------------------------
-    const AmIAfraid = (day, num) => {
-        if(day === 'Monday' && num === 12) return true
-        else if(day === 'Tuesday' && num > 95) return true
-        else if(day === 'Wednesday' && num === 34) return true
-        else if(day === 'Thursday' && num === 0) return true
-        else if(day === 'Friday' && num%2 === 0) return true
-        else if(day === 'Saturday' && num === 56) return true
-        else return day === 'Sunday' && Math.abs(num) === 666;
+    // const AmIAfraid = (day, num) => {
+    //     if(day === 'Monday' && num === 12) return true
+    //     else if(day === 'Tuesday' && num > 95) return true
+    //     else if(day === 'Wednesday' && num === 34) return true
+    //     else if(day === 'Thursday' && num === 0) return true
+    //     else if(day === 'Friday' && num%2 === 0) return true
+    //     else if(day === 'Saturday' && num === 56) return true
+    //     else return day === 'Sunday' && Math.abs(num) === 666;
+    // }
+
+    // ------------------------------------------------712.Bubblesort Once----------------------------------------------
+    function bubblesortOnce(arr) {
+        let n = arr.length
+        const newArr=[...arr]
+        for (let i = 0; i < 1; i++) {
+            for (let j = 0; j < n - 1 - i; j++) {
+                if (newArr[j] > newArr[j + 1]) {
+                    let temp = newArr[j]
+                    newArr[j] = newArr[j + 1]
+                    newArr[j + 1] = temp
+                }
+            }
+        }
+        return newArr
     }
 
-    // ------------------------------------------712.----------------------------------------------------------
     // ------------------------------------------713.----------------------------------------------------------
     // ------------------------------------------715.----------------------------------------------------------
     // ------------------------------------------716.----------------------------------------------------------
