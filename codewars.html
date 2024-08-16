@@ -6784,17 +6784,22 @@
     //     return a.map((el,i) => i%2? el*2 : el)
     // }
 
-    // ------------------------------------------716.Remove duplicates with Set----------------------------------------------------------
-    const remDuplicate = (str) => {
-        return [...new Set(str.split(''))].join('')
+    // ------------------------------------------716.Remove duplicates with Set-----------------------------------------
+    // const remDuplicate = (str) => {
+    //     return [...new Set(str.split(''))].join('')
+    // }
+    //
+    // console.log(remDuplicate('asdasd'))
+    // console.log(remDuplicate(''))
+    // console.log(remDuplicate('zxcZXC'))
+    // console.log(remDuplicate('asd1111111111asd'))
+
+    // -----------------------------------717.Arithmetic sequence - sum of n elements-----------------------------------
+    function ArithmeticSequenceSum(a, r, n) {
+        const an= a+r*(n-1)
+        return (a+an)*n/2
     }
 
-    console.log(remDuplicate('asdasd'))
-    console.log(remDuplicate(''))
-    console.log(remDuplicate('zxcZXC'))
-    console.log(remDuplicate('asd1111111111asd'))
-
-    // ------------------------------------------717.----------------------------------------------------------
     // ------------------------------------------718.----------------------------------------------------------
     // ------------------------------------------719.----------------------------------------------------------
     // ------------------------------------------720.----------------------------------------------------------
