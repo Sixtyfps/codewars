@@ -6801,14 +6801,31 @@
     // }
 
     // ------------------------------------------718.All Star Code Challenge #16----------------------------------------
-    function noRepeat(str) {
-        for(let i=0; i<str.length; i++) {
-            if(str.split('').filter(el => el===str[i]).length === 1) return str[i]
+    // function noRepeat(str) {
+    //     for(let i=0; i<str.length; i++) {
+    //         if(str.split('').filter(el => el===str[i]).length === 1) return str[i]
+    //     }
+    // }
+
+    // --------------------------------------------719.Fizz Buzz Cuckoo Clock-------------------------------------------
+    function fizzBuzzCuckooClock(time) {
+        let [hour, minute] = time.split(':').map(Number)
+        hour = hour % 12 === 0 ? 12 : hour % 12
+
+        if (minute === 0) {
+            return "Cuckoo ".repeat(hour).trim()
+        } else if (minute === 30) {
+            return "Cuckoo"
+        } else if (minute % 3 === 0 && minute % 5 === 0) {
+            return "Fizz Buzz"
+        } else if (minute % 3 === 0) {
+            return "Fizz"
+        } else if (minute % 5 === 0) {
+            return "Buzz"
+        } else {
+            return "tick"
         }
     }
-
-    // --------------------------------------------719.-------------------------------------------
-
 
     // ------------------------------------------720.----------------------------------------------------------
 
