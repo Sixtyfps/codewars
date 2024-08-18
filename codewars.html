@@ -6828,13 +6828,31 @@
     // }
 
     // -------------720.Training JS #19: Methods of String object--toUpperCase() toLowerCase() and replace()------------
-    function alienLanguage(str){
-        return str.split(' ').map(el => el.slice(0, -1).toUpperCase() + el.slice(-1).toLowerCase()).join(' ')
+    // function alienLanguage(str){
+    //     return str.split(' ').map(el => el.slice(0, -1).toUpperCase() + el.slice(-1).toLowerCase()).join(' ')
+    // }
+    //
+    // console.log(alienLanguage("My name is John"))
+
+    // ----------------------------------------721.Hello World - Without Strings----------------------------------------
+    const helloWorld = () => {
+        return String.fromCharCode(72) +
+            String.fromCharCode(101) +
+            String.fromCharCode(108) +
+            String.fromCharCode(108) +
+            String.fromCharCode(111) +
+            String.fromCharCode(44) +
+            String.fromCharCode(32) +
+            String.fromCharCode(87) +
+            String.fromCharCode(111) +
+            String.fromCharCode(114) +
+            String.fromCharCode(108) +
+            String.fromCharCode(100) +
+            String.fromCharCode(33)
     }
 
-    console.log(alienLanguage("My name is John"))
+    console.log(helloWorld())
 
-    // ------------------------------------------721.----------------------------------------------------------
     // ------------------------------------------722.----------------------------------------------------------
     // ------------------------------------------723.----------------------------------------------------------
     // ------------------------------------------724.----------------------------------------------------------
