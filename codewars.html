@@ -6835,25 +6835,35 @@
     // console.log(alienLanguage("My name is John"))
 
     // ----------------------------------------721.Hello World - Without Strings----------------------------------------
-    const helloWorld = () => {
-        return String.fromCharCode(72) +
-            String.fromCharCode(101) +
-            String.fromCharCode(108) +
-            String.fromCharCode(108) +
-            String.fromCharCode(111) +
-            String.fromCharCode(44) +
-            String.fromCharCode(32) +
-            String.fromCharCode(87) +
-            String.fromCharCode(111) +
-            String.fromCharCode(114) +
-            String.fromCharCode(108) +
-            String.fromCharCode(100) +
-            String.fromCharCode(33)
+    // const helloWorld = () => {
+    //     return String.fromCharCode(72) +
+    //         String.fromCharCode(101) +
+    //         String.fromCharCode(108) +
+    //         String.fromCharCode(108) +
+    //         String.fromCharCode(111) +
+    //         String.fromCharCode(44) +
+    //         String.fromCharCode(32) +
+    //         String.fromCharCode(87) +
+    //         String.fromCharCode(111) +
+    //         String.fromCharCode(114) +
+    //         String.fromCharCode(108) +
+    //         String.fromCharCode(100) +
+    //         String.fromCharCode(33)
+    // }
+    //
+    // console.log(helloWorld())
+
+    // ---------------------------------------722.Find all non-consecutive numbers--------------------------------------
+    function allNonConsecutive (arr) {
+        let res = []
+        for(let i=1; i<arr.length; i++) {
+            if(arr[i] !== arr[i-1] + 1) res.push({i: i, n: arr[i]})
+        }
+        return res
     }
 
-    console.log(helloWorld())
+    console.log(allNonConsecutive([1,2,3,4,6,7,8,15,16]))
 
-    // ------------------------------------------722.----------------------------------------------------------
     // ------------------------------------------723.----------------------------------------------------------
     // ------------------------------------------724.----------------------------------------------------------
     // ------------------------------------------725.----------------------------------------------------------
