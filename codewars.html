@@ -6899,18 +6899,22 @@
     // console.log(findMissing([4, 3, 3, 61, 8, 8], [8, 61, 8, 3, 4]))
 
     // -------------------------------------------------727.C.Wars------------------------------------------------------
-    function initials(n){
-        n = n.split(' ')
-        let res = []
-        for(let i=0; i<n.length-1; i++) {
-            res.push(n[i][0].toUpperCase() + '.')
-        }
-        return res.join('')+n[n.length-1][0].toUpperCase() + n[n.length-1].slice(1)
+    // function initials(n){
+    //     n = n.split(' ')
+    //     let res = []
+    //     for(let i=0; i<n.length-1; i++) {
+    //         res.push(n[i][0].toUpperCase() + '.')
+    //     }
+    //     return res.join('')+n[n.length-1][0].toUpperCase() + n[n.length-1].slice(1)
+    // }
+    //
+    // console.log(initials('Barack hussain obama'))
+
+    // ----------------------------------------728.How many times should I go?------------------------------------------
+    function howManyTimes(annualPrice, individualPrice) {
+        return Math.ceil(annualPrice/individualPrice)
     }
 
-    console.log(initials('Barack hussain obama'))
-
-    // ------------------------------------------728.----------------------------------------------------------
     // ------------------------------------------729.----------------------------------------------------------
     // ------------------------------------------730.----------------------------------------------------------
 
