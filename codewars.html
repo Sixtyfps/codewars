@@ -6949,15 +6949,24 @@
     // console.log(counterEffect("1250"))
 
     // -----------------------------------------732.The Poet And The Pendulum-------------------------------------------
-    function pendulum(arr) {
-        let res = []
-        arr.sort((a,b) => a-b).forEach((el,i) => i%2 ? res.push(el) : res.unshift(el))
-        return res
+    // function pendulum(arr) {
+    //     let res = []
+    //     arr.sort((a,b) => a-b).forEach((el,i) => i%2 ? res.push(el) : res.unshift(el))
+    //     return res
+    // }
+    //
+    // console.log(pendulum([31,4,10,9]))
+
+    // ---------------------------------------------733.Even odd disparity----------------------------------------------
+    function solve(arr){
+        arr = arr.filter(el => +el===el)
+        const oddSum = arr.filter(el => el%2===1).length
+        const evenSum = arr.filter(el => el%2===0).length
+        return evenSum-oddSum
     }
 
-    console.log(pendulum([31,4,10,9]))
+    console.log(solve([0,1,2,3,'a','b']))
 
-    // ------------------------------------------733.----------------------------------------------------------
     // ------------------------------------------734.----------------------------------------------------------
     // ------------------------------------------735.----------------------------------------------------------
     // ------------------------------------------736.----------------------------------------------------------
