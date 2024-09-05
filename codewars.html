@@ -7008,17 +7008,21 @@
     // }
 
     // --------------------------------------------------738.Reverser---------------------------------------------------
-    function reverse(n){
-        let reversed = 0
-        while (n !== 0) {
-            let lastDigit = n % 10
-            reversed = reversed * 10 + lastDigit
-            n = Math.floor(n / 10)
-        }
-        return reversed
+    // function reverse(n){
+    //     let reversed = 0
+    //     while (n !== 0) {
+    //         let lastDigit = n % 10
+    //         reversed = reversed * 10 + lastDigit
+    //         n = Math.floor(n / 10)
+    //     }
+    //     return reversed
+    // }
+
+    // ----------739.Exclamation marks series #3: Remove all exclamation marks from sentence except at the end----------
+    function remove (str) {
+        return str.replace(/!+(?!!*$)/g, '')
     }
 
-    // ------------------------------------------739.----------------------------------------------------------
     // ------------------------------------------740.----------------------------------------------------------
     // ------------------------------------------741.----------------------------------------------------------
     // ------------------------------------------742.----------------------------------------------------------
