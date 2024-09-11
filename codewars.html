@@ -7068,22 +7068,26 @@
     // console.log(solve("100*b/y"))
 
     // ------------------------------------------745.Cryptanalysis Word Patterns----------------------------------------
-    function wordPattern(str) {
-        let res = []
-        let map = {}
-        let nextCode = 0
-        for (let i = 0; i < str.length; i++) {
-            let char = str[i].toLowerCase()
-            if (!(char in map)) {
-                map[char] = nextCode
-                nextCode++
-            }
-            res.push(map[char])
-        }
-        return res.join('.')
+    // function wordPattern(str) {
+    //     let res = []
+    //     let map = {}
+    //     let nextCode = 0
+    //     for (let i = 0; i < str.length; i++) {
+    //         let char = str[i].toLowerCase()
+    //         if (!(char in map)) {
+    //             map[char] = nextCode
+    //             nextCode++
+    //         }
+    //         res.push(map[char])
+    //     }
+    //     return res.join('.')
+    // }
+
+    // ------------------------------------------------746.Filter Coffee------------------------------------------------
+    function search(budget, prices) {
+        return prices.filter(el => el<=budget).sort((a,b) => a-b).toString()
     }
 
-    // ------------------------------------------746.----------------------------------------------------------
     // ------------------------------------------747.----------------------------------------------------------
     // ------------------------------------------748.----------------------------------------------------------
     // ------------------------------------------749.----------------------------------------------------------
