@@ -7112,28 +7112,36 @@
     // }
 
     // ----------------------------------------750.Linked Lists - Get Nth Node------------------------------------------
-    function Node(data) {
-        this.data = data
-        this.next = null
+    // function Node(data) {
+    //     this.data = data
+    //     this.next = null
+    // }
+    //
+    // function getNth(node, index) {
+    //     let currentNode = node
+    //     let currentIndex = 0
+    //
+    //     while (currentNode !== null) {
+    //         if (currentIndex === index) {
+    //             return currentNode
+    //         }
+    //         currentNode = currentNode.next
+    //         currentIndex++
+    //     }
+    //
+    //     throw new Error("Index out of bounds or list is empty")
+    // }
+
+
+    // ------------------------------------------751.Odder Than the Rest------------------------------------------------
+    function oddOne(arr) {
+        const oddArr = arr.filter(el => el%2)
+        const lastOdd = oddArr[oddArr.length-1]
+        return arr.indexOf(lastOdd)
     }
 
-    function getNth(node, index) {
-        let currentNode = node
-        let currentIndex = 0
+    console.log(oddOne([2,4,6,7,10]))
 
-        while (currentNode !== null) {
-            if (currentIndex === index) {
-                return currentNode
-            }
-            currentNode = currentNode.next
-            currentIndex++
-        }
-
-        throw new Error("Index out of bounds or list is empty")
-    }
-
-
-    // ------------------------------------------751.----------------------------------------------------------
     // ------------------------------------------752.----------------------------------------------------------
     // ------------------------------------------753.----------------------------------------------------------
     // ------------------------------------------754.----------------------------------------------------------
