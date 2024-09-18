@@ -7134,15 +7134,27 @@
 
 
     // ------------------------------------------751.Odder Than the Rest------------------------------------------------
-    function oddOne(arr) {
-        const oddArr = arr.filter(el => el%2)
-        const lastOdd = oddArr[oddArr.length-1]
-        return arr.indexOf(lastOdd)
+    // function oddOne(arr) {
+    //     const oddArr = arr.filter(el => el%2)
+    //     const lastOdd = oddArr[oddArr.length-1]
+    //     return arr.indexOf(lastOdd)
+    // }
+    //
+    // console.log(oddOne([2,4,6,7,10]))
+
+    // ------------------------------------------752.LinkedList -> Array----------------------------------------------------------
+    function listToArray(list) {
+        let result = []
+        let current = list
+
+        while (current !== null) {
+            result.push(current.value)
+            current = current.next
+        }
+
+        return result
     }
 
-    console.log(oddOne([2,4,6,7,10]))
-
-    // ------------------------------------------752.----------------------------------------------------------
     // ------------------------------------------753.----------------------------------------------------------
     // ------------------------------------------754.----------------------------------------------------------
     // ------------------------------------------755.----------------------------------------------------------
