@@ -7156,16 +7156,30 @@
     // }
 
     // ---------------------------------------------753.Kooka-Counter---------------------------------------------------
-    var kookaCounter = function(str) {
-        if (!str) return 0
-        let c = 0
-        for(let i=0; i<str.length; i=i+2) {
-            if(str[i] !== str[i+2]) c++
+    // var kookaCounter = function(str) {
+    //     if (!str) return 0
+    //     let c = 0
+    //     for(let i=0; i<str.length; i=i+2) {
+    //         if(str[i] !== str[i+2]) c++
+    //     }
+    //     return c
+    // }
+
+    // ------------------------------------------754.Cat Years, Dog Years (2)-------------------------------------------
+    var ownedCatAndDog = function(catYears, dogYears) {
+        const calculateYears = (years, firstYear, secondYear, subsequentYears) => {
+            if (years < firstYear) return 0
+            if (years < firstYear + secondYear) return 1
+            return 2 + Math.floor((years - firstYear - secondYear) / subsequentYears)
         }
-        return c
+
+        const ownedCat = calculateYears(catYears, 15, 9, 4);
+        const ownedDog = calculateYears(dogYears, 15, 9, 5);
+
+        return [ownedCat, ownedDog]
+
     }
 
-    // ------------------------------------------754.----------------------------------------------------------
     // ------------------------------------------755.----------------------------------------------------------
     // ------------------------------------------756.----------------------------------------------------------
     // ------------------------------------------757.----------------------------------------------------------
