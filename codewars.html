@@ -7166,21 +7166,32 @@
     // }
 
     // ------------------------------------------754.Cat Years, Dog Years (2)-------------------------------------------
-    var ownedCatAndDog = function(catYears, dogYears) {
-        const calculateYears = (years, firstYear, secondYear, subsequentYears) => {
-            if (years < firstYear) return 0
-            if (years < firstYear + secondYear) return 1
-            return 2 + Math.floor((years - firstYear - secondYear) / subsequentYears)
+    // var ownedCatAndDog = function(catYears, dogYears) {
+    //     const calculateYears = (years, firstYear, secondYear, subsequentYears) => {
+    //         if (years < firstYear) return 0
+    //         if (years < firstYear + secondYear) return 1
+    //         return 2 + Math.floor((years - firstYear - secondYear) / subsequentYears)
+    //     }
+    //
+    //     const ownedCat = calculateYears(catYears, 15, 9, 4);
+    //     const ownedDog = calculateYears(dogYears, 15, 9, 5);
+    //
+    //     return [ownedCat, ownedDog]
+    // }
+
+    // ---------------------------------------------755.Digital cypher vol 2--------------------------------------------
+    function decode  (code, key) {
+        const keyDigits = String(key).split('').map(Number)
+        let decodedMessage = ''
+        for (let i = 0; i < code.length; i++) {
+            const keyDigit = keyDigits[i % keyDigits.length]
+            const letterNumber = code[i] - keyDigit
+            const letter = String.fromCharCode(letterNumber + 96)
+            decodedMessage += letter
         }
-
-        const ownedCat = calculateYears(catYears, 15, 9, 4);
-        const ownedDog = calculateYears(dogYears, 15, 9, 5);
-
-        return [ownedCat, ownedDog]
-
+        return decodedMessage
     }
 
-    // ------------------------------------------755.----------------------------------------------------------
     // ------------------------------------------756.----------------------------------------------------------
     // ------------------------------------------757.----------------------------------------------------------
     // ------------------------------------------758.----------------------------------------------------------
