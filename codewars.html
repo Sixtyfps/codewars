@@ -7180,19 +7180,40 @@
     // }
 
     // ---------------------------------------------755.Digital cypher vol 2--------------------------------------------
-    function decode  (code, key) {
-        const keyDigits = String(key).split('').map(Number)
-        let decodedMessage = ''
-        for (let i = 0; i < code.length; i++) {
-            const keyDigit = keyDigits[i % keyDigits.length]
-            const letterNumber = code[i] - keyDigit
-            const letter = String.fromCharCode(letterNumber + 96)
-            decodedMessage += letter
+    // function decode  (code, key) {
+    //     const keyDigits = String(key).split('').map(Number)
+    //     let decodedMessage = ''
+    //     for (let i = 0; i < code.length; i++) {
+    //         const keyDigit = keyDigits[i % keyDigits.length]
+    //         const letterNumber = code[i] - keyDigit
+    //         const letter = String.fromCharCode(letterNumber + 96)
+    //         decodedMessage += letter
+    //     }
+    //     return decodedMessage
+    // }
+
+    // -----------------------------------------------756.What a "Classy" Song------------------------------------------
+    class Song {
+        constructor(title, artist) {
+            this.title = title
+            this.artist = artist
+            this.listeners = new Set()
         }
-        return decodedMessage
+
+        howMany(people) {
+            const lowercasedPeople = new Set(people.map(person => person.toLowerCase()))
+
+            let newListeners = 0
+            for (let person of lowercasedPeople) {
+                if (!this.listeners.has(person)) {
+                    newListeners++
+                    this.listeners.add(person)
+                }
+            }
+            return newListeners
+        }
     }
 
-    // ------------------------------------------756.----------------------------------------------------------
     // ------------------------------------------757.----------------------------------------------------------
     // ------------------------------------------758.----------------------------------------------------------
     // ------------------------------------------759.----------------------------------------------------------
