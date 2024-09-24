@@ -7193,28 +7193,36 @@
     // }
 
     // -----------------------------------------------756.What a "Classy" Song------------------------------------------
-    class Song {
-        constructor(title, artist) {
-            this.title = title
-            this.artist = artist
-            this.listeners = new Set()
-        }
+    // class Song {
+    //     constructor(title, artist) {
+    //         this.title = title
+    //         this.artist = artist
+    //         this.listeners = new Set()
+    //     }
+    //
+    //     howMany(people) {
+    //         const lowercasedPeople = new Set(people.map(person => person.toLowerCase()))
+    //
+    //         let newListeners = 0
+    //         for (let person of lowercasedPeople) {
+    //             if (!this.listeners.has(person)) {
+    //                 newListeners++
+    //                 this.listeners.add(person)
+    //             }
+    //         }
+    //         return newListeners
+    //     }
+    // }
 
-        howMany(people) {
-            const lowercasedPeople = new Set(people.map(person => person.toLowerCase()))
-
-            let newListeners = 0
-            for (let person of lowercasedPeople) {
-                if (!this.listeners.has(person)) {
-                    newListeners++
-                    this.listeners.add(person)
-                }
-            }
-            return newListeners
+    // ------------------------------------------757.GCD sum----------------------------------------------------------
+    function solve(sum, gcd){
+        if (sum % gcd !== 0) {
+            return -1
         }
+        let quotient = sum / gcd
+        return [gcd, gcd * (quotient - 1)]
     }
 
-    // ------------------------------------------757.----------------------------------------------------------
     // ------------------------------------------758.----------------------------------------------------------
     // ------------------------------------------759.----------------------------------------------------------
     // ------------------------------------------760.----------------------------------------------------------
