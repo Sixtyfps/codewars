@@ -7224,13 +7224,23 @@
     // }
 
     // ------------------------------------------758.Drying Potatoes----------------------------------------------------
-    function potatoes(p0, w0, p1) {
-        let dryMatter = w0 * (100 - p0) / 100;
-        let w1 = dryMatter * 100 / (100 - p1);
-        return Math.floor(w1);
+    // function potatoes(p0, w0, p1) {
+    //     let dryMatter = w0 * (100 - p0) / 100;
+    //     let w1 = dryMatter * 100 / (100 - p1);
+    //     return Math.floor(w1);
+    // }
+
+    // -----------------------------------759.Simple Fun #10: Range Bit Counting----------------------------------------
+    function rangeBitCount(a, b) {
+        let arr = []
+        for(let i=a; i<=b; i++) {
+            arr.push(i)
+        }
+        return arr.map(el => el.toString(2)).join('').split('').filter(el => el==='1').length
     }
 
-    // ------------------------------------------759.----------------------------------------------------------
+    console.log(rangeBitCount(3,8))
+
     // ------------------------------------------760.----------------------------------------------------------
 
 
