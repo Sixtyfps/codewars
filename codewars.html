@@ -7242,29 +7242,33 @@
     // console.log(rangeBitCount(3,8))
 
     // --------------------------------------------760.Test's results---------------------------------------------------
-    function testResult(arr) {
-        const avg = (arr.reduce((a,b) => a+b,0)/arr.length).toFixed(3)
-        let hMark = 0
-        let aMark = 0
-        let lMark = 0
+    // function testResult(arr) {
+    //     const avg = (arr.reduce((a,b) => a+b,0)/arr.length).toFixed(3)
+    //     let hMark = 0
+    //     let aMark = 0
+    //     let lMark = 0
+    //
+    //     for(let i=0; i<arr.length; i++) {
+    //         if(arr[i]===9 || arr[i]===10) hMark++
+    //         if(arr[i]===7 || arr[i]===8) aMark++
+    //         if(arr[i]<=6 && arr[i]>=1) lMark++
+    //     }
+    //
+    //     let res = [+avg, {'h': hMark, 'a': aMark, 'l': lMark}]
+    //
+    //     if(hMark>0 && aMark===0 && lMark===0) {
+    //         res.push('They did well')
+    //         return res
+    //     } else {
+    //         return res
+    //     }
+    // }
 
-        for(let i=0; i<arr.length; i++) {
-            if(arr[i]===9 || arr[i]===10) hMark++
-            if(arr[i]===7 || arr[i]===8) aMark++
-            if(arr[i]<=6 && arr[i]>=1) lMark++
-        }
-
-        let res = [+avg, {'h': hMark, 'a': aMark, 'l': lMark}]
-
-        if(hMark>0 && aMark===0 && lMark===0) {
-            res.push('They did well')
-            return res
-        } else {
-            return res
-        }
+    // -------------------------------761.Find sum of top-left to bottom-right diagonals--------------------------------
+    function diagonalSum(matrix){
+        return matrix.map((el,i) => el[i]).reduce((a,b) => a+b,0)
     }
 
-    // ------------------------------------------761.----------------------------------------------------------
     // ------------------------------------------762.----------------------------------------------------------
     // ------------------------------------------763.----------------------------------------------------------
     // ------------------------------------------764.----------------------------------------------------------
