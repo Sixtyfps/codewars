@@ -7280,23 +7280,27 @@
     // }
 
     // ---------------------------------------------763.The Pony Express------------------------------------------------
-    function riders(stations) {
-        let riders = 1
-        let distanceCovered = 0
+    // function riders(stations) {
+    //     let riders = 1
+    //     let distanceCovered = 0
+    //
+    //     for (let i = 0; i < stations.length; i++) {
+    //         if (distanceCovered + stations[i] > 100) {
+    //             riders++
+    //             distanceCovered = stations[i]
+    //         } else {
+    //             distanceCovered += stations[i]
+    //         }
+    //     }
+    //
+    //     return riders
+    // }
 
-        for (let i = 0; i < stations.length; i++) {
-            if (distanceCovered + stations[i] > 100) {
-                riders++
-                distanceCovered = stations[i]
-            } else {
-                distanceCovered += stations[i]
-            }
-        }
-
-        return riders
+    // ------------------------------------------764.Unpacking Arguments------------------------------------------------
+    function spread(func, args) {
+        return func(...args)
     }
 
-    // ------------------------------------------764.----------------------------------------------------------
     // ------------------------------------------765.----------------------------------------------------------
     // ------------------------------------------766.----------------------------------------------------------
     // ------------------------------------------767.----------------------------------------------------------
