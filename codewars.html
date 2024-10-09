@@ -7302,11 +7302,18 @@
     // }
 
     // ----------------------------------------------765.Squeaky Clean--------------------------------------------------
-    function squeakyClean(arr) {
-        return arr.filter(el => el!=='' && el!==0 && el!==undefined && el!==null)
+    // function squeakyClean(arr) {
+    //     return arr.filter(el => el!=='' && el!==0 && el!==undefined && el!==null)
+    // }
+
+    // ---------------------------------766.Eliminate the intruders! Bit manipulation-----------------------------------
+    function eliminateUnsetBits(number) {
+        const filteredBinary = number.toString().split('').filter(el => +el === 1).join('')
+        return filteredBinary ? parseInt(filteredBinary, 2) : 0
     }
 
-    // ------------------------------------------766.----------------------------------------------------------
+    console.log(eliminateUnsetBits(100101))
+
     // ------------------------------------------767.----------------------------------------------------------
     // ------------------------------------------768.----------------------------------------------------------
     // ------------------------------------------769.----------------------------------------------------------
