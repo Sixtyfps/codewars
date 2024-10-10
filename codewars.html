@@ -7307,14 +7307,18 @@
     // }
 
     // ---------------------------------766.Eliminate the intruders! Bit manipulation-----------------------------------
-    function eliminateUnsetBits(number) {
-        const filteredBinary = number.toString().split('').filter(el => +el === 1).join('')
-        return filteredBinary ? parseInt(filteredBinary, 2) : 0
+    // function eliminateUnsetBits(number) {
+    //     const filteredBinary = number.toString().split('').filter(el => +el === 1).join('')
+    //     return filteredBinary ? parseInt(filteredBinary, 2) : 0
+    // }
+    //
+    // console.log(eliminateUnsetBits(100101))
+
+    // ----------------------------------------------767.Borrower Speak-------------------------------------------------
+    function borrow(s){
+        return s.toLowerCase().replace(/[^a-zA-Z]/g, '')
     }
 
-    console.log(eliminateUnsetBits(100101))
-
-    // ------------------------------------------767.----------------------------------------------------------
     // ------------------------------------------768.----------------------------------------------------------
     // ------------------------------------------769.----------------------------------------------------------
     // ------------------------------------------770.----------------------------------------------------------
