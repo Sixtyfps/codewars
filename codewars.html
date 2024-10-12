@@ -7320,15 +7320,22 @@
     // }
 
     // -------------------------------------------768.Sort Santa's Reindeer---------------------------------------------
-    function sortReindeer(reindeerNames) {
-        return reindeerNames.sort((a, b) => {
-            const lastNameA = a.split(" ")[1]
-            const lastNameB = b.split(" ")[1]
-            return lastNameA.localeCompare(lastNameB)
-        })
+    // function sortReindeer(reindeerNames) {
+    //     return reindeerNames.sort((a, b) => {
+    //         const lastNameA = a.split(" ")[1]
+    //         const lastNameB = b.split(" ")[1]
+    //         return lastNameA.localeCompare(lastNameB)
+    //     })
+    // }
+
+    // -------------769.Exclamation marks series #8: Move all exclamation marks to the end of the sentence--------------
+    function remove (str) {
+        const markEmount = str.split('').filter(el => el==='!').length
+        return str.replaceAll('!', '') +'!'.repeat(markEmount)
     }
 
-    // ------------------------------------------769.----------------------------------------------------------
+    console.log(remove("Hi! Hi!! Hi!"))
+
     // ------------------------------------------770.----------------------------------------------------------
     // ------------------------------------------771.----------------------------------------------------------
     // ------------------------------------------772.----------------------------------------------------------
