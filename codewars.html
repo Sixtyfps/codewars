@@ -7329,14 +7329,18 @@
     // }
 
     // -------------769.Exclamation marks series #8: Move all exclamation marks to the end of the sentence--------------
-    function remove (str) {
-        const markEmount = str.split('').filter(el => el==='!').length
-        return str.replaceAll('!', '') +'!'.repeat(markEmount)
+    // function remove (str) {
+    //     const markEmount = str.split('').filter(el => el==='!').length
+    //     return str.replaceAll('!', '') +'!'.repeat(markEmount)
+    // }
+    //
+    // console.log(remove("Hi! Hi!! Hi!"))
+
+    // -------------------------------------770.Get key/value pairs as arrays-------------------------------------------
+    function keysAndValues(data){
+        return [Object.keys(data), Object.values(data)]
     }
 
-    console.log(remove("Hi! Hi!! Hi!"))
-
-    // ------------------------------------------770.----------------------------------------------------------
     // ------------------------------------------771.----------------------------------------------------------
     // ------------------------------------------772.----------------------------------------------------------
     // ------------------------------------------773.----------------------------------------------------------
