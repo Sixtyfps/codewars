@@ -7342,14 +7342,24 @@
     // }
 
     // ------------------------------------------771.Monotone travel----------------------------------------------------
-    var isMonotone = function(arr){
-        if (arr.length === 0) return true
-        if (arr.join() === arr.sort((a, b) => a - b).join()) return true
-        if (arr.join() === arr.sort((a, b) => b - a).join()) return false
-        return false
+    // var isMonotone = function(arr){
+    //     if (arr.length === 0) return true
+    //     if (arr.join() === arr.sort((a, b) => a - b).join()) return true
+    //     if (arr.join() === arr.sort((a, b) => b - a).join()) return false
+    //     return false
+    // }
+
+    // ------------------------------------------772.Trimming a string--------------------------------------------------
+    function trim ( str, size ) {
+        if ( str.length <= size ) {
+            return str;
+        }
+
+        const real = str.slice(0, size);
+
+        return `${real.length < 4 ? real : real.slice(0, -3)}...`;
     }
 
-    // ------------------------------------------772.----------------------------------------------------------
     // ------------------------------------------773.----------------------------------------------------------
     // ------------------------------------------774.----------------------------------------------------------
     // ------------------------------------------775.----------------------------------------------------------
