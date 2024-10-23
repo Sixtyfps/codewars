@@ -7405,19 +7405,25 @@
     // }
 
     // ------------------------------------------778.Fruit string calculator--------------------------------------------
-    function calculate(str) {
-        const nums = str.match(/\d+/g).map(Number)
-        if(str.includes('gains')) {
-            return nums[0] + nums[1]
-        }
-        if(str.includes('loses')) {
-            return nums[0] - nums[1]
-        }
+    // function calculate(str) {
+    //     const nums = str.match(/\d+/g).map(Number)
+    //     if(str.includes('gains')) {
+    //         return nums[0] + nums[1]
+    //     }
+    //     if(str.includes('loses')) {
+    //         return nums[0] - nums[1]
+    //     }
+    // }
+    //
+    // console.log(calculate('sdfj34kh kfjv 87 kjdshv hjk90'))
+
+    // --------------------------------------------779.Name Array Capping-----------------------------------------------
+    function capMe(names) {
+        return names.map(el => el[0].toUpperCase() + el.slice(1).toLowerCase() )
     }
 
-    console.log(calculate('sdfj34kh kfjv 87 kjdshv hjk90'))
+    console.log(capMe(['jo', 'nelson', 'jurie']))
 
-    // ------------------------------------------779.----------------------------------------------------------
     // ------------------------------------------780.----------------------------------------------------------
     // ------------------------------------------781.----------------------------------------------------------
     // ------------------------------------------782.----------------------------------------------------------
