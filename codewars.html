@@ -7418,13 +7418,28 @@
     // console.log(calculate('sdfj34kh kfjv 87 kjdshv hjk90'))
 
     // --------------------------------------------779.Name Array Capping-----------------------------------------------
-    function capMe(names) {
-        return names.map(el => el[0].toUpperCase() + el.slice(1).toLowerCase() )
+    // function capMe(names) {
+    //     return names.map(el => el[0].toUpperCase() + el.slice(1).toLowerCase() )
+    // }
+    //
+    // console.log(capMe(['jo', 'nelson', 'jurie']))
+
+    // -----------------------------------------------780.Least Larger--------------------------------------------------
+    function leastLarger(arr, k) {
+        const target = arr[k];
+        let resultIndex = -1;
+        let smallestLargerValue = Infinity;
+
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] > target && arr[i] < smallestLargerValue) {
+                smallestLargerValue = arr[i];
+                resultIndex = i;
+            }
+        }
+
+        return resultIndex;
     }
 
-    console.log(capMe(['jo', 'nelson', 'jurie']))
-
-    // ------------------------------------------780.----------------------------------------------------------
     // ------------------------------------------781.----------------------------------------------------------
     // ------------------------------------------782.----------------------------------------------------------
     // ------------------------------------------783.----------------------------------------------------------
