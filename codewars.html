@@ -7425,22 +7425,29 @@
     // console.log(capMe(['jo', 'nelson', 'jurie']))
 
     // -----------------------------------------------780.Least Larger--------------------------------------------------
-    function leastLarger(arr, k) {
-        const target = arr[k];
-        let resultIndex = -1;
-        let smallestLargerValue = Infinity;
+    // function leastLarger(arr, k) {
+    //     const target = arr[k];
+    //     let resultIndex = -1;
+    //     let smallestLargerValue = Infinity;
+    //
+    //     for (let i = 0; i < arr.length; i++) {
+    //         if (arr[i] > target && arr[i] < smallestLargerValue) {
+    //             smallestLargerValue = arr[i];
+    //             resultIndex = i;
+    //         }
+    //     }
+    //
+    //     return resultIndex;
+    // }
 
-        for (let i = 0; i < arr.length; i++) {
-            if (arr[i] > target && arr[i] < smallestLargerValue) {
-                smallestLargerValue = arr[i];
-                resultIndex = i;
-            }
-        }
-
-        return resultIndex;
+    // ---------------------------------------781.Mirror, mirror, on the wall...----------------------------------------
+    function mirror(data) {
+        const arr = [...data].sort((a, b) => a - b) //[]
+        return [...arr, ...arr.slice(0, -1).reverse()]
     }
 
-    // ------------------------------------------781.----------------------------------------------------------
+    console.log(mirror([5, 2, 10, 43, 23]))
+
     // ------------------------------------------782.----------------------------------------------------------
     // ------------------------------------------783.----------------------------------------------------------
     // ------------------------------------------784.----------------------------------------------------------
