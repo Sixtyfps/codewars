@@ -7449,15 +7449,26 @@
     // console.log(mirror([5, 2, 10, 43, 23]))
 
     // ---------------------------------------------782.Are they square?------------------------------------------------
-    const isSquare = (arr) => {
-        if(arr.length<1) return undefined
-        for(let i=0; i<arr.length; i++) {
-            if(Math.sqrt(arr[i]) % 1 !== 0) return false
+    // const isSquare = (arr) => {
+    //     if(arr.length<1) return undefined
+    //     for(let i=0; i<arr.length; i++) {
+    //         if(Math.sqrt(arr[i]) % 1 !== 0) return false
+    //     }
+    //     return true
+    // }
+
+    // ---------------------------------------783.Hungarian Vowel Harmony (easy)----------------------------------------
+    function dative(word) {
+        const lastV = word.replace(/[^eéiíöőüűaáoóuú]/g, '')[word.replace(/[^eéiíöőüűaáoóuú]/g, '').length-1]
+        if('eéiíöőüű'.includes(lastV)) {
+            return word+'nek'
+        } else {
+            return word+'nak'
         }
-        return true
     }
 
-    // ------------------------------------------783.----------------------------------------------------------
+    console.log(dative("tükör"))
+
     // ------------------------------------------784.----------------------------------------------------------
     // ------------------------------------------785.----------------------------------------------------------
     // ------------------------------------------786.----------------------------------------------------------
