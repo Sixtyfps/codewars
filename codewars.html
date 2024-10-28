@@ -7458,18 +7458,26 @@
     // }
 
     // ---------------------------------------783.Hungarian Vowel Harmony (easy)----------------------------------------
-    function dative(word) {
-        const lastV = word.replace(/[^eéiíöőüűaáoóuú]/g, '')[word.replace(/[^eéiíöőüűaáoóuú]/g, '').length-1]
-        if('eéiíöőüű'.includes(lastV)) {
-            return word+'nek'
-        } else {
-            return word+'nak'
+    // function dative(word) {
+    //     const lastV = word.replace(/[^eéiíöőüűaáoóuú]/g, '')[word.replace(/[^eéiíöőüűaáoóuú]/g, '').length-1]
+    //     if('eéiíöőüű'.includes(lastV)) {
+    //         return word+'nek'
+    //     } else {
+    //         return word+'nak'
+    //     }
+    // }
+    //
+    // console.log(dative("tükör"))
+
+    // -----------------------------------------------784.Reversing Fun-------------------------------------------------
+    function flipNumber(n) {
+        n = n.split('').reverse().join('')
+        for(let i=1; i<n.length; i++) {
+            n = n.slice(0, i) + n.slice(i, n.length).split('').reverse().join('')
         }
+        return n
     }
 
-    console.log(dative("tükör"))
-
-    // ------------------------------------------784.----------------------------------------------------------
     // ------------------------------------------785.----------------------------------------------------------
     // ------------------------------------------786.----------------------------------------------------------
     // ------------------------------------------787.----------------------------------------------------------
