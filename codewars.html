@@ -7484,16 +7484,24 @@
     // }
 
     // ---------------------------------------------786.Replace all items-----------------------------------------------
-    const replaceAll = (seq, find, replace) => {
-        if(Array.isArray(seq)) {
-            return seq.map(el => el===find? replace : el)
-        }
-        if(typeof seq === 'string') {
-            return seq.replaceAll(find, replace)
-        }
+    // const replaceAll = (seq, find, replace) => {
+    //     if(Array.isArray(seq)) {
+    //         return seq.map(el => el===find? replace : el)
+    //     }
+    //     if(typeof seq === 'string') {
+    //         return seq.replaceAll(find, replace)
+    //     }
+    // }
+
+    // ------------------------------------------787.Simple Fun #3: Late Ride-------------------------------------------
+    function lateRide(n) {
+        const hours = Math.floor(n/60).toString().split('').map(el => +el)
+        const minutes = (n%60).toString().split('').map(el => +el)
+        return [...hours, ...minutes].reduce((a,b) => a+b,0)
     }
 
-    // ------------------------------------------787.----------------------------------------------------------
+    console.log(lateRide(808))
+
     // ------------------------------------------788.----------------------------------------------------------
     // ------------------------------------------789.----------------------------------------------------------
     // ------------------------------------------790.----------------------------------------------------------
