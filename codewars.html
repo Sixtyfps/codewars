@@ -7494,15 +7494,29 @@
     // }
 
     // ------------------------------------------787.Simple Fun #3: Late Ride-------------------------------------------
-    function lateRide(n) {
-        const hours = Math.floor(n/60).toString().split('').map(el => +el)
-        const minutes = (n%60).toString().split('').map(el => +el)
-        return [...hours, ...minutes].reduce((a,b) => a+b,0)
+    // function lateRide(n) {
+    //     const hours = Math.floor(n/60).toString().split('').map(el => +el)
+    //     const minutes = (n%60).toString().split('').map(el => +el)
+    //     return [...hours, ...minutes].reduce((a,b) => a+b,0)
+    // }
+    //
+    // console.log(lateRide(808))
+
+    // -----------------------------------------------788.Histogram - H1------------------------------------------------
+    function histogram(results) {
+        let histogramString = ''
+        for (let value = 6; value >= 1; value--) {
+            const count = results[value - 1]
+            const bar = '#'.repeat(count)
+            if (count > 0) {
+                histogramString += `${value}|${bar} ${count}\n`
+            } else {
+                histogramString += `${value}|\n`
+            }
+        }
+        return histogramString
     }
 
-    console.log(lateRide(808))
-
-    // ------------------------------------------788.----------------------------------------------------------
     // ------------------------------------------789.----------------------------------------------------------
     // ------------------------------------------790.----------------------------------------------------------
 
