@@ -7598,13 +7598,28 @@
     // }
 
     // ---------------------------------------------798.Homogenous arrays-----------------------------------------------
-    function filterHomogenous(arrs) {
-        return arrs.filter(el => el.length>0 && el.every(item => typeof item === typeof el[0]))
+    // function filterHomogenous(arrs) {
+    //     return arrs.filter(el => el.length>0 && el.every(item => typeof item === typeof el[0]))
+    // }
+    //
+    // console.log(filterHomogenous([[1, 5, 4], ['a', 3, 5], ['b'], [], ['1', 2, 3]]))
+
+    // ----------------------------------------------799.Array Array Array----------------------------------------------------------
+    function explode(x){
+        let num = 0
+        let res = []
+        if(typeof x[0] !=='number' && typeof x[1] !=='number') return 'Void!'
+        if(typeof x[0] ==='number') num=x[0]
+        if(typeof x[1] ==='number') num=x[1]
+        if(typeof x[0] ==='number' && typeof x[1] ==='number') num=x[0]+x[1]
+        for(let i=0; i<num; i++) {
+            res.push(x)
+        }
+        return res
     }
 
-    console.log(filterHomogenous([[1, 5, 4], ['a', 3, 5], ['b'], [], ['1', 2, 3]]))
+    console.log(explode(['a','b']))
 
-    // ------------------------------------------799.----------------------------------------------------------
     // ------------------------------------------800.----------------------------------------------------------
     // ------------------------------------------801.----------------------------------------------------------
     // ------------------------------------------802.----------------------------------------------------------
