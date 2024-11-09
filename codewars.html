@@ -7654,12 +7654,21 @@
     // console.log(capitalsFirst("hey You, Sort me Already!"))
 
     // ---------------------------------------------803.Circle area inside square---------------------------------------
-    function squareAreaToCircle(size){
-        const radius = (Math.sqrt(size))/2
-        return Math.PI*radius**2
+    // function squareAreaToCircle(size){
+    //     const radius = (Math.sqrt(size))/2
+    //     return Math.PI*radius**2
+    // }
+
+    // ------------------------------------------804.Geometric Progression Sequence-------------------------------------
+    function geometricSequenceElements(a, r, n){
+        let res = []
+        for (let i=0; i<n; i++) {
+            res.push(a)
+            a=a*r
+        }
+        return res.join(', ')
     }
 
-    // ------------------------------------------804.----------------------------------------------------------
     // ------------------------------------------805.----------------------------------------------------------
     // ------------------------------------------806.----------------------------------------------------------
     // ------------------------------------------807.----------------------------------------------------------
