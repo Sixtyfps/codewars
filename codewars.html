@@ -7644,16 +7644,21 @@
     // console.log(encode('abc'))
 
     // ------------------------------------------------802.Capitals first!----------------------------------------------
-    function capitalsFirst(str){
-        str = str.split(' ')
-        const up = str.filter(el => el[0].match(/[A-Z]/))
-        const low = str.filter(el => el[0].match(/[a-z]/))
-        return up.concat(low).join(' ')
+    // function capitalsFirst(str){
+    //     str = str.split(' ')
+    //     const up = str.filter(el => el[0].match(/[A-Z]/))
+    //     const low = str.filter(el => el[0].match(/[a-z]/))
+    //     return up.concat(low).join(' ')
+    // }
+    //
+    // console.log(capitalsFirst("hey You, Sort me Already!"))
+
+    // ---------------------------------------------803.Circle area inside square---------------------------------------
+    function squareAreaToCircle(size){
+        const radius = (Math.sqrt(size))/2
+        return Math.PI*radius**2
     }
 
-    console.log(capitalsFirst("hey You, Sort me Already!"))
-
-    // ------------------------------------------803.----------------------------------------------------------
     // ------------------------------------------804.----------------------------------------------------------
     // ------------------------------------------805.----------------------------------------------------------
     // ------------------------------------------806.----------------------------------------------------------
