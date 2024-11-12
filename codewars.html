@@ -7717,34 +7717,39 @@
     // }
 
     // 812.TV Remote----------------------------------------------------------------------------------------------------
-    function tvRemote(word) {
-        const keyboard = [
-            ['a', 'b', 'c', 'd', 'e', '1', '2', '3'],
-            ['f', 'g', 'h', 'i', 'j', '4', '5', '6'],
-            ['k', 'l', 'm', 'n', 'o', '7', '8', '9'],
-            ['p', 'q', 'r', 's', 't', '.', '@', '0'],
-            ['u', 'v', 'w', 'x', 'y', 'z', '_', '/']
-        ]
-        const position = {}
-        for (let row = 0; row < keyboard.length; row++) {
-            for (let col = 0; col < keyboard[row].length; col++) {
-                position[keyboard[row][col]] = [row, col]
-            }
-        }
-        let presses = 0
-        let currentPos = [0, 0]
-        for (let char of word) {
-            let targetPos = position[char]
-            let verticalSteps = Math.abs(targetPos[0] - currentPos[0])
-            let horizontalSteps = Math.abs(targetPos[1] - currentPos[1])
-            presses += verticalSteps + horizontalSteps + 1
-            currentPos = targetPos
-        }
+    // function tvRemote(word) {
+    //     const keyboard = [
+    //         ['a', 'b', 'c', 'd', 'e', '1', '2', '3'],
+    //         ['f', 'g', 'h', 'i', 'j', '4', '5', '6'],
+    //         ['k', 'l', 'm', 'n', 'o', '7', '8', '9'],
+    //         ['p', 'q', 'r', 's', 't', '.', '@', '0'],
+    //         ['u', 'v', 'w', 'x', 'y', 'z', '_', '/']
+    //     ]
+    //     const position = {}
+    //     for (let row = 0; row < keyboard.length; row++) {
+    //         for (let col = 0; col < keyboard[row].length; col++) {
+    //             position[keyboard[row][col]] = [row, col]
+    //         }
+    //     }
+    //     let presses = 0
+    //     let currentPos = [0, 0]
+    //     for (let char of word) {
+    //         let targetPos = position[char]
+    //         let verticalSteps = Math.abs(targetPos[0] - currentPos[0])
+    //         let horizontalSteps = Math.abs(targetPos[1] - currentPos[1])
+    //         presses += verticalSteps + horizontalSteps + 1
+    //         currentPos = targetPos
+    //     }
+    //
+    //     return presses
+    // }
 
-        return presses
+    // 813.Cartesian neighbors------------------------------------------------------------------------------------------
+    function cartesianNeighbor(x, y) {
+        return [[x - 1, y - 1], [x - 1, y], [x - 1, y + 1], [x, y - 1],
+            [x, y + 1], [x + 1, y - 1], [x + 1, y], [x + 1, y + 1]]
     }
 
-    // ------------------------------------------813.----------------------------------------------------------
     // ------------------------------------------814.----------------------------------------------------------
     // ------------------------------------------815.----------------------------------------------------------
     // ------------------------------------------816.----------------------------------------------------------
