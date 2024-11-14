@@ -7751,16 +7751,27 @@
     // }
 
     // 814.Complete Series----------------------------------------------------------------------------------------------
-    function completeSeries(arr) {
-        if(arr.sort((a,b) => a-b).length !== [...new Set(arr)].length) return [0]
-        let res = []
-        for(let i=0; i<=Math.max(...arr); i++) {
-            res.push(i)
+    // function completeSeries(arr) {
+    //     if(arr.length !== [...new Set(arr)].length) return [0]
+    //     let res = []
+    //     for(let i=0; i<=Math.max(...arr); i++) {
+    //         res.push(i)
+    //     }
+    //     return res
+    // }
+
+    // 815.How Many Unique Consonants?----------------------------------------------------------------------------------
+    function countConsonants(str) {
+        const consonants = new Set()
+        const vowels = new Set(['a', 'e', 'i', 'o', 'u'])
+        for (const char of str.toLowerCase()) {
+            if (/[a-z]/.test(char) && !vowels.has(char)) {
+                consonants.add(char)
+            }
         }
-        return res
+        return consonants.size
     }
 
-    // ------------------------------------------815.----------------------------------------------------------
     // ------------------------------------------816.----------------------------------------------------------
     // ------------------------------------------817.----------------------------------------------------------
     // ------------------------------------------818.----------------------------------------------------------
