@@ -7761,18 +7761,32 @@
     // }
 
     // 815.How Many Unique Consonants?----------------------------------------------------------------------------------
-    function countConsonants(str) {
-        const consonants = new Set()
-        const vowels = new Set(['a', 'e', 'i', 'o', 'u'])
-        for (const char of str.toLowerCase()) {
-            if (/[a-z]/.test(char) && !vowels.has(char)) {
-                consonants.add(char)
+    // function countConsonants(str) {
+    //     const consonants = new Set()
+    //     const vowels = new Set(['a', 'e', 'i', 'o', 'u'])
+    //     for (const char of str.toLowerCase()) {
+    //         if (/[a-z]/.test(char) && !vowels.has(char)) {
+    //             consonants.add(char)
+    //         }
+    //     }
+    //     return consonants.size
+    // }
+
+    // 816.Fizz / Buzz--------------------------------------------------------------------------------------------------
+    function solution(n) {
+        let A = 0, B = 0, C = 0
+        for (let i = 1; i < n; i++) {
+            if (i % 3 === 0 && i % 5 === 0) {
+                C++
+            } else if (i % 3 === 0) {
+                A++
+            } else if (i % 5 === 0) {
+                B++
             }
         }
-        return consonants.size
+        return [A, B, C]
     }
 
-    // ------------------------------------------816.----------------------------------------------------------
     // ------------------------------------------817.----------------------------------------------------------
     // ------------------------------------------818.----------------------------------------------------------
     // ------------------------------------------819.----------------------------------------------------------
