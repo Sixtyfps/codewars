@@ -7788,15 +7788,32 @@
     // }
 
     // 817.Likes Vs Dislikes--------------------------------------------------------------------------------------------
-    function likeOrDislike(buttons) {
-        let state = Nothing
-        for (const button of buttons) {
-            state = state === button ? Nothing : button;
-        }
-        return state
+    // function likeOrDislike(buttons) {
+    //     let state = Nothing
+    //     for (const button of buttons) {
+    //         state = state === button ? Nothing : button;
+    //     }
+    //     return state
+    // }
+
+    // 818.Rock Paper Scissors Lizard Spock-----------------------------------------------------------------------------
+    function rpsls(p1,p2){
+        if(p1===p2) return "Draw!"
+
+        if((p1==='scissors' && p2==='paper') ||
+            (p1==='paper' && p2==='rock') ||
+            (p1==='rock' && p2==='lizard') ||
+            (p1==='lizard' && p2==='spock') ||
+            (p1==='spock' && p2==='scissors') ||
+            (p1==='scissors' && p2==='lizard') ||
+            (p1==='lizard' && p2==='paper') ||
+            (p1==='paper' && p2==='spock') ||
+            (p1==='spock' && p2==='rock') ||
+            (p1==='rock' && p2==='scissors')
+        ) return 'Player 1 Won!'
+        return 'Player 2 Won!'
     }
 
-    // 818.----------------------------------------------------------------------------------------------------
     // 819.----------------------------------------------------------------------------------------------------
     // 820.----------------------------------------------------------------------------------------------------
     // 821.----------------------------------------------------------------------------------------------------
