@@ -7825,12 +7825,16 @@
     // }
 
     // 821.Beginner Series #5 Triangular Numbers------------------------------------------------------------------------
-    function isTriangular(T) {
-        const discriminant = 1 + 8 * T
-        const sqrtDiscriminant = Math.sqrt(discriminant)
-        if (!Number.isInteger(sqrtDiscriminant)) return false
-        const n = (-1 + sqrtDiscriminant) / 2
-        return Number.isInteger(n) && n > 0
+    // function isTriangular(T) {
+    //     const discriminant = 1 + 8 * T
+    //     const sqrtDiscriminant = Math.sqrt(discriminant)
+    //     if (!Number.isInteger(sqrtDiscriminant)) return false
+    //     const n = (-1 + sqrtDiscriminant) / 2
+    //     return Number.isInteger(n) && n > 0
+    // }
+    //2 ver-------------------------------------------------------------------------------------------------------------
+    function isTriangular(t) {
+        return Number.isInteger(Math.sqrt(8*t + 1))
     }
 
     // 822.----------------------------------------------------------------------------------------------------
