@@ -7852,16 +7852,23 @@
     // }
 
     // 823.Combine objects----------------------------------------------------------------------------------------------
-    function combine(...objects) {
-        return objects.reduce((result, currentObj) => {
-            for (const key in currentObj) {
-                result[key] = (result[key] || 0) + currentObj[key];
-            }
-            return result;
-        }, {});
+    // function combine(...objects) {
+    //     return objects.reduce((result, currentObj) => {
+    //         for (const key in currentObj) {
+    //             result[key] = (result[key] || 0) + currentObj[key];
+    //         }
+    //         return result;
+    //     }, {});
+    // }
+
+    // 824.Larger Product or Sum----------------------------------------------------------------------------------------
+    function sumOrProduct(arr, n) {
+        arr = arr.sort((a,b)=> a-b)
+        const lrg = arr.slice(-n).reduce((a,b) => a+b)
+        const sml = arr.slice(0,n).reduce((a,b) => a*b)
+        return lrg>sml? 'sum' :  lrg<sml? 'product' : 'same'
     }
 
-    // 824.----------------------------------------------------------------------------------------------------
     // 825.----------------------------------------------------------------------------------------------------
     // 826.----------------------------------------------------------------------------------------------------
     // 827.----------------------------------------------------------------------------------------------------
