@@ -7862,14 +7862,22 @@
     // }
 
     // 824.Larger Product or Sum----------------------------------------------------------------------------------------
-    function sumOrProduct(arr, n) {
-        arr = arr.sort((a,b)=> a-b)
-        const lrg = arr.slice(-n).reduce((a,b) => a+b)
-        const sml = arr.slice(0,n).reduce((a,b) => a*b)
-        return lrg>sml? 'sum' :  lrg<sml? 'product' : 'same'
+    // function sumOrProduct(arr, n) {
+    //     arr = arr.sort((a,b)=> a-b)
+    //     const lrg = arr.slice(-n).reduce((a,b) => a+b)
+    //     const sml = arr.slice(0,n).reduce((a,b) => a*b)
+    //     return lrg>sml? 'sum' :  lrg<sml? 'product' : 'same'
+    // }
+
+    // 825.What's my golf score?----------------------------------------------------------------------------------------
+    const golfScoreCalculator = (parList, scoreList) => {
+        let res = []
+        for(let i=0; i<18; i++) {
+            res.push(+scoreList[i]-(+parList[i]))
+        }
+        return res.reduce((a,b) => a+b,0)
     }
 
-    // 825.----------------------------------------------------------------------------------------------------
     // 826.----------------------------------------------------------------------------------------------------
     // 827.----------------------------------------------------------------------------------------------------
     // 828.----------------------------------------------------------------------------------------------------
