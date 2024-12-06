@@ -7979,14 +7979,25 @@
     // }
 
     // 840.Easy Time Convert--------------------------------------------------------------------------------------------
-    function timeConvert(mins) {
-        if(mins<1) return '00:00'
-        const minutes = mins % 60
-        const hours = Math.floor(mins/60)
-        return `${hours>9? hours : '0' + hours}:${minutes>9? minutes : '0' + minutes}`
+    // function timeConvert(mins) {
+    //     if(mins<1) return '00:00'
+    //     const minutes = mins % 60
+    //     const hours = Math.floor(mins/60)
+    //     return `${hours>9? hours : '0' + hours}:${minutes>9? minutes : '0' + minutes}`
+    // }
+
+    // 841.Simple letter removal----------------------------------------------------------------------------------------
+    function solve(s, k){
+        for (let char of 'abcdefghijklmnopqrstuvwxyz') {
+            while (k > 0 && s.includes(char)) {
+                s = s.replace(char, ''); // Удаляем первое вхождение символа
+                k--;
+            }
+            if (k === 0) break;
+        }
+        return s;
     }
 
-    // 841.----------------------------------------------------------------------------------------------------
     // 842.----------------------------------------------------------------------------------------------------
     // 843.----------------------------------------------------------------------------------------------------
     // 844.----------------------------------------------------------------------------------------------------
