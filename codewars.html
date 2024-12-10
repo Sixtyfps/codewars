@@ -8016,13 +8016,28 @@
     // }
 
     // 844.String Reversing, Changing case, etc.------------------------------------------------------------------------
-    function reverseAndMirror(s1,s2) {
-        s1 = [...s1].map(x => x == x.toLowerCase() ? x.toUpperCase() : x.toLowerCase()).join('')
-        s2 = [...s2].map(x => x == x.toLowerCase() ? x.toUpperCase() : x.toLowerCase()).reverse().join('')
-        return `${s2}@@@${[...s1].reverse().join('')}${s1}`
+    // function reverseAndMirror(s1,s2) {
+    //     s1 = [...s1].map(x => x == x.toLowerCase() ? x.toUpperCase() : x.toLowerCase()).join('')
+    //     s2 = [...s2].map(x => x == x.toLowerCase() ? x.toUpperCase() : x.toLowerCase()).reverse().join('')
+    //     return `${s2}@@@${[...s1].reverse().join('')}${s1}`
+    // }
+
+    // 845.Transpose two strings in an array----------------------------------------------------------------------------
+    function transposeTwoStrings(arr) {
+        const [str1, str2] = arr;
+        const maxLength = Math.max(str1.length, str2.length);
+        let result = '';
+
+        for (let i = 0; i < maxLength; i++) {
+            const char1 = str1[i] || ' ';
+            const char2 = str2[i] || ' ';
+            result += `${char1} ${char2}`;
+            if (i < maxLength - 1) result += '\n';
+        }
+
+        return result;
     }
 
-    // 845.----------------------------------------------------------------------------------------------------
     // 846.----------------------------------------------------------------------------------------------------
     // 847.----------------------------------------------------------------------------------------------------
     // 848.----------------------------------------------------------------------------------------------------
