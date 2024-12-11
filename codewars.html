@@ -8023,22 +8023,27 @@
     // }
 
     // 845.Transpose two strings in an array----------------------------------------------------------------------------
-    function transposeTwoStrings(arr) {
-        const [str1, str2] = arr;
-        const maxLength = Math.max(str1.length, str2.length);
-        let result = '';
+    // function transposeTwoStrings(arr) {
+    //     const [str1, str2] = arr;
+    //     const maxLength = Math.max(str1.length, str2.length);
+    //     let result = '';
+    //
+    //     for (let i = 0; i < maxLength; i++) {
+    //         const char1 = str1[i] || ' ';
+    //         const char2 = str2[i] || ' ';
+    //         result += `${char1} ${char2}`;
+    //         if (i < maxLength - 1) result += '\n';
+    //     }
+    //
+    //     return result;
+    // }
 
-        for (let i = 0; i < maxLength; i++) {
-            const char1 = str1[i] || ' ';
-            const char2 = str2[i] || ' ';
-            result += `${char1} ${char2}`;
-            if (i < maxLength - 1) result += '\n';
-        }
-
-        return result;
+    // 846.Pull your words together, man!-------------------------------------------------------------------------------
+    function sentencify(words) {
+        words = [...words].join(' ') + '.'
+        return words.charAt(0).toUpperCase() + words.slice(1)
     }
 
-    // 846.----------------------------------------------------------------------------------------------------
     // 847.----------------------------------------------------------------------------------------------------
     // 848.----------------------------------------------------------------------------------------------------
     // 849.----------------------------------------------------------------------------------------------------
