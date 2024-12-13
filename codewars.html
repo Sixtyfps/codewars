@@ -8045,13 +8045,25 @@
     // }
 
     // 847.Ch4113ng3----------------------------------------------------------------------------------------------------
-    function nerdify(txt){
-        return txt.replaceAll('a',4).replaceAll('A',4)
-            .replaceAll('e',3).replaceAll('E',3)
-            .replaceAll('l',1)
+    // function nerdify(txt){
+    //     return txt.replaceAll('a',4).replaceAll('A',4)
+    //         .replaceAll('e',3).replaceAll('E',3)
+    //         .replaceAll('l',1)
+    // }
+
+    // 848.Ironman Triathlon--------------------------------------------------------------------------------------------
+    function iTri(s){
+        const total = 2.4 + 112 + 26.2
+        if(s === 0) return 'Starting Line... Good Luck!'
+        else if (s<=2.5) return {Swim: `${(total - s).toFixed(2)} to go!`}
+        else if (s > 2.5 && s <= 112) return {Bike: `${(total - s).toFixed(2)} to go!`}
+        else if (s> 114.4 && s<total) {
+            if (total - s > 10 ) return {Run: `${(total - s).toFixed(2)} to go!`}
+            else return {Run: 'Nearly there!'}
+        }
+        else return "You're done! Stop running!"
     }
 
-    // 848.----------------------------------------------------------------------------------------------------
     // 849.----------------------------------------------------------------------------------------------------
     // 850.----------------------------------------------------------------------------------------------------
     // 851.----------------------------------------------------------------------------------------------------
