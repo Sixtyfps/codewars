@@ -8052,19 +8052,30 @@
     // }
 
     // 848.Ironman Triathlon--------------------------------------------------------------------------------------------
-    function iTri(s){
-        const total = 2.4 + 112 + 26.2
-        if(s === 0) return 'Starting Line... Good Luck!'
-        else if (s<=2.5) return {Swim: `${(total - s).toFixed(2)} to go!`}
-        else if (s > 2.5 && s <= 112) return {Bike: `${(total - s).toFixed(2)} to go!`}
-        else if (s> 114.4 && s<total) {
-            if (total - s > 10 ) return {Run: `${(total - s).toFixed(2)} to go!`}
-            else return {Run: 'Nearly there!'}
+    // function iTri(s){
+    //     const total = 2.4 + 112 + 26.2
+    //     if(s === 0) return 'Starting Line... Good Luck!'
+    //     else if (s<=2.5) return {Swim: `${(total - s).toFixed(2)} to go!`}
+    //     else if (s > 2.5 && s <= 112) return {Bike: `${(total - s).toFixed(2)} to go!`}
+    //     else if (s> 114.4 && s<total) {
+    //         if (total - s > 10 ) return {Run: `${(total - s).toFixed(2)} to go!`}
+    //         else return {Run: 'Nearly there!'}
+    //     }
+    //     else return "You're done! Stop running!"
+    // }
+
+    // 849.Spraying trees-----------------------------------------------------------------------------------------------
+    const task = (w, n, c) => {
+        const g = {
+            Monday: 'James',
+            Tuesday: 'John',
+            Wednesday: 'Robert',
+            Thursday: 'Michael',
+            Friday: 'William'
         }
-        else return "You're done! Stop running!"
+        return `It is ${w} today, ${g[w]}, you have to work, you must spray ${n} trees and you need ${c*n} dollars to buy liquid`
     }
 
-    // 849.----------------------------------------------------------------------------------------------------
     // 850.----------------------------------------------------------------------------------------------------
     // 851.----------------------------------------------------------------------------------------------------
     // 852.----------------------------------------------------------------------------------------------------
