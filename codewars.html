@@ -8065,18 +8065,28 @@
     // }
 
     // 849.Spraying trees-----------------------------------------------------------------------------------------------
-    const task = (w, n, c) => {
-        const g = {
-            Monday: 'James',
-            Tuesday: 'John',
-            Wednesday: 'Robert',
-            Thursday: 'Michael',
-            Friday: 'William'
+    // const task = (w, n, c) => {
+    //     const g = {
+    //         Monday: 'James',
+    //         Tuesday: 'John',
+    //         Wednesday: 'Robert',
+    //         Thursday: 'Michael',
+    //         Friday: 'William'
+    //     }
+    //     return `It is ${w} today, ${g[w]}, you have to work,
+    //     you must spray ${n} trees and you need ${c*n} dollars to buy liquid`
+    // }
+
+    // 850.Do you speak retsec?-----------------------------------------------------------------------------------------
+    const reverseByCenter = (s) => {
+        const half = Math.floor(s.length/2)
+        if(s.length%2) {
+            return s.slice(-half) + s[half] + s.slice(0, half)
+        } else {
+            return s.slice(-half) + s.slice(0, half)
         }
-        return `It is ${w} today, ${g[w]}, you have to work, you must spray ${n} trees and you need ${c*n} dollars to buy liquid`
     }
 
-    // 850.----------------------------------------------------------------------------------------------------
     // 851.----------------------------------------------------------------------------------------------------
     // 852.----------------------------------------------------------------------------------------------------
     // 853.----------------------------------------------------------------------------------------------------
