@@ -8123,15 +8123,20 @@
     // }
 
     // 854.Naughty or Nice?---------------------------------------------------------------------------------------------
-    function getNiceNames(people){
-        return people.filter(el => el.wasNice === true).map(el => el.name)
+    // function getNiceNames(people){
+    //     return people.filter(el => el.wasNice === true).map(el => el.name)
+    // }
+    //
+    // function getNaughtyNames(people){
+    //     return people.filter(el => el.wasNice === false).map(el => el.name)
+    // }
+
+    // 855.String to integer conversion---------------------------------------------------------------------------------
+    function myParseInt(str) {
+        str = str.trim()
+        return /^\d+$/.test(str) ? parseInt(str, 10) : "NaN"
     }
 
-    function getNaughtyNames(people){
-        return people.filter(el => el.wasNice === false).map(el => el.name)
-    }
-
-    // 855.----------------------------------------------------------------------------------------------------
     // 856.----------------------------------------------------------------------------------------------------
     // 857.----------------------------------------------------------------------------------------------------
     // 858.----------------------------------------------------------------------------------------------------
