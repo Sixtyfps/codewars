@@ -8149,17 +8149,34 @@
     // }
 
     // 857.Move all vowels----------------------------------------------------------------------------------------------
-    function moveVowel(str) {
-        let start = []
-        let vowels = []
-        for(let i=0; i<str.length; i++) {
-            if(str[i].match(/[aeiuo]/)) vowels.push(str[i])
-            else start.push(str[i])
+    // function moveVowel(str) {
+    //     let start = []
+    //     let vowels = []
+    //     for(let i=0; i<str.length; i++) {
+    //         if(str[i].match(/[aeiuo]/)) vowels.push(str[i])
+    //         else start.push(str[i])
+    //     }
+    //     return [...start, ...vowels].join('')
+    // }
+
+    // 858.Simple fibonacci strings-------------------------------------------------------------------------------------
+    function solve(n) {
+        if (n === 0) return '0'
+        if (n === 1) return '01'
+
+        let f0 = '0'
+        let f1 = '01'
+        let result = ''
+
+        for (let i = 2; i <= n; i++) {
+            result = f1 + f0
+            f0 = f1
+            f1 = result
         }
-        return [...start, ...vowels].join('')
+
+        return result
     }
 
-    // 858.----------------------------------------------------------------------------------------------------
     // 859.----------------------------------------------------------------------------------------------------
     // 860.----------------------------------------------------------------------------------------------------
 
