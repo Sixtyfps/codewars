@@ -8196,14 +8196,13 @@
     // console.log(gap(49))
 
     // 860.Ninja vs Samurai: Strike-------------------------------------------------------------------------------------
-    var Warrior = function(name) {
+    const Warrior = function(name) {
         this.name = name;
         this.health = 100;
-    };
-
-    Warrior.strike = function(enemy, swings) {
-        enemy.health = Math.max(0, enemy.health - (swings * 10));
-    };
+        this.strike = function(enemy, swings) {
+            enemy.health = Math.max(0, enemy.health - (swings * 10));
+        }
+    }
 
     // 861.----------------------------------------------------------------------------------------------------
     // 862.----------------------------------------------------------------------------------------------------
