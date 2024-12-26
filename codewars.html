@@ -8235,16 +8235,25 @@
     // console.log(getTurkishNumber(15))
 
     // 862.Calculator: Coin Combination---------------------------------------------------------------------------------
-    function coinCombo(cents) {
-        const values = [25, 10, 5, 1]
+    // function coinCombo(cents) {
+    //     const values = [25, 10, 5, 1]
+    //     return values.map(value => {
+    //         const count = Math.floor(cents / value);
+    //         cents %= value;
+    //         return count;
+    //     }).reverse();
+    // }
+
+    // 863.You Got Change?----------------------------------------------------------------------------------------------
+    function giveChange(amount) {
+        const values = [100, 50, 20, 10, 5, 1]
         return values.map(value => {
-            const count = Math.floor(cents / value);
-            cents %= value;
+            const count = Math.floor(amount / value);
+            amount %= value;
             return count;
-        }).reverse();
+        }).reverse()
     }
 
-    // 863.----------------------------------------------------------------------------------------------------
     // 864.----------------------------------------------------------------------------------------------------
     // 865.----------------------------------------------------------------------------------------------------
     // 866.----------------------------------------------------------------------------------------------------
