@@ -8293,11 +8293,26 @@
     // }
 
     // 868.Multiply array values and filter non-numeric-----------------------------------------------------------------
-    function multiplyAndFilter(arr, m){
-        return arr.filter(el => typeof el === 'number').map(el => el*m)
+    // function multiplyAndFilter(arr, m){
+    //     return arr.filter(el => typeof el === 'number').map(el => el*m)
+    // }
+
+    // 869.Difference between two collections---------------------------------------------------------------------------
+    function diff(a, b){
+        a = a.sort()
+        b = b.sort()
+        let res = []
+        a.forEach(el => {
+            if (!b.includes(el)) res.push(el)
+        })
+        b.forEach(el => {
+            if (!a.includes(el)) res.push(el)
+        })
+        return [...new Set(res)].sort()
     }
 
-    // 869.----------------------------------------------------------------------------------------------------
+    console.log(diff(['m','e','f'], ['k', 'r', 'e']))
+
     // 870.----------------------------------------------------------------------------------------------------
 
 
