@@ -8362,17 +8362,23 @@
     // }
 
     // 875.From A to Z--------------------------------------------------------------------------------------------------
-    function gimmeTheLetters(sp) {
-        let res = []
-        const from = sp[0].charCodeAt()
-        const till = sp[2].charCodeAt()
-        for (let i=from; i<=till; i++) {
-            res.push(String.fromCharCode(i))
-        }
-        return res.join('')
+    // function gimmeTheLetters(sp) {
+    //     let res = []
+    //     const from = sp[0].charCodeAt()
+    //     const till = sp[2].charCodeAt()
+    //     for (let i=from; i<=till; i++) {
+    //         res.push(String.fromCharCode(i))
+    //     }
+    //     return res.join('')
+    // }
+
+    // 876.Failed Filter - Bug Fixing #3--------------------------------------------------------------------------------
+    const FilterNumbers = (str) => {
+        return str.split('').filter(el =>  !+el && el !== '0').join('');
     }
 
-    // 876.----------------------------------------------------------------------------------------------------
+    console.log(FilterNumbers('123abc'))
+
     // 877.----------------------------------------------------------------------------------------------------
     // 878.----------------------------------------------------------------------------------------------------
     // 879.----------------------------------------------------------------------------------------------------
