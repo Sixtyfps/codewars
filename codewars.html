@@ -8373,13 +8373,25 @@
     // }
 
     // 876.Failed Filter - Bug Fixing #3--------------------------------------------------------------------------------
-    const FilterNumbers = (str) => {
-        return str.split('').filter(el =>  !+el && el !== '0').join('');
+    // const FilterNumbers = (str) => {
+    //     return str.split('').filter(el =>  !+el && el !== '0').join('');
+    // }
+    //
+    // console.log(FilterNumbers('123abc'))
+
+    // 877.Suzuki needs help lining up his students!--------------------------------------------------------------------
+    const lineupStudents = (str) => {
+        return str.split(' ')
+            .sort((a, b) => {
+                if (a.length === b.length) {
+                    return b.localeCompare(a)
+                }
+                return b.length - a.length
+            })
     }
 
-    console.log(FilterNumbers('123abc'))
+    console.log(lineupStudents('ab abc abcd abcde'))
 
-    // 877.----------------------------------------------------------------------------------------------------
     // 878.----------------------------------------------------------------------------------------------------
     // 879.----------------------------------------------------------------------------------------------------
     // 880.----------------------------------------------------------------------------------------------------
