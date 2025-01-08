@@ -8393,13 +8393,19 @@
     // console.log(lineupStudents('ab abc abcd abcde'))
 
     // 878.Simple Fun #136: Missing Values------------------------------------------------------------------------------
-    const missingValues = (arr) => {
-        const once = arr.find(el => arr.filter(num => el===num).length === 1)
-        const twice = arr.find(el => arr.filter(num => el===num).length === 2)
-        return once * once * twice
-    }
+    // const missingValues = (arr) => {
+    //     const once = arr.find(el => arr.filter(num => el===num).length === 1)
+    //     const twice = arr.find(el => arr.filter(num => el===num).length === 2)
+    //     return once * once * twice
+    // }
+    //
+    // console.log(missingValues([4,3,2,3,2,2]))
 
-    console.log(missingValues([4,3,2,3,2,2]))
+    // ver.2------------------
+    const _missingValues = (arr) => {
+        const count = (array, number) => array.find(el => arr.filter(num => num===el).length === number)
+        return count(arr,1) * count(arr,1) * count(arr,2)
+    }
 
     // 879.----------------------------------------------------------------------------------------------------
     // 880.----------------------------------------------------------------------------------------------------
