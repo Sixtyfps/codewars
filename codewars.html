@@ -8408,18 +8408,24 @@
     // }
 
     // 879.Paul's Misery------------------------------------------------------------------------------------------------
-    const paul = (x) => {
-        const a = ['kata', 5, 'Petes kata', 10, 'life', 0, 'eating', 1]
-        const sum = x.map(el => a[a.indexOf(el)+1]).reduce((a,b) => a+b,0)
-        if(sum < 40) return 'Super happy!'
-        else if(sum < 70 && sum >=40) return 'Happy!'
-        else if(sum < 100 && sum >=70) return 'Sad!'
-        else return 'Miserable!'
+    // const paul = (x) => {
+    //     const a = ['kata', 5, 'Petes kata', 10, 'life', 0, 'eating', 1]
+    //     const sum = x.map(el => a[a.indexOf(el)+1]).reduce((a,b) => a+b,0)
+    //     if(sum < 40) return 'Super happy!'
+    //     else if(sum < 70 && sum >=40) return 'Happy!'
+    //     else if(sum < 100 && sum >=70) return 'Sad!'
+    //     else return 'Miserable!'
+    // }
+    //
+    // console.log(paul(['life', 'eating', 'Petes kata', 'kata']))
+
+    // 880.Dropcaps-----------------------------------------------------------------------------------------------------
+    const dropCap = (n) => {
+        return n.split(' ')
+            .map(el => el.length>2? (el.charAt(0).toUpperCase() + el.slice(1).toLowerCase()) : el)
+            .join(' ')
     }
 
-    console.log(paul(['life', 'eating', 'Petes kata', 'kata']))
-
-    // 880.----------------------------------------------------------------------------------------------------
     // 881.----------------------------------------------------------------------------------------------------
     // 882.----------------------------------------------------------------------------------------------------
     // 883.----------------------------------------------------------------------------------------------------
