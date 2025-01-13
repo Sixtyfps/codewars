@@ -8432,20 +8432,36 @@
     // }
 
     // 882.Number climber-----------------------------------------------------------------------------------------------
-    function climb(N){
-        const sequence = []
-        while (N > 0) {
-            sequence.push(N)
-            if (N % 2 === 0) {
-                N = N / 2
-            } else {
-                N = (N - 1) / 2
-            }
-        }
-        return sequence.reverse()
+    // function climb(N){
+    //     const sequence = []
+    //     while (N > 0) {
+    //         sequence.push(N)
+    //         if (N % 2 === 0) {
+    //             N = N / 2
+    //         } else {
+    //             N = (N - 1) / 2
+    //         }
+    //     }
+    //     return sequence.reverse()
+    // }
+
+    // 883.Easy wallpaper-----------------------------------------------------------------------------------------------
+    function wallpaper(l, w, h) {
+        const numbers = [
+            "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine",
+            "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen",
+            "seventeen", "eighteen", "nineteen", "twenty"
+        ]
+        if (l === 0 || w === 0 || h === 0) return numbers[0]
+        const wallArea = 2 * (l * h) + 2 * (w * h)
+        const rollWidth = 0.52
+        const rollLength = 10
+        const rollArea = rollWidth * rollLength
+        const totalArea = wallArea * 1.15
+        const rollsNeeded = Math.ceil(totalArea / rollArea)
+        return numbers[rollsNeeded]
     }
 
-    // 883.----------------------------------------------------------------------------------------------------
     // 884.----------------------------------------------------------------------------------------------------
     // 885.----------------------------------------------------------------------------------------------------
     // 886.----------------------------------------------------------------------------------------------------
