@@ -8446,23 +8446,31 @@
     // }
 
     // 883.Easy wallpaper-----------------------------------------------------------------------------------------------
-    function wallpaper(l, w, h) {
-        const numbers = [
-            "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine",
-            "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen",
-            "seventeen", "eighteen", "nineteen", "twenty"
-        ]
-        if (l === 0 || w === 0 || h === 0) return numbers[0]
-        const wallArea = 2 * (l * h) + 2 * (w * h)
-        const rollWidth = 0.52
-        const rollLength = 10
-        const rollArea = rollWidth * rollLength
-        const totalArea = wallArea * 1.15
-        const rollsNeeded = Math.ceil(totalArea / rollArea)
-        return numbers[rollsNeeded]
+    // function wallpaper(l, w, h) {
+    //     const numbers = [
+    //         "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine",
+    //         "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen",
+    //         "seventeen", "eighteen", "nineteen", "twenty"
+    //     ]
+    //     if (l === 0 || w === 0 || h === 0) return numbers[0]
+    //     const wallArea = 2 * (l * h) + 2 * (w * h)
+    //     const rollWidth = 0.52
+    //     const rollLength = 10
+    //     const rollArea = rollWidth * rollLength
+    //     const totalArea = wallArea * 1.15
+    //     const rollsNeeded = Math.ceil(totalArea / rollArea)
+    //     return numbers[rollsNeeded]
+    // }
+
+    // 884.Training JS #24: methods of arrayObject---splice() and slice()-----------------------------------------------
+    function threeInOne(arr){
+        let res = []
+        for(let i=0; i<arr.length; i=i+3) {
+            res.push(arr[i]+arr[i+1]+arr[i+2])
+        }
+        return res
     }
 
-    // 884.----------------------------------------------------------------------------------------------------
     // 885.----------------------------------------------------------------------------------------------------
     // 886.----------------------------------------------------------------------------------------------------
     // 887.----------------------------------------------------------------------------------------------------
