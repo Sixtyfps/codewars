@@ -8482,18 +8482,24 @@
     // }
 
     // 887.Slaphead-----------------------------------------------------------------------------------------------------
-    function bald(x){
-        let res=''
-        const hairs = x.split('').filter(el => el==='/').length
-        if(hairs === 0) res = "Clean!"
-        else if(hairs === 1) res = "Unicorn!"
-        else if(hairs === 2) res = "Homer!"
-        else if(hairs >= 3 && hairs<=5) res = "Careless!"
-        else res = "Hobo!"
-        return['-'.repeat(x.length), res]
-    }
+    // function bald(x){
+    //     let res=''
+    //     const hairs = x.split('').filter(el => el==='/').length
+    //     if(hairs === 0) res = "Clean!"
+    //     else if(hairs === 1) res = "Unicorn!"
+    //     else if(hairs === 2) res = "Homer!"
+    //     else if(hairs >= 3 && hairs<=5) res = "Careless!"
+    //     else res = "Hobo!"
+    //     return['-'.repeat(x.length), res]
+    // }
 
-    // 888.----------------------------------------------------------------------------------------------------
+    // 888.Finding length of the sequence-------------------------------------------------------------------------------
+    var lengthOfSequence = function (arr, n) {
+        const c = arr.filter(el => el===n).length
+        if(c<2 || c>2) return 0
+        return Math.abs(arr.indexOf(n) - arr.lastIndexOf(n))+1
+    };
+
     // 889.----------------------------------------------------------------------------------------------------
     // 890.----------------------------------------------------------------------------------------------------
 
