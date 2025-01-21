@@ -8494,13 +8494,19 @@
     // }
 
     // 888.Finding length of the sequence-------------------------------------------------------------------------------
-    var lengthOfSequence = function (arr, n) {
-        const c = arr.filter(el => el===n).length
-        if(c<2 || c>2) return 0
-        return Math.abs(arr.indexOf(n) - arr.lastIndexOf(n))+1
-    };
+    // var lengthOfSequence = function (arr, n) {
+    //     const c = arr.filter(el => el===n).length
+    //     if(c<2 || c>2) return 0
+    //     return Math.abs(arr.indexOf(n) - arr.lastIndexOf(n))+1
+    // }
 
-    // 889.----------------------------------------------------------------------------------------------------
+    // 889.Candy problem------------------------------------------------------------------------------------------------
+    function candies(kids){
+        if(kids.length < 2) return -1
+        const max = Math.max(...kids)
+        return kids.map(el => max-el).reduce((a,b) => a+b)
+    }
+
     // 890.----------------------------------------------------------------------------------------------------
 
 
