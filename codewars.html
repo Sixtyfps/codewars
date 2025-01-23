@@ -8508,16 +8508,27 @@
     // }
 
     // 890.Jenny the youngest detective---------------------------------------------------------------------------------
-    function missingWord(arr, str) {
-        arr = arr.sort((a,b) => a - b)
-        str = str.replaceAll(' ', '')
-        if(Math.max(...arr)>str.length) return 'No mission today'
-        return arr.map(el => str[el]).join('').toLowerCase()
+    // function missingWord(arr, str) {
+    //     arr = arr.sort((a,b) => a - b)
+    //     str = str.replaceAll(' ', '')
+    //     if(Math.max(...arr)>str.length) return 'No mission today'
+    //     return arr.map(el => str[el]).join('').toLowerCase()
+    // }
+    //
+    // console.log(missingWord([29, 31, 8], "The quick brown fox jumps over the lazy dog"))
+
+    // 891.Product of Largest Pair--------------------------------------------------------------------------------------
+    function maxProduct(numbers) {
+        let [max1, max2] = [0, 0]
+
+        for (const num of numbers) {
+            if (num > max1) [max1, max2] = [num, max1]
+            else if (num > max2) max2 = num
+        }
+
+        return max1 * max2
     }
 
-    console.log(missingWord([29, 31, 8], "The quick brown fox jumps over the lazy dog"))
-
-    // 891.----------------------------------------------------------------------------------------------------
     // 892.----------------------------------------------------------------------------------------------------
     // 893.----------------------------------------------------------------------------------------------------
     // 894.----------------------------------------------------------------------------------------------------
