@@ -8536,13 +8536,19 @@
     // }
 
     // 892.RaNDoM CAsE--------------------------------------------------------------------------------------------------
-    function randomCase(x) {
-        return x.split('').map(el => Math.random()<0.5? el.toUpperCase() : el.toLowerCase()).join('')
+    // function randomCase(x) {
+    //     return x.split('').map(el => Math.random()<0.5? el.toUpperCase() : el.toLowerCase()).join('')
+    // }
+    //
+    // console.log(randomCase('Donec eleifend cursus lobortis'))
+
+    // 893.Keypad horror------------------------------------------------------------------------------------------------
+    function computerToPhone(nums){
+        const comp = '0789456123'
+        const phone = '0123456789'
+        return nums.split('').map (el => phone[comp.indexOf(el)]).join('')
     }
 
-    console.log(randomCase('Donec eleifend cursus lobortis'))
-
-    // 893.----------------------------------------------------------------------------------------------------
     // 894.----------------------------------------------------------------------------------------------------
     // 895.----------------------------------------------------------------------------------------------------
     // 896.----------------------------------------------------------------------------------------------------
