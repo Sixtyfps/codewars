@@ -8597,11 +8597,21 @@
     // }
 
     // 902.The reject() function----------------------------------------------------------------------------------------
-    function reject(arr, pr) {
-        return arr.filter(el => !pr(el))
+    // function reject(arr, pr) {
+    //     return arr.filter(el => !pr(el))
+    // }
+
+    // 903.Whose bicycle?-----------------------------------------------------------------------------------------------
+    function whoseBicycle(d1, d2, d3) {
+        const scores = [
+            { name: "first", sum: Object.values(d1).reduce((a, b) => a + b, 0) },
+            { name: "second", sum: Object.values(d2).reduce((a, b) => a + b, 0) },
+            { name: "third", sum: Object.values(d3).reduce((a, b) => a + b, 0) },
+        ]
+        scores.sort((a, b) => b.sum - a.sum || ageTable[`${a.name}SonAge`] - ageTable[`${b.name}SonAge`])
+        return `I need to buy a bicycle for my ${scores[0].name} son.`
     }
 
-    // 903.----------------------------------------------------------------------------------------------------
     // 904.----------------------------------------------------------------------------------------------------
     // 905.----------------------------------------------------------------------------------------------------
     // 906.----------------------------------------------------------------------------------------------------
