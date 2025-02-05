@@ -8602,17 +8602,27 @@
     // }
 
     // 903.Whose bicycle?-----------------------------------------------------------------------------------------------
-    function whoseBicycle(d1, d2, d3) {
-        const scores = [
-            { name: "first", sum: Object.values(d1).reduce((a, b) => a + b, 0) },
-            { name: "second", sum: Object.values(d2).reduce((a, b) => a + b, 0) },
-            { name: "third", sum: Object.values(d3).reduce((a, b) => a + b, 0) },
-        ]
-        scores.sort((a, b) => b.sum - a.sum || ageTable[`${a.name}SonAge`] - ageTable[`${b.name}SonAge`])
-        return `I need to buy a bicycle for my ${scores[0].name} son.`
+    // function whoseBicycle(d1, d2, d3) {
+    //     const scores = [
+    //         { name: "first", sum: Object.values(d1).reduce((a, b) => a + b, 0) },
+    //         { name: "second", sum: Object.values(d2).reduce((a, b) => a + b, 0) },
+    //         { name: "third", sum: Object.values(d3).reduce((a, b) => a + b, 0) },
+    //     ]
+    //     scores.sort((a, b) => b.sum - a.sum || ageTable[`${a.name}SonAge`] - ageTable[`${b.name}SonAge`])
+    //     return `I need to buy a bicycle for my ${scores[0].name} son.`
+    // }
+
+    // 904.Integer Difference-------------------------------------------------------------------------------------------
+    const intDiff = (arr, n) => {
+        let c = 0
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = i + 1; j < arr.length; j++) {
+                if (Math.abs(arr[i] - arr[j]) === n) c++
+            }
+        }
+        return c
     }
 
-    // 904.----------------------------------------------------------------------------------------------------
     // 905.----------------------------------------------------------------------------------------------------
     // 906.----------------------------------------------------------------------------------------------------
     // 907.----------------------------------------------------------------------------------------------------
