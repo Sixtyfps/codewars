@@ -8629,18 +8629,24 @@
     // }
 
     // 906.Ultimate Array Reverser--------------------------------------------------------------------------------------
-    const ultimateReverse = arr => {
-        let reversedString = arr.join('').split('').reverse().join('')
-        let result = []
-        let index = 0
-        for (let word of arr) {
-            result.push(reversedString.slice(index, index + word.length))
-            index += word.length
-        }
-        return result
+    // const ultimateReverse = arr => {
+    //     let reversedString = arr.join('').split('').reverse().join('')
+    //     let result = []
+    //     let index = 0
+    //     for (let word of arr) {
+    //         result.push(reversedString.slice(index, index + word.length))
+    //         index += word.length
+    //     }
+    //     return result
+    // }
+
+    // 907.imple Fun #20: First Reverse Try-----------------------------------------------------------------------------
+    function firstReverseTry(arr) {
+        if (arr.length<1) return []
+        if (arr.length===1) return arr
+        return [arr[arr.length-1],...arr.slice(1, -1),arr[0]]
     }
 
-    // 907.----------------------------------------------------------------------------------------------------
     // 908.----------------------------------------------------------------------------------------------------
     // 909.----------------------------------------------------------------------------------------------------
     // 910.----------------------------------------------------------------------------------------------------
